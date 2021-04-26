@@ -1,11 +1,12 @@
 > ** ⚠ WARNING: Examples for old TE2000 version 1.10 **
+>
 > These examples are designed for the version 1.10 of TwinCAT HMI. The main branch holds examples for up to date versions.
 
 This repository contains examples that showcase many features of the Framework, as well as various aspects of its APIs.
 
 Here is a list of all samples:
 
-- Todo
+- [SwipeContentOfRegion](SwipeContentOfRegion/README.md) This sample shows how to create animated content switching in a region which reacts on touch swipe gestures.
 
 ## Requirements
 

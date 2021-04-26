@@ -6,7 +6,7 @@ This sample shows how to create animated content switching in a region which rea
 
 ## Files
 
-![SolutionExplorer](README/SolutionExplorer1.png) 
+![SolutionExplorer](README/SolutionExplorer1.png)
 
 ### Desktop.view
 
@@ -16,7 +16,7 @@ The region has a width of 800px and a height of 600px and should show content ba
 
 ### Content1.content
 
-![Content1.content](README/Content1-Content.png) 
+![Content1.content](README/Content1-Content.png)
 
 Content1.content has a height of 600px and a width of 2400px (800px * 3) because we wan't to load 3 additional content files in additional regions on it.
 
@@ -25,7 +25,7 @@ TcHmiRegion_1 will load Content2.content, TcHmiRegion_2 will load Content3.conte
 Each region in Content1.content has a height of 600px and a width of 800px and those regions are placed next to each other. 
 The plan is to load this file into the region on Desktop.view and move the left offset animated to achieve the goal of animated content switching.
 
-![Content1.content](README/Content1-Designer.png) 
+![Content1.content](README/Content1-Designer.png)
 
 
 ### Content2.content
@@ -43,7 +43,8 @@ Just a content dummy with a width of 800px and a height of 600px to fit into the
 ### CodeBehindTs1.ts
 
 Contains the logic for setting the offset of Content1.content which is loaded in the main region in Desktop.view.
-```` js
+
+````js
         // Used to store current animation view for determination what is next view.
         let focusIndex = 0;
         // Used to store TcHmiContent object from Region1 for manipulation.
@@ -146,9 +147,8 @@ Contains the logic for setting the offset of Content1.content which is loaded in
         });
 ````
 
-
 ### CssBehind.css
 
 Contains css definition for animated transition of Content1.
 
-![Content1.content](README/CssBehind1.png) 
+![Content1.content](README/CssBehind1.png)
