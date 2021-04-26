@@ -1,0 +1,8 @@
+﻿/* 
+    Selector to macht with element with id: Content1 
+*/
+#Content1 {
+    transition-property: left; /* Use transition animation if css property left is changed. */
+    transition-duration: 0.5s; /* Transition animation should run for 0.5 seconds. */
+    transition-timing-function: ease-out; /* Transition animation should ease out (get slower at the end). */
+}

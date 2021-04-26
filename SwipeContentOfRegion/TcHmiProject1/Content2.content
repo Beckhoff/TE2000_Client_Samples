@@ -1,0 +1,19 @@
+﻿<div id="Content2" data-tchmi-type="tchmi-content" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="600">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(110, 136, 137, 1)"
+}
+</script>
+<div id="TcHmiImage_2" data-tchmi-type="tchmi-image" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="300" data-tchmi-left-unit="px" data-tchmi-src="Images/Beckhoff_Logo.svg" data-tchmi-top="250" data-tchmi-top-unit="px" data-tchmi-width="200" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+</div>

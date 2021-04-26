@@ -1,0 +1,50 @@
+﻿<div id="Content1" 
+     data-tchmi-type="tchmi-content" 
+     data-tchmi-top="0" 
+     data-tchmi-left="0" 
+     data-tchmi-width="2400" 
+     data-tchmi-height="600">
+
+    <div id="TcHmiRegion_1" 
+         data-tchmi-type="tchmi-region" 
+         data-tchmi-height="600" 
+         data-tchmi-height-unit="px" 
+         data-tchmi-left="0" 
+         data-tchmi-left-unit="px" 
+         data-tchmi-top="0" 
+         data-tchmi-top-unit="px" 
+         data-tchmi-width="800" 
+         data-tchmi-width-unit="px" 
+         data-tchmi-target-content="Content2.content">
+
+    </div>
+
+    <div id="TcHmiRegion_2" 
+         data-tchmi-type="tchmi-region" 
+         data-tchmi-height="600" 
+         data-tchmi-height-unit="px" 
+         data-tchmi-left="800" 
+         data-tchmi-left-unit="px" 
+         data-tchmi-top="0" 
+         data-tchmi-top-unit="px" 
+         data-tchmi-width="800" 
+         data-tchmi-width-unit="px" 
+         data-tchmi-target-content="Content3.content">
+
+    </div>
+
+    <div id="TcHmiRegion_3" 
+         data-tchmi-type="tchmi-region" 
+         data-tchmi-height="600" 
+         data-tchmi-height-unit="px" 
+         data-tchmi-left="1600" 
+         data-tchmi-left-unit="px" 
+         data-tchmi-top="0" 
+         data-tchmi-top-unit="px" 
+         data-tchmi-width="800" 
+         data-tchmi-width-unit="px" 
+         data-tchmi-target-content="Content4.content">
+
+    </div>
+
+</div>
