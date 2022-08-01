@@ -1,0 +1,51 @@
+﻿{
+  "function": {
+    "name": "ListRecipesAsReferenceArray",
+    "displayName": "ListRecipesAsReferenceArray",
+    "visible": true,
+    "category": "Recipe",
+    "waitMode": "Asynchronous",
+    "injectContextObject": true,
+    "description": "Parses a recipe folder and returns a string array with the RecipeReferences",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/Array",
+      "description": ""
+    },
+    "arguments": [
+      {
+        "name": "ctx",
+        "displayName": "ctx",
+        "type": "tchmi:framework#/definitions/ContextReference",
+        "description": "Context Reference",
+        "defaultValue": "",
+        "required": true,
+        "bindable": false,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "recipeList",
+        "displayName": "recipeList",
+        "type": "tchmi:server#/definitions/folderRecipe",
+        "description": "Recipe symbol so the function is updated again when recipe list is changed",
+        "defaultValue": "%s%TcHmiRecipeManagement.Config::recipeList%/s%",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "filterText",
+        "displayName": "filterText",
+        "type": "tchmi:general#/definitions/String",
+        "description": "String to filter the recipes for their names",
+        "defaultValue": "''",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+}

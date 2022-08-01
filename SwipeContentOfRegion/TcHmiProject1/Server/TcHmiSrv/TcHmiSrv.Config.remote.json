@@ -1,0 +1,12 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\TcHmiProject1",
+        "/Beckhoff.TwinCAT.HMI.Controls": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.742.5\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.742.5\\runtimes\\native1.12-tchmi",
+        "/bin": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\TcHmiProject1\\bin\\",
+        "/bin/framework": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\TcHmiProject1\\bin\\framework",
+        "/framework": "C:\\GIT\\TCHMI_Client_Samples\\SwipeContentOfRegion\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.742.5\\runtimes\\native1.12-tchmi"
+    }
+}

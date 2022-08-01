@@ -1,0 +1,6 @@
+﻿/* Theme depended control css. */
+.TcHmi_Controls_StringPager_StringPagerControl-Template-item-container > div {
+    padding: 5px;
+    margin-bottom: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}

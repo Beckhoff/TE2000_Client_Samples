@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{a8219101-a537-4360-9fce-99dfc569f512}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	loremIpsum: ARRAY [0..99] OF STRING := ['Lorem', 'ipsum', 'dolor', 'sit', 'amet,', 'consetetur', 'sadipscing', 'elitr,', 'sed', 'diam', 'nonumy', 'eirmod', 'tempor', 'invidunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliquyam', 'erat,', 'sed', 'diam', 'voluptua.', 'At', 'vero', 'eos', 'et', 'accusam', 'et', 'justo', 'duo', 'dolores', 'et', 'ea', 'rebum.', 'Stet', 'clita', 'kasd', 'gubergren,', 'no', 'sea', 'takimata', 'sanctus', 'est', 'Lorem', 'ipsum', 'dolor', 'sit', 'amet.', 'Lorem', 'ipsum', 'dolor', 'sit', 'amet,', 'consetetur', 'sadipscing', 'elitr,', 'sed', 'diam', 'nonumy', 'eirmod', 'tempor', 'invidunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliquyam', 'erat,', 'sed', 'diam', 'voluptua.', 'At', 'vero', 'eos', 'et', 'accusam', 'et', 'justo', 'duo', 'dolores', 'et', 'ea', 'rebum.', 'Stet', 'clita', 'kasd', 'gubergren,', 'no', 'sea', 'takimata', 'sanctus', 'est', 'Lorem', 'ipsum', 'dolor', 'sit', 'amet.'];
+	jumbledAlphabet: ARRAY [0..25] OF STRING := ['d', 'k', 'i', 'o', 'e', 'b', 'p', 'n', 'j', 'c', 'a', 'u', 'm', 'x', 'w', 's', 'g', 'y', 'z', 'f', 'v', 't', 'h', 'l', 'r', 'q'];
+	
+	loremIpsumItems: ARRAY [0..99] OF LoremItem;
+	
+	initialized: BOOL := FALSE;
+	i: INT;
+	j: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT initialized THEN
+	FOR i := 0 TO 99 DO
+		loremIpsumItems[i].text := loremIpsum[i];
+		loremIpsumItems[i].properties.length := LEN(loremIpsum[i]);
+		loremIpsumItems[i].properties.hasUppercase := loremIpsum[i][0] <= 90 AND loremIpsum[i][0] >= 65;
+		
+		FOR j := 0 TO LEN(loremIpsum[i]) DO
+			loremIpsumItems[i].properties.chars[j] := F_ToCHR(loremIpsum[i][j]);
+		END_FOR
+	END_FOR
+
+	initialized := TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="1" />
+      <LineId Id="26" Count="1" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="12" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

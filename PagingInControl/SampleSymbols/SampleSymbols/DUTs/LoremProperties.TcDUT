@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <DUT Name="LoremProperties" Id="{ef98293f-2a71-45c1-8c67-392c553beb22}">
+    <Declaration><![CDATA[TYPE LoremProperties :
+STRUCT
+	length: INT;
+	hasUppercase: BOOL;
+	chars: ARRAY [0..255] OF STRING;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

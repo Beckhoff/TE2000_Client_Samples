@@ -1,0 +1,40 @@
+﻿{
+  "function": {
+    "name": "DeleteRecipe",
+    "displayName": "DeleteRecipe",
+    "visible": true,
+    "category": "Recipe",
+    "waitMode": "Asynchronous",
+    "injectContextObject": true,
+    "description": "Deletes a Recipe",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/Number",
+      "description": ""
+    },
+    "arguments": [
+      {
+        "name": "ctx",
+        "displayName": "ctx",
+        "type": "tchmi:framework#/definitions/ContextReference",
+        "description": "Context Reference",
+        "defaultValue": "",
+        "required": true,
+        "bindable": false,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "recipeReference",
+        "displayName": "recipeReference",
+        "type": "tchmi:framework#/definitions/RecipeReference",
+        "description": "Reference (path + '::' + name) of the recipe",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+}

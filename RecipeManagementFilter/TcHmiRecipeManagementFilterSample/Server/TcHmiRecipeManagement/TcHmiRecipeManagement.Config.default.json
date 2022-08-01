@@ -1,0 +1,87 @@
+{
+    "recipeList": {
+        "Recipe1": {
+            "recipeTypeName": "RecipeType1",
+            "values": {
+                "Value1": 111,
+                "Value2": 222
+            }
+        },
+        "Recipe2": {
+            "recipeTypeName": "RecipeType1",
+            "values": {
+                "Value1": 299,
+                "Value2": 499
+            }
+        },
+        "Recipe3": {
+            "recipeTypeName": "RecipeType2",
+            "values": {
+                "Value3": 42
+            }
+        },
+        "SubFolder1": {
+            "Recipe4": {
+                "recipeTypeName": "RecipeType1",
+                "values": {
+                    "Value1": 299,
+                    "Value2": 499
+                }
+            }
+        }
+    },
+    "recipeTypeList": {
+        "RecipeType1": {
+            "members": {
+                "Value1": {
+                    "defaultValue": 100,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {
+                        "maximum": 500,
+                        "minimum": 0
+                    },
+                    "symbol": "PLC1.MAIN.Value1",
+                    "unit": ""
+                },
+                "Value2": {
+                    "defaultValue": 200,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {
+                        "maximum": 500,
+                        "minimum": 0
+                    },
+                    "symbol": "PLC1.MAIN.Value2",
+                    "unit": ""
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
+        "RecipeType2": {
+            "members": {
+                "Value3": {
+                    "defaultValue": 11,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {
+                        "maximum": 500,
+                        "minimum": 0
+                    },
+                    "symbol": "Value3",
+                    "unit": ""
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        }
+    }
+}

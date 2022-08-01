@@ -1,0 +1,23 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.StringPager.StringPagerControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "StringPagerControl",
+      "frameworkControlNamespace": "TcHmi.Controls.StringPager"
+    },
+    "TcHmi.Controls.StringPager.StringPagerControl.DataSymbol": {
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/Array"
+          }
+        }
+      ]
+    }
+  }
+}

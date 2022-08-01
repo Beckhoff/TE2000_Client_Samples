@@ -1,0 +1,23 @@
+﻿{
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1,
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "type": "Control",
+      "basePath": "StringPagerControl/",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": "Beckhoff.TwinCAT.HMI:202"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "StringPager": {
+        "200": "StringPager"
+      }
+    }
+  }
+}

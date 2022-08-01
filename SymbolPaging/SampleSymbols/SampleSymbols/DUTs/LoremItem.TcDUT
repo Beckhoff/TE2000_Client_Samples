@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <DUT Name="LoremItem" Id="{24cc142b-0691-47dd-b64b-c0d2db84a1b6}">
+    <Declaration><![CDATA[TYPE LoremItem :
+STRUCT
+	text: STRING;
+	properties: LoremProperties;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

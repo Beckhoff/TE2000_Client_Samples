@@ -1,0 +1,55 @@
+﻿/* General theme independed control css. */
+
+.TcHmi_Controls_StringPager_StringPagerControl {
+    /* Disabled to allow drop-shadow of buttons to be visible beyond the control
+        overflow: hidden;
+    */
+}
+
+.TcHmi_Controls_StringPager_StringPagerControl-Template {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-rows: 1fr 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.TcHmi_Controls_StringPager_StringPagerControl-Template-item-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+    .TcHmi_Controls_StringPager_StringPagerControl-Template-item-container .TcHmi_Controls_Beckhoff_TcHmiTextbox {
+        position: relative;
+        width: calc(100% + 10px);
+        height: 26px;
+        margin: -5px;
+    }
+
+.TcHmi_Controls_StringPager_StringPagerControl-Template .TcHmi_Controls_Beckhoff_TcHmiButton {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* If the main use for this control is interaction
+    uncomment the following lines to give user feedback:
+    This overlays the whole control with a white color
+    and change the mouse cursor */
+
+.TcHmi_Controls_StringPager_StringPagerControl.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}
