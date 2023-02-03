@@ -1,5 +1,5 @@
 ﻿{
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.756.1/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -50,22 +50,12 @@
       "type": "JavaScript"
     },
     {
-      "name": "RecipeFunctions/DownloadRecipe.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
       "name": "RecipeFunctions/ListRecipesAsReferenceArray.js",
       "description": "",
       "type": "JavaScript"
     },
     {
       "name": "RecipeFunctions/UpdateDatagridFromTarget.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "RecipeFunctions/UploadRecipe.js",
       "description": "",
       "type": "JavaScript"
     }
@@ -91,20 +81,15 @@
       "url": "RecipeFunctions/DeleteRecipe.js"
     },
     {
-      "url": "RecipeFunctions/DownloadRecipe.js"
-    },
-    {
       "url": "RecipeFunctions/ListRecipesAsReferenceArray.js"
     },
     {
       "url": "RecipeFunctions/UpdateDatagridFromTarget.js"
-    },
-    {
-      "url": "RecipeFunctions/UploadRecipe.js"
     }
   ],
   "symbols": {
-    "internal": {}
+    "internal": {},
+    "themedResources": {}
   },
   "trigger": [],
   "actionTemplates": [],

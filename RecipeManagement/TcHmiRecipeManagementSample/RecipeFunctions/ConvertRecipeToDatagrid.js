@@ -1,14 +1,12 @@
-﻿// Keep this lines for a best effort IntelliSense of Visual Studio 2017.
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery.d.ts" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.d.ts" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Controls\System\TcHmiControl\Source.d.ts" />
+﻿// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
+/// <reference path="../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/TcHmi.d.ts" />
 
-// Keep this lines for a best effort IntelliSense of Visual Studio 2013/2015.
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
+(function (/** @type {globalThis.TcHmi} */ TcHmi) {
 
-(function (TcHmi) {
-
+    /**
+     * @param ctx {TcHmi.Context<any[]|null>}
+     * @param recipeReference {string}
+     */
     var ConvertRecipeToDataGrid = function (ctx,recipeReference) {
         if (!recipeReference) {
             // Stop (not abort) with null (binding without a value) or empty string

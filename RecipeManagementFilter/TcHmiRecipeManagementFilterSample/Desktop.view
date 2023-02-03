@@ -367,44 +367,54 @@
 <div id="TcHmiButton_Download" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="649" data-tchmi-left-unit="px" data-tchmi-text="Download recipe" data-tchmi-top="147" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-tooltip="The selected recipe is download via the client and is available on device, where the client is started.">
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "TcHmiButton_Download.onPressed",
     "actions": [
       {
         "objectType": "Function",
         "active": true,
-        "fn": "DownloadRecipe",
+        "fn": "TcHmi.Functions.Beckhoff.DownloadRecipes",
         "fnParams": [
           {
             "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/MultipleRecipeReferences",
             "symbolExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedValue%/ctrl%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Boolean",
+            "value": true
           }
         ],
         "asyncWait": true
       }
     ]
   }
-]</script>
+]
+</script>
 </div>
 
 <div id="TcHmiButton_Upload" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="649" data-tchmi-left-unit="px" data-tchmi-text="Upload recipe" data-tchmi-top="207" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-tooltip="The upload dialog of the client brower is opened to upload a recipe, which is automatically added to the available recipes.">
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
   {
     "event": "TcHmiButton_Upload.onPressed",
     "actions": [
       {
         "objectType": "Function",
         "active": true,
-        "fn": "UploadRecipe",
+        "fn": "TcHmi.Functions.Beckhoff.UploadRecipeFiles",
         "fnParams": [],
         "asyncWait": true
       }
     ]
   }
-]</script>
+]
+</script>
 </div>
 
 <div id="TcHmiTextblock_Filter" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-text="Filter:" data-tchmi-top="87" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="18" data-tchmi-text-font-weight="Bold" data-tchmi-text-vertical-alignment="Center">

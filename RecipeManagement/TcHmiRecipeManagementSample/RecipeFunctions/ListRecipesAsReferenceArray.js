@@ -1,14 +1,12 @@
-﻿// Keep this lines for a best effort IntelliSense of Visual Studio 2017.
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery.d.ts" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.d.ts" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Controls\System\TcHmiControl\Source.d.ts" />
+﻿// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
+/// <reference path="../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/TcHmi.d.ts" />
 
-// Keep this lines for a best effort IntelliSense of Visual Studio 2013/2015.
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\Lib\jquery\jquery.js" />
-/// <reference path="C:\TwinCAT\Functions\TE2000-HMI-Engineering\Infrastructure\TcHmiFramework\Latest\TcHmi.js" />
+(function (/** @type {globalThis.TcHmi} */ TcHmi) {
 
-(function (TcHmi) {
-
+    /**
+     * @param ctx {TcHmi.Context<string[]>}
+     * @param recipeList {TcHmi.Server.RecipeManagement.FolderRecipe}
+     */
     var ListRecipesAsReferenceArray = function (ctx, recipeList) {
         if (!recipeList) {
             // Inform the system that we are done and have a dummy result
@@ -16,9 +14,14 @@
             return;    // We are running async so the return value is not used
         }
         // Build a flat array out of the recursive object
+        /** @type {string[]} */
         var result = [];
         
-        // Checks recursive all properties of the recipe folder and remember recipes
+        // Checks recursive all properties of the recipe folder and remembers recipes
+        /**
+         * @param currentPath {string}
+         * @param recipeFolder {TcHmi.Server.RecipeManagement.FolderRecipe}
+         */
         var iterateRecipes = function (currentPath, recipeFolder) {
             for (var subPath in recipeFolder) {
                 var currentName = (currentPath ? currentPath + '::' : '') + subPath;

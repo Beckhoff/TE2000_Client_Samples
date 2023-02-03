@@ -390,11 +390,17 @@
       {
         "objectType": "Function",
         "active": true,
-        "fn": "DownloadRecipe",
+        "fn": "TcHmi.Functions.Beckhoff.DownloadRecipes",
         "fnParams": [
           {
             "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/MultipleRecipeReferences",
             "symbolExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedValue%/ctrl%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Boolean",
+            "value": false
           }
         ],
         "asyncWait": true
@@ -417,7 +423,7 @@
       {
         "objectType": "Function",
         "active": true,
-        "fn": "UploadRecipe",
+        "fn": "TcHmi.Functions.Beckhoff.UploadRecipeFiles",
         "fnParams": [],
         "asyncWait": true
       }
