@@ -1,0 +1,11 @@
+/** Styles for theme: Base */
+.TcHmi_Controls_ExampleControl_ColorChange {
+}
+
+    .TcHmi_Controls_ExampleControl_ColorChange > * > .glow-red {
+        background-color: #FF0000;
+    }
+
+    .TcHmi_Controls_ExampleControl_ColorChange > * > .glow-green {
+        background-color: #00FF00;
+    }

@@ -8,6 +8,7 @@ This repository contains examples that showcase many features of the Framework, 
 
 Here is a list of all samples:
 
+- [ExampleControl:](ExampleControl) This sample shows how to create a control with a simple attribute.
 - [SwipeContentOfRegion:](SwipeContentOfRegion) This sample shows how to create animated content switching in a region which reacts on touch swipe gestures.
 - [RecipeManagement:](RecipeManagement) This sample shows how to use the RecipeManagement Framework API.
 - [RecipeManagementFilter:](RecipeManagementFilter) This sample shows how to use the RecipeManagement Framework API with added filter functionality.

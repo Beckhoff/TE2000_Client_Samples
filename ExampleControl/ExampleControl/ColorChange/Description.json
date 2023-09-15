@@ -1,0 +1,92 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "ColorChange",
+  "namespace": "TcHmi.Controls.ExampleControl",
+  "displayName": "ColorChange",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "A simple color change control.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 150,
+      "height": 150
+    }
+  },
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "template": "Template.html",
+  "dependencyFiles": [
+    {
+      "name": "ColorChange.js",
+      "type": "JavaScript",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "name": "data-tchmi-value",
+      "propertyName": "Value",
+      "propertySetterName": "setValue",
+      "propertyGetterName": "getValue",
+      "displayName": "Value",
+      "visible": true,
+      "displayPriority": 10,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "Common",
+      "description": "This boolean toggles the color of the whole control.",
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "defaultValue": null,
+      "defaultValueInternal": false
+    }
+  ],
+  "attributeCategories": [],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}

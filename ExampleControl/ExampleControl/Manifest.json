@@ -1,0 +1,23 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Control",
+      "basePath": "./ColorChange",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "ExampleControl": {
+        "200": "ExampleControl"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}

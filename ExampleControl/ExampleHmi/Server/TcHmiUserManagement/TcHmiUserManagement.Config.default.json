@@ -1,0 +1,22 @@
+{
+    "USERS": {
+        "__SystemAdministrator": {
+            "ALGORITHM": 0,
+            "ENABLED": false,
+            "PASSWORD": "",
+            "SALT": ""
+        },
+        "__SystemGuest": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "PASSWORD": "",
+            "SALT": ""
+        },
+        "__SystemUser": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "PASSWORD": "",
+            "SALT": ""
+        }
+    }
+}
