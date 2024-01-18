@@ -12,3 +12,7 @@ The project has a project [ExampleControl](ExampleControl) with the implementati
 
 See Beckhoff Information System for more information about controls:
 https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/8971583499.html?id=6326028457938979673
+
+# Controls unit tests
+
+The Visual Studio solution contains [another project](ControlTest) with an example for creating unit tests with controls.
