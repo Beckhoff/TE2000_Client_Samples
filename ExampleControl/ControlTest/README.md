@@ -32,4 +32,6 @@ This is the url you need to open with your chrome or firefox.
 - [spec/support/flags.js](spec/support/flags.js) disables Framework initialisation and Framework logging.
 - [helpers/mockupHelper.js](helpers/mockupHelper.js) contains code to instantiate controls outside the running framework environment.
 
-- [spec/ColorChange/ColorChange.ts](spec/ColorChange/ColorChange.ts) contains the control test itself.
+The framework control project itself has the code under test:
+
+- [../ExampleControl/ColorChange/ColorChange.ts](../ExampleControl/ColorChange/ColorChange.ts) contains the control test itself.
