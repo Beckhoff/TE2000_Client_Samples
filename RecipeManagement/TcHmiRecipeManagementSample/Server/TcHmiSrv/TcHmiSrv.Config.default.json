@@ -1,12 +1,13 @@
 {
-    "AUTHCLIENTCERTIFICATE": false,
+    "ALLOW_REMOTE_ADMIN": true,
     "AUTO_LOGINUSER": "",
     "AUTO_LOGOFF": "P30D",
+    "BASE_HMI_URL": "",
     "CACHEENABLED": true,
     "CACHEMAXAGE": "P30D",
     "CACHEMAXENTRYSIZE": 1048576,
     "CACHEMAXSIZE": 2097152,
-    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURxekNDQXBPZ0F3SUJBZ0lKQU9pcWpyWExLZ2NtTUEwR0NTcUdTSWIzRFFFQkN3VUFNRWd4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SERBYUJnTlZCQU1NRTFkcApiamRVU0RZMFltbDBMVkJEWDNKdmIzUXdIaGNOTVRnd09USTBNVGMwTmpVNVdoY05NVGt3T1RJME1UYzBOalU1CldqQkRNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1SY3cKRlFZRFZRUUREQTVYYVc0M1ZFZzJOR0pwZEMxUVF6Q0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQwpBUW9DZ2dFQkFOT1U2SVMrMzNJSWQyRmUyV3pPazZWaUhiaU9COTNBWTFWcWxnOHZydzBKNTNPVDFZZ2tsYnZKCkZCMDNFckMrS0V5b3Bmb2pjcEtuWmgwQ1ZlUldwcnExdHF6TUoxSGFFUTVZL08yS2l6L0l0aGMvcERKQTRQejgKOHRhdEZPSTYyK2xOYXdiZFFDQzNLaWxyZFh2VFRVcmdUaHc5SkdQeS9kN2o5S2d2Ti9HRzRTb2cxeXMvSWhTSApGTi9Db1ZKYjFGWUhISW5FbGJjTnJDeWlZM2dhZlB2T0RWWEdGenEyd01tU3Z5ZTkrK3FON05obUJEV1NiV3JSCmQrUTZacE1qbW1XNzZ1TW1IZXVHTVEwNnJIc3pPOGw0M1BuTEZmSzhpLzVVRmkyQW9aVW9IbnNoM1ZOZXdsZlMKM1Q1aGVkaXlrbllHMTVqaFRBbEFQcDdZRnR3dVptY0NBd0VBQWFPQm5EQ0JtVEJxQmdOVkhSRUVZekJoZ2dscwpiMk5oYkdodmMzU0hCSDhBQUFHSEVBQUFBQUFBQUFBQUFBQUFBQUFBQUFHQ0RsZHBiamRVU0RZMFltbDBMVkJECmdnNVhhVzQzVkVnMk5HSnBkQzFRUTRjRUNnQUNENGNRQUFBQUFBQUFBQUFBQUFBQUFBQUFBWWNFZndBQUFUQWQKQmdOVkhRNEVGZ1FVSVZSdkNPZ1d2eDNlN0QvMlZ0akU4em9pdWNFd0RBWURWUjBUQVFIL0JBSXdBREFOQmdrcQpoa2lHOXcwQkFRc0ZBQU9DQVFFQVJReEtWL1pHSTF4bDdXMzFyUU56Vk1YSFRnMEtWVmoyTU4zSk8rcEZXTmdpCnYwU21iUlJIRVF0NllXUmdOTFowWDRUbS9lME1MMDU3dUxta0V4a0NwYStGOU96amt2TWxMblJLN2x2c3R4ak4KeGh3aUcxa3VvWVVCcWlzeEtqNVFqRlppcDJ2Nm9IZWpicWoycXMwZ3FsNHhoUVNrVi9QL1BaN2hXVHlkd0l3bQpmSjdkcHY1YnFja0o5c1lITGNYc3kwbHVGbGFyNWpqcGM0REJ3Y29EZm5KaklNSnVxb3hPZi9YVHZpYm9yaTQwCkhkeEVPeEF6cEFzcU9OdVlLME5DOERDeWhIb3hITnBGaXJjUmt3QTUrK3lUSVhkY0ZteGdTeXFDSGhDbzB2U3QKQTAyWDhZZzAxRlVuSmEyWStybHZJbVg3WG5PQTRPWWZQMCtKMzZPVGlBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRHN6Q0NBcHVnQXdJQkFnSUpBTDlRazZKcFVhMHpNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1FZ3hDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhIREFhQmdOVkJBTU1FMWRwCmJqZFVTRFkwWW1sMExWQkRYM0p2YjNRd0hoY05NVGd3T1RJME1UYzBOalU1V2hjTk1Ua3dPVEkwTVRjME5qVTUKV2pCSU1Rc3dDUVlEVlFRR0V3SkVSVEViTUJrR0ExVUVDZ3dTVkhkcGJrTkJWQ0JJVFVrZ1UyVnlkbVZ5TVJ3dwpHZ1lEVlFRRERCTlhhVzQzVkVnMk5HSnBkQzFRUTE5eWIyOTBNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DCkFROEFNSUlCQ2dLQ0FRRUE1aVRhV2xmc2FrSEdhc0FwTDdHNEtBVGxpZnlkN0JNcit5SkxmUmtrTkJrMGM1Y1QKWWZkY0xkT0lmR1h3b0EzRzNRLy9ZUjcyMnpmYjFKT203dGg1b1lQU3QvVlhiTjFqWXpOTWdYTHhlMzcweGgvdgpCV3ZqWXpjT3d3SHU0bEVWR0FPVFNTMDkxLzVrREYwSnZtdStrZmNkU0tIb2RRQ2NtTWJ5MU5CeExRVFBBSFVsCkVXVzE5bnZ2Q3NhYWtrRExETGpYaGxtYjM5KzF1ZWdSTENZb0JPTWdLdTM5SVNGTEY1RHllQTVpQy8zdEU3emMKd3RtbUlzamtsMzBVNkJzWWc5K2VpTGlCQS8wQ0R6ajB2ZGxWZlQ3RCtCRVBUYmlUTHNTbmM4SUpkTlpUQjdRaQpCd1Fpb1QxODZtYnh4cUZML0pMdDFISkQzMitRVGR1STJLUGc3UUlEQVFBQm80R2ZNSUdjTUdvR0ExVWRFUVJqCk1HR0NDV3h2WTJGc2FHOXpkSWNFZndBQUFZY1FBQUFBQUFBQUFBQUFBQUFBQUFBQUFZSU9WMmx1TjFSSU5qUmkKYVhRdFVFT0NEbGRwYmpkVVNEWTBZbWwwTFZCRGh3UUtBQUlQaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCaHdSLwpBQUFCTUIwR0ExVWREZ1FXQkJSV0NtMkpsbHJoYVoxcDV0OWdqU1BZdHNFTENEQVBCZ05WSFJNQkFmOEVCVEFECkFRSC9NQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUJiZXpNN0oyV2s1bHRPTVVNWXRRcW5UWWxPRGJReGM2ZVQKNHRtUjRwN1Bzd3pjWVBtSnk2WldxOG9rb3plR3lRMmxqWFdWZFJvQjR0anBlQW1GQk9GNFVuUHJQb2l2aHhEVApLUFhSSGpjSjlTQWdjZVBweE5zZktTU1p0ZncvKys2VlVvcFZ6YnJTK3ptK0JuVlZiRmxIeHZtcHJ3UWJQRFdJCi9OZlR0Z0gyazMyT1BiUm53QUZTS3hBMlJSS2R0TmZMOURCUmhXVVFzZjJjNDhEZ2JaNjdIREViT0FDZkg1cVkKeGZwWmhBdFJHb3R1b0IwSWYrWVhqZE5qK3FnYTJDcmNwd0ZXamFvdEJvYXdkOVdOWHlHNkJpUG9nVURNY1l2dAo0VktOZDRyVXhsNWpQUlpyRkFwUmczOW5LRWFnRDhKNVFKbVV2YUllLzc1UUlTVnRyQUN4Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR3ekNDQXF1Z0F3SUJBZ0lKQU5ZTDJCNkpWZUxZTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVodgpiR2RsY2tvdFRrSXdNbDl5YjI5ME1CNFhEVEkwTVRFd05qRXpNREUwTVZvWERUSTFNVEV3TmpFek1ERTBNVm93ClFURUxNQWtHQTFVRUJoTUNSRVV4R3pBWkJnTlZCQW9NRWxSM2FXNURRVlFnU0UxSklGTmxjblpsY2pFVk1CTUcKQTFVRUF3d01TRzlzWjJWeVNpMU9RakF5TUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQwpBUUVBM0pJamZYWnBHWmRZSlYxNSttZy93Zkxpcm9aRkdnblBGTE9LWk5EdjRQLy9EVWtiaFYwNUt6ZmNSVTdYCmlUMEdjVks4M3FiYzd6TkhEcHh1RGlFdU1QRlh5Z2wwWTBUSVlKOTgvV1hJeWxYMllPaFVWblRkcDVMUHgycVUKNzJyQUM4K1RBR0NrRVowdnVxaGhjWTN1T3ljOUI1Q3BKOHZlaG9NKzBETGJSQXZERFhnTWkwYmtUSWlxZGVRMwpJOUVGaExKL3RBaDZpNXlNRjNuc2t3NVNsdE1pRmFrbzB6Q1ZjVWx2NWZIazZNTVkwRk44c01pWHJ2bTQxbHM1CkxOUkR3ZEl0WlJIeHhBbUpuSVhIVGIvNVBaUFZ3MktuUmVycE13TW1IaGltY0dsQU9kY3lxRTFvd1ppZ0hXUUkKKzVlZ0xERzlocnRwVThLR25MZUpsaHRhOFFJREFRQUJvNEc0TUlHMU1JR0ZCZ05WSFJFRWZqQjhnZ2xzYjJOaApiR2h2YzNTSEJIOEFBQUdIRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUdDREVodmJHZGxja290VGtJd01vSVpTRzlzCloyVnlTaTFPUWpBeUxtSmxZMnRvYjJabUxtTnZiWWNFckJFODZJY0V3S2c0QVljUS9vQUFBQUFBQUFDL2NrVk8Ka0RkZis0Y1Evb0FBQUFBQUFBRFN4M000bjd2NWRUQWRCZ05WSFE0RUZnUVVjUEZOd2VsNnNBb0xEbTlDY0pTdApKOU1xU0drd0RBWURWUjBUQVFIL0JBSXdBREFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBZ3p6K0Y4QkZ3Z3ZiCkNzRVlleEgrWTNjSE0rS08yd05GamQwaTZtTTg2dHZCd1N0eGxxNlNFUzJ3Q1h0cXN0Tk5DYjNlNlZMVzNLWG8KL3QvQkovcm5RdDROaENHQXBRSW00YkZYNjBTejZXRU9BcVR1RXVySDEzd081Y25lSnl6a3hZR1Y2U2l1R01vLwpnNVpDVml5UEVZeEZYcjdvSk5RN3lQWHNpSVZ0UEtKZVQvL0N6N3gyalZaTk16YW9MZ3ozc1VrTkxWZFFQY3NTCjNQc0ZZb0JCb1dHdkNhY29jSENjdXB6bmwxNjU0bXZyNHlUVHVhZ2pwaHpNT0I1VEFmdEUyM3VqZUZFZUdkTVIKamxGZGswNnFHKzdMNjBTRjc4bnAxVnN3QW1UUXYzakcwU1FhOTUzbjJBN2JmRVJiTG55djFEai9KeEF1anRJcQo3c3d3TXI0SGVRPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRHl6Q0NBck9nQXdJQkFnSUpBSUF3V3hDTzVEV05NQTBHQ1NxR1NJYjNEUUVCQ3dVQU1FWXhDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhHakFZQmdOVkJBTU1FVWh2CmJHZGxja290VGtJd01sOXliMjkwTUI0WERUSTBNVEV3TmpFek1ERTBNRm9YRFRJMU1URXdOakV6TURFME1Gb3cKUmpFTE1Ba0dBMVVFQmhNQ1JFVXhHekFaQmdOVkJBb01FbFIzYVc1RFFWUWdTRTFKSUZObGNuWmxjakVhTUJnRwpBMVVFQXd3UlNHOXNaMlZ5U2kxT1FqQXlYM0p2YjNRd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3CmdnRUtBb0lCQVFEUHVabXFTS3VHeXhBSDY2QzRDUkhpMlIyYjh6SWlUbFU1cFlsczhuRnRPbU40L2hkM2VlMWgKWVl0dU51QnQvV3U2ZlZENTFJUzk5WW9YZUNmakR3dkhxQ1FJTlVWdzY2V1hBN0tlMlIyVnc1TjhPVllGbHNXUQp4RWNNcmNLbUpvblBaTEFGUnB1eXQ5bk1UL3ZVZmNGeVNPZ3YvektoNWdzdE9qWEtSWnVleUdPMWlMdHVKbEdOCkxBbER6bXBjZHJMQ0twMWJkbGxmY0ozS2RHQysyelJ6V0JxYVpjWHZGSUpHWWhOOEphMHREU2doVXg2NmtEQy8KakloMmZybFZNTkRESnlkQ1k2K2Nta0E1ZlEwNGFxYTlEc1o2TE9yUkt4VSt5RjhYR1RlVUZBTGNwa1g4Nm9NWApreHJURld6SzZhMUUwOHlJMjMvMUIrNmRydENITUcyTkFnTUJBQUdqZ2Jzd2diZ3dnWVVHQTFVZEVRUitNSHlDCkNXeHZZMkZzYUc5emRJY0Vmd0FBQVljUUFBQUFBQUFBQUFBQUFBQUFBQUFBQVlJTVNHOXNaMlZ5U2kxT1FqQXkKZ2hsSWIyeG5aWEpLTFU1Q01ESXVZbVZqYTJodlptWXVZMjl0aHdTc0VUem9od1RBcURnQmh4RCtnQUFBQUFBQQpBTDl5UlU2UU4xLzdoeEQrZ0FBQUFBQUFBTkxIY3ppZnUvbDFNQjBHQTFVZERnUVdCQlNJVVNqdWErUWNlRDJkCnhieVc5eVRZc1k1ekdEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQWMKRG5rK3dZVkswZFgvdk1QZjBRejd2QnFWWks4bVBjaU9OekFyaGFhcy9sdzV3RmVhbWQ2VHNSZkhUVmNaTWcwcQo5czJzZU1hN3dSNEl4RHIwajhHV0gxSllYU04zOTRaVFVRNis2VnNLS0NzcWZRMGlUUGdXMlBFTWFRS1RwbEQvCnd6UUlOaWczN1F3QWtudmpwZFBTQ2tGK1p5bU1RSERHem01TEV0cCszSDZYYUV2M2dsK05SL0ozdHR3SG1WdWsKdENJcHUwZDFadm93VU5CckkyL2RwTFR5OW5CUE5YNWpRNDJ0aTF4ZVJTeUNiZk1NSTZyelMvYllYdSt1Qyt5NApJc0hCM3cwVFBRV0hOMFRGVys4UFRmSTJZQit4aDVMSzRRTDZDZVlONDhwcHFJM2MwejUrdzBhR2pmdzRZWk1HClJudUpwSVdCRDNxbndnR3l2cW5nCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
     "CERTIFICATEEXPIRATION": "P365D",
     "CHECKSUMENABLED": true,
     "CHUNKSIZE": 1048576,
@@ -17,6 +18,7 @@
         "remote"
     ],
     "COOKIEEXPIRATIONDATE": "P30D",
+    "CUSTOM_CSS": "",
     "DEFAULTAUTHEXTENSION": "TcHmiUserManagement",
     "DEFAULTDOCUMENT": [
         "Default.html"
@@ -25,13 +27,13 @@
     "DEFAULTLOCALE": "en",
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
-    "DEFAULTUSERGROUP": "__SystemUsers",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "TcHmiSrv": {}
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DIAGNOSTICS_DOMAINS": [],
     "DISABLED_CONFIGURATION_HINTS": [],
     "DISCOVERY": 2,
-    "ENABLE_SERVER_UPDATE": true,
     "ENDPOINTS": [
         "http://127.0.0.1:13002",
         "http://127.0.0.1:3002"
@@ -40,29 +42,53 @@
     "EXTENSIONS": {
         "ADS": {
             "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14",
+                "previousVersions": [
+                    "1.12"
+                ]
+            },
             "NAME": "TcHmiAds",
             "PATH": "TcHmiAds\\",
-            "PROCESSID": -1,
-            "REQUIRED": false,
-            "STARTUPTYPE": 1
-        },
-        "TcHmiLua": {
-            "ENABLED": true,
-            "NAME": "TcHmiLua",
-            "PATH": "TcHmiLua\\",
             "PROCESSID": -1,
             "REQUIRED": true,
             "STARTUPTYPE": 1
         },
+        "TcHmiLua": {
+            "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14",
+                "previousVersions": [
+                    "1.12"
+                ]
+            },
+            "NAME": "TcHmiLua",
+            "PATH": "TcHmiLua\\",
+            "PROCESSID": -1,
+            "REQUIRED": true,
+            "STARTUPTYPE": 0
+        },
         "TcHmiRecipeManagement": {
             "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14",
+                "previousVersions": [
+                    "1.12"
+                ]
+            },
             "NAME": "TcHmiRecipeManagement",
-            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.RecipeManagement.12.756.1\\runtimes\\win-x64\\native\\",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.RecipeManagement.22.0.6063\\runtimes\\win-x64\\native\\",
             "REQUIRED": false,
             "STARTUPTYPE": 1
         },
         "TcHmiSqliteLogger": {
             "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14",
+                "previousVersions": [
+                    "1.12"
+                ]
+            },
             "NAME": "TcHmiSqliteLogger",
             "PATH": "TcHmiSqliteLogger\\",
             "PROCESSID": -1,
@@ -71,6 +97,12 @@
         },
         "TcHmiUserManagement": {
             "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14",
+                "previousVersions": [
+                    "1.12"
+                ]
+            },
             "NAME": "TcHmiUserManagement",
             "PATH": "TcHmiUserManagement\\",
             "PROCESSID": -1,
@@ -79,355 +111,168 @@
         }
     },
     "FILES": {},
+    "FILESREGEX": [
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self'\r\n Content-Type: text/html",
+            "REGEX": ".*\\.(xml|htm|html|shtml)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: text/plain",
+            "REGEX": ".*\\.(txt|view|content|usercontrol)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: text/xml",
+            "REGEX": ".*\\.(config|xml)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: text/javascript",
+            "REGEX": ".*\\.(js|mjs|jsonp)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: image/svg+xml",
+            "REGEX": ".*\\.(svg)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: application/json",
+            "REGEX": ".*\\.(json|map|localization|theme)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/pdf",
+            "REGEX": ".*\\.(pdf)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: image/gif",
+            "REGEX": ".*\\.(gif)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: image/jpeg",
+            "REGEX": ".*\\.(jpeg|jpg)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: image/png",
+            "REGEX": ".*\\.(png)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: image/bmp",
+            "REGEX": ".*\\.(bmp)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: image/x-icon",
+            "REGEX": ".*\\.(ico)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: text/css",
+            "REGEX": ".*\\.(css)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/octet-stream",
+            "REGEX": ".*\\.(bin|dll|exe|img|iso)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/java-archive",
+            "REGEX": ".*\\.(ear|jar|war)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: vnd.ms-fontobject",
+            "REGEX": ".*\\.(eot)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: application/font-sfnt",
+            "REGEX": ".*\\.(ttf|otf)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/font-woff",
+            "REGEX": ".*\\.(woff)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/font-woff2",
+            "REGEX": ".*\\.(woff2)$"
+        },
+        {
+            "FILESHTTPHEADERS": "Content-Type: application/zip",
+            "REGEX": ".*\\.(zip)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: video/mp4",
+            "REGEX": ".*\\.(mp4)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: audio/mpeg",
+            "REGEX": ".*\\.(mp3)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: video/webm",
+            "REGEX": ".*\\.(webm)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: video/ogg",
+            "REGEX": ".*\\.(ogg)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: video/ogg",
+            "REGEX": ".*\\.(ogv)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: application/x-pem-file",
+            "REGEX": ".*\\.(pem)$"
+        },
+        {
+            "ENABLE_CACHE": false,
+            "ENABLE_CHUNKING": false,
+            "FILESHTTPHEADERS": "Content-Type: application/x-x509-ca-cert",
+            "REGEX": ".*\\.(pem)$"
+        }
+    ],
     "FLOODPROTECTION": 500,
+    "FLOODPROTECTION_LOG_INTERVAL": "PT1M",
     "GLOBALHTTPHEADERS": "{LASTMODIFIED}",
     "GZIPENABLED": true,
     "GZIPMINSIZE": 800,
+    "HTTP_FLOODPROTECTION": 10,
     "INITTIMEOUT": "PT10S",
     "KEEP_ALIVE": "PT40S",
-    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRRFRsT2lFdnQ5eUNIZGgKWHRsc3pwT2xZaDI0amdmZHdHTlZhcFlQTDY4TkNlZHprOVdJSkpXN3lSUWROeEt3dmloTXFLWDZJM0tTcDJZZApBbFhrVnFhNnRiYXN6Q2RSMmhFT1dQenRpb3MveUxZWFA2UXlRT0Q4L1BMV3JSVGlPdHZwVFdzRzNVQWd0eW9wCmEzVjcwMDFLNEU0Y1BTUmo4djNlNC9Tb0x6ZnhodUVxSU5jclB5SVVoeFRmd3FGU1c5UldCeHlKeEpXM0Rhd3MKb21ONEduejd6ZzFWeGhjNnRzREprcjhudmZ2cWplellaZ1Exa20xcTBYZmtPbWFUSTVwbHUrcmpKaDNyaGpFTgpPcXg3TXp2SmVOejV5eFh5dkl2K1ZCWXRnS0dWS0I1N0lkMVRYc0pYMHQwK1lYbllzcEoyQnRlWTRVd0pRRDZlCjJCYmNMbVpuQWdNQkFBRUNnZ0VBSkQreXhtdGRKTkJHZzZ3WVhBZllTOUZQZmpyM0pncTcrZnBVMHkwOE5HT3AKLzZjb1FqYmlZRlhHMkdxRERUekc4cnRDRkdUV1VFSFZ3TXFScEprajM0RWFWdWh6SkJiVUxUMFp1Q2l3U3JFOApZU2RLSGtIM1NlQ2NTaU5GSEswdzEvdW5obm1KYnhGeWE3NDVWb21SQ0c3OWN1RVd4dmp1ZmExWVVTZ2wwWDhXCmZXTkJBYXNpU2VOVTBHVk1aekcxbnFiaEluc2thOWpjQlAvVFlQVHhpZ2tya1VHNGovV2R4WDZIZlN6b3NyL3AKcVZpSjJ2MkNlSEgwU3lTclc0dUJNT0g5bWZOMjI4Q0tUVnNUS1RoMDlRNE5MR3kzMGNkSmc4MTRqQUFEc2xhSwp3SzhnOEluTExrWlhTLzRJNU9GK3BaN1RKQ0lFcWtUSUx3Vm5oSktRZ1FLQmdRRG81TDdDNzJnWnlWZVdXemp5Cjd4cjNCUEFiZkk1WmZiMXRjR1g0WUpacGVKdk5SNHg0Ylo4N2pqYyt1eHR1OFBhcUk1VVlxVzRobEMwNStKVWEKUGNlV1c0RS94QXRldlQrZTFabmh5dDVjZVl0RFRnbDZ2R05zQ3ZTRnc3M0ViSi9XY1Z3cEpTc1F5ZjEzckNOcQp1ZERFQ3hlV1JQSFkxTWtYSm5XbzhqQytVUUtCZ1FEb2t0MGxMUS94U2JCN1BhQjJqODFpMDM3TGs3bjBNczhiCnJBRitmKzdvQ0hoQmRaMzluSVlFSExVSngzWXZPb01CTWhOVkU4V0JhM2loaytPSCtVWFdWdktRTi9wYUpmMTUKQUxHbTduS2xMdGhNdTMyb0E4Q1A5em9TblM5OW5pRktoS3J4N2t5WkJQOSszeTl5WHgrK0JaUERmcTZXbFkraApsNkZNdzEyVE53S0JnSEhDS2h2MTdSZUxiYWtYN2YxY0pnTzYrYjJ6WGFVQThtSmVvTEJ1SFlwdlMwcytRN01mCmVNUVNkNUhBdTJtNWNnTXhWa2F4bkFYeTV4U0dBKzdKZHBCUEtoY0huN1lySXNSbStiOTg1Sml2RmdOT1B2c2cKd2orb0trQ2NtRGsyQmUwdGVpTHU4TlpHay9TOHRLQVJHNVJuQnFKMEV0NGpNZ2FJMXJncmRQdkJBb0dBZEdxWApZZldGaG0weGR1OHBORS9WS2tQZHN6K1dGR09lZ2laK2RQaksrTURNbVUrcnJ2ZzdxVEZKZWNTckp3YnQ3cHBIClRRM2hqbC9pZVZiU3pReDg1Y2FPRXB6Q3AzOWV1c1FiS1Frd3YvaUw4eFRpMkVoUWluL2hSTklEcEtpVDEzNUQKSjJqMlZKNUkyaFFUNXZjd3AyaVpSNEZSR1RWeU9SdnlkTDlTUnM4Q2dZQUF2amFPOW9tckQ0cTZUbW0vL3BzaApFNlgwa3hvVjNNNlZUTmRLN2JoV3QvQUV4dmliWDdMVzEyTHlCMDFvNXVOOWtPNHZQVS9YcHhTL2dhbmgxWlB5CkJKOHNKZndqUnIxcHRpMzhsY090aXI3QkZxblJ2NzEwUjFkaC91aE8yQ3BhU0hvM3BjU0s3WjJLRUhXMUJHMFYKdnBYREErQ1VTNHlER0pFQS84bENIZz09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRRGNraU45ZG1rWmwxZ2wKWFhuNmFEL0I4dUt1aGtVYUNjOFVzNHBrME8vZy8vOE5TUnVGWFRrck45eEZUdGVKUFFaeFVyemVwdHp2TTBjTwpuRzRPSVM0dzhWZktDWFJqUk1oZ24zejlaY2pLVmZaZzZGUldkTjJua3MvSGFwVHZhc0FMejVNQVlLUVJuUys2CnFHRnhqZTQ3SnowSGtLa255OTZHZ3o3UU10dEVDOE1OZUF5TFJ1Uk1pS3AxNURjajBRV0VzbiswQ0hxTG5Jd1gKZWV5VERsS1cweUlWcVNqVE1KVnhTVy9sOGVUb3d4alFVM3l3eUpldStialdXemtzMUVQQjBpMWxFZkhFQ1ltYwpoY2ROdi9rOWs5WERZcWRGNnVrekF5WWVHS1p3YVVBNTF6S29UV2pCbUtBZFpBajdsNkFzTWIyR3UybFR3b2FjCnQ0bVdHMXJ4QWdNQkFBRUNnZ0VBQ2RpRHpvdDgvMTJHMjZ0MlJpNmw4cHBOQ0VBcDhLZ0c3eDdnNVlWV2E5dFUKTHl1TlY3RHFCc3RESVJ5TVE2TkR6aHV2ZEJzMmlmNlJPYTVURXZ6a0F3bkc0dGZLQ0U0RW5zYmRHQWVWaEszOQpKZVZyc2F5YzkxTU1STlBMQ3Z2ZmVqZDladkIrdjdnelE2TUFCSWNJSHhVRGo2Vk9DUWw3NlAwTitQMElLM0RyClk4amxsODVscXl4c00zcEN5RUVia2M4VE9aQzE2YVBWQkp5QUFKM1p4S3pJcjRkd2xRYUliOWRXR0x6bDYrUDIKQnF4bXlXSzFGZEdLK3F4S0hQQmFONGdmMTRhSEFVNUVqekl2aVVtMkZCR2gzMk1GajV2Nm9XYVNnMm0wWHA5TQpGdUpHSDZJUElSZWNiS0VyaGtjYTlhOGhaUmJZc1c1UHJUYVRQOTVyOVFLQmdRRDZodXdTLzdCR3ZEZkpFMUVYCjlENUMzLzdCTnprOUZiTjdVTWpDQUN4b2V2U1N2TmhQOCtyUVlqUmpIZ3FzUHZTUk4zVDRvazJFWXk4NFNxN0IKQjZZV0NhNkJ5Rm5sZmFHSUNHSUs3aDNzQlVRV0lCMDlBdGVERXduTkFjdzlqczV2eTZVVm0zT3pHeVNsd1RqaQpSL0VudXlaOXlISXdwUzhETFZrTzNPVWdEUUtCZ1FEaFk2K1VhVFNia3ZLakVxYzU0NmxoMkF6R0x1Nm9YNEl6CkY0VUFOWkVzL0R6VmRUc0xSOE0vQ1JRYmU3RFNFOTdiZmVpQXJVdWNsS2NoT09OK295ckVSaDh3ZFo4R1o1ZU8KbzQ1aHJpRHpoTldPQ0h3RWxrc1I3L0ZyNWFibjE3azROdm1hbkpxeDNlWG40NkdoelZ2M0RJWllZVFRic2F6VQpub2xFYUVCSmRRS0JnUUNsVXNRWEJZUmVLWGJteWtpSmRqUmdEVkVnVUVFRmZueWlzL3pIaVRYRS9ON0l0clpJCmpMNDRKWlpNa2xhWXRETFFZYmhmR3p2c1VVZW43aURFWVRmSTh6cWxpb0ZJWUU5b1paL05kclZvTzFGakNHNUQKQk0wVFFrMEZiRnBMaFNIVnhKMThWTWxWT0dSR3ZldTc1NTNNaWtRc1hVcDlyNFFHcExaUWlKVHJRUUtCZ0VLLwo5QkxlNlc2ZG9YQThLUHhTK1NuNkF5WjZaY0hGcjFpVVFaWmpSdUJzdjFOMFNZMDRycEV2amgzcGp0OVlkU3JKCjZoNlp0QWZtV216VFhVUjI3RVorZ2VRbklYYVRIV1puOTlYajdPeFJ6YkVud0JyWHE5bmZGcitlbnNTUXRkRDUKTHdqa0VraFU4QzZ4MG4rSnd3K3lUT05GdnBMRjF1cU5IUmYrUy9PMUFvR0JBTDRhU3NjQStXOWM4QlVzVWdCTQplS3krNWxYQnBoUUVOZ3Z3Slg0b3h5T2dXY09ZUkNrZHl1TG5GU01EVUh1ZFVqUHA0ZUZCdllQNTE4bHVBcVIwCjZRV3NZQzdvOWx4bUUrbTR4MEl1a29KZFFLZy9xL3QrcEVzUmo5bVhjc081bUxTYkhDWHhVSG1RQzB6cUVpUm8KcWpIcUUwMlNUQTNiVGphR0FuU2hVZ0t5Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "KEYPASSWORD": "",
-    "LOCKOUT_PROTECTION_CLIENT_CERTIFICATE": true,
     "MAXCONNECTIONSPERCLIENT": 32,
     "MAXHTTPHEADERSIZE": 8192,
     "MAXREQUESTSIZE": 1048576,
     "MAXSESSIONS": 128,
-    "MIME": {
-        "bin": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/octet-stream"
-        },
-        "bmp": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/bmp"
-        },
-        "cer": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/x-x509-ca-cert"
-        },
-        "config": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/xml"
-        },
-        "content": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/plain"
-        },
-        "css": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/css"
-        },
-        "dll": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/octet-stream"
-        },
-        "ear": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/java-archive"
-        },
-        "eot": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "vnd.ms-fontobject"
-        },
-        "exe": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/octet-stream"
-        },
-        "gif": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/gif"
-        },
-        "htm": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/html"
-        },
-        "html": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/html"
-        },
-        "ico": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/x-icon"
-        },
-        "img": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/octet-stream"
-        },
-        "iso": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/octet-stream"
-        },
-        "jar": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/java-archive"
-        },
-        "jpeg": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/jpeg"
-        },
-        "jpg": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/jpeg"
-        },
-        "js": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/javascript"
-        },
-        "json": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/json"
-        },
-        "jsonp": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/javascript"
-        },
-        "localization": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/json"
-        },
-        "lp": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "no-store",
-            "MIME_TYPE": "application/lp"
-        },
-        "lua": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "no-store",
-            "MIME_TYPE": "application/lua"
-        },
-        "map": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/json"
-        },
-        "mp3": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "audio/mpeg"
-        },
-        "mp4": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "video/mp4"
-        },
-        "ogg": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "video/ogg"
-        },
-        "ogv": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "video/ogg"
-        },
-        "otf": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/font-sfnt"
-        },
-        "pdf": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/pdf"
-        },
-        "pem": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/x-pem-file"
-        },
-        "png": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/png"
-        },
-        "shtml": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/html"
-        },
-        "svg": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "image/svg+xml"
-        },
-        "theme": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/json"
-        },
-        "ttf": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/font-sfnt"
-        },
-        "txt": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/plain"
-        },
-        "usercontrol": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/plain"
-        },
-        "view": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/plain"
-        },
-        "war": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/java-archive"
-        },
-        "webm": {
-            "MIME_ENABLE_CACHE": false,
-            "MIME_ENABLE_CHUNKING": false,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "video/webm"
-        },
-        "woff": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/font-woff"
-        },
-        "xml": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": true,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "text/xml"
-        },
-        "zip": {
-            "MIME_ENABLE_CACHE": true,
-            "MIME_ENABLE_CHUNKING": true,
-            "MIME_ENABLE_GZIP": false,
-            "MIME_HTTP_HEADERS": "",
-            "MIME_TYPE": "application/zip"
-        }
-    },
     "PERMESSAGEDEFLATEENABLED": true,
     "PROJECTNAME": "TcHmiRecipeManagementSample",
     "PROJECTVERSION": "1.0.0.0",
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
     "REQUIREAUTH": 0,
-    "REVALIDATION": true,
+    "REQUIRE_CLIENT_CERTIFICATE": false,
     "SAMESITE_ATTRIBUTE": 2,
-    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURzekNDQXB1Z0F3SUJBZ0lKQUw5UWs2SnBVYTB6TUEwR0NTcUdTSWIzRFFFQkN3VUFNRWd4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SERBYUJnTlZCQU1NRTFkcApiamRVU0RZMFltbDBMVkJEWDNKdmIzUXdIaGNOTVRnd09USTBNVGMwTmpVNVdoY05NVGt3T1RJME1UYzBOalU1CldqQklNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1Sd3cKR2dZRFZRUUREQk5YYVc0M1ZFZzJOR0pwZEMxUVExOXliMjkwTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQwpBUThBTUlJQkNnS0NBUUVBNWlUYVdsZnNha0hHYXNBcEw3RzRLQVRsaWZ5ZDdCTXIreUpMZlJra05CazBjNWNUCllmZGNMZE9JZkdYd29BM0czUS8vWVI3MjJ6ZmIxSk9tN3RoNW9ZUFN0L1ZYYk4xall6Tk1nWEx4ZTM3MHhoL3YKQld2all6Y093d0h1NGxFVkdBT1RTUzA5MS81a0RGMEp2bXUra2ZjZFNLSG9kUUNjbU1ieTFOQnhMUVRQQUhVbApFV1cxOW52dkNzYWFra0RMRExqWGhsbWIzOSsxdWVnUkxDWW9CT01nS3UzOUlTRkxGNUR5ZUE1aUMvM3RFN3pjCnd0bW1Jc2prbDMwVTZCc1lnOStlaUxpQkEvMENEemowdmRsVmZUN0QrQkVQVGJpVExzU25jOElKZE5aVEI3UWkKQndRaW9UMTg2bWJ4eHFGTC9KTHQxSEpEMzIrUVRkdUkyS1BnN1FJREFRQUJvNEdmTUlHY01Hb0dBMVVkRVFSagpNR0dDQ1d4dlkyRnNhRzl6ZEljRWZ3QUFBWWNRQUFBQUFBQUFBQUFBQUFBQUFBQUFBWUlPVjJsdU4xUklOalJpCmFYUXRVRU9DRGxkcGJqZFVTRFkwWW1sMExWQkRod1FLQUFJUGh4QUFBQUFBQUFBQUFBQUFBQUFBQUFBQmh3Ui8KQUFBQk1CMEdBMVVkRGdRV0JCUldDbTJKbGxyaGFaMXA1dDlnalNQWXRzRUxDREFQQmdOVkhSTUJBZjhFQlRBRApBUUgvTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFCYmV6TTdKMldrNWx0T01VTVl0UXFuVFlsT0RiUXhjNmVUCjR0bVI0cDdQc3d6Y1lQbUp5NlpXcThva296ZUd5UTJsalhXVmRSb0I0dGpwZUFtRkJPRjRVblByUG9pdmh4RFQKS1BYUkhqY0o5U0FnY2VQcHhOc2ZLU1NadGZ3LysrNlZVb3BWemJyUyt6bStCblZWYkZsSHh2bXByd1FiUERXSQovTmZUdGdIMmszMk9QYlJud0FGU0t4QTJSUktkdE5mTDlEQlJoV1VRc2YyYzQ4RGdiWjY3SERFYk9BQ2ZINXFZCnhmcFpoQXRSR290dW9CMElmK1lYamROaitxZ2EyQ3JjcHdGV2phb3RCb2F3ZDlXTlh5RzZCaVBvZ1VETWNZdnQKNFZLTmQ0clV4bDVqUFJackZBcFJnMzluS0VhZ0Q4SjVRSm1VdmFJZS83NVFJU1Z0ckFDeAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
-    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRRFRsT2lFdnQ5eUNIZGgKWHRsc3pwT2xZaDI0amdmZHdHTlZhcFlQTDY4TkNlZHprOVdJSkpXN3lSUWROeEt3dmloTXFLWDZJM0tTcDJZZApBbFhrVnFhNnRiYXN6Q2RSMmhFT1dQenRpb3MveUxZWFA2UXlRT0Q4L1BMV3JSVGlPdHZwVFdzRzNVQWd0eW9wCmEzVjcwMDFLNEU0Y1BTUmo4djNlNC9Tb0x6ZnhodUVxSU5jclB5SVVoeFRmd3FGU1c5UldCeHlKeEpXM0Rhd3MKb21ONEduejd6ZzFWeGhjNnRzREprcjhudmZ2cWplellaZ1Exa20xcTBYZmtPbWFUSTVwbHUrcmpKaDNyaGpFTgpPcXg3TXp2SmVOejV5eFh5dkl2K1ZCWXRnS0dWS0I1N0lkMVRYc0pYMHQwK1lYbllzcEoyQnRlWTRVd0pRRDZlCjJCYmNMbVpuQWdNQkFBRUNnZ0VBSkQreXhtdGRKTkJHZzZ3WVhBZllTOUZQZmpyM0pncTcrZnBVMHkwOE5HT3AKLzZjb1FqYmlZRlhHMkdxRERUekc4cnRDRkdUV1VFSFZ3TXFScEprajM0RWFWdWh6SkJiVUxUMFp1Q2l3U3JFOApZU2RLSGtIM1NlQ2NTaU5GSEswdzEvdW5obm1KYnhGeWE3NDVWb21SQ0c3OWN1RVd4dmp1ZmExWVVTZ2wwWDhXCmZXTkJBYXNpU2VOVTBHVk1aekcxbnFiaEluc2thOWpjQlAvVFlQVHhpZ2tya1VHNGovV2R4WDZIZlN6b3NyL3AKcVZpSjJ2MkNlSEgwU3lTclc0dUJNT0g5bWZOMjI4Q0tUVnNUS1RoMDlRNE5MR3kzMGNkSmc4MTRqQUFEc2xhSwp3SzhnOEluTExrWlhTLzRJNU9GK3BaN1RKQ0lFcWtUSUx3Vm5oSktRZ1FLQmdRRG81TDdDNzJnWnlWZVdXemp5Cjd4cjNCUEFiZkk1WmZiMXRjR1g0WUpacGVKdk5SNHg0Ylo4N2pqYyt1eHR1OFBhcUk1VVlxVzRobEMwNStKVWEKUGNlV1c0RS94QXRldlQrZTFabmh5dDVjZVl0RFRnbDZ2R05zQ3ZTRnc3M0ViSi9XY1Z3cEpTc1F5ZjEzckNOcQp1ZERFQ3hlV1JQSFkxTWtYSm5XbzhqQytVUUtCZ1FEb2t0MGxMUS94U2JCN1BhQjJqODFpMDM3TGs3bjBNczhiCnJBRitmKzdvQ0hoQmRaMzluSVlFSExVSngzWXZPb01CTWhOVkU4V0JhM2loaytPSCtVWFdWdktRTi9wYUpmMTUKQUxHbTduS2xMdGhNdTMyb0E4Q1A5em9TblM5OW5pRktoS3J4N2t5WkJQOSszeTl5WHgrK0JaUERmcTZXbFkraApsNkZNdzEyVE53S0JnSEhDS2h2MTdSZUxiYWtYN2YxY0pnTzYrYjJ6WGFVQThtSmVvTEJ1SFlwdlMwcytRN01mCmVNUVNkNUhBdTJtNWNnTXhWa2F4bkFYeTV4U0dBKzdKZHBCUEtoY0huN1lySXNSbStiOTg1Sml2RmdOT1B2c2cKd2orb0trQ2NtRGsyQmUwdGVpTHU4TlpHay9TOHRLQVJHNVJuQnFKMEV0NGpNZ2FJMXJncmRQdkJBb0dBZEdxWApZZldGaG0weGR1OHBORS9WS2tQZHN6K1dGR09lZ2laK2RQaksrTURNbVUrcnJ2ZzdxVEZKZWNTckp3YnQ3cHBIClRRM2hqbC9pZVZiU3pReDg1Y2FPRXB6Q3AzOWV1c1FiS1Frd3YvaUw4eFRpMkVoUWluL2hSTklEcEtpVDEzNUQKSjJqMlZKNUkyaFFUNXZjd3AyaVpSNEZSR1RWeU9SdnlkTDlTUnM4Q2dZQUF2amFPOW9tckQ0cTZUbW0vL3BzaApFNlgwa3hvVjNNNlZUTmRLN2JoV3QvQUV4dmliWDdMVzEyTHlCMDFvNXVOOWtPNHZQVS9YcHhTL2dhbmgxWlB5CkJKOHNKZndqUnIxcHRpMzhsY090aXI3QkZxblJ2NzEwUjFkaC91aE8yQ3BhU0hvM3BjU0s3WjJLRUhXMUJHMFYKdnBYREErQ1VTNHlER0pFQS84bENIZz09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR5ekNDQXJPZ0F3SUJBZ0lKQUlBd1d4Q081RFdOTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVodgpiR2RsY2tvdFRrSXdNbDl5YjI5ME1CNFhEVEkwTVRFd05qRXpNREUwTUZvWERUSTFNVEV3TmpFek1ERTBNRm93ClJqRUxNQWtHQTFVRUJoTUNSRVV4R3pBWkJnTlZCQW9NRWxSM2FXNURRVlFnU0UxSklGTmxjblpsY2pFYU1CZ0cKQTFVRUF3d1JTRzlzWjJWeVNpMU9RakF5WDNKdmIzUXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBdwpnZ0VLQW9JQkFRRFB1Wm1xU0t1R3l4QUg2NkM0Q1JIaTJSMmI4eklpVGxVNXBZbHM4bkZ0T21ONC9oZDNlZTFoCllZdHVOdUJ0L1d1NmZWRDUxSVM5OVlvWGVDZmpEd3ZIcUNRSU5VVnc2NldYQTdLZTJSMlZ3NU44T1ZZRmxzV1EKeEVjTXJjS21Kb25QWkxBRlJwdXl0OW5NVC92VWZjRnlTT2d2L3pLaDVnc3RPalhLUlp1ZXlHTzFpTHR1SmxHTgpMQWxEem1wY2RyTENLcDFiZGxsZmNKM0tkR0MrMnpSeldCcWFaY1h2RklKR1loTjhKYTB0RFNnaFV4NjZrREMvCmpJaDJmcmxWTU5EREp5ZENZNitjbWtBNWZRMDRhcWE5RHNaNkxPclJLeFUreUY4WEdUZVVGQUxjcGtYODZvTVgKa3hyVEZXeks2YTFFMDh5STIzLzFCKzZkcnRDSE1HMk5BZ01CQUFHamdic3dnYmd3Z1lVR0ExVWRFUVIrTUh5QwpDV3h2WTJGc2FHOXpkSWNFZndBQUFZY1FBQUFBQUFBQUFBQUFBQUFBQUFBQUFZSU1TRzlzWjJWeVNpMU9RakF5CmdobEliMnhuWlhKS0xVNUNNREl1WW1WamEyaHZabVl1WTI5dGh3U3NFVHpvaHdUQXFEZ0JoeEQrZ0FBQUFBQUEKQUw5eVJVNlFOMS83aHhEK2dBQUFBQUFBQU5MSGN6aWZ1L2wxTUIwR0ExVWREZ1FXQkJTSVVTanVhK1FjZUQyZAp4YnlXOXlUWXNZNXpHREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUFjCkRuayt3WVZLMGRYL3ZNUGYwUXo3dkJxVlpLOG1QY2lPTnpBcmhhYXMvbHc1d0ZlYW1kNlRzUmZIVFZjWk1nMHEKOXMyc2VNYTd3UjRJeERyMGo4R1dIMUpZWFNOMzk0WlRVUTYrNlZzS0tDc3FmUTBpVFBnVzJQRU1hUUtUcGxELwp3elFJTmlnMzdRd0FrbnZqcGRQU0NrRitaeW1NUUhER3ptNUxFdHArM0g2WGFFdjNnbCtOUi9KM3R0d0htVnVrCnRDSXB1MGQxWnZvd1VOQnJJMi9kcExUeTluQlBOWDVqUTQydGkxeGVSU3lDYmZNTUk2cnpTL2JZWHUrdUMreTQKSXNIQjN3MFRQUVdITjBURlcrOFBUZkkyWUIreGg1TEs0UUw2Q2VZTjQ4cHBxSTNjMHo1K3cwYUdqZnc0WVpNRwpSbnVKcElXQkQzcW53Z0d5dnFuZwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRRFB1Wm1xU0t1R3l4QUgKNjZDNENSSGkyUjJiOHpJaVRsVTVwWWxzOG5GdE9tTjQvaGQzZWUxaFlZdHVOdUJ0L1d1NmZWRDUxSVM5OVlvWAplQ2ZqRHd2SHFDUUlOVVZ3NjZXWEE3S2UyUjJWdzVOOE9WWUZsc1dReEVjTXJjS21Kb25QWkxBRlJwdXl0OW5NClQvdlVmY0Z5U09ndi96S2g1Z3N0T2pYS1JadWV5R08xaUx0dUpsR05MQWxEem1wY2RyTENLcDFiZGxsZmNKM0sKZEdDKzJ6UnpXQnFhWmNYdkZJSkdZaE44SmEwdERTZ2hVeDY2a0RDL2pJaDJmcmxWTU5EREp5ZENZNitjbWtBNQpmUTA0YXFhOURzWjZMT3JSS3hVK3lGOFhHVGVVRkFMY3BrWDg2b01Ya3hyVEZXeks2YTFFMDh5STIzLzFCKzZkCnJ0Q0hNRzJOQWdNQkFBRUNnZ0VBRndBb0Z3WXJrcVg5YjhNVUdBeWp0d2lhRWdzMXErZ2NpN1l4VWZ6dVk2SisKelREbFlhSUFqNGlBMWRnQnRjRnZ6UEIvVWpVZWxhSVFnNm9XK3puNVJmR2FPOFp2bXFIeWJleEhqNkNKZVd4MApjamJadURpMDhPTlZoLzZJSlE3elhNd2wvcm80d2V0QVB6S1pZZDFOaERLMUhhREE5eWhGRXpiMDFIYlhWUmRoCmZDWHhXSGE5L0xvdlpGVWpFRkFxbFlOYjZOaEtDNWdDWm9FVXNIdUNFcThVN0VYdzcwSDFrZTZmeE1nVEZDNkYKT1RrWjVCNXlJbkFUdlNXQ1N2TmhGWWNKMjlDRG16anRMQXY4eVZDYXdKd3loUWJXZERaakxxb011UkFzd1huOAo4SFROb0lScmNpMWl6V0hXdmVlZUtRKzgzODg2Y3FKRWN5VXpnQWdHeVFLQmdRRG5KaXhRMGJUWk5ZZkVNWWRoCnBMMUxObFlZQlZZdEtJTklTdjQvMWFybDgvdG9iL0lkbUVTUWtXYXZUZGQ0WnNheTNLazluM0lzamFPQUt5VWUKd1ZIVG5jNFhWZzBIdjZFSlFYdC9GdmZ2ODY2V0g1ZW1zaEZRL0lydWZXTi90THRkWThBK1gvTjFiSVZ5bW80cgowbHFMMDB0U2VmaHBYUVdJTmM0bU9oSVBad0tCZ1FEbURyd0RqOCtIVWFOclAxSUozYS9aQ09kelBsRmRvWnNFCjRhdC9TRzZjZ0g5T1FnNjRYQ3FnVUJxV2FnQlJSU0FNdHF1YW1lVG5mcDdaTnNZMWdJRFh1Q1dOK2ZGUG0yNlAKQXZqTTV5UzVWTENoTXpCRm92eWYrcjg4cytDOWUyL0FJRzQvSGhTZUdTOWxNSEJYb041NjZHWlVmY3dUOXUzQwpibWVSbGpVbTZ3S0JnQk1MdWlzT25IQXBVUDZCZGo0OWJMdDl4cXBFQmszQ1FNNzhIdWJ6bkJsR2VUaXB3TEZmCmtvYTI5RmNOZXV1WXpGYUFpQkZqeWV5UjN4NzRieDZSbjBSb2hFcTM5R3JuQjBYVDkzRUpXM1NTQjVpbkViL1MKZkVySUJFcVNXbGh6Yzl6R0Uxa1FYdWNXQWdqbll6K0pIWnpYMUNUL2w5QldzZFgvV1BVZFk4K1JBb0dBR2JNQgpxOEF2NWFUb0JYNEFVeHZSbmdRUm50MFNSOHhhdmRQYnpZOHcxQWpDcitKUE5LY1BGL042MU55b2htdWJaZkF1CkFVbzV1T1o3SmphcE02YlVQY1RUWlNYTG9DSHoyc1B4T1NxRS9yTUlQQ20wdGNLOFI3N0NDQ3pyNlI3VjMvZC8KZVV1SjhCTk9LUmFkSmh6UlhaZUNmdVBDbldSVE1Rb1dSYndxMmRzQ2dZRUE0Z0hyZXNjclpiWXN6SDVYQnFBUgpRdzlQeHU1VU9XZnlYTHdPR1ozVW84ZjJtbHZpSTMrRDFsYVgydXFUMmNlNVRWNjdCbWk2eGZxZjlrNUo3VndQCkRBQnhLZkZIOFRTanF2V3dMMXY5Y2xVQUJVWUFrVzZrUlRDalhmemc3OFkzVWpQM3hKc2tka3BPa0RZQ29hYUkKVkdFR2FhQ0xxWm1VelNSN3RkYU9Kd1k9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "SESSIONSTORAGE": {},
     "SHOW_CONFIGURATION_HINTS": true,
+    "SHOW_MAINTENANCE_MODE": true,
     "SHUTDOWNTIMEOUT": "PT10S",
     "SOCKET_TIMEOUT": "PT10S",
     "SYMBOLS": {
@@ -495,7 +340,7 @@
                 "function": true,
                 "properties": {
                     "AdsState": {
-                        "$ref": "tchmi:server#/definitions/adsState"
+                        "$ref": "tchmi:server#/definitions/ADS-adsState"
                     },
                     "DeviceState": {
                         "type": "integer"
@@ -590,7 +435,7 @@
                 "writeValue": {
                     "properties": {
                         "AdsState": {
-                            "$ref": "tchmi:server#/definitions/adsState"
+                            "$ref": "tchmi:server#/definitions/ADS-adsState"
                         },
                         "DeviceState": {
                             "$ref": "tchmi:general#/definitions/UINT32"
@@ -706,56 +551,52 @@
                         "additionalProperties": {
                             "properties": {
                                 "adsApplicationName": {
-                                    "hidden": true,
                                     "propertyOrder": 5,
-                                    "readOnly": true,
-                                    "type": "string"
+                                    "type": "string",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "adsProjectCompiledAt": {
                                     "format": "date-time",
-                                    "hidden": true,
                                     "propertyOrder": 7,
-                                    "readOnly": true,
-                                    "type": "string"
+                                    "type": "string",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "adsProjectName": {
                                     "propertyOrder": 6,
-                                    "readOnly": true,
                                     "type": "string"
                                 },
                                 "adsState": {
                                     "propertyOrder": 3,
-                                    "readOnly": true,
                                     "type": "string"
                                 },
                                 "adsVersion": {
                                     "propertyOrder": 8,
-                                    "readOnly": true,
                                     "type": "string"
+                                },
+                                "adsVersionBuild": {
+                                    "minimum": 0,
+                                    "propertyOrder": 9,
+                                    "type": "integer",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "connectionState": {
                                     "propertyOrder": 1,
-                                    "readOnly": true,
                                     "type": "string"
                                 },
                                 "deviceName": {
                                     "propertyOrder": 4,
-                                    "readOnly": true,
                                     "type": "string"
                                 },
                                 "isUserModeRuntime": {
-                                    "hidden": true,
-                                    "propertyOrder": 9,
-                                    "readOnly": true,
-                                    "type": "boolean"
+                                    "propertyOrder": 10,
+                                    "type": "boolean",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "systemServiceAdsState": {
                                     "propertyOrder": 2,
-                                    "readOnly": true,
                                     "type": "string"
                                 }
                             },
-                            "readOnly": true,
                             "required": [
                                 "deviceName",
                                 "adsVersion",
@@ -764,26 +605,10 @@
                             ],
                             "type": "object"
                         },
-                        "readOnly": true,
                         "type": "object"
                     }
                 },
-                "readOnly": true,
-                "transient": true,
                 "type": "object"
-            },
-            "USEMAPPING": true
-        },
-        "ADS.GetDefinitions": {
-            "ACCESS": 3,
-            "CUSTOMERDATA": "",
-            "DOMAIN": "ADS",
-            "DYNAMIC": false,
-            "HIDDEN": true,
-            "MAPPING": "GetDefinitions",
-            "OPTIONS": {},
-            "SCHEMA": {
-                "function": true
             },
             "USEMAPPING": true
         },
@@ -800,6 +625,19 @@
                 "writeValue": {
                     "type": "string"
                 }
+            },
+            "USEMAPPING": true
+        },
+        "ADS.GetSystemId": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetSystemId",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "string"
             },
             "USEMAPPING": true
         },
@@ -913,6 +751,7 @@
                         {
                             "properties": {
                                 "NETID": {
+                                    "format": "amsnetid",
                                     "type": "string"
                                 },
                                 "all": {
@@ -971,12 +810,23 @@
                             "type": "string"
                         },
                         "parameters": {
-                            "allOf": [
+                            "anyOf": [
                                 {
-                                    "$ref": "tchmi:general#/definitions/Any"
+                                    "additionalProperties": true,
+                                    "description": "Parameters that are forwarded to the authentication extension's AddUser function. Notice that the userName without the domain is forwarded automatically.",
+                                    "properties": {
+                                        "password": {
+                                            "format": "masked",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "password"
+                                    ],
+                                    "type": "object"
                                 },
                                 {
-                                    "description": "Parameters that are forwarded to the authentication extension's AddUser function. Notice that the userName without the domain is forwarded automatically."
+                                    "$ref": "tchmi:general#/definitions/VOID"
                                 }
                             ]
                         },
@@ -1027,6 +877,21 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true,
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "symbolCount": {
+                        "type": "integer"
+                    },
+                    "validSymbolCount": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "type": "object",
                 "writeValue": {
                     "properties": {
                         "ACCESS": {
@@ -1040,8 +905,13 @@
                             ]
                         },
                         "AUTOMAP": {
-                            "default": true,
+                            "default": false,
                             "description": "Automatically obtain symbol information such as options and schema from the domain.",
+                            "type": "boolean"
+                        },
+                        "CHECKCOMPLEXITY": {
+                            "default": false,
+                            "description": "Do not add symbol, check complexity of added symbol instead",
                             "type": "boolean"
                         },
                         "CUSTOMERDATA": {
@@ -1068,15 +938,110 @@
                         "SCHEMA": {
                             "$ref": "tchmi:server#/definitions/schemaRef"
                         },
+                        "SUBSYMBOL_MAPPING": {
+                            "type": "string"
+                        },
                         "USEMAPPING": {
                             "default": true,
+                            "type": "boolean"
+                        },
+                        "USERGROUPS": {
+                            "anyOf": [
+                                {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                {
+                                    "additionalProperties": {
+                                        "$ref": "tchmi:server#/definitions/accessEnum"
+                                    },
+                                    "type": "object"
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "DOMAIN",
+                        "MAPPING"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "AddSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "AddSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "additionalProperties": {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/errorDetails"
+                        }
+                    ]
+                },
+                "function": true,
+                "type": "object",
+                "writeValue": {
+                    "properties": {
+                        "domain": {
+                            "type": "string"
+                        },
+                        "dryRun": {
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        "ignore": {
+                            "default": [],
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "ignoreProblems": {
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        "limit": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:general#/definitions/INT32"
+                                },
+                                {
+                                    "default": 1000,
+                                    "minimum": 1
+                                }
+                            ]
+                        },
+                        "namePrefix": {
+                            "default": "",
+                            "type": "string"
+                        },
+                        "options": {
+                            "additionalProperties": {},
+                            "type": "object"
+                        },
+                        "path": {
+                            "default": "",
+                            "type": "string"
+                        },
+                        "skipExisting": {
+                            "default": false,
                             "type": "boolean"
                         }
                     },
                     "required": [
-                        "NAME",
-                        "DOMAIN",
-                        "MAPPING"
+                        "domain"
                     ],
                     "type": "object"
                 }
@@ -1132,7 +1097,7 @@
                     "anyOf": [
                         {
                             "additionalProperties": false,
-                            "description": "Changes to the USERGROUPUSERS entry of the current user",
+                            "description": "Changes to the USERGROUPUSERS entry of the current user.",
                             "properties": {
                                 "changePassword": {
                                     "allOf": [
@@ -1236,6 +1201,10 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true,
+                "versions": [
+                    1.0,
+                    2.0
+                ],
                 "writeValue": {
                     "$ref": "tchmi:server#/definitions/event"
                 }
@@ -1246,13 +1215,28 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiSrv",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
-            "MAPPING": "Config::DEFAULTAUTHEXTENSION",
+            "MAPPING": "DefaultAuthExtension",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
+                "default": "TcHmiUserManagement",
                 "type": "string"
+            },
+            "USEMAPPING": true
+        },
+        "DefaultUserGroup": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "DefaultUserGroup",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "const": "__SystemUsers",
+                "function": true,
+                "type": "string",
+                "visibility": "HideInEngineering"
             },
             "USEMAPPING": true
         },
@@ -1314,77 +1298,52 @@
                 "function": true,
                 "properties": {
                     "ACCEPTEDSOCKETS": {
-                        "readOnly": true,
-                        "transient": true,
                         "type": "integer"
                     },
                     "ACTIVESESSIONS": {
                         "link": "Sessions",
-                        "readOnly": true,
-                        "transient": true,
                         "type": "integer"
                     },
                     "ACTIVESOCKETS": {
-                        "readOnly": true,
-                        "transient": true,
                         "type": "integer"
                     },
                     "ARCHITECTURE": {
-                        "readOnly": true,
-                        "transient": true,
                         "type": "string"
                     },
                     "DISCOVERY_RUNNING": {
-                        "hidden": true,
-                        "readOnly": true,
-                        "transient": true,
-                        "type": "boolean"
+                        "type": "boolean",
+                        "visibility": "HideInEngineering"
                     },
                     "DOTNETCLASSICVERSIONS": {
                         "items": {
-                            "readOnly": true,
                             "type": "string"
                         },
-                        "readOnly": true,
-                        "transient": true,
                         "type": "array"
                     },
                     "DOTNETCOREVERSIONS": {
                         "items": {
-                            "readOnly": true,
                             "type": "string"
                         },
-                        "readOnly": true,
-                        "transient": true,
                         "type": "array"
                     },
                     "DOTNETVERSIONS": {
                         "items": {
-                            "readOnly": true,
                             "type": "string"
                         },
-                        "readOnly": true,
-                        "transient": true,
                         "type": "array"
                     },
                     "LICENSE": {
                         "properties": {
                             "CLIENTS": {
                                 "propertyOrder": 2,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "integer"
                             },
                             "EXTENSIONS": {
                                 "propertyOrder": 6,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "boolean"
                             },
                             "SERVERS": {
                                 "propertyOrder": 1,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "integer"
                             },
                             "STATE": {
@@ -1398,50 +1357,32 @@
                                     "OK"
                                 ],
                                 "propertyOrder": 7,
-                                "readOnly": true,
                                 "type": "string"
                             },
                             "TARGETS": {
                                 "propertyOrder": 4,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "integer"
                             },
                             "USEDCLIENTS": {
                                 "propertyOrder": 3,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "integer"
                             },
                             "USEDTARGETS": {
                                 "propertyOrder": 5,
-                                "readOnly": true,
-                                "transient": true,
                                 "type": "integer"
                             }
                         },
-                        "readOnly": true,
-                        "transient": true,
                         "type": "object"
                     },
                     "MEMORYUSAGE": {
-                        "displayClass": "megabyte",
-                        "readOnly": true,
-                        "transient": true,
-                        "type": "number"
+                        "type": "number",
+                        "unit": "megabyte"
                     },
                     "REMOTESERVERS": {
                         "additionalProperties": {
                             "properties": {
                                 "REMOTE_ERROR": {
-                                    "allOf": [
-                                        {
-                                            "$ref": "tchmi:general#/definitions/errorDetails"
-                                        },
-                                        {
-                                            "readOnly": true
-                                        }
-                                    ]
+                                    "$ref": "tchmi:general#/definitions/errorDetails"
                                 },
                                 "REMOTE_STATUS": {
                                     "enum": [
@@ -1451,8 +1392,6 @@
                                         "Disabled"
                                     ],
                                     "propertyOrder": 1,
-                                    "readOnly": true,
-                                    "transient": true,
                                     "type": "string"
                                 }
                             },
@@ -1461,38 +1400,57 @@
                             ],
                             "type": "object"
                         },
-                        "readOnly": true,
-                        "transient": true,
                         "type": "object"
                     },
                     "SERVERTIME": {
                         "format": "date-time",
-                        "readOnly": true,
-                        "transient": true,
                         "type": "string"
                     },
                     "TRAFFICIN": {
-                        "displayClass": "byte",
-                        "readOnly": true,
-                        "transient": true,
-                        "type": "number"
+                        "type": "number",
+                        "unit": "byte"
                     },
                     "TRAFFICOUT": {
-                        "displayClass": "byte",
-                        "readOnly": true,
-                        "transient": true,
-                        "type": "number"
+                        "type": "number",
+                        "unit": "byte"
                     },
                     "UPTIME": {
                         "format": "timespan",
-                        "readOnly": true,
-                        "transient": true,
                         "type": "string"
                     }
                 },
-                "readOnly": true,
-                "transient": true,
                 "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "Export": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Export",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "properties": {
+                        "domain": {
+                            "type": "string"
+                        },
+                        "full": {
+                            "default": false,
+                            "type": "boolean"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "domain"
+                    ],
+                    "type": "object"
+                }
             },
             "USEMAPPING": true
         },
@@ -1672,6 +1630,35 @@
             },
             "USEMAPPING": true
         },
+        "GetFileInformation": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetFileInformation",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/fileInfo"
+                    },
+                    {
+                        "required": [
+                            "modificationTime",
+                            "fileSize",
+                            "access"
+                        ]
+                    }
+                ],
+                "writeValue": {
+                    "type": "string"
+                }
+            },
+            "USEMAPPING": true
+        },
         "GetSchema": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
@@ -1681,37 +1668,86 @@
             "MAPPING": "GetSchema",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
-                "writeValue": {
-                    "properties": {
-                        "resolve": {
-                            "default": "None",
-                            "enum": [
-                                "AddRefs",
-                                "Simplify",
-                                "AddAllRefs",
-                                "None"
+                "anyOf": [
+                    {
+                        "function": true,
+                        "versions": [
+                            1.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "resolve": {
+                                    "default": "None",
+                                    "enum": [
+                                        "AddRefs",
+                                        "Simplify",
+                                        "AddAllRefs",
+                                        "None"
+                                    ],
+                                    "type": "string"
+                                },
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "default": "Read",
+                                    "enum": [
+                                        "Read",
+                                        "Write"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
                             ],
-                            "type": "string"
-                        },
-                        "symbol": {
-                            "description": "Name of the symbol.",
-                            "type": "string"
-                        },
-                        "type": {
-                            "default": "Read",
-                            "enum": [
-                                "Read",
-                                "Write"
-                            ],
-                            "type": "string"
+                            "type": "object"
                         }
                     },
-                    "required": [
-                        "symbol"
-                    ],
-                    "type": "object"
-                }
+                    {
+                        "function": true,
+                        "versions": [
+                            2.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "mergeSettings": {
+                                    "default": true,
+                                    "description": "Merge settings from the symbol configuration into the schema.",
+                                    "type": "boolean"
+                                },
+                                "resolve": {
+                                    "default": "None",
+                                    "enum": [
+                                        "AddRefs",
+                                        "Simplify",
+                                        "AddAllRefs",
+                                        "AllVersions",
+                                        "None"
+                                    ],
+                                    "type": "string"
+                                },
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "default": "Read",
+                                    "enum": [
+                                        "Read",
+                                        "Write"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -1795,6 +1831,37 @@
             },
             "USEMAPPING": true
         },
+        "IsSymbolOutdated": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "IsSymbolOutdated",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "enum": [
+                    "SYMBOL_UP_TO_DATE",
+                    "SYMBOL_SCHEMA_DIFFERENCE",
+                    "SYMBOL_INVALID_DOMAIN",
+                    "SYMBOL_INVALID_SYMBOL"
+                ],
+                "function": true,
+                "type": "string",
+                "writeValue": {
+                    "properties": {
+                        "symbol": {
+                            "description": "Name of the symbol.",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "symbol"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
         "ListActiveSessions": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
@@ -1849,6 +1916,10 @@
                     "subscriptions": {
                         "additionalProperties": {
                             "properties": {
+                                "averageDuration": {
+                                    "format": "timespan",
+                                    "type": "string"
+                                },
                                 "clientCount": {
                                     "type": "integer"
                                 },
@@ -1858,6 +1929,11 @@
                                             "lastSent": {
                                                 "format": "date-time",
                                                 "type": "string"
+                                            },
+                                            "readValueJsonLength": {
+                                                "minimum": 0,
+                                                "type": "integer",
+                                                "unit": "byte"
                                             },
                                             "symbol": {
                                                 "type": "string"
@@ -1875,6 +1951,11 @@
                                 },
                                 "intervalTime": {
                                     "type": "integer"
+                                },
+                                "readValueJsonLength": {
+                                    "minimum": 0,
+                                    "type": "integer",
+                                    "unit": "byte"
                                 },
                                 "type": {
                                     "enum": [
@@ -1895,7 +1976,27 @@
                         "type": "object"
                     }
                 },
-                "type": "object"
+                "type": "object",
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "averageDuration": {
+                                    "default": false,
+                                    "type": "boolean"
+                                },
+                                "readValueJsonLength": {
+                                    "default": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
             },
             "USEMAPPING": true
         },
@@ -1946,6 +2047,10 @@
                             "description": "The name of the extension.",
                             "type": "string"
                         },
+                        "friendlyName": {
+                            "description": "A more readable name version of the extension name.",
+                            "type": "string"
+                        },
                         "guid": {
                             "description": "The globally unique identifier associated with the extension.",
                             "type": "string"
@@ -1953,6 +2058,10 @@
                         "licensed": {
                             "description": "indicate the extension is license status",
                             "type": "boolean"
+                        },
+                        "packageVersion": {
+                            "description": "The version of the NuGet package that contains the extension.",
+                            "type": "string"
                         },
                         "remote": {
                             "description": "Shows if the domain refers to a remote server.",
@@ -2018,11 +2127,12 @@
                 "items": {
                     "oneOf": [
                         {
+                            "additionalProperties": false,
                             "properties": {
                                 "domain": {
                                     "type": "string"
                                 },
-                                "localizedText": {
+                                "localizedString": {
                                     "type": "string"
                                 },
                                 "name": {
@@ -2055,11 +2165,12 @@
                                 "name",
                                 "domain",
                                 "timeReceived",
-                                "localizedText"
+                                "localizedString"
                             ],
                             "type": "object"
                         },
                         {
+                            "additionalProperties": false,
                             "properties": {
                                 "domain": {
                                     "type": "string"
@@ -2101,48 +2212,94 @@
             "MAPPING": "ListFiles",
             "OPTIONS": {},
             "SCHEMA": {
-                "additionalProperties": {
-                    "properties": {
-                        "fileFlags": {
-                            "items": {
-                                "enum": [
-                                    "Directory",
-                                    "ReadOnly",
-                                    "UserAccessReadOnly",
-                                    "VirtualDirectory"
-                                ],
-                                "type": "string"
-                            },
-                            "type": "array"
+                "anyOf": [
+                    {
+                        "additionalProperties": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:server#/definitions/fileInfo"
+                                },
+                                {
+                                    "properties": {
+                                        "link": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "fileFlags"
+                                    ]
+                                }
+                            ]
                         },
-                        "fileSize": {
-                            "displayClass": "kilobyte",
-                            "type": "number"
-                        },
-                        "link": {
-                            "type": "string"
-                        },
-                        "modificationTime": {
-                            "type": "string"
+                        "function": true,
+                        "type": "object",
+                        "versions": [
+                            1.0
+                        ],
+                        "writeValue": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ]
                         }
                     },
-                    "required": [
-                        "fileFlags"
-                    ],
-                    "type": "object"
-                },
-                "function": true,
-                "type": "object",
-                "writeValue": {
-                    "oneOf": [
-                        {
-                            "type": "string"
+                    {
+                        "additionalProperties": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:server#/definitions/fileInfo"
+                                },
+                                {
+                                    "properties": {
+                                        "hash": {
+                                            "description": "The md5 hash of the file",
+                                            "type": "string"
+                                        },
+                                        "link": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "fileFlags"
+                                    ]
+                                }
+                            ]
                         },
-                        {
-                            "type": "null"
+                        "function": true,
+                        "type": "object",
+                        "versions": [
+                            2.0
+                        ],
+                        "writeValue": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "hashes": {
+                                    "description": "If true, the hash of each file is returned.",
+                                    "type": "boolean"
+                                },
+                                "path": {
+                                    "description": "The path to list files from.",
+                                    "type": "string"
+                                },
+                                "recursive": {
+                                    "description": "If true, the entire directory tree is returned.",
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "path"
+                            ],
+                            "type": "object",
+                            "versions": [
+                                2.0
+                            ]
                         }
-                    ]
-                }
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -2157,6 +2314,50 @@
             "SCHEMA": {
                 "function": true,
                 "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "ListOutdatedSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListOutdatedSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "additionalProperties": {
+                    "enum": [
+                        "SYMBOL_SCHEMA_DIFFERENCE",
+                        "SYMBOL_INVALID_DOMAIN",
+                        "SYMBOL_INVALID_SYMBOL"
+                    ],
+                    "type": "string"
+                },
+                "function": true,
+                "type": "object",
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "domain": {
+                                    "type": "string"
+                                },
+                                "ignoreHiddenSymbols": {
+                                    "default": false,
+                                    "type": "boolean"
+                                },
+                                "onlyDynamicSymbols": {
+                                    "default": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
             },
             "USEMAPPING": true
         },
@@ -2179,8 +2380,22 @@
                     "anyOf": [
                         {
                             "properties": {
+                                "depth": {
+                                    "default": 1,
+                                    "maximum": 5,
+                                    "minimum": 1,
+                                    "type": "integer"
+                                },
                                 "domain": {
                                     "type": "string"
+                                },
+                                "ignoreHiddenSymbols": {
+                                    "default": false,
+                                    "type": "boolean"
+                                },
+                                "onlyDynamicSymbols": {
+                                    "default": false,
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -2319,8 +2534,17 @@
                 "type": "string",
                 "writeValue": {
                     "properties": {
+                        "maintenanceMode": {
+                            "default": false,
+                            "type": "boolean"
+                        },
                         "password": {
+                            "format": "masked",
                             "type": "string"
+                        },
+                        "persistPreviousSession": {
+                            "default": false,
+                            "type": "boolean"
                         },
                         "persistent": {
                             "default": false,
@@ -2597,7 +2821,37 @@
             "MAPPING": "RemoveUnusedDefinitions",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true
+                "function": true,
+                "items": [
+                    {
+                        "type": "string"
+                    }
+                ],
+                "type": "array",
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "dryRun": {
+                                    "default": false,
+                                    "type": "boolean"
+                                },
+                                "ignore": {
+                                    "default": [],
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array",
+                                    "uniqueItems": true
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
             },
             "USEMAPPING": true
         },
@@ -2807,7 +3061,7 @@
             "ACCESS": 0,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiLua",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "Config",
             "OPTIONS": {},
@@ -2818,7 +3072,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "ActivateRecipe",
             "OPTIONS": {},
@@ -2842,7 +3096,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "Config",
             "OPTIONS": {},
@@ -2853,7 +3107,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "GetActiveRecipes",
             "OPTIONS": {},
@@ -2886,7 +3140,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "GetRecipes",
             "OPTIONS": {},
@@ -2912,11 +3166,35 @@
             },
             "USEMAPPING": true
         },
+        "TcHmiRecipeManagement.ListRecipeTypes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListRecipeTypes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.ListRecipes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListRecipes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
         "TcHmiRecipeManagement.ReadFromTarget": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "ReadFromTarget",
             "OPTIONS": {},
@@ -2950,7 +3228,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiRecipeManagement",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "UpdateRecipe",
             "OPTIONS": {},
@@ -3208,12 +3486,60 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiSqliteLogger",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "Clear",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true
+                "function": true,
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "match": {
+                                    "$ref": "tchmi:server#/definitions/eventFilter"
+                                }
+                            },
+                            "required": [
+                                "match"
+                            ],
+                            "type": "object"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiSqliteLogger.ClearLocalizations": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSqliteLogger",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ClearLocalizations",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "match": {
+                                    "$ref": "tchmi:server#/definitions/eventFilter"
+                                }
+                            },
+                            "required": [
+                                "match"
+                            ],
+                            "type": "object"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
             },
             "USEMAPPING": true
         },
@@ -3221,7 +3547,7 @@
             "ACCESS": 0,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiSqliteLogger",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "Config",
             "OPTIONS": {},
@@ -3232,7 +3558,7 @@
             "ACCESS": 1,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiSqliteLogger",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "Diagnostics",
             "OPTIONS": {},
@@ -3247,44 +3573,37 @@
                                         "$ref": "tchmi:general#/definitions/INT64"
                                     },
                                     {
-                                        "displayClass": "byte",
                                         "propertyOrder": 1,
-                                        "readOnly": true
+                                        "unit": "byte"
                                     }
                                 ]
                             },
                             "numEvents": {
                                 "propertyOrder": 3,
-                                "readOnly": true,
                                 "type": "integer"
                             },
                             "numEventsWithAlarmPayload": {
                                 "propertyOrder": 7,
-                                "readOnly": true,
                                 "type": "integer"
                             },
                             "numEventsWithMessagePayload": {
                                 "propertyOrder": 5,
-                                "readOnly": true,
                                 "type": "integer"
                             },
                             "numPersistentEvents": {
-                                "hidden": true,
                                 "propertyOrder": 4,
-                                "readOnly": true,
-                                "type": "integer"
+                                "type": "integer",
+                                "visibility": "HideInEngineering"
                             },
                             "numPersistentEventsWithAlarmPayload": {
-                                "hidden": true,
                                 "propertyOrder": 8,
-                                "readOnly": true,
-                                "type": "integer"
+                                "type": "integer",
+                                "visibility": "HideInEngineering"
                             },
                             "numPersistentEventsWithMessagePayload": {
-                                "hidden": true,
                                 "propertyOrder": 6,
-                                "readOnly": true,
-                                "type": "integer"
+                                "type": "integer",
+                                "visibility": "HideInEngineering"
                             },
                             "persistentDatabaseSize": {
                                 "allOf": [
@@ -3292,14 +3611,12 @@
                                         "$ref": "tchmi:general#/definitions/INT64"
                                     },
                                     {
-                                        "displayClass": "byte",
                                         "propertyOrder": 2,
-                                        "readOnly": true
+                                        "unit": "byte"
                                     }
                                 ]
                             }
                         },
-                        "readOnly": true,
                         "required": [
                             "databaseSize",
                             "persistentDatabaseSize",
@@ -3317,36 +3634,30 @@
                             "properties": {
                                 "numEvents": {
                                     "propertyOrder": 1,
-                                    "readOnly": true,
                                     "type": "integer"
                                 },
                                 "numEventsWithAlarmPayload": {
                                     "propertyOrder": 5,
-                                    "readOnly": true,
                                     "type": "integer"
                                 },
                                 "numEventsWithMessagePayload": {
                                     "propertyOrder": 3,
-                                    "readOnly": true,
                                     "type": "integer"
                                 },
                                 "numPersistentEvents": {
-                                    "hidden": true,
                                     "propertyOrder": 2,
-                                    "readOnly": true,
-                                    "type": "integer"
+                                    "type": "integer",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "numPersistentEventsWithAlarmPayload": {
-                                    "hidden": true,
                                     "propertyOrder": 6,
-                                    "readOnly": true,
-                                    "type": "integer"
+                                    "type": "integer",
+                                    "visibility": "HideInEngineering"
                                 },
                                 "numPersistentEventsWithMessagePayload": {
-                                    "hidden": true,
                                     "propertyOrder": 4,
-                                    "readOnly": true,
-                                    "type": "integer"
+                                    "type": "integer",
+                                    "visibility": "HideInEngineering"
                                 }
                             },
                             "required": [
@@ -3359,16 +3670,13 @@
                             ],
                             "type": "object"
                         },
-                        "readOnly": true,
                         "type": "object"
                     }
                 },
-                "readOnly": true,
                 "required": [
                     "allDomains",
                     "perDomain"
                 ],
-                "transient": true,
                 "type": "object"
             },
             "USEMAPPING": true
@@ -3377,7 +3685,7 @@
             "ACCESS": 3,
             "CUSTOMERDATA": "",
             "DOMAIN": "TcHmiSqliteLogger",
-            "DYNAMIC": true,
+            "DYNAMIC": false,
             "HIDDEN": true,
             "MAPPING": "ListEvents",
             "OPTIONS": {},
@@ -3415,6 +3723,7 @@
                         },
                         "password": {
                             "description": "Password of the user. Only a hash will be stored.",
+                            "format": "masked",
                             "type": "string"
                         },
                         "userName": {
@@ -3444,9 +3753,15 @@
                 "writeValue": {
                     "properties": {
                         "currentPassword": {
+                            "format": "masked",
                             "type": "string"
                         },
                         "newPassword": {
+                            "format": "masked",
+                            "type": "string"
+                        },
+                        "twoFactorToken": {
+                            "format": "masked",
                             "type": "string"
                         }
                     },
@@ -3466,6 +3781,36 @@
             "SCHEMA": {},
             "USEMAPPING": true
         },
+        "TcHmiUserManagement.Disable2FA": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiUserManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Disable2FA",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "boolean",
+                "writeValue": {
+                    "properties": {
+                        "password": {
+                            "format": "masked",
+                            "type": "string"
+                        },
+                        "twoFactorToken": {
+                            "format": "masked",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "password",
+                        "twoFactorToken"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
         "TcHmiUserManagement.DisableUser": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
@@ -3479,6 +3824,38 @@
                 "writeValue": {
                     "description": "Name of the user.",
                     "type": "string"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiUserManagement.Enable2FA": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiUserManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Enable2FA",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "boolean",
+                "writeValue": {
+                    "properties": {
+                        "password": {
+                            "type": "string"
+                        },
+                        "secret": {
+                            "type": "string"
+                        },
+                        "twoFactorToken": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "password",
+                        "secret",
+                        "twoFactorToken"
+                    ],
+                    "type": "object"
                 }
             },
             "USEMAPPING": true
@@ -3497,6 +3874,83 @@
                     "description": "Name of the user.",
                     "type": "string"
                 }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiUserManagement.Get2FAStatus": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiUserManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Get2FAStatus",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "options": [
+                    {
+                        "description": "2FA is enabled.",
+                        "label": "2FAEnabled",
+                        "value": 0
+                    },
+                    {
+                        "description": "2FA can be enabled.",
+                        "label": "2FACanBeEnabled",
+                        "value": 1
+                    },
+                    {
+                        "description": "2FA cannot be enabled.",
+                        "label": "2FACannotBeEnabled",
+                        "value": 2
+                    },
+                    {
+                        "description": "2FA may be disabled.",
+                        "label": "2FACanBeDisabled",
+                        "value": 3
+                    },
+                    {
+                        "description": "2FA is enabled but not asked for",
+                        "label": "2FANotRequired",
+                        "value": 4
+                    }
+                ],
+                "type": "integer"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiUserManagement.GetComplexityRules": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiUserManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetComplexityRules",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "additionalProperties": {
+                    "properties": {
+                        "localizationParameters": {
+                            "additionalProperties": {
+                                "type": "string"
+                            },
+                            "type": "object"
+                        },
+                        "regex": {
+                            "format": "regex",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "regex"
+                    ],
+                    "type": "object"
+                },
+                "function": true,
+                "type": "object"
             },
             "USEMAPPING": true
         },
@@ -3590,6 +4044,22 @@
                         "newUserName"
                     ],
                     "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiUserManagement.Reset2FA": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiUserManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Reset2FA",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "type": "boolean",
+                "writeValue": {
+                    "type": "string"
                 }
             },
             "USEMAPPING": true
@@ -3733,9 +4203,11 @@
             "USEMAPPING": false
         }
     },
+    "SYMBOL_COMPLEXITY_LIMIT": 100,
     "TEMPDH": "",
     "THREADPOOLSIZE": 12,
     "UPLOADTIMEOUT": "PT5S",
+    "USEINT64STRING": true,
     "USERGROUPS": {
         "__SystemAdministrators": {
             "ENABLED": true,
@@ -3764,6 +4236,13 @@
                 "Unsubscribe": 3
             }
         },
+        "__SystemMaintenanceUsers": {
+            "ENABLED": true,
+            "FILEACCESS": 3,
+            "FILES": {},
+            "SYMBOLACCESS": 0,
+            "SYMBOLS": {}
+        },
         "__SystemUsers": {
             "ENABLED": true,
             "FILEACCESS": 3,
@@ -3775,17 +4254,20 @@
                 "ADS.AdsSyncReadDeviceInfoReq": 3,
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
-                "ADS.Diagnostics": 1,
+                "ADS.Diagnostics": 3,
                 "ChangeUserSettings": 3,
                 "ConfirmAlarm": 3,
                 "CreateEvent": 3,
                 "DefaultAuthExtension": 1,
                 "DefaultUserGroup": 1,
                 "Diagnostics": 3,
+                "Export": 3,
                 "GetConfiguration": 3,
                 "GetCurrentUser": 3,
                 "GetDefinitions": 3,
+                "GetFileInformation": 3,
                 "GetSchema": 3,
+                "GetServerInformation": 3,
                 "IsAuthRequired": 3,
                 "ListDomains": 3,
                 "ListEvents": 3,
@@ -3796,14 +4278,27 @@
                 "Logout": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
+                "TcHmiRecipeManagement.ActivateRecipe": 3,
                 "TcHmiRecipeManagement.Config": 3,
+                "TcHmiRecipeManagement.GetActiveRecipes": 3,
+                "TcHmiRecipeManagement.GetRecipes": 3,
+                "TcHmiRecipeManagement.ListRecipeTypes": 3,
+                "TcHmiRecipeManagement.ListRecipes": 3,
+                "TcHmiRecipeManagement.ReadFromTarget": 3,
+                "TcHmiRecipeManagement.UpdateRecipe": 3,
                 "TcHmiSqliteHistorize.GetTrendLineData": 3,
                 "TcHmiSqliteHistorize.GetTrendLineWindow": 3,
                 "TcHmiSqliteHistorize.HistorizeData": 3,
+                "TcHmiSqliteLogger.Diagnostics": 3,
                 "TcHmiUserManagement.ChangePassword": 3,
+                "TcHmiUserManagement.Disable2FA": 3,
+                "TcHmiUserManagement.Enable2FA": 3,
+                "TcHmiUserManagement.Get2FAStatus": 3,
+                "TcHmiUserManagement.GetComplexityRules": 3,
                 "Unsubscribe": 3,
                 "UnsubscribeEvents": 3,
-                "UpdateEventsSubscription": 3
+                "UpdateEventsSubscription": 3,
+                "UserSelectType": 1
             }
         }
     },
@@ -3826,6 +4321,15 @@
                 "USERGROUPUSERS_LOCALE": "en",
                 "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
                 "USERGROUPUSERS_TIMEZONE": "project"
+            },
+            "__SystemUser": {
+                "USERGROUPUSERS_AUTO_LOGOFF": "P30D",
+                "USERGROUPUSERS_GROUPS": [
+                    "__SystemUsers"
+                ],
+                "USERGROUPUSERS_LOCALE": "en",
+                "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
+                "USERGROUPUSERS_TIMEZONE": "project"
             }
         }
     },
@@ -3833,10 +4337,10 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\TcHmiRecipeManagementSample\\",
-        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.756.1\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.2.110\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.EventLogger": "..\\..\\..\\..\\..\\Users\\thild\\Desktop\\Samples\\TcHmiRecipeManagementSample_1_10\\Packages\\Beckhoff.TwinCAT.HMI.EventLogger.12.742.5",
-        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.756.1\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.RecipeManagement": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.RecipeManagement.12.750.1",
+        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.2.110\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.2.90\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.SqliteHistorize": "..\\..\\..\\..\\..\\Users\\thild\\Desktop\\Samples\\TcHmiRecipeManagementSample_1_10\\Packages\\Beckhoff.TwinCAT.HMI.SqliteHistorize.12.742.5",
         "/bin": "..\\..\\TcHmiRecipeManagementSample\\bin\\",
         "/bin/framework": "..\\..\\TcHmiRecipeManagementSample\\bin\\framework",

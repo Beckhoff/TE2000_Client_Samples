@@ -1,4 +1,4 @@
-﻿-- Designer --
+-- Designer --
 <!DOCTYPE html>
 <html lang="en" class="tchmi-html-designer">
 <head>

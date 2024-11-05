@@ -1,0 +1,42 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Control",
+      "basePath": "./ControlWithImport",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    },
+    {
+      "type": "Control",
+      "basePath": "./JsControlWithImport",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    }
+  ],
+  "esmoduleImports": [
+    {
+      "imports": {
+        "textmodule": "ControlWithImport/someText.js"
+      }
+    },
+    {
+      "moduleScope": "JsControlWithImport",
+      "imports": {
+        "textmodule": "JsControlWithImport/someText.js"
+      }
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "ExampleControlEsModule": {
+        "200": "ExampleControlEsModule"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}

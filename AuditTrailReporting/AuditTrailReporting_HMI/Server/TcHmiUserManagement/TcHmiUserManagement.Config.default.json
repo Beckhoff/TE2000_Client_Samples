@@ -1,0 +1,60 @@
+{
+    "ENABLE_TWO_FACTOR_AUTHENTICATION": 0,
+    "PASSWORD_BLACKLIST": "",
+    "PASSWORD_ENABLE_AGING": false,
+    "PASSWORD_FORCE_COMPLEX": 0,
+    "PASSWORD_MAXIMUM_AGE": "P90D",
+    "PASSWORD_MINIMUM_LENGTH": 1,
+    "USERS": {
+        "User1": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "LAST_PASSWORD_CHANGE": "2024-09-04T12:09:09.3049884Z",
+            "PASSWORD": "094765a3803cf7daadcbf0b131e69ecd97aa58ceee5fb126fe4913793f5f91cba2c649f955656ddb6f68524f06893bdcc233b963d44bb4825ca60968401b66cb",
+            "SALT": "a8I3qXK94vacu3ovDB6zbZ9aUGlxMa3+RXziWenuSYamUEtrJG0G0j25ucjGfd8RBQFJYffMcSSYi2AD8ma63w==",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemAdministrator": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "LAST_PASSWORD_CHANGE": "2024-09-04T11:48:09.4895889Z",
+            "PASSWORD": "58d7a5618d02132b49a383034aa0d03567893cc4c1b788a41caa8d4703b68768772955ffb94b36df434429f0acbd1b8edbfd631e3238423c6ea7b4dee0ee6cb2",
+            "SALT": "EbcwZv3aP+DYOV3SRW+AteVo97Pzt3gXYQd/3MN+tx9aPnLsoXMCa4jhx9CBM6+j7IiaAHeXGIjfU8GKL71Yww==",
+            "SECRET": {
+                "algorithm": 0,
+                "configuration": 0,
+                "iv": "",
+                "value": ""
+            },
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemGuest": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "LAST_PASSWORD_CHANGE": "1970-01-01T00:00:00Z",
+            "PASSWORD": "",
+            "SALT": "",
+            "SECRET": {
+                "algorithm": 0,
+                "configuration": 0,
+                "iv": "",
+                "value": ""
+            },
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        },
+        "__SystemUser": {
+            "ALGORITHM": 0,
+            "ENABLED": true,
+            "LAST_PASSWORD_CHANGE": "1970-01-01T00:00:00Z",
+            "PASSWORD": "",
+            "SALT": "",
+            "SECRET": {
+                "algorithm": 0,
+                "configuration": 0,
+                "iv": "",
+                "value": ""
+            },
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
+        }
+    }
+}

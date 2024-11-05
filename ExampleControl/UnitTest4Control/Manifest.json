@@ -1,0 +1,17 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "UnitTest4Control": {
+        "200": "UnitTest4Control"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}

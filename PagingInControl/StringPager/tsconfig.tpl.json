@@ -3,20 +3,18 @@
   "compileOnSave": true,
   "compilerOptions": {
     "module": "none",
-    "target": "es6",
+    "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
-      "dom",
-      "scripthost",
-      "es6",
-      "es2017.intl"
+      "DOM",
+      "DOM.Iterable",
+      "ES2023"
     ],
     "types": [],
     "declaration": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictBindCallApply": true,
     "strictNullChecks": true,

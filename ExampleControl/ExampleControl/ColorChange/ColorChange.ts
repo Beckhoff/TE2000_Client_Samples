@@ -48,12 +48,12 @@ module TcHmi {
                     }
 
                     // Fetch template root element as native Element
-                    const jqCircle = this.__element[0].querySelector<HTMLDivElement>('.TcHmi_Controls_ExampleControl_ColorChange-circle');
-                    if (!jqCircle) {
+                    const circleElem = this.__element[0].querySelector<HTMLDivElement>('.TcHmi_Controls_ExampleControl_ColorChange-circle');
+                    if (!circleElem) {
                         throw new Error('Invalid Template.html');
                     }
                     // remember native DOM element
-                    this.__elementCircle = jqCircle;
+                    this.__elementCircle = circleElem;
 
                     //const inlinePolygon = this.__element[0].querySelector<SVGPolygonElement>('.TcHmi_Controls_ExampleControl_ColorChange-svgpolygon');
                     //if (!inlinePolygon) {

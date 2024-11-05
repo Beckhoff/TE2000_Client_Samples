@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <TcHmiDirectory>$(registry:HKEY_CURRENT_USER\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
@@ -15,8 +15,6 @@
     <HmiCommunicationServerPort>3000</HmiCommunicationServerPort>
     <HmiLogTcHmiServerMessages>false</HmiLogTcHmiServerMessages>
     <HmiLogDesignerModeComMessages>false</HmiLogDesignerModeComMessages>
-    <HmiServerVersion>Latest</HmiServerVersion>
-    <HmiUseX64>True</HmiUseX64>
     <HmiDefaultLanguage>client</HmiDefaultLanguage>
     <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
     <TargetFramework>native1.12-tchmi</TargetFramework>
@@ -27,11 +25,14 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>ExampleHmi</Name>
-    <HmiCommunicationRouterPort>10101</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
-    <HmiRecent>1.12.760.48</HmiRecent>
+    <HmiRecent>14.2.116</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>false</TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -98,6 +99,18 @@
     <TcHmi_ServerAddress Condition="'$(TcHmi_ServerAddress)' == ''">127.0.0.1</TcHmi_ServerAddress>
     <TcHmi_ServerPort Condition="'$(TcHmi_ServerPort)' == ''">1010</TcHmi_ServerPort>
   </PropertyGroup>
+  <PropertyGroup>
+    <_TcHmiNodeJsMode>Global</_TcHmiNodeJsMode>
+    <_TcHmiNodeJsMode Condition="'$(_TcHmiNodeJsMode)' == ''">Global</_TcHmiNodeJsMode>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global'">$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\Node.js@InstallPath)</_TcHmiNodePath>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global' AND '$(_TcHmiNodePath)' == '' AND Exists('C:\Program Files\nodejs\')">C:\Program Files\nodejs\</_TcHmiNodePath>
+    <_TcHmiNodePath Condition="'$(_TcHmiNodeJsMode)' == 'Global' AND '$(_TcHmiNodePath)' == '' AND Exists('C:\Program Files (x86)\nodejs\')">C:\Program Files (x86)\nodejs\</_TcHmiNodePath>
+  </PropertyGroup>
+  <Target Name="ReTargetNodePath" Condition="'$(_TcHmiNodePath)' != ''" BeforeTargets="$(CompileDependsOn)">
+    <PropertyGroup>
+      <NodePath>$(_TcHmiNodePath)</NodePath>
+    </PropertyGroup>
+  </Target>
   <Target Name="CoreBuild">
     <TcHmiMSBuild.Publish.TcHmiBuild TaskAction="Clean" ProjectDirectory="$(TcHmi_ProjectDirectory)" OutputPath="$(OutputPath)" />
     <TcHmiMSBuild.Publish.TcHmiBuild TaskAction="Build" ProjectDirectory="$(TcHmi_ProjectDirectory)" OutputPath="$(OutputPath)" ProjectFiles="@(Content)" VirtualMappings="$(TcHmi_VirtualMappings)" PostProcessing="$(HmiPostProcessing)" />
@@ -128,6 +141,12 @@
     <Folder Include="Properties" />
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
+    </Content>
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\ADS\ADS.Config.default.json">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
       <SubType>Content</SubType>
@@ -165,10 +184,6 @@
       <Visible>true</Visible>
       <DependentUpon>tsconfig.tpl.json</DependentUpon>
     </Content>
-    <Content Include="packages.config">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="packages.xsd">
       <SubType>Content</SubType>
       <Visible>false</Visible>
@@ -177,23 +192,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Properties\tchmi.framework.Schema.tpl.json">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="Properties\tchmi.framework.Schema.json">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-      <DependentUpon>Properties\tchmi.framework.Schema.tpl.json</DependentUpon>
-    </Content>
-    <Content Include="Properties\tchmi.project.Schema.tpl.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
     <Content Include="Properties\tchmi.project.Schema.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Properties\tchmi.project.Schema.tpl.json</DependentUpon>
     </Content>
     <Content Include="Properties\tchmipublish.config.json">
       <SubType>Content</SubType>
@@ -271,23 +276,13 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Localization\de.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Localization\en.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="Localization\de.localization">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Localization\de.tpl.localization</DependentUpon>
     </Content>
     <Content Include="Localization\en.localization">
       <SubType>Content</SubType>
       <Visible>true</Visible>
-      <DependentUpon>Localization\en.tpl.localization</DependentUpon>
     </Content>
     <Content Include="KeyboardLayouts\German - compact.keyboard.json">
       <SubType>Content</SubType>
@@ -342,38 +337,11 @@
     <Folder Include="Server\TcHmiSqliteLogger\" />
     <Folder Include="Server\TcHmiSrv\" />
     <Folder Include="Server\TcHmiUserManagement\" />
-    <Content Include="Server\ADS\ADS.Config.default.json">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Server\ADS\ADS.Config.remote.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\ADS\ADS.Storage.json">
       <SubType>Content</SubType>
-    </Content>
-    <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiLua\TcHmiLua.Config.remote.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiLua\TcHmiLua.Storage.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.default.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.remote.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Storage.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
     </Content>
     <Content Include="Server\TcHmiSrv\TcHmiSrv.Config.default.json">
       <SubType>Content</SubType>
@@ -384,21 +352,13 @@
     <Content Include="Server\TcHmiSrv\TcHmiSrv.Storage.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.default.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.remote.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
-    <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
-      <SubType>Content</SubType>
-      <Visible>false</Visible>
-    </Content>
     <Folder Include="Themes\Base\Images\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExampleControlEsModule\ExampleControlEsModule.hmiextproj">
+      <Name>ExampleControlEsModule</Name>
+      <Project>{dc7777e3-0f3f-43d2-9d64-0780229902a5}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\ExampleControl\ExampleControl.hmiextproj">
       <Name>ExampleControl</Name>
       <Project>{20a01022-022b-49c4-a81e-a116afddfca8}</Project>
@@ -408,8 +368,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.9.5\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets')" />
 </Project>

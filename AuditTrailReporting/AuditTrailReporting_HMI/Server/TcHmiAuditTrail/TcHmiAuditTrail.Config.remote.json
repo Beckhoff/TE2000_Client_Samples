@@ -1,0 +1,11 @@
+{
+    "databaseConnection": {
+        "connectionTimeout": 10,
+        "dbname": "postgres",
+        "host": "localhost",
+        "password": "",
+        "port": 5432,
+        "tableId": 1,
+        "userName": "postgres"
+    }
+}

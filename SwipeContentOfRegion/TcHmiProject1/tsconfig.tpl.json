@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
@@ -15,8 +15,7 @@
     "declaration": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,

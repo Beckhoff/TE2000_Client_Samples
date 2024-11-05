@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.ExampleControlEsModule.JsControlWithImport": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "JsControlWithImport",
+      "frameworkControlNamespace": "TcHmi.Controls.ExampleControlEsModule"
+    }
+  }
+}

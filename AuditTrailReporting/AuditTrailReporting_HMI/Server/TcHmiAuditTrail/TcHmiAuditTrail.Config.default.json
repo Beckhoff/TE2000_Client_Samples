@@ -1,0 +1,146 @@
+{
+    "auditTrailSymbols": {
+        "ADS.PLC1.MAIN.bTest": {
+            "commentRequired": true,
+            "enabled": true
+        },
+        "ADS.PLC1.MAIN.nTest": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "ADS.PLC1.MAIN.sTest": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "AddOrChangeUser": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.AddUser": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.ChangePassword": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.DisableUser": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.EnableUser": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.RemoveUser": {
+            "commentRequired": false,
+            "enabled": true
+        },
+        "TcHmiUserManagement.RenameUser": {
+            "commentRequired": false,
+            "enabled": true
+        }
+    },
+    "blockCommandsOnError": false,
+    "configPageMaxEntries": 200,
+    "databaseConnection": {
+        "connectionTimeout": 10,
+        "dbname": "MyNewDatabase",
+        "host": "localhost",
+        "password": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA24cIM6dihEmkQZEA9KHxhQAAAAAeAAAARQBuAGMAcgB5AHAAdABlAGQAIABkAGEAdABhAAAAA2YAAMAAAAAQAAAAa3l5vZg6TDkqBadUsaTbfAAAAAAEgAAAoAAAABAAAAAaVYHRTiM97KrreJaJc3IFCAAAAGIghu1sgDN9FAAAAP+3W8pER6IsCibRMfnnZkNyNOUF",
+        "port": 5432,
+        "tableId": 1,
+        "userName": "postgres"
+    },
+    "databaseMaxEntries": 15000,
+    "eventFilters": {
+        "auditTrailDatabaseReset": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "auditTrailDatabaseReset"
+                }
+            ]
+        },
+        "auditTrailErrorLogMessage": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "auditTrailErrorLogMessage"
+                }
+            ]
+        },
+        "authFailed": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "AUTH_FAILED"
+                },
+                {
+                    "logic": "AND"
+                },
+                {
+                    "comparator": "==",
+                    "path": "payload::params::persistPreviousSession",
+                    "value": false
+                }
+            ]
+        },
+        "customAuditTrailLogEntry": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "AuditLogEntry"
+                }
+            ]
+        },
+        "login": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "LOGIN_LOG"
+                },
+                {
+                    "logic": "AND"
+                },
+                {
+                    "comparator": "==",
+                    "path": "payload::params::persistPreviousSession",
+                    "value": false
+                }
+            ]
+        },
+        "logout": {
+            "enabled": true,
+            "filter": [
+                {
+                    "comparator": "==",
+                    "path": "name",
+                    "value": "LOGOUT_LOG"
+                },
+                {
+                    "logic": "AND"
+                },
+                {
+                    "comparator": "!=",
+                    "path": "payload::params::reason",
+                    "value": "PersistPreviousSession"
+                }
+            ]
+        }
+    },
+    "maxErrorLogSize": 2097152,
+    "minCommentLength": 5,
+    "remainingDatabaseEntriesHintLimit": 10,
+    "signatureKey": "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"
+}

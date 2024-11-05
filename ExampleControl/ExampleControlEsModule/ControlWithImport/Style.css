@@ -1,0 +1,29 @@
+/* General theme independent control css. */
+
+.TcHmi_Controls_ExampleControlEsModule_ControlWithImport {
+    overflow: hidden;
+}
+
+    .TcHmi_Controls_ExampleControlEsModule_ControlWithImport-Template {
+        width: 100%;
+        height: 100%;
+    }
+
+/* If the main use for this control is interaction
+    uncomment the following lines to give user feedback:
+    This overlays the whole control with a white color
+    and changes the mouse cursor */
+
+/*
+.TcHmi_Controls_ExampleControlEsModule_ControlWithImport.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}
+*/

@@ -1,4 +1,4 @@
-﻿{
+{
   "function": {
     "name": "ListRecipesAsReferenceArray",
     "displayName": "ListRecipesAsReferenceArray",
@@ -26,7 +26,7 @@
       {
         "name": "recipeList",
         "displayName": "recipeList",
-        "type": "tchmi:server#/definitions/folderRecipe",
+        "type": "tchmi:server#/definitions/TcHmiRecipeManagement-folderRecipe",
         "description": "Recipe symbol so the function is updated again when recipe list is changed",
         "defaultValue": "%s%TcHmiRecipeManagement.Config::recipeList%/s%",
         "required": true,

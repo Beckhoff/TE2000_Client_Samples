@@ -1,22 +1,30 @@
 {
+    "PASSWORD_BLACKLIST": "",
+    "PASSWORD_ENABLE_AGING": false,
+    "PASSWORD_FORCE_COMPLEX": 0,
+    "PASSWORD_MAXIMUM_AGE": "P90D",
+    "PASSWORD_MINIMUM_LENGTH": 1,
     "USERS": {
         "__SystemAdministrator": {
             "ALGORITHM": 0,
             "ENABLED": false,
             "PASSWORD": "",
-            "SALT": ""
+            "SALT": "",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         },
         "__SystemGuest": {
             "ALGORITHM": 0,
             "ENABLED": true,
             "PASSWORD": "",
-            "SALT": ""
+            "SALT": "",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         },
         "__SystemUser": {
             "ALGORITHM": 0,
             "ENABLED": true,
             "PASSWORD": "",
-            "SALT": ""
+            "SALT": "",
+            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         }
     }
 }

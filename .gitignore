@@ -331,5 +331,5 @@ ASALocalRun/
 
 # TwinCAT HMI
 .engineering_servers
-/ExampleControl/ControlTest/spec/**/*.js
-!/ExampleControl/ControlTest/spec/support/*.js
+/ExampleControl/UnitTest4Control/spec/**/*.js
+!/ExampleControl/UnitTest4Control/spec/support/*.js

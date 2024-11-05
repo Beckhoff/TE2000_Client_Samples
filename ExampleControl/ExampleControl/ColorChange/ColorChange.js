@@ -27,6 +27,13 @@ var TcHmi;
                     /** Call base class constructor */
                     super(element, pcElement, attrs);
                 }
+                __elementTemplateRoot;
+                /** circle element as native DOM element */
+                __elementCircle;
+                ///** svg polygon element as native DOM element */
+                //protected __elementSvgPolygon!: SVGPolygonElement;
+                /** Initial undefined, after init the value of the attribute */
+                __value;
                 /**
                  * Raised after the control was added to the control cache and the constructors of all base classes were called.
                  */
@@ -37,12 +44,12 @@ var TcHmi;
                         throw new Error('Invalid Template.html');
                     }
                     // Fetch template root element as native Element
-                    const jqCircle = this.__element[0].querySelector('.TcHmi_Controls_ExampleControl_ColorChange-circle');
-                    if (!jqCircle) {
+                    const circleElem = this.__element[0].querySelector('.TcHmi_Controls_ExampleControl_ColorChange-circle');
+                    if (!circleElem) {
                         throw new Error('Invalid Template.html');
                     }
                     // remember native DOM element
-                    this.__elementCircle = jqCircle;
+                    this.__elementCircle = circleElem;
                     //const inlinePolygon = this.__element[0].querySelector<SVGPolygonElement>('.TcHmi_Controls_ExampleControl_ColorChange-svgpolygon');
                     //if (!inlinePolygon) {
                     //    throw new Error('Invalid Template.html');

@@ -1,16 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "ExampleControl", "ExampleControl\ExampleControl.hmiextproj", "{20A01022-022B-49C4-A81E-A116AFDDFCA8}"
 EndProject
 Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "ExampleHmi", "ExampleHmi\ExampleHmi.hmiproj", "{956571C2-9A04-4F09-9E23-147A42DEC41B}"
 EndProject
-Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "ControlTest", "ControlTest\ControlTest.hmiextproj", "{19B45A53-AAD8-4629-B05B-03857B759528}"
+Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "UnitTest4Control", "UnitTest4Control\UnitTest4Control.hmiextproj", "{19B45A53-AAD8-4629-B05B-03857B759528}"
 	ProjectSection(ProjectDependencies) = postProject
 		{20A01022-022B-49C4-A81E-A116AFDDFCA8} = {20A01022-022B-49C4-A81E-A116AFDDFCA8}
 	EndProjectSection
+EndProject
+Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "ExampleControlEsModule", "ExampleControlEsModule\ExampleControlEsModule.hmiextproj", "{DC7777E3-0F3F-43D2-9D64-0780229902A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{19B45A53-AAD8-4629-B05B-03857B759528}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
 		{19B45A53-AAD8-4629-B05B-03857B759528}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
 		{19B45A53-AAD8-4629-B05B-03857B759528}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+		{DC7777E3-0F3F-43D2-9D64-0780229902A5}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{DC7777E3-0F3F-43D2-9D64-0780229902A5}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{DC7777E3-0F3F-43D2-9D64-0780229902A5}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{DC7777E3-0F3F-43D2-9D64-0780229902A5}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

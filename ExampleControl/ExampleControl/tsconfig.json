@@ -3,13 +3,12 @@
   "compileOnSave": true,
   "compilerOptions": {
     "module": "none",
-    "target": "ES2020",
+    "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2019",
-      "ES2020.BigInt"
+      "ES2023"
     ],
     "types": [],
     "declaration": true,
@@ -25,7 +24,7 @@
     "alwaysStrict": false
   },
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.48/runtimes/native1.12-tchmi/TcHmi.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ],
   "files": [
     "ColorChange/ColorChange.ts"

@@ -1,4 +1,4 @@
-﻿// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
+// Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
 /// <reference path="../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/TcHmi.d.ts" />
 /// <reference path="../../Packages/Beckhoff.TwinCAT.HMI.Controls.12.758.8/runtimes/native1.12-tchmi/TcHmiDatagrid/TcHmiDatagrid.d.ts" />
 

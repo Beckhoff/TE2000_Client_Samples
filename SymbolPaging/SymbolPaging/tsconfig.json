@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
@@ -15,8 +15,7 @@
     "declaration": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
@@ -28,8 +27,8 @@
     "bin/"
   ],
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.756.1/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.12.756.1/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/TcHmi.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.2.110/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts"
   ],
   "files": [
     "CodeBehindSorting.ts",
