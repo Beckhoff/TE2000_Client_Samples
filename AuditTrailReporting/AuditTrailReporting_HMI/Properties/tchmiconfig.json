@@ -1,9 +1,13 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.1.15/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
   "loginPage": "",
+  "splash": {
+    "versionSource": "Framework"
+  },
+  "projectVersion": "1.0.0.0",
   "tcHmiServer": {
     "websocketIntervalTime": 500,
     "websocketTimeout": 20000,
@@ -48,36 +52,6 @@
   "dependencyFiles": [
     {
       "name": "Fonts/Fonts.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "ReportingSources/ReportingScripts/apexcharts.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "ReportingSources/ReportingScripts/Toolbox.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "ReportingSources/ReportingScripts/Images.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "ReportingSources/ReportingScripts/Charting.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "ReportingSources/ReportingScripts/chart_2_8_0.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "ReportingSources/ReportingStyles/TcHmi.css",
       "description": "",
       "type": "Stylesheet"
     }

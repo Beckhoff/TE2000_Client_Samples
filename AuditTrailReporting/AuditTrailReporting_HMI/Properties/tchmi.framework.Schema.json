@@ -812,6 +812,11 @@
         "fn": {
           "type": "string"
         },
+        "active": {
+          "type": "boolean",
+          "description": "Should function be active?",
+          "default": true
+        },
         "fnParams": {
           "type": "array",
           "items": {
@@ -1732,6 +1737,15 @@
                   "description": "",
                   "defaultValue": null,
                   "defaultValueInternal": "deg"
+                },
+                {
+                  "name": "vector",
+                  "category": "General",
+                  "displayName": "Vector",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
                 }
               ],
               "properties": {
@@ -1748,7 +1762,37 @@
                   "$ref": "#/definitions/TransformList/definitions/angleUnit"
                 },
                 "vector": {
+                  "title": "Vector",
                   "type": "object",
+                  "propertiesMeta": [
+                    {
+                      "name": "x",
+                      "category": "general",
+                      "displayName": "X",
+                      "displayPriority": 10,
+                      "description": "",
+                      "defaultValue": null,
+                      "defaultValueInternal": null
+                    },
+                    {
+                      "name": "y",
+                      "category": "general",
+                      "displayName": "Y",
+                      "displayPriority": 10,
+                      "description": "",
+                      "defaultValue": null,
+                      "defaultValueInternal": null
+                    },
+                    {
+                      "name": "z",
+                      "category": "general",
+                      "displayName": "Z",
+                      "displayPriority": 10,
+                      "description": "",
+                      "defaultValue": null,
+                      "defaultValueInternal": null
+                    }
+                  ],
                   "properties": {
                     "x": {
                       "type": "number"
@@ -1777,6 +1821,44 @@
             {
               "title": "Scale",
               "type": "object",
+              "propertiesMeta": [
+                {
+                  "name": "transformType",
+                  "category": "general",
+                  "displayName": "Transform Type",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": "Scale",
+                  "defaultValueInternal": "Scale"
+                },
+                {
+                  "name": "x",
+                  "category": "general",
+                  "displayName": "X",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+                },
+                {
+                  "name": "y",
+                  "category": "general",
+                  "displayName": "Y",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+                },
+                {
+                  "name": "z",
+                  "category": "general",
+                  "displayName": "Z",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+                }
+              ],
               "properties": {
                 "transformType": {
                   "type": "string",
@@ -2009,6 +2091,15 @@
                   "description": "",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
+                },
+                {
+                  "name": "origin",
+                  "category": "General",
+                  "displayName": "Origin",
+                  "displayPriority": 10,
+                  "description": "",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
                 }
               ],
               "properties": {
@@ -2025,6 +2116,7 @@
                   "$ref": "#/definitions/MeasurementUnit"
                 },
                 "origin": {
+                  "title": "Origin",
                   "type": "object",
                   "propertiesMeta": [
                     {
@@ -2079,7 +2171,8 @@
                     "yUnit": {
                       "$ref": "#/definitions/MeasurementUnit"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               },
               "required": [
@@ -2132,16 +2225,14 @@
                             "$ref": "#/definitions/Trigger/definitions/expression"
                           },
                           "then": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/Trigger/definitions/action"
-                            }
+                            "$ref": "#/definitions/Trigger/definitions/actionList"
                           },
                           "showThenActions": {
                             "type": "boolean",
                             "description": "Holds the current state of the Trigger GUI. Not used in runtime"
                           }
-                        }
+                        },
+                        "additionalProperties": false
                       },
                       {
                         "type": "object",
@@ -2150,31 +2241,27 @@
                             "$ref": "#/definitions/Trigger/definitions/expression"
                           },
                           "then": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/Trigger/definitions/action"
-                            }
+                            "$ref": "#/definitions/Trigger/definitions/actionList"
                           },
                           "showThenActions": {
                             "type": "boolean",
                             "description": "Holds the current state of the Trigger GUI. Not used in runtime"
                           }
-                        }
+                        },
+                        "additionalProperties": false
                       },
                       {
                         "type": "object",
                         "properties": {
                           "else": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/Trigger/definitions/action"
-                            }
+                            "$ref": "#/definitions/Trigger/definitions/actionList"
                           },
                           "showThenActions": {
                             "type": "boolean",
                             "description": "Holds the current state of the Trigger GUI. Not used in runtime"
                           }
-                        }
+                        },
+                        "additionalProperties": false
                       }
                     ]
                   }
@@ -2208,9 +2295,7 @@
                 }
               },
               "required": [
-                "objectType",
-                "true",
-                "false"
+                "objectType"
               ],
               "additionalProperties": false
             },
@@ -2238,16 +2323,10 @@
                   "$ref": "#/definitions/Trigger/definitions/dCase"
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2289,16 +2368,10 @@
                   "$ref": "#/definitions/Trigger/definitions/value"
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2341,16 +2414,10 @@
                   }
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2389,10 +2456,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "injectContextObject": {
-                  "type": "boolean",
-                  "description": "Inject context object.\nCall ctx.success() or ctx.error(TcHmi.Errors.ERROR)"
                 },
                 "waitMode": {
                   "type": "string",
@@ -2461,16 +2524,10 @@
                   }
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2517,16 +2574,10 @@
                   }
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2563,16 +2614,10 @@
                   "type": "string"
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2609,16 +2654,10 @@
                   "$ref": "#/definitions/Trigger/definitions/comment"
                 },
                 "success": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "error": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/definitions/Trigger/definitions/action"
-                  }
+                  "$ref": "#/definitions/Trigger/definitions/actionList"
                 },
                 "active": {
                   "type": "boolean",
@@ -2640,6 +2679,12 @@
               "additionalProperties": false
             }
           ]
+        },
+        "actionList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Trigger/definitions/action"
+          }
         },
         "value": {
           "anyOf": [
@@ -2823,10 +2868,7 @@
           "type": "object",
           "properties": {
             "actions": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Trigger/definitions/action"
-              }
+              "$ref": "#/definitions/Trigger/definitions/actionList"
             },
             "caseValue": {
               "$ref": "#/definitions/Trigger/definitions/value"
@@ -2843,10 +2885,7 @@
           "type": "object",
           "properties": {
             "actions": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Trigger/definitions/action"
-              }
+              "$ref": "#/definitions/Trigger/definitions/actionList"
             }
           },
           "required": [
@@ -3256,11 +3295,7 @@
             "default": false
           },
           "actions": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
-            }
+            "$ref": "tchmi:framework#/definitions/Trigger/definitions/actionList"
           }
         },
         "required": [
@@ -3673,7 +3708,7 @@
             "displayName": "Width",
             "displayPriority": 10,
             "description": "Defines width of the column in the grid. Can be a pixel value (42px), percent value (42%) or a grow factor (1).\nThe grow factor determines how much the items will grow relative to the rest of the items when positive free space is distributed.",
-            "defaultValue": null,
+            "defaultValue": 1,
             "defaultValueInternal": 1
           },
           {
@@ -3683,7 +3718,7 @@
             "displayName": "Width Unit",
             "displayPriority": 10,
             "description": "Defines if the number defines a pixel value (px), percent value (42%) or grow factor (2).",
-            "defaultValue": null,
+            "defaultValue": "factor",
             "defaultValueInternal": "factor"
           },
           {
@@ -3692,7 +3727,7 @@
             "displayName": "Width Mode",
             "displayPriority": 30,
             "description": "Defines if the width is taken from the width value or calculated from child controls in this Column.",
-            "defaultValue": null,
+            "defaultValue": "Value",
             "defaultValueInternal": "Value"
           },
           {
@@ -3892,7 +3927,7 @@
             "displayName": "Height",
             "displayPriority": 10,
             "description": "Defines height of the cells of this row in the grid. Can be a pixel value (42px), percent value (42%) or a grow factor (1).\nThe grow factor determines how much the items will grow relative to the rest of the items when positive free space is distributed.",
-            "defaultValue": null,
+            "defaultValue": 1,
             "defaultValueInternal": 1
           },
           {
@@ -3902,7 +3937,7 @@
             "displayName": "Height Unit",
             "displayPriority": 10,
             "description": "Defines if the number defines a pixel value (px), percent value (42%) or grow factor (2).",
-            "defaultValue": null,
+            "defaultValue": "factor",
             "defaultValueInternal": "factor"
           },
           {
@@ -3911,7 +3946,7 @@
             "displayName": "Height Mode",
             "displayPriority": 30,
             "description": "Defines if the height is taken from the height value or calculated from child controls in row.",
-            "defaultValue": null,
+            "defaultValue": "Value",
             "defaultValueInternal": "Value"
           },
           {
@@ -4643,7 +4678,8 @@
                 "expression": {
                   "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarColorFilter"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "defaultVisibility": {
@@ -5323,7 +5359,7 @@
                 "name": "textColor",
                 "displayName": "Text Color",
                 "category": "Colors",
-                "displayPriority": 10,
+                "displayPriority": 11,
                 "description": "Text color of the cells in this column",
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -5333,7 +5369,7 @@
                 "displayName": "Name",
                 "category": "General",
                 "displayPriority": 10,
-                "description": "Name of the property in the srcData object",
+                "description": "Name of the property in the srcData object. If not defined the column adresses the full object (usefull if the data is an array containing simple datatypes).",
                 "defaultValue": null,
                 "defaultValueInternal": null
               },
@@ -5341,7 +5377,7 @@
                 "name": "label",
                 "displayName": "Label",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 11,
                 "description": "Name of the label for this column",
                 "defaultValue": "",
                 "defaultValueInternal": null
@@ -5350,7 +5386,7 @@
                 "name": "control",
                 "displayName": "Control",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 12,
                 "description": "Type of the input elements for this column",
                 "defaultValue": "TextBox",
                 "defaultValueInternal": "TextBlock"
@@ -5359,7 +5395,7 @@
                 "name": "width",
                 "displayName": "Width",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 13,
                 "description": "Width for this column",
                 "defaultValue": 100,
                 "defaultValueInternal": null
@@ -5369,17 +5405,17 @@
                 "refTo": "width",
                 "displayName": "Width Unit",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 13,
                 "description": "Width unit for this column. px defines an absolute width, % is relative to the control width and factor can be used to divide the available space into fractions.",
                 "defaultValue": "px",
                 "defaultValueInternal": "px"
               },
               {
-                "name": "resize",
-                "displayName": "Resize",
+                "name": "editable",
+                "displayName": "Editable",
                 "category": "General",
-                "displayPriority": 10,
-                "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
+                "displayPriority": 14,
+                "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
                 "defaultValue": false,
                 "defaultValueInternal": false
               },
@@ -5387,7 +5423,7 @@
                 "name": "minWidth",
                 "displayName": "Min Width",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 15,
                 "description": "Minimum width for this column",
                 "defaultValue": 100,
                 "defaultValueInternal": null
@@ -5397,17 +5433,17 @@
                 "refTo": "minWidth",
                 "displayName": "Min Width Unit",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 15,
                 "description": "Minimum width unit for this column",
                 "defaultValue": "px",
                 "defaultValueInternal": "px"
               },
               {
-                "name": "editable",
-                "displayName": "Editable",
+                "name": "resize",
+                "displayName": "Resize",
                 "category": "General",
-                "displayPriority": 10,
-                "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
+                "displayPriority": 16,
+                "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
                 "defaultValue": false,
                 "defaultValueInternal": false
               },
@@ -5415,7 +5451,7 @@
                 "name": "sortable",
                 "displayName": "Sortable",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 17,
                 "description": "Can this column be sortedby user interaction?",
                 "defaultValue": true,
                 "defaultValueInternal": true
@@ -5424,7 +5460,7 @@
                 "name": "horizontalAlignment",
                 "displayName": "Horizontal Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 18,
                 "description": "Horizontal alignment of this column",
                 "defaultValue": "Left",
                 "defaultValueInternal": "Left"
@@ -5433,7 +5469,7 @@
                 "name": "verticalAlignment",
                 "displayName": "Vertical Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 19,
                 "description": "Vertical alignment of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -5442,7 +5478,7 @@
                 "name": "headerHorizontalAlignment",
                 "displayName": "Header Horizontal Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 20,
                 "description": "Horizontal alignment of the header of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -5451,7 +5487,7 @@
                 "name": "headerVerticalAlignment",
                 "displayName": "Header Vertical Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 21,
                 "description": "Vertical alignment of the header of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -5460,7 +5496,7 @@
                 "name": "format",
                 "displayName": "Format",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 22,
                 "description": "A reference of function which is called with each entry",
                 "allowedFunctions": {
                   "returnType": "tchmi:general#/definitions/String",
@@ -5470,7 +5506,7 @@
                       "description": "The value to format."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -5479,7 +5515,7 @@
                 "name": "dataDefinitions",
                 "displayName": "Data Definitions",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 23,
                 "description": "Mapping from the srcData to a combobox or image selection. \nText to show on Buttons. \nRestrictions for number inputs.",
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -5488,7 +5524,7 @@
                 "name": "ignoreEscapeSequences",
                 "displayName": "Ignore Escape Sequences",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 24,
                 "description": "When set to true a backslash in a text will be shown verbatim in the HMI",
                 "defaultValue": false,
                 "defaultValueInternal": false
@@ -5497,7 +5533,7 @@
                 "name": "autoFocusOut",
                 "displayName": "Auto Focus Out",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 25,
                 "description": "When set to true the control will automatically lose focus when the user presses the enter or escape key",
                 "defaultValue": true,
                 "defaultValueInternal": true
@@ -5506,7 +5542,7 @@
                 "name": "autoSelectText",
                 "displayName": "Auto Select Text",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 26,
                 "description": "When set to true all text within the control will be selected when the control gains focus",
                 "defaultValue": false,
                 "defaultValueInternal": false
@@ -5527,8 +5563,14 @@
                 ]
               },
               "name": {
-                "type": "string",
-                "minLength": 1
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
               },
               "label": {
                 "type": "string"
@@ -5566,7 +5608,7 @@
               "widthUnit": {
                 "$ref": "tchmi:framework#/definitions/MeasurementUnitOrFactor"
               },
-              "resize": {
+              "editable": {
                 "type": "boolean"
               },
               "minWidth": {
@@ -5582,7 +5624,7 @@
               "minWidthUnit": {
                 "$ref": "tchmi:framework#/definitions/MeasurementUnit"
               },
-              "editable": {
+              "resize": {
                 "type": "boolean"
               },
               "sortable": {
@@ -5617,7 +5659,6 @@
               }
             },
             "required": [
-              "name",
               "label",
               "control",
               "width",
@@ -5786,7 +5827,7 @@
                     "description": "The value to format."
                   }
                 ],
-                "waitMode": "Synchronous"
+                "requiredWaitMode": "Synchronous"
               },
               "defaultValue": null,
               "defaultValueInternal": null
@@ -6306,7 +6347,6 @@
       ]
     },
     "TcHmi.Controls.Beckhoff.TcHmiDateTimeInput": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
       "frameworkControlType": "TcHmiDateTimeInput",
@@ -6325,7 +6365,6 @@
       "default": "Right"
     },
     "TcHmi.Controls.Beckhoff.TcHmiDateTimePicker": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
       "frameworkControlType": "TcHmiDateTimePicker",
@@ -6335,7 +6374,6 @@
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiDateTimePicker"
     },
     "TcHmi.Controls.Beckhoff.TcHmiEllipse": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
       "frameworkControlType": "TcHmiEllipse",
@@ -6420,7 +6458,7 @@
                       "description": "The value to format."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -6535,7 +6573,7 @@
                       "description": "The value to format."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -6666,6 +6704,25 @@
                 "description": "A Part of the displayed message.",
                 "defaultValue": null,
                 "defaultValueInternal": null
+              },
+              {
+                "name": "format",
+                "displayName": "Format",
+                "category": "General",
+                "displayPriority": 10,
+                "description": "A reference of function which is called with each entry",
+                "allowedFunctions": {
+                  "returnType": "tchmi:general#/definitions/String",
+                  "requiredArguments": [
+                    {
+                      "type": "tchmi:general#/definitions/String",
+                      "description": "The message to format."
+                    }
+                  ],
+                  "requiredWaitMode": "Synchronous"
+                },
+                "defaultValue": null,
+                "defaultValueInternal": null
               }
             ],
             "properties": {
@@ -6685,6 +6742,9 @@
                   "timeConfirmed",
                   "timeCleared"
                 ]
+              },
+              "format": {
+                "$ref": "tchmi:framework#/definitions/Function"
               }
             },
             "required": [
@@ -6729,11 +6789,33 @@
                 "description": "A custom text displayed in the event message.",
                 "defaultValue": null,
                 "defaultValueInternal": null
+              },
+              {
+                "name": "format",
+                "displayName": "Format",
+                "category": "General",
+                "displayPriority": 10,
+                "description": "A reference of function which is called with each entry",
+                "allowedFunctions": {
+                  "returnType": "tchmi:general#/definitions/String",
+                  "requiredArguments": [
+                    {
+                      "type": "tchmi:general#/definitions/String",
+                      "description": "The message to format."
+                    }
+                  ],
+                  "requiredWaitMode": "Synchronous"
+                },
+                "defaultValue": null,
+                "defaultValueInternal": null
               }
             ],
             "properties": {
               "text": {
                 "type": "string"
+              },
+              "format": {
+                "$ref": "tchmi:framework#/definitions/Function"
               }
             },
             "required": [
@@ -6974,7 +7056,8 @@
                 "expression": {
                   "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiHorizontalBarChart.ChartBarColorFilter"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "defaultVisibility": {
@@ -7894,7 +7977,8 @@
                 "expression": {
                   "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLineChart.ChartLineColorFilter"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "defaultVisibility": {
@@ -7983,9 +8067,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisLabelFontColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#4794da"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "axisColor",
@@ -7994,9 +8076,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#4794da"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "axisNameFontColor",
@@ -8005,9 +8085,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisNameFontColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#4794da"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "id",
@@ -8082,6 +8160,15 @@
           "defaultValueInternal": 2
         },
         {
+          "name": "showAxis",
+          "category": "General",
+          "displayName": "Show Axis",
+          "displayPriority": 10,
+          "description": "",
+          "defaultValue": null,
+          "defaultValueInternal": true
+        },
+        {
           "name": "showLabels",
           "category": "General",
           "displayName": "Show Labels",
@@ -8124,7 +8211,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": null,
-          "defaultValueInternal": 12
+          "defaultValueInternal": 15
         },
         {
           "name": "axisNameFontSizeUnit",
@@ -8153,6 +8240,15 @@
           "description": "",
           "defaultValue": null,
           "defaultValueInternal": null
+        },
+        {
+          "name": "showAxisIfNoData",
+          "category": "General",
+          "displayName": "Show Axis If No Data",
+          "displayPriority": 10,
+          "description": "If showAxisIfNoData is true, the axis is always displayed; if false, the axis is only displayed if there are data sets assigned to the axis.",
+          "defaultValue": null,
+          "defaultValueInternal": true
         }
       ],
       "properties": {
@@ -8199,6 +8295,9 @@
           "type": "number",
           "minimum": 0
         },
+        "showAxis": {
+          "type": "boolean"
+        },
         "showLabels": {
           "type": "boolean"
         },
@@ -8222,6 +8321,9 @@
         },
         "unit": {
           "type": "string"
+        },
+        "showAxisIfNoData": {
+          "type": "boolean"
         }
       },
       "additionalProperties": false,
@@ -8273,7 +8375,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": null,
-          "defaultValueInternal": ""
+          "defaultValueInternal": null
         },
         {
           "name": "orientation",
@@ -8299,7 +8401,7 @@
           "displayName": "Value",
           "displayPriority": 10,
           "description": "",
-          "defaultValue": null,
+          "defaultValue": 0,
           "defaultValueInternal": 0
         },
         {
@@ -8319,8 +8421,8 @@
           "displayName": "Line Width",
           "displayPriority": 10,
           "description": "",
-          "defaultValue": null,
-          "defaultValueInternal": 1
+          "defaultValue": 1,
+          "defaultValueInternal": null
         },
         {
           "name": "showLabel",
@@ -8640,7 +8742,7 @@
             "name": "textColor",
             "displayName": "Text Color",
             "category": "Colors",
-            "displayPriority": 10,
+            "displayPriority": 11,
             "description": "Text color of the cells in this column",
             "defaultValue": null,
             "defaultValueInternal": null
@@ -8651,14 +8753,14 @@
             "category": "General",
             "displayPriority": 10,
             "description": "The data that will be displayed in the column.",
-            "defaultValue": "",
+            "defaultValue": null,
             "defaultValueInternal": null
           },
           {
             "name": "width",
             "displayName": "Width",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 11,
             "description": "Width for this column",
             "defaultValue": 100,
             "defaultValueInternal": null
@@ -8668,17 +8770,17 @@
             "refTo": "width",
             "displayName": "Width Unit",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 11,
             "description": "Width unit for this column. px defines an absolute width, % is relative to the control width and factor can be used to divide the available space into fractions.",
             "defaultValue": "px",
             "defaultValueInternal": "px"
           },
           {
-            "name": "resize",
-            "displayName": "Resize",
+            "name": "editable",
+            "displayName": "Editable",
             "category": "General",
-            "displayPriority": 10,
-            "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
+            "displayPriority": 12,
+            "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
             "defaultValue": false,
             "defaultValueInternal": false
           },
@@ -8686,7 +8788,7 @@
             "name": "minWidth",
             "displayName": "Min Width",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 13,
             "description": "Minimum width for this column",
             "defaultValue": 100,
             "defaultValueInternal": null
@@ -8696,17 +8798,17 @@
             "refTo": "minWidth",
             "displayName": "Min Width Unit",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 13,
             "description": "Minimum width unit for this column",
             "defaultValue": "px",
             "defaultValueInternal": "px"
           },
           {
-            "name": "editable",
-            "displayName": "Editable",
+            "name": "resize",
+            "displayName": "Resize",
             "category": "General",
-            "displayPriority": 10,
-            "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
+            "displayPriority": 14,
+            "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
             "defaultValue": false,
             "defaultValueInternal": false
           },
@@ -8714,7 +8816,7 @@
             "name": "sortable",
             "displayName": "Sortable",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 15,
             "description": "Can this column be sortedby user interaction?",
             "defaultValue": true,
             "defaultValueInternal": true
@@ -8723,7 +8825,7 @@
             "name": "horizontalAlignment",
             "displayName": "Horizontal Alignment",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 16,
             "description": "Horizontal alignment of this column",
             "defaultValue": "Left",
             "defaultValueInternal": "Left"
@@ -8732,7 +8834,7 @@
             "name": "verticalAlignment",
             "displayName": "Vertical Alignment",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 17,
             "description": "Vertical alignment of this column",
             "defaultValue": "Center",
             "defaultValueInternal": "Center"
@@ -8741,7 +8843,7 @@
             "name": "headerHorizontalAlignment",
             "displayName": "Header Horizontal Alignment",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 18,
             "description": "Horizontal alignment of the header of this column",
             "defaultValue": "Center",
             "defaultValueInternal": "Center"
@@ -8750,7 +8852,7 @@
             "name": "headerVerticalAlignment",
             "displayName": "Header Vertical Alignment",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 19,
             "description": "Vertical alignment of the header of this column",
             "defaultValue": "Center",
             "defaultValueInternal": "Center"
@@ -8759,7 +8861,7 @@
             "name": "format",
             "displayName": "Format",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 20,
             "description": "A reference of function which is called with each entry",
             "allowedFunctions": {
               "returnType": "tchmi:general#/definitions/String",
@@ -8767,9 +8869,13 @@
                 {
                   "type": "tchmi:general#/definitions/Any",
                   "description": "The value to format."
+                },
+                {
+                  "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TchmiTreeView.ValueMetaData",
+                  "description": "Meta data of the value. Includes the json schema."
                 }
               ],
-              "waitMode": "Synchronous"
+              "requiredWaitMode": "Synchronous"
             },
             "defaultValue": null,
             "defaultValueInternal": null
@@ -8778,8 +8884,26 @@
             "name": "ignoreEscapeSequences",
             "displayName": "Ignore Escape Sequences",
             "category": "General",
-            "displayPriority": 10,
+            "displayPriority": 21,
             "description": "When set to true a backslash in a text will be shown verbatim in the HMI",
+            "defaultValue": false,
+            "defaultValueInternal": false
+          },
+          {
+            "name": "autoFocusOut",
+            "displayName": "Auto Focus Out",
+            "category": "General",
+            "displayPriority": 22,
+            "description": "When set to true the control will automatically lose focus when the user presses the enter or escape key",
+            "defaultValue": true,
+            "defaultValueInternal": true
+          },
+          {
+            "name": "autoSelectText",
+            "displayName": "Auto Select Text",
+            "category": "General",
+            "displayPriority": 23,
+            "description": "When set to true all text within the control will be selected when the control gains focus",
             "defaultValue": false,
             "defaultValueInternal": false
           }
@@ -8845,6 +8969,12 @@
             "$ref": "tchmi:framework#/definitions/Function"
           },
           "ignoreEscapeSequences": {
+            "type": "boolean"
+          },
+          "autoFocusOut": {
+            "type": "boolean"
+          },
+          "autoSelectText": {
             "type": "boolean"
           }
         },
@@ -8912,6 +9042,16 @@
     },
     "TcHmiPolyline": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiPolyline"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiProgressBar": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiProgressBar",
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+    },
+    "TcHmiProgressBar": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiProgressBar"
     },
     "RadialGaugeLabelPosition": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRadialGauge.LabelPosition"
@@ -9149,6 +9289,12 @@
         "targetFileHostKeepAlive": {
           "type": "boolean"
         },
+        "scrolling": {
+          "$ref": "tchmi:framework#/definitions/ScrollMode"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
         "horizontalAlignment": {
           "$ref": "tchmi:framework#/definitions/HorizontalAlignment"
         },
@@ -9281,6 +9427,24 @@
           "category": "General",
           "displayPriority": 15,
           "description": "Defines whether the target file host is kept alive when the tab is unselected. Has no effect when TargetFileHostPreload is set to true.",
+          "defaultValue": null,
+          "defaultValueInternal": false
+        },
+        {
+          "name": "scrolling",
+          "displayName": "Scrolling",
+          "category": "General",
+          "displayPriority": 16,
+          "description": "Defines whether a content is scrollable. Possible values are No, Yes, Auto. Does not affect user controls.",
+          "defaultValue": null,
+          "defaultValueInternal": "Auto"
+        },
+        {
+          "name": "hidden",
+          "displayName": "Hidden",
+          "category": "General",
+          "displayPriority": 17,
+          "description": "Defines whether the tab is hidden or not.",
           "defaultValue": null,
           "defaultValueInternal": false
         },
@@ -9505,7 +9669,7 @@
                 "name": "textColor",
                 "displayName": "Text Color",
                 "category": "Colors",
-                "displayPriority": 10,
+                "displayPriority": 11,
                 "description": "Text color of the cells in this column",
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -9515,15 +9679,15 @@
                 "displayName": "Name",
                 "category": "General",
                 "displayPriority": 10,
-                "description": "Name of the property in the srcData object",
-                "defaultValue": "",
+                "description": "Name of the property in the data object. If not defined the column adresses the full object (usefull if the data is an array containing simple datatypes).",
+                "defaultValue": null,
                 "defaultValueInternal": null
               },
               {
                 "name": "label",
                 "displayName": "Label",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 11,
                 "description": "Name of the label for this column",
                 "defaultValue": "",
                 "defaultValueInternal": null
@@ -9532,7 +9696,7 @@
                 "name": "control",
                 "displayName": "Control",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 12,
                 "description": "Type of the input elements for this column",
                 "defaultValue": "TextBox",
                 "defaultValueInternal": null
@@ -9541,7 +9705,7 @@
                 "name": "width",
                 "displayName": "Width",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 13,
                 "description": "Width for this column",
                 "defaultValue": 100,
                 "defaultValueInternal": null
@@ -9551,17 +9715,17 @@
                 "refTo": "width",
                 "displayName": "Width Unit",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 13,
                 "description": "Width unit for this column. px defines an absolute width, % is relative to the control width and factor can be used to divide the available space into fractions.",
                 "defaultValue": "px",
                 "defaultValueInternal": "px"
               },
               {
-                "name": "resize",
-                "displayName": "Resize",
+                "name": "editable",
+                "displayName": "Editable",
                 "category": "General",
-                "displayPriority": 10,
-                "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
+                "displayPriority": 14,
+                "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
                 "defaultValue": false,
                 "defaultValueInternal": false
               },
@@ -9569,7 +9733,7 @@
                 "name": "minWidth",
                 "displayName": "Min Width",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 15,
                 "description": "Minimum width for this column",
                 "defaultValue": 100,
                 "defaultValueInternal": null
@@ -9579,17 +9743,17 @@
                 "refTo": "minWidth",
                 "displayName": "Min Width Unit",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 15,
                 "description": "Minimum width unit for this column",
                 "defaultValue": "px",
                 "defaultValueInternal": "px"
               },
               {
-                "name": "editable",
-                "displayName": "Editable",
+                "name": "resize",
+                "displayName": "Resize",
                 "category": "General",
-                "displayPriority": 10,
-                "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
+                "displayPriority": 16,
+                "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
                 "defaultValue": false,
                 "defaultValueInternal": false
               },
@@ -9597,7 +9761,7 @@
                 "name": "sortable",
                 "displayName": "Sortable",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 17,
                 "description": "Can this column be sortedby user interaction?",
                 "defaultValue": true,
                 "defaultValueInternal": true
@@ -9606,7 +9770,7 @@
                 "name": "horizontalAlignment",
                 "displayName": "Horizontal Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 18,
                 "description": "Horizontal alignment of this column",
                 "defaultValue": "Left",
                 "defaultValueInternal": "Left"
@@ -9615,7 +9779,7 @@
                 "name": "verticalAlignment",
                 "displayName": "Vertical Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 19,
                 "description": "Vertical alignment of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -9624,7 +9788,7 @@
                 "name": "headerHorizontalAlignment",
                 "displayName": "Header Horizontal Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 20,
                 "description": "Horizontal alignment of the header of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -9633,7 +9797,7 @@
                 "name": "headerVerticalAlignment",
                 "displayName": "Header Vertical Alignment",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 21,
                 "description": "Vertical alignment of the header of this column",
                 "defaultValue": "Center",
                 "defaultValueInternal": "Center"
@@ -9642,7 +9806,7 @@
                 "name": "format",
                 "displayName": "Format",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 22,
                 "description": "A reference of function which is called with each entry",
                 "allowedFunctions": {
                   "returnType": "tchmi:general#/definitions/String",
@@ -9650,9 +9814,13 @@
                     {
                       "type": "tchmi:general#/definitions/Any",
                       "description": "The value to format."
+                    },
+                    {
+                      "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TchmiTreeView.ValueMetaData",
+                      "description": "Meta data of the value. Includes the json schema."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -9661,7 +9829,7 @@
                 "name": "dataDefinitions",
                 "displayName": "Data Definitions",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 23,
                 "description": "Mapping from the srcData to a combobox or image selection. \nText to show on Buttons. \nRestrictions for number inputs.",
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -9670,7 +9838,7 @@
                 "name": "ignoreEscapeSequences",
                 "displayName": "Ignore Escape Sequences",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 24,
                 "description": "When set to true a backslash in a text will be shown verbatim in the HMI",
                 "defaultValue": false,
                 "defaultValueInternal": false
@@ -9679,7 +9847,7 @@
                 "name": "autoFocusOut",
                 "displayName": "Auto Focus Out",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 25,
                 "description": "When set to true the control will automatically lose focus when the user presses the enter or escape key",
                 "defaultValue": true,
                 "defaultValueInternal": true
@@ -9688,7 +9856,7 @@
                 "name": "autoSelectText",
                 "displayName": "Auto Select Text",
                 "category": "General",
-                "displayPriority": 10,
+                "displayPriority": 26,
                 "description": "When set to true all text within the control will be selected when the control gains focus",
                 "defaultValue": false,
                 "defaultValueInternal": false
@@ -9709,8 +9877,14 @@
                 ]
               },
               "name": {
-                "type": "string",
-                "minLength": 1
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
               },
               "label": {
                 "type": "string"
@@ -9748,7 +9922,7 @@
               "widthUnit": {
                 "$ref": "tchmi:framework#/definitions/MeasurementUnitOrFactor"
               },
-              "resize": {
+              "editable": {
                 "type": "boolean"
               },
               "minWidth": {
@@ -9764,7 +9938,7 @@
               "minWidthUnit": {
                 "$ref": "tchmi:framework#/definitions/MeasurementUnit"
               },
-              "editable": {
+              "resize": {
                 "type": "boolean"
               },
               "sortable": {
@@ -9799,7 +9973,6 @@
               }
             },
             "required": [
-              "name",
               "label",
               "control",
               "width",
@@ -9830,7 +10003,7 @@
               "name": "textColor",
               "displayName": "Text Color",
               "category": "Colors",
-              "displayPriority": 10,
+              "displayPriority": 11,
               "description": "Text color of the cells in this column",
               "defaultValue": null,
               "defaultValueInternal": null
@@ -9839,7 +10012,7 @@
               "name": "label",
               "displayName": "Label",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 11,
               "description": "Name of the label for this column",
               "defaultValue": "",
               "defaultValueInternal": null
@@ -9848,7 +10021,7 @@
               "name": "control",
               "displayName": "Control",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 12,
               "description": "Type of the input elements for this column",
               "defaultValue": "TextBox",
               "defaultValueInternal": null
@@ -9857,7 +10030,7 @@
               "name": "width",
               "displayName": "Width",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 13,
               "description": "Width for this column",
               "defaultValue": 100,
               "defaultValueInternal": null
@@ -9867,17 +10040,17 @@
               "refTo": "width",
               "displayName": "Width Unit",
               "category": "General",
-              "displayPriority": 10,
-              "description": "Width unit for this column",
+              "displayPriority": 13,
+              "description": "Width unit for this column. px defines an absolute width, % is relative to the control width and factor can be used to divide the available space into fractions.",
               "defaultValue": "px",
               "defaultValueInternal": "px"
             },
             {
-              "name": "resize",
-              "displayName": "Resize",
+              "name": "editable",
+              "displayName": "Editable",
               "category": "General",
-              "displayPriority": 10,
-              "description": "Can this column be resized?",
+              "displayPriority": 14,
+              "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
               "defaultValue": false,
               "defaultValueInternal": false
             },
@@ -9885,7 +10058,7 @@
               "name": "minWidth",
               "displayName": "Min Width",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 15,
               "description": "Minimum width for this column",
               "defaultValue": 100,
               "defaultValueInternal": null
@@ -9895,17 +10068,17 @@
               "refTo": "minWidth",
               "displayName": "Min Width Unit",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 15,
               "description": "Minimum width unit for this column",
               "defaultValue": "px",
               "defaultValueInternal": "px"
             },
             {
-              "name": "editable",
-              "displayName": "Editable",
+              "name": "resize",
+              "displayName": "Resize",
               "category": "General",
-              "displayPriority": 10,
-              "description": "Can this column be edited (text, number) or operated (button, checkbox)?",
+              "displayPriority": 16,
+              "description": "Can this column be resized? Columns that have factor as their widthUnit can never be resizeable.",
               "defaultValue": false,
               "defaultValueInternal": false
             },
@@ -9913,16 +10086,16 @@
               "name": "sortable",
               "displayName": "Sortable",
               "category": "General",
-              "displayPriority": 10,
-              "description": "Can this column be sorted by user interaction?",
+              "displayPriority": 17,
+              "description": "Can this column be sortedby user interaction?",
               "defaultValue": true,
-              "defaultValueInternal": false
+              "defaultValueInternal": true
             },
             {
               "name": "horizontalAlignment",
               "displayName": "Horizontal Alignment",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 18,
               "description": "Horizontal alignment of this column",
               "defaultValue": "Left",
               "defaultValueInternal": "Left"
@@ -9931,7 +10104,7 @@
               "name": "verticalAlignment",
               "displayName": "Vertical Alignment",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 19,
               "description": "Vertical alignment of this column",
               "defaultValue": "Center",
               "defaultValueInternal": "Center"
@@ -9940,7 +10113,7 @@
               "name": "headerHorizontalAlignment",
               "displayName": "Header Horizontal Alignment",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 20,
               "description": "Horizontal alignment of the header of this column",
               "defaultValue": "Center",
               "defaultValueInternal": "Center"
@@ -9949,7 +10122,7 @@
               "name": "headerVerticalAlignment",
               "displayName": "Header Vertical Alignment",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 21,
               "description": "Vertical alignment of the header of this column",
               "defaultValue": "Center",
               "defaultValueInternal": "Center"
@@ -9958,7 +10131,7 @@
               "name": "format",
               "displayName": "Format",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 22,
               "description": "A reference of function which is called with each entry",
               "allowedFunctions": {
                 "returnType": "tchmi:general#/definitions/String",
@@ -9966,9 +10139,13 @@
                   {
                     "type": "tchmi:general#/definitions/Any",
                     "description": "The value to format."
+                  },
+                  {
+                    "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TchmiTreeView.ValueMetaData",
+                    "description": "Meta data of the value. Includes the json schema."
                   }
                 ],
-                "waitMode": "Synchronous"
+                "requiredWaitMode": "Synchronous"
               },
               "defaultValue": null,
               "defaultValueInternal": null
@@ -9977,7 +10154,7 @@
               "name": "dataDefinitions",
               "displayName": "Data Definitions",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 23,
               "description": "Mapping from the srcData to a combobox or image selection. \nText to show on Buttons. \nRestrictions for number inputs.",
               "defaultValue": null,
               "defaultValueInternal": null
@@ -9986,7 +10163,7 @@
               "name": "ignoreEscapeSequences",
               "displayName": "Ignore Escape Sequences",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 24,
               "description": "When set to true a backslash in a text will be shown verbatim in the HMI",
               "defaultValue": false,
               "defaultValueInternal": false
@@ -9995,7 +10172,7 @@
               "name": "autoFocusOut",
               "displayName": "Auto Focus Out",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 25,
               "description": "When set to true the control will automatically lose focus when the user presses the enter or escape key",
               "defaultValue": true,
               "defaultValueInternal": true
@@ -10004,7 +10181,7 @@
               "name": "autoSelectText",
               "displayName": "Auto Select Text",
               "category": "General",
-              "displayPriority": 10,
+              "displayPriority": 26,
               "description": "When set to true all text within the control will be selected when the control gains focus",
               "defaultValue": false,
               "defaultValueInternal": false
@@ -10060,7 +10237,7 @@
             "widthUnit": {
               "$ref": "tchmi:framework#/definitions/MeasurementUnitOrFactor"
             },
-            "resize": {
+            "editable": {
               "type": "boolean"
             },
             "minWidth": {
@@ -10076,7 +10253,7 @@
             "minWidthUnit": {
               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
             },
-            "editable": {
+            "resize": {
               "type": "boolean"
             },
             "sortable": {
@@ -10124,6 +10301,30 @@
           ],
           "additionalProperties": false
         }
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TchmiTreeView.ValueMetaData": {
+      "title": "ValueMetaData",
+      "description": "Meta data of a value.",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "type": "object"
+        }
+      },
+      "propertiesMeta": [
+        {
+          "name": "schema",
+          "displayName": "Schema",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "The json schema of the value.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        }
+      ],
+      "required": [
+        "schema"
       ]
     },
     "ChartMenuBarPosition": {
@@ -10387,7 +10588,8 @@
                 "expression": {
                   "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineColorFilter"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "defaultVisibility": {
@@ -10586,9 +10788,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#2775be"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "axisColor",
@@ -10597,9 +10797,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#2775be"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "axisNameFontColor",
@@ -10608,9 +10806,7 @@
           "displayPriority": 10,
           "description": "",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%",
-          "defaultValueInternal": {
-            "color": "#2775be"
-          }
+          "defaultValueInternal": null
         },
         {
           "name": "id",
@@ -10765,6 +10961,15 @@
           "description": "",
           "defaultValue": null,
           "defaultValueInternal": null
+        },
+        {
+          "name": "showAxisIfNoData",
+          "category": "General",
+          "displayName": "Show Axis If No Data",
+          "displayPriority": 10,
+          "description": "If showAxisIfNoData is true, the axis is always displayed; if false, the axis is only displayed if there are data sets assigned to the axis.",
+          "defaultValue": null,
+          "defaultValueInternal": true
         }
       ],
       "properties": {
@@ -10837,6 +11042,9 @@
         },
         "unit": {
           "type": "string"
+        },
+        "showAxisIfNoData": {
+          "type": "boolean"
         }
       },
       "additionalProperties": false,
@@ -10948,8 +11156,8 @@
           "displayName": "Line Width",
           "displayPriority": 10,
           "description": "",
-          "defaultValue": null,
-          "defaultValueInternal": 1
+          "defaultValue": 1,
+          "defaultValueInternal": null
         },
         {
           "name": "showLabel",
@@ -11338,7 +11546,7 @@
                       "description": "The value to format."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
@@ -11578,7 +11786,7 @@
                       "description": "The value to format."
                     }
                   ],
-                  "waitMode": "Synchronous"
+                  "requiredWaitMode": "Synchronous"
                 },
                 "defaultValue": null,
                 "defaultValueInternal": null
