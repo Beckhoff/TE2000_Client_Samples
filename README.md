@@ -20,4 +20,4 @@ Here is a list of all samples:
 
 The following components must be installed to build the samples:
 
-- [TE2000-HMI-Engineering](https://www.beckhoff.com/en-en/products/automation/twincat/te1xxx-twincat-3-engineering/te2000.html) version 1.12 or higher
+- [TE2000-HMI-Engineering](https://www.beckhoff.com/en-en/products/automation/twincat/texxxx-twincat-3-engineering/te2000.html) version 1.14 or higher
