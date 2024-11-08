@@ -2,6 +2,7 @@
     "CERTIFICATEEXPIRATION": "P365D",
     "REQUIREAUTH": 2,
     "VIRTUALDIRECTORIES": {
-        "/": "www"
+        "/": "www",
+        "/framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.2.110\\runtimes\\native1.12-tchmi"
     }
 }

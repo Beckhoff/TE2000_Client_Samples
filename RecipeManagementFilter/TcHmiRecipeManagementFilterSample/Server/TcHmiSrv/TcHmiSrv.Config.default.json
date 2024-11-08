@@ -4347,10 +4347,8 @@
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\TcHmiRecipeManagementFilterSample\\",
         "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.2.110\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.EventLogger": "..\\..\\..\\..\\..\\Users\\thild\\Desktop\\Samples\\TcHmiRecipeManagementFilterSample_1_10\\Packages\\Beckhoff.TwinCAT.HMI.EventLogger.12.742.5",
         "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.2.110\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.2.90\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.SqliteHistorize": "..\\..\\..\\..\\..\\Users\\thild\\Desktop\\Samples\\TcHmiRecipeManagementFilterSample_1_10\\Packages\\Beckhoff.TwinCAT.HMI.SqliteHistorize.12.742.5",
         "/bin": "..\\..\\TcHmiRecipeManagementFilterSample\\bin\\"
     }
 }
