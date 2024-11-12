@@ -1,0 +1,20 @@
+<div id="Station2" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="880" data-tchmi-height-unit="px">
+  
+  <div id="Station2_Header" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="32" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Station2%/l%" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="16">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "headline-2"
+      ]
+    </script>
+  </div>
+
+  <div id="Station2_Container" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-top="64" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "background-container"
+      ]
+    </script>
+<div id="Station2_SystemEngineeringControl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiParametersAndFunctions" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-runtime="Runtime1" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="8" data-tchmi-bottom="8" data-tchmi-image-base-path="%tr%TR_SystemEngineering_ImagePath%/tr%" data-tchmi-target-path="fbMachine::_fbInfeedFood" data-tchmi-show-symbol-mapping="false" data-tchmi-show-tree-view="true" data-tchmi-show-breadcrumb="false" data-tchmi-show-navigation="true" data-tchmi-use-value-as-default-prepared-value="true">
+</div>
+</div>    
+</div>

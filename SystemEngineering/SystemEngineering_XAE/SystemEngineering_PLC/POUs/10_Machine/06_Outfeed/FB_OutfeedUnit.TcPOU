@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_OutfeedUnit" Id="{e2bdb813-a3e5-40ae-96e2-0b09afee1198}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_OutfeedUnit EXTENDS FB_BaseMainStation
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Label Speed'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Enter the speed of the label'}
+    {attribute 'TcHmiSystemEng.Parameter.Unit' := 'mm/1'}
+    {attribute 'TcHmiSystemEng.Parameter.Min' := '0'}
+    {attribute 'TcHmiSystemEng.Parameter.Max' := '@_nMaxPickPosition'}
+    _nPickPosition        : REAL;
+    _nMaxPickPosition     : REAL := 3000;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

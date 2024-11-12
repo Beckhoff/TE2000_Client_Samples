@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Cylinder" Id="{1227d95f-626a-47b4-a76e-f2a6931d14c6}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Cylinder/normal.svg'}
+FUNCTION_BLOCK FB_Cylinder
+VAR_OUTPUT CONSTANT	
+END_VAR
+VAR_INPUT
+	quit									: BOOL;	//Resets error with rising edge
+	toWorkPos								: BOOL;	//moves cylinder to work position
+	toBasePos								: BOOL	:= TRUE;	//moves cylinder to base position
+
+	feedBasePos								: BOOL := TRUE;	//enables feed in base direction
+	feedWorkPos								: BOOL := TRUE;	//enables feed in work direction
+	
+	hmiEventDataAlarmErrBasePos				: ST_HmiEventJson;
+	hmiEventDataAlarmErrWorkPos				: ST_HmiEventJson;
+END_VAR                                     			
+VAR_OUTPUT       			
+	inBasePos								: BOOL;	//TRUE when cylinder is in base position
+	inWorkpos								: BOOL;	//TRUE when cylinder is in work position
+	done									: BOOL; //Limit sensor reached or feedback time counted down
+	busy									: BOOL;	//Busy is TRUE at the rising edge of Execute and FALSE when one of the outputs Done, Aborted, or Error is set 
+	errBasePos								: BOOL;	//Cannot reach base position
+	errWorkPos								: BOOL;	//Cannot reach work position  
+	errLogic								: BOOL; 	//Both Feedbacks signaled
+
+	q_ToBasePos						AT  %Q* : BOOL; //Hardware output
+	q_ToWorkPos						AT  %Q* : BOOL; //Hardware output
+END_VAR
+VAR	
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Name'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Name of the cylinder'}
+	_name									: STRING;
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Id'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Identification name of the cylinder'}
+	_id										: STRING;
+	
+	_sensorBasePos							: FB_Input;
+	_sensorWorkPos							: FB_Input;
+	_ton_ErrWorkPos							: TON;
+	_ton_ErrBasePos							: TON;
+	
+	{ attribute 'TcHmiSystemEng.Parameter.Name' := 'Config' }
+	_config									: ST_CylinderConfig;
+	
+	_alarmErrBasePos						: FB_TcAlarm;	
+	_alarmErrWorkPos						: FB_TcAlarm;
+	_alarmErrLogic							: FB_TcAlarm;
+	
+  	_fbJsonDataType							: FB_JsonReadWriteDataType;
+  	_sJsonDoc      							: STRING(2000); 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[	(* Cylinder	 IO V2.8					 								       	*)
+	(* Includes functionblock "INPUT" 												*)
+	(********************************************************************************)
+
+(* Messages *********************************************************)
+	Messages();
+	
+(* Write Output *****************************************************)
+		
+	IF toBasePos AND toWorkPos 
+	THEN
+		ON();
+	ELSIF toBasePos 	
+	THEN
+		BasePos();
+	ELSIF toWorkPos 
+	THEN
+		WorkPos();
+	ELSE
+		OFF();
+	END_IF
+
+(* Reedkontakte lesen ***********************************************)
+	_sensorBasePos(
+		force	:= q_ToBasePos AND NOT inWorkpos AND _config._disableFeedbackBP,
+		invert	:= _config._invertFeedbackBP,
+		pt_ON	:= SEL(_config._disableFeedbackBP ,T#0MS,_config._simulationFeedback),
+		pt_OFF	:= ,
+		q_DIRECT=>,
+		q		=> inBasePos,
+		q_RT	=> ,
+		q_FT	=> ,
+		in		=> );
+
+	_sensorWorkPos(
+		force	:= q_ToWorkPos AND NOT inBasePos AND _config._disableFeedbackWP,
+		invert	:= _config._invertFeedbackWP,
+		pt_ON	:= SEL(_config._disableFeedbackWP ,T#0MS,_config._simulationFeedback),
+		pt_OFF	:= ,
+		q_DIRECT=>,
+		q		=> inWorkpos,
+		q_RT	=> ,
+		q_FT	=> ,
+		in		=> );
+                        	
+(* ack Error **********************************************************)
+	IF quit  THEN  Quitting(); END_IF
+
+(* Timeout WorkPos ************************************************)
+	_ton_ErrWorkPos(	IN := q_ToWorkPos AND (NOT inWorkpos OR inBasePos),
+					PT := MAX(_config._timeout,_config._simulationFeedback + T#1S),
+					Q => errWorkPos);
+
+(* Timeout WorkPos ************************************************)
+	_ton_ErrBasePos(	IN := q_ToBasePos AND (NOT inBasePos OR inWorkpos),
+					PT := MAX(_config._timeout,_config._simulationFeedback + T#1S),
+					Q => errBasePos);
+
+(* Senor logic ******************************************************)
+	errLogic								:= inBasePos AND inWorkpos;
+	
+(*********************************************************************)]]></ST>
+    </Implementation>
+    <Method Name="BasePos" Id="{d80c551c-aacc-42b3-8210-755bfeb23277}">
+      <Declaration><![CDATA[METHOD PUBLIC BasePos : BOOL //Return = Done -> InBasePos
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[toWorkPos 				:= q_ToWorkPos		:= FALSE;
+toBasePos 									:= TRUE;
+q_ToBasePos	 								:= feedBasePos AND NOT inBasePos;
+BasePos 				:= done				:= inBasePos;
+busy										:= NOT done; ]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Enable" Id="{f738efbf-0508-45ea-8c86-5e343316a28c}">
+      <Declaration><![CDATA[METHOD PUBLIC Enable : BOOL //Return Done = TRUE if WorkPos is TRUE and InWorkPos = TRUE or WorkPos is FALSE and InBasePos is TRUE 
+VAR_INPUT
+	workPos													:	BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF workPos
+THEN
+	Enable 									:= THIS^.workPos();
+ELSE
+	Enable 									:= THIS^.basePos();
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="InError" Id="{85bbbc09-ddb1-46f9-b25b-0253bebb8d11}">
+      <Declaration><![CDATA[PROPERTY PUBLIC InError : Bool]]></Declaration>
+      <Get Name="Get" Id="{b8d37460-bd4e-4d1a-b763-d0ad07fdacb7}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[InError := errBasePos OR errWorkPos OR errLogic;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="Init" Id="{c4c57c61-9f82-45c0-ba47-5594f182998c}">
+      <Declaration><![CDATA[{attribute 'call_after_global_init_slot' := '100'}
+METHOD Init : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+_alarmErrBasePos.CreateEx(TC_EVENTS.Cylinder.errBasePos, FALSE, 0);
+_alarmErrBasePos.ipArguments.AddString(_id);
+
+_alarmErrWorkPos.CreateEx(TC_EVENTS.Cylinder.errWorkPos, FALSE, 0);
+_alarmErrWorkPos.ipArguments.AddString(_id);
+
+_alarmErrLogic.CreateEx(TC_EVENTS.Cylinder.errLogic, FALSE, 0);
+_alarmErrLogic.ipArguments.AddString(_id);]]></ST>
+      </Implementation>
+    </Method>
+    <Action Name="Messages" Id="{c2027b02-c857-49bf-8c81-dc71b7231170}">
+      <Implementation>
+        <ST><![CDATA[
+// errBasePos
+IF errBasePos THEN
+	// JSON
+	_sJsonDoc := _fbJsonDataType.GetJsonStringFromSymbol('ST_HmiEventJson', SIZEOF(hmiEventDataAlarmErrBasePos), ADR(hmiEventDataAlarmErrBasePos));
+	_alarmErrBasePos.SetJsonAttribute(_sJsonDoc);
+	_alarmErrBasePos.Raise(0);
+ELSE
+	_alarmErrBasePos.Clear(0, TRUE);
+END_IF
+// errWorkPos
+IF errWorkPos THEN	
+	// JSON
+	_sJsonDoc := _fbJsonDataType.GetJsonStringFromSymbol('ST_HmiEventJson', SIZEOF(hmiEventDataAlarmErrWorkPos), ADR(hmiEventDataAlarmErrWorkPos));
+	_alarmErrWorkPos.SetJsonAttribute(_sJsonDoc);
+	_alarmErrWorkPos.Raise(0);
+ELSE	
+	_alarmErrWorkPos.Clear(0, TRUE);
+END_IF
+// errLogic
+IF errLogic THEN	
+	_alarmErrLogic.Raise(0);
+ELSE
+	_alarmErrLogic.Clear(0, TRUE);
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Property Name="NoFeed" Id="{60a57e3f-70f6-4018-8367-afe0fd9247f5}">
+      <Declaration><![CDATA[PROPERTY PUBLIC NoFeed : BOOL]]></Declaration>
+      <Get Name="Get" Id="{5d9a926a-9960-4d9b-8141-9ce74926158c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[NoFeed := toWorkPos and not feedWorkPos or toBasePos and not feedBasePos;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="Off" Id="{297b2784-2d14-4a5c-a8c4-2cdc343f9230}">
+      <Declaration><![CDATA[METHOD PUBLIC Off : BOOL //Result = Done 
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[done := busy := q_ToWorkPos := q_ToBasePos 		:= FALSE;
+toBasePos := toWorkPos 							:= FALSE;
+Off												:= TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="On" Id="{0781666c-fa81-439b-aba0-c093e5f18ed5}">
+      <Declaration><![CDATA[METHOD PUBLIC On : BOOL //Result = Done
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[toWorkPos 					:= q_ToWorkPos 	:= feedWorkPos;
+toBasePos 					:= q_ToBasePos	:= feedBasePos;
+done 										:= TRUE;
+busy 										:= TRUE;
+On											:= TRUE;												]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Quitting" Id="{4abbad38-d334-419d-934e-44698f21322e}">
+      <Declaration><![CDATA[METHOD PUBLIC Quitting : BOOL //Result = Quitting active
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_ton_ErrWorkPos(IN := FALSE);
+_ton_ErrBasePos(IN := FALSE);
+errWorkPos	:= errBasePos := errLogic		:= FALSE;
+Quitting									:= FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WorkPos" Id="{dcebcec2-61a8-4bbc-aa95-e2e13080ef8f}">
+      <Declaration><![CDATA[METHOD PUBLIC WorkPos : BOOL //Return = Done -> InWorkPos
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[toBasePos 				:= q_ToBasePos 		:= FALSE;
+toWorkPos									:= TRUE;
+q_ToWorkPos	 								:= feedWorkPos AND NOT inWorkpos;
+WorkPos					:= done 			:= inWorkpos;
+Busy										:= NOT done;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

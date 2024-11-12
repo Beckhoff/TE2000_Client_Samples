@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_InfeedContainerUnit" Id="{ab6eeec8-0af8-462a-8995-b94cd1e9afc2}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_InfeedContainerUnit EXTENDS FB_BaseMainStation
+VAR CONSTANT
+END_VAR
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR	
+	{ attribute 'TcHmiSystemEng.Parameter.Name' := 'Cut Cylinder' }
+	_fbCutCylinder			: FB_Cylinder;
+	{ attribute 'TcHmiSystemEng.Parameter.Name' := 'Press Cylinder' }
+	_fbPressCylinder		: FB_Cylinder;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

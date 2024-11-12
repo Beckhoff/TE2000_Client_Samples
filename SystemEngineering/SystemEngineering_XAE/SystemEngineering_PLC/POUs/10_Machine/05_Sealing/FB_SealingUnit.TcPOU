@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_SealingUnit" Id="{42797246-6ee0-4eda-a23d-e69c63aa5b1f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SealingUnit EXTENDS FB_BaseMainStation
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Temperature'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Temperature of the sealing'}
+    {attribute 'TcHmiSystemEng.Parameter.Unit' := '°C'}
+    {attribute 'TcHmiSystemEng.Parameter.Min' := '@_nMinTemperature'}
+    {attribute 'TcHmiSystemEng.Parameter.Max' := '@_nMaxTemperature'}
+    _nTemperature        : REAL;
+    _nMinTemperature     : REAL := 30;
+    _nMaxTemperature     : REAL := 100;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

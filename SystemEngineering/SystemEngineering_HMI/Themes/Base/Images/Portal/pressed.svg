@@ -1,0 +1,39 @@
+<svg id="pfade" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke: #000000;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="37.716 20.576 62.5 20.576 62.5 54.126 64.5 60.001 59.252 60.001"/>
+  <polyline class="cls-1" points="20.877 60.001 15.5 60.001 17.5 54.126 17.5 20.576 28.218 20.576"/>
+  <line class="cls-2" x1="20.87709" y1="42.854" x2="24.69419" y2="42.854"/>
+  <line class="cls-2" x1="20.87709" y1="46.2457" x2="24.69419" y2="46.2457"/>
+  <line class="cls-3" x1="20.87709" y1="20.5759" x2="20.87709" y2="60.9845"/>
+  <line class="cls-3" x1="59.25229" y1="20.5759" x2="59.25229" y2="60.9845"/>
+  <rect class="cls-4" x="28.42239" y="18.562" width="7" height="7.8957"/>
+  <line class="cls-3" x1="37.71569" y1="24.75" x2="62.50009" y2="24.75"/>
+  <line class="cls-2" x1="17.49989" y1="24.75" x2="28.218" y2="24.75"/>
+  <rect class="cls-4" x="29.23489" y="45.4205" width="5.375" height="5.7422"/>
+  <rect class="cls-4" x="25.18639" y="54.2589" width="5.375" height="5.7423"/>
+  <rect class="cls-4" x="33.62489" y="54.2589" width="5.375" height="5.7423"/>
+  <rect class="cls-2" x="50.525" y="38.8619" width="5.375" height="5.7421"/>
+  <rect class="cls-2" x="42.19339" y="38.8619" width="5.375" height="5.7421"/>
+  <line class="cls-3" x1="57.66879" y1="42.854" x2="59.25229" y2="42.854"/>
+  <line class="cls-3" x1="49.21059" y1="42.854" x2="50.52509" y2="42.854"/>
+  <line class="cls-3" x1="40.29909" y1="42.854" x2="42.19339" y2="42.854"/>
+  <line class="cls-3" x1="40.29909" y1="46.2457" x2="59.25229" y2="46.2457"/>
+  <polyline class="cls-4" points="25.831 49.108 25.831 41.733 38.014 41.733 38.014 49.108"/>
+  <rect class="cls-4" x="30.13059" y="26.4577" width="3.5835" height="15.2753"/>
+</svg>

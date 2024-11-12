@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.11">
+	<Project ProjectGUID="{E5BCD211-BDD6-4DE9-AC46-040DC268C289}" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Settings MaxCpus="12">
+				<Cpu CpuId="5"/>
+			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+			<TypeSystem>
+				<AdditionalTmcFile Name="Cylinder" File="Cylinder.tmc"/>
+			</TypeSystem>
+		</System>
+		<Plc>
+			<Project GUID="{F0B4A6CD-0966-4CB9-B2DF-0D60823E54EF}" Name="SystemEngineering_PLC" PrjFilePath="SystemEngineering_PLC\SystemEngineering_PLC.plcproj" TmcFilePath="SystemEngineering_PLC\SystemEngineering_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{B5174132-765F-02AB-7AFE-8DFBE96018D2}" TmcPath="SystemEngineering_PLC\SystemEngineering_PLC.tmc">
+					<Name>SystemEngineering_PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbCutCylinder.q_ToBasePos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbCutCylinder.q_ToWorkPos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbPressCylinder.q_ToBasePos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbPressCylinder.q_ToWorkPos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedFood._fbCutCylinder.q_ToBasePos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedFood._fbCutCylinder.q_ToWorkPos</Name>
+							<Comment><![CDATA[Hardware output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._sensorBasePos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._sensorWorkPos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._sensorBasePos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._sensorWorkPos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedFood._fbCutCylinder._sensorBasePos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbMachine._fbInfeedFood._fbCutCylinder._sensorWorkPos.in</Name>
+							<Comment><![CDATA[Hardware Input]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

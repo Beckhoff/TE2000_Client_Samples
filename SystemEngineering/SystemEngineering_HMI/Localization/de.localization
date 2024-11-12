@@ -1,0 +1,17 @@
+{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.2/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "de",
+  "localizedText": {
+    "L_Station1": "Infeed Container",
+    "L_Station2": "Infeed Food",
+    "L_Station3": "Inspection",
+    "L_Station4": "Labeling",
+    "L_Station5": "Sealing",
+    "L_Station6": "Outfeed",
+    "L_Machine": "Machine",
+    "L_Events": "Meldungen",
+    "L_Localization": "Lokalisierung",
+    "L_Theme": "Farbschema",
+    "L_Settings": "Einstellungen"
+  }
+}

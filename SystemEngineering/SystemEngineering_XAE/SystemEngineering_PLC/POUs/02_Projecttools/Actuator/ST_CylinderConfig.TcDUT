@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="ST_CylinderConfig" Id="{143a7593-ed3b-4254-a92d-2ea1327d558e}">
+    <Declaration><![CDATA[TYPE ST_CylinderConfig :
+STRUCT
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Disable Feedback'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Disable the feedback for the base position'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Base Position'} 
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_disableFeedbackBP		: BOOL;
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Disable Feedback'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Disable the feedback for the work position'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Work Position'} 
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_disableFeedbackWP		: BOOL;
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Invert Feedback'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Invert the feedback for the work position'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Base Position'} 
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_invertFeedbackBP		: BOOL;
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Invert Feedback'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Invert the feedback for the work position'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Work Position'} 
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_invertFeedbackWP		: BOOL;
+	
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Timeout'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Work process timout'}
+	{attribute 'TcHmiSystemEng.Parameter.Min' := 'T#0S'}
+	{attribute 'TcHmiSystemEng.Parameter.Max' := 'T#30S'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Time'}
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_timeout 				: TIME := T#5S;
+	
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Simulation Feedback'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Work process simulation time'}
+	{attribute 'TcHmiSystemEng.Parameter.Min' := 'T#0S'}
+	{attribute 'TcHmiSystemEng.Parameter.Max' := 'T#30S'}
+	{attribute 'TcHmiSystemEng.Parameter.GroupName' := 'Time'}
+	{attribute 'TcHmiSystemEng.Parameter.Layer' := '-1'}
+	_simulationFeedback		: TIME	:= T#3S;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

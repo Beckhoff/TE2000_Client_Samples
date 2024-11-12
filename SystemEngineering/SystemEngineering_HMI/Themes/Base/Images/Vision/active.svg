@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>icons/tc/vision-active</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="50%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EFF1F3" offset="0%"></stop>
+            <stop stop-color="#AEB9C2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="20191023-lieferung-icons-aus-tc-bereich" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-and-Buttons" transform="translate(-368.000000, -707.000000)">
+            <g id="icons/tc/vision" transform="translate(368.000000, 707.000000)">
+                <g id="backgrounds" fill="url(#linearGradient-1)" fill-opacity="0.01">
+                    <rect id="normal" x="0" y="0" width="80" height="80"></rect>
+                </g>
+                <g id="icon-status-copy" transform="translate(12.000000, 24.000000)" fill="#FFFFFF">
+                    <g id="normal">
+                        <g id="icon-base">
+                            <path d="M27.5,0 C37.0765689,0 45.7298791,5.00076536 53.424178,14.9109956 L54.256701,16 L53.424178,17.0890044 C45.7298791,26.9992346 37.0765689,32 27.5,32 C17.9234311,32 9.2701209,26.9992346 1.57582197,17.0890044 L0.743298981,16 L1.57582197,14.9109956 C9.2701209,5.00076536 17.9234311,0 27.5,0 Z M27.5,2 C18.6422942,2 10.5749116,6.63669585 3.26264327,16 C10.5749116,25.3633041 18.6422942,30 27.5,30 C36.2100774,30 44.1559561,25.5165727 51.3711139,16.4642268 L51.7373567,16 L51.3711139,15.5357732 C44.1559561,6.48342729 36.2100774,2 27.5,2 Z M28,5 C34.0751322,5 39,9.92486775 39,16 C39,22.0751322 34.0751322,27 28,27 C21.9248678,27 17,22.0751322 17,16 C17,9.92486775 21.9248678,5 28,5 Z M28,7 C23.0294373,7 19,11.0294373 19,16 C19,20.9705627 23.0294373,25 28,25 C32.9705627,25 37,20.9705627 37,16 C37,11.0294373 32.9705627,7 28,7 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,2570 @@
+{
+    "runtimes": {
+        "Runtime1": {
+            "adsRuntime": "PLC1",
+            "autoSymbolUpdate": false,
+            "enableAuditTrail": false,
+            "enabled": true,
+            "entryPath": "MAIN",
+            "isInitializedSymbol": "MAIN::_isInit",
+            "schema": {
+                "definitions": {
+                    "PLC1.ARRAY_0..2_OF-TcSerializedSourceInfoType": {
+                        "items": {
+                            "$ref": "#/definitions/PLC1.TcSerializedSourceInfoType"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "PLC1.ARRAY_0..7_OF-BYTE": {
+                        "items": {
+                            "$ref": "tchmi:general#/definitions/BYTE"
+                        },
+                        "maxItems": 8,
+                        "minItems": 8,
+                        "type": "array"
+                    },
+                    "PLC1.FB_Cylinder.hash.66275835": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcHmiSystemEng.Parameter.TreeViewImage": "Cylinder/normal.svg"
+                        },
+                        "properties": {
+                            "_alarmErrBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_TcAlarm"
+                                    },
+                                    {
+                                        "propertyOrder": 24
+                                    }
+                                ]
+                            },
+                            "_alarmErrLogic": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_TcAlarm"
+                                    },
+                                    {
+                                        "propertyOrder": 26
+                                    }
+                                ]
+                            },
+                            "_alarmErrWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_TcAlarm"
+                                    },
+                                    {
+                                        "propertyOrder": 25
+                                    }
+                                ]
+                            },
+                            "_config": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ST_CylinderConfig.hash.1221744835"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Config"
+                                        },
+                                        "propertyOrder": 23
+                                    }
+                                ]
+                            },
+                            "_fbJsonDataType": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_JsonXml.FB_JsonReadWriteDatatype"
+                                    },
+                                    {
+                                        "propertyOrder": 27
+                                    }
+                                ]
+                            },
+                            "_id": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Identification name of the cylinder",
+                                            "TcHmiSystemEng.Parameter.Name": "Id"
+                                        },
+                                        "propertyOrder": 18
+                                    }
+                                ]
+                            },
+                            "_name": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Name of the cylinder",
+                                            "TcHmiSystemEng.Parameter.Name": "Name"
+                                        },
+                                        "propertyOrder": 17
+                                    }
+                                ]
+                            },
+                            "_sJsonDoc": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.STRING-2000"
+                                    },
+                                    {
+                                        "propertyOrder": 28
+                                    }
+                                ]
+                            },
+                            "_sensorBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_Input"
+                                    },
+                                    {
+                                        "propertyOrder": 19
+                                    }
+                                ]
+                            },
+                            "_sensorWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_Input"
+                                    },
+                                    {
+                                        "propertyOrder": 20
+                                    }
+                                ]
+                            },
+                            "_ton_ErrBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc2_Standard.TON"
+                                    },
+                                    {
+                                        "propertyOrder": 22
+                                    }
+                                ]
+                            },
+                            "_ton_ErrWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc2_Standard.TON"
+                                    },
+                                    {
+                                        "propertyOrder": 21
+                                    }
+                                ]
+                            },
+                            "busy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Busy is TRUE at the rising edge of Execute and FALSE when one of the outputs Done, Aborted, or Error is set",
+                                        "propertyOrder": 11
+                                    }
+                                ]
+                            },
+                            "done": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Limit sensor reached or feedback time counted down",
+                                        "propertyOrder": 10
+                                    }
+                                ]
+                            },
+                            "errBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Cannot reach base position",
+                                        "propertyOrder": 12
+                                    }
+                                ]
+                            },
+                            "errLogic": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Both Feedbacks signaled",
+                                        "propertyOrder": 14
+                                    }
+                                ]
+                            },
+                            "errWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Cannot reach work position",
+                                        "propertyOrder": 13
+                                    }
+                                ]
+                            },
+                            "feedBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "enables feed in base direction",
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "feedWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "enables feed in work direction",
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "hmiEventDataAlarmErrBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ST_HmiEventJson"
+                                    },
+                                    {
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "hmiEventDataAlarmErrWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ST_HmiEventJson"
+                                    },
+                                    {
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "inBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "TRUE when cylinder is in base position",
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "inWorkpos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "TRUE when cylinder is in work position",
+                                        "propertyOrder": 9
+                                    }
+                                ]
+                            },
+                            "q_ToBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Hardware output",
+                                        "propertyOrder": 15
+                                    }
+                                ]
+                            },
+                            "q_ToWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Hardware output",
+                                        "propertyOrder": 16
+                                    }
+                                ]
+                            },
+                            "quit": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Resets error with rising edge",
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "toBasePos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "moves cylinder to base position",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "toWorkPos": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "moves cylinder to work position",
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "quit",
+                            "toWorkPos",
+                            "toBasePos",
+                            "feedBasePos",
+                            "feedWorkPos",
+                            "hmiEventDataAlarmErrBasePos",
+                            "hmiEventDataAlarmErrWorkPos",
+                            "inBasePos",
+                            "inWorkpos",
+                            "done",
+                            "busy",
+                            "errBasePos",
+                            "errWorkPos",
+                            "errLogic",
+                            "q_ToBasePos",
+                            "q_ToWorkPos",
+                            "_name",
+                            "_id",
+                            "_sensorBasePos",
+                            "_sensorWorkPos",
+                            "_ton_ErrWorkPos",
+                            "_ton_ErrBasePos",
+                            "_config",
+                            "_alarmErrBasePos",
+                            "_alarmErrWorkPos",
+                            "_alarmErrLogic",
+                            "_fbJsonDataType",
+                            "_sJsonDoc"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_InfeedContainerUnit.hash.535739148": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_fbCutCylinder": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_Cylinder.hash.66275835"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Cut Cylinder"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_fbPressCylinder": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_Cylinder.hash.66275835"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Press Cylinder"
+                                        },
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_fbCutCylinder",
+                            "_fbPressCylinder"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_InfeedFoodUnit.hash.828162730": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_fbCutCylinder": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_Cylinder.hash.66275835"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Cut Cylinder"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_fbCutCylinder"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_Input": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "force": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "simulates Input",
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "in": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Hardware Input",
+                                        "propertyOrder": 9
+                                    }
+                                ]
+                            },
+                            "invert": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "inverts the Hardware Input",
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "pt_OFF": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "comment": "off delay",
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "pt_ON": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "comment": "on delay",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "q": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Signal Delay",
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "q_DIRECT": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "Signal direct",
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "q_FT": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "F_Trig Signal of Q",
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "q_RT": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "R_Trig Signal of Q",
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "ton": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc2_Standard.TON"
+                                    },
+                                    {
+                                        "propertyOrder": 10
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "force",
+                            "invert",
+                            "pt_ON",
+                            "pt_OFF",
+                            "q",
+                            "q_RT",
+                            "q_FT",
+                            "q_DIRECT",
+                            "in",
+                            "ton"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_InspectionUnit.hash.786689208.hash.1320927651": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_nMaxResolution": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "_nMinResolution": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_nResolution": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Resolution of the image",
+                                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbInspection::_nMaxResolution",
+                                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbInspection::_nMinResolution",
+                                            "TcHmiSystemEng.Parameter.Name": "Resolution",
+                                            "TcHmiSystemEng.Parameter.Unit": ""
+                                        },
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_sImage": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Image of the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station Image"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_sImage",
+                            "_nResolution",
+                            "_nMinResolution",
+                            "_nMaxResolution"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_LabelingUnit.hash.3620066641.hash.993769852": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_nMaxSpeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_nMinSpeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_nSpeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
+                                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbLabeling::_nMaxSpeed",
+                                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbLabeling::_nMinSpeed",
+                                            "TcHmiSystemEng.Parameter.Name": "Label Speed",
+                                            "TcHmiSystemEng.Parameter.Unit": "mm/1"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_nSpeed",
+                            "_nMinSpeed",
+                            "_nMaxSpeed"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_MachineUnit.hash.1748896124.hash.352065910": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "_fbInfeedContainer": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedContainerUnit.hash.535739148"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Container",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Conveyor/normal.svg"
+                                        },
+                                        "comment": "stations",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_fbInfeedFood": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedFoodUnit.hash.828162730"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Food",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "TrayFeeder/normal.svg"
+                                        },
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_fbInspection": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InspectionUnit.hash.786689208.hash.1320927651"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Inspection",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "@PLC1::MAIN::fbMachine::_fbInspection::_sImage"
+                                        },
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "_fbLabeling": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_LabelingUnit.hash.3620066641.hash.993769852"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Labeling",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Packaging/normal.svg"
+                                        },
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "_fbOutfeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_OutfeedUnit.hash.3551864111.hash.3957974232"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Outfeed",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Handling/normal.svg"
+                                        },
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "_fbSealing": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_SealingUnit.hash.4284694911.hash.1567956687"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Sealing",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Temperature/normal.svg"
+                                        },
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "_sMachineName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "_sMachineVersion": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the version from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine version"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sMachineName",
+                            "_sMachineVersion",
+                            "_fbInfeedContainer",
+                            "_fbInfeedFood",
+                            "_fbInspection",
+                            "_fbLabeling",
+                            "_fbSealing",
+                            "_fbOutfeed"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_MachineUnit.hash.2873793491.hash.683030613": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "_fbInfeedContainer": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedContainerUnit.hash.535739148"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Container",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Conveyor/normal.svg"
+                                        },
+                                        "comment": "stations",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_fbInfeedFood": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedFoodUnit.hash.828162730"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Food",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "TrayFeeder/normal.svg"
+                                        },
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_fbInspection": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InspectionUnit.hash.786689208.hash.1320927651"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Inspection",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Vision/normal.svg"
+                                        },
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "_fbLabeling": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_LabelingUnit.hash.3620066641.hash.993769852"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Labeling",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Packaging/normal.svg"
+                                        },
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "_fbOutfeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_OutfeedUnit.hash.3551864111.hash.3957974232"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Outfeed",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Handling/normal.svg"
+                                        },
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "_fbSealing": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_SealingUnit.hash.4284694911.hash.1567956687"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Sealing",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Temperature/normal.svg"
+                                        },
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "_sMachineName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "_sMachineVersion": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the version from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine version"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sMachineName",
+                            "_sMachineVersion",
+                            "_fbInfeedContainer",
+                            "_fbInfeedFood",
+                            "_fbInspection",
+                            "_fbLabeling",
+                            "_fbSealing",
+                            "_fbOutfeed"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_MachineUnit.hash.488664700.hash.3043168783": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "_fbInfeedContainer": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedContainerUnit.hash.535739148"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Container",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Conveyor/normal.svg"
+                                        },
+                                        "comment": "stations",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_fbInfeedFood": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InfeedFoodUnit.hash.828162730"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Infeed Food",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "TrayFeeder/normal.svg"
+                                        },
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_fbInspection": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_InspectionUnit.hash.786689208.hash.1320927651"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "@PLC1::MAIN::fbMachine::_fbInspection::_sStationName",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "@PLC1::MAIN::fbMachine::_fbInspection::_sImage"
+                                        },
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "_fbLabeling": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_LabelingUnit.hash.3620066641.hash.993769852"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Labeling",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Packaging/normal.svg"
+                                        },
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "_fbOutfeed": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_OutfeedUnit.hash.3551864111.hash.3957974232"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Outfeed",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Handling/normal.svg"
+                                        },
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "_fbSealing": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_SealingUnit.hash.4284694911.hash.1567956687"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Sealing",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Temperature/normal.svg"
+                                        },
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "_sMachineName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "_sMachineVersion": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the version from the machine",
+                                            "TcHmiSystemEng.Parameter.Name": "Machine version"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sMachineName",
+                            "_sMachineVersion",
+                            "_fbInfeedContainer",
+                            "_fbInfeedFood",
+                            "_fbInspection",
+                            "_fbLabeling",
+                            "_fbSealing",
+                            "_fbOutfeed"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_OutfeedUnit.hash.3551864111.hash.3957974232": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_nMaxPickPosition": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_nPickPosition": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
+                                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbOutfeed::_nMaxPickPosition",
+                                            "TcHmiSystemEng.Parameter.Min": "0",
+                                            "TcHmiSystemEng.Parameter.Name": "Label Speed",
+                                            "TcHmiSystemEng.Parameter.Unit": "mm/1"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_nPickPosition",
+                            "_nMaxPickPosition"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.FB_SealingUnit.hash.4284694911.hash.1567956687": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "FB_BaseMainStation"
+                        },
+                        "properties": {
+                            "_nMaxTemperature": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_nMinTemperature": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_nTemperature": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/REAL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Temperature of the sealing",
+                                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbSealing::_nMaxTemperature",
+                                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbSealing::_nMinTemperature",
+                                            "TcHmiSystemEng.Parameter.Name": "Temperature",
+                                            "TcHmiSystemEng.Parameter.Unit": "°C"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_sStationName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
+                                            "TcHmiSystemEng.Parameter.Name": "Station name"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_sStationName",
+                            "_nTemperature",
+                            "_nMinTemperature",
+                            "_nMaxTemperature"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.GUID": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "Data1": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/DWORD"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "Data2": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/WORD"
+                                    },
+                                    {
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "Data3": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/WORD"
+                                    },
+                                    {
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "Data4": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ARRAY_0..7_OF-BYTE"
+                                    },
+                                    {
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "Data1",
+                            "Data2",
+                            "Data3",
+                            "Data4"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.ITcIecApplicationJson": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "ITcIecApplicationBase"
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.MAIN-Static.hash.2188931176.hash.896398147": {
+                        "allowMapping": false,
+                        "properties": {
+                            "fbMachine": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Machine",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Portal/normal.svg"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_MachineUnit.hash.2873793491.hash.683030613"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.MAIN-Static.hash.606457001.hash.3006825796": {
+                        "allowMapping": false,
+                        "properties": {
+                            "fbMachine": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Machine",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Portal/normal.svg"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_MachineUnit.hash.1748896124.hash.352065910"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.MAIN-Static.hash.893633844.hash.2447103505": {
+                        "allowMapping": false,
+                        "properties": {
+                            "fbMachine": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.Name": "Machine",
+                                            "TcHmiSystemEng.Parameter.TreeViewImage": "Portal/normal.svg"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.FB_MachineUnit.hash.488664700.hash.3043168783"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.PROPERTY-GET-BOOL": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/BOOL"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-HRESULT": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/HRESULT"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-SET-STRING-255": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PLC1.STRING-255"
+                            },
+                            {
+                                "function": true,
+                                "writeValue": {
+                                    "$ref": "#/definitions/PLC1.STRING-255"
+                                }
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-SET-UDINT": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UDINT"
+                            },
+                            {
+                                "function": true,
+                                "writeValue": {
+                                    "$ref": "tchmi:general#/definitions/UDINT"
+                                }
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-STRING-255": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PLC1.STRING-255"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-Tc3_EventLogger.I_TcSourceInfo": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PLC1.Tc3_EventLogger.I_TcSourceInfo"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-TcEventConfirmationState": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PLC1.TcEventConfirmationState"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-TcEventSeverity": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PLC1.TcEventSeverity"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-UDINT": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UDINT"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.PROPERTY-GET-ULINT": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/ULINT"
+                            },
+                            {
+                                "function": true
+                            }
+                        ]
+                    },
+                    "PLC1.STRING-2000": {
+                        "allOf": [
+                            {
+                                "maxLength": 2000
+                            },
+                            {
+                                "$ref": "tchmi:general#/definitions/String"
+                            }
+                        ]
+                    },
+                    "PLC1.STRING-255": {
+                        "allOf": [
+                            {
+                                "maxLength": 255
+                            },
+                            {
+                                "$ref": "tchmi:general#/definitions/String"
+                            }
+                        ]
+                    },
+                    "PLC1.STRING-278": {
+                        "allOf": [
+                            {
+                                "maxLength": 278
+                            },
+                            {
+                                "$ref": "tchmi:general#/definitions/String"
+                            }
+                        ]
+                    },
+                    "PLC1.ST_CylinderConfig.hash.1221744835": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "_disableFeedbackBP": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
+                                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the base position",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "_disableFeedbackWP": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
+                                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the work position",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_invertFeedbackBP": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
+                                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
+                                        },
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "_invertFeedbackWP": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
+                                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
+                                        },
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "_simulationFeedback": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Time",
+                                            "TcHmiSystemEng.Parameter.Info": "Work process simulation time",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Max": "T#30S",
+                                            "TcHmiSystemEng.Parameter.Min": "T#0S",
+                                            "TcHmiSystemEng.Parameter.Name": "Simulation Feedback"
+                                        },
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "_timeout": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "addSymbol": true,
+                                        "attributes": {
+                                            "TcHmiSystemEng.Parameter.GroupName": "Time",
+                                            "TcHmiSystemEng.Parameter.Info": "Work process timout",
+                                            "TcHmiSystemEng.Parameter.Layer": "-1",
+                                            "TcHmiSystemEng.Parameter.Max": "T#30S",
+                                            "TcHmiSystemEng.Parameter.Min": "T#0S",
+                                            "TcHmiSystemEng.Parameter.Name": "Timeout"
+                                        },
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "_disableFeedbackBP",
+                            "_disableFeedbackWP",
+                            "_invertFeedbackBP",
+                            "_invertFeedbackWP",
+                            "_timeout",
+                            "_simulationFeedback"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.ST_HmiEventJson": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "eplan": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "popUp": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "eplan",
+                            "popUp"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc2_Standard.TON": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "ET": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "comment": "elapsed time",
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "IN": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "starts timer with rising edge, resets timer with falling edge",
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "M": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "PT": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "comment": "time to pass, before Q is set",
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "Q": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "comment": "gets TRUE, delay time (PT) after a rising edge at IN",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "StartTime": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/TIME"
+                                    },
+                                    {
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "IN",
+                            "PT",
+                            "Q",
+                            "ET",
+                            "M",
+                            "StartTime"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.FB_AsyncStrResult": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "VTableOffset": "438904",
+                            "VfInitVTableIndex": "8",
+                            "conditionalshow_all_locals": "",
+                            "enable_dynamic_creation": "",
+                            "no_explicit_call": "do not call this POU directly"
+                        },
+                        "properties": {
+                            "bBusy": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-BOOL"
+                            },
+                            "bError": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-BOOL"
+                            },
+                            "hrErrorCode": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-HRESULT"
+                            },
+                            "nStringSize": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-UDINT"
+                            },
+                            "sResult": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-STRING-255"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.FB_SourceInfoData": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcImplements": "ITcSourceInfo",
+                            "c++_compatible": "",
+                            "no_explicit_call": "do not call this POU directly"
+                        },
+                        "properties": {
+                            "_bCutInstancePathByLastInst": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "_stSourceInfo": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.ST_SourceInfo"
+                                    },
+                                    {
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "aSourceInfoData": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ARRAY_0..2_OF-TcSerializedSourceInfoType"
+                                    },
+                                    {
+                                        "propertyOrder": 8
+                                    }
+                                ]
+                            },
+                            "bGuidExists": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "bIdExists": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "bSourceNameIsEqualDefault": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 6
+                                    }
+                                ]
+                            },
+                            "bSourceNameShouldBeDefault": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "propertyOrder": 7
+                                    }
+                                ]
+                            },
+                            "hrInit": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/HRESULT"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "m_refCnt": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/UDINT"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": ""
+                                        },
+                                        "propertyOrder": 9
+                                    }
+                                ]
+                            },
+                            "nSourceId": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-SET-UDINT"
+                            },
+                            "sSourceName": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-SET-STRING-255"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "hrInit",
+                            "_bCutInstancePathByLastInst",
+                            "_stSourceInfo",
+                            "bIdExists",
+                            "bGuidExists",
+                            "bSourceNameIsEqualDefault",
+                            "bSourceNameShouldBeDefault",
+                            "aSourceInfoData",
+                            "m_refCnt"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.FB_TcAlarm": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcExtends": "Tc3_EventLogger.FB_TcEventBase",
+                            "TcImplements": "Tc3_EventLogger.I_ArgumentsChangeListener",
+                            "conditionalshow_all_locals": "",
+                            "no_explicit_call": "do not call this POU directly",
+                            "reflection": ""
+                        },
+                        "properties": {
+                            "FB_TcEventBase_563__RequestEventClassName_595__bBusy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": "",
+                                            "implicit_inst_var": ""
+                                        },
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "FB_TcEventBase_563__RequestEventClassName_595__fbResult": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_AsyncStrResult"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": "",
+                                            "implicit_inst_var": ""
+                                        },
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "FB_TcEventBase_563__RequestEventText_596__bBusy": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/BOOL"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": "",
+                                            "implicit_inst_var": ""
+                                        },
+                                        "propertyOrder": 5
+                                    }
+                                ]
+                            },
+                            "FB_TcEventBase_563__RequestEventText_596__fbResult": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_AsyncStrResult"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": "",
+                                            "implicit_inst_var": ""
+                                        },
+                                        "propertyOrder": 4
+                                    }
+                                ]
+                            },
+                            "bActive": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-BOOL"
+                            },
+                            "bRaised": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-BOOL"
+                            },
+                            "eConfirmationState": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-TcEventConfirmationState"
+                            },
+                            "eSeverity": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-TcEventSeverity"
+                            },
+                            "fbSourceInfo": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_TcSourceInfo"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": ""
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "ipSourceInfo": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-Tc3_EventLogger.I_TcSourceInfo"
+                            },
+                            "nEventId": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-UDINT"
+                            },
+                            "nTimeCleared": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcDisplayTypeGUID": "18071995-0000-0000-0000-000000000046"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-ULINT"
+                                    }
+                                ]
+                            },
+                            "nTimeConfirmed": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcDisplayTypeGUID": "18071995-0000-0000-0000-000000000046"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-ULINT"
+                                    }
+                                ]
+                            },
+                            "nTimeRaised": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcDisplayTypeGUID": "18071995-0000-0000-0000-000000000046"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-ULINT"
+                                    }
+                                ]
+                            },
+                            "nUniqueId": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-UDINT"
+                            },
+                            "sEventClassName": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-STRING-255"
+                                    }
+                                ]
+                            },
+                            "sEventText": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-STRING-255"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "fbSourceInfo",
+                            "FB_TcEventBase_563__RequestEventClassName_595__fbResult",
+                            "FB_TcEventBase_563__RequestEventClassName_595__bBusy",
+                            "FB_TcEventBase_563__RequestEventText_596__fbResult",
+                            "FB_TcEventBase_563__RequestEventText_596__bBusy"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.FB_TcSourceInfo": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "TcImplements": "Tc3_EventLogger.I_TcSourceInfo",
+                            "no_explicit_call": "do not call this POU directly"
+                        },
+                        "properties": {
+                            "fbSrcData": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.Tc3_EventLogger.FB_SourceInfoData"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "conditionalshow": ""
+                                        },
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "nId": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-SET-UDINT"
+                            },
+                            "sName": {
+                                "allOf": [
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/PLC1.PROPERTY-GET-SET-STRING-255"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "fbSrcData"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.I_TcSourceInfo": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "nId": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-UDINT"
+                            },
+                            "sName": {
+                                "$ref": "#/definitions/PLC1.PROPERTY-GET-STRING-255"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_EventLogger.ST_SourceInfo": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "guid": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.GUID"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "nId": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/UDINT"
+                                    },
+                                    {
+                                        "comment": "eg.the PLC instance object ID as owner of the event object",
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            },
+                            "sName": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.STRING-278"
+                                    },
+                                    {
+                                        "attributes": {
+                                            "TcEncoding": "UTF-8"
+                                        },
+                                        "comment": "eg.the symbol name of the function block which created the event",
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "guid",
+                            "nId",
+                            "sName"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.Tc3_JsonXml.FB_JsonReadWriteDatatype": {
+                        "additionalProperties": false,
+                        "attributes": {
+                            "no_explicit_call": "do not call this POU directly"
+                        },
+                        "properties": {
+                            "initStatus": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/HRESULT"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "ipJson": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.ITcIecApplicationJson"
+                                    },
+                                    {
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "initStatus",
+                            "ipJson"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.TcEventConfirmationState": {
+                        "attributes": {
+                            "plcAttribute_qualified_only": "",
+                            "plcAttribute_strict": ""
+                        },
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "options": [
+                            {
+                                "label": "NotSupported",
+                                "value": 0
+                            },
+                            {
+                                "label": "NotRequired",
+                                "value": 1
+                            },
+                            {
+                                "label": "WaitForConfirmation",
+                                "value": 2
+                            },
+                            {
+                                "label": "Confirmed",
+                                "value": 3
+                            },
+                            {
+                                "label": "Reset",
+                                "value": 4
+                            }
+                        ],
+                        "type": "integer"
+                    },
+                    "PLC1.TcEventSeverity": {
+                        "attributes": {
+                            "plcAttribute_qualified_only": "",
+                            "plcAttribute_strict": ""
+                        },
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "options": [
+                            {
+                                "label": "TCEVENTSEVERITY_Verbose",
+                                "value": 0
+                            },
+                            {
+                                "label": "TCEVENTSEVERITY_Info",
+                                "value": 1
+                            },
+                            {
+                                "label": "TCEVENTSEVERITY_Warning",
+                                "value": 2
+                            },
+                            {
+                                "label": "TCEVENTSEVERITY_Error",
+                                "value": 3
+                            },
+                            {
+                                "label": "TCEVENTSEVERITY_Critical",
+                                "value": 4
+                            }
+                        ],
+                        "type": "integer"
+                    },
+                    "PLC1.TcSerializedSourceInfoType": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "cbData": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/UDINT"
+                                    },
+                                    {
+                                        "propertyOrder": 3
+                                    }
+                                ]
+                            },
+                            "eType": {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/PLC1.TcSourceInfoType"
+                                    },
+                                    {
+                                        "propertyOrder": 1
+                                    }
+                                ]
+                            },
+                            "obData": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/UDINT"
+                                    },
+                                    {
+                                        "propertyOrder": 2
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "eType",
+                            "obData",
+                            "cbData"
+                        ],
+                        "type": "object"
+                    },
+                    "PLC1.TcSourceInfoType": {
+                        "attributes": {
+                            "plcAttribute_qualified_only": "",
+                            "plcAttribute_strict": ""
+                        },
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            4
+                        ],
+                        "options": [
+                            {
+                                "label": "Undefined",
+                                "value": 0
+                            },
+                            {
+                                "label": "Id",
+                                "value": 1
+                            },
+                            {
+                                "label": "Guid",
+                                "value": 2
+                            },
+                            {
+                                "label": "Name",
+                                "value": 4
+                            }
+                        ],
+                        "type": "integer"
+                    }
+                },
+                "properties": {
+                    "PLC1": {
+                        "allowMapping": false,
+                        "properties": {
+                            "MAIN": {
+                                "$ref": "#/definitions/PLC1.MAIN-Static.hash.893633844.hash.2447103505"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "schemaHash": "1730996169000000000",
+            "symbolValues": {
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._disableFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._disableFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._invertFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._invertFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._simulationFeedback": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT3S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._timeout": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT5S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._id": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Infeed Container Cut Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._name": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Cut Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._disableFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._disableFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._invertFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._invertFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._simulationFeedback": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT3S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._timeout": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT5S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._id": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Infeed Container Press Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._name": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Press Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Infeed Container"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._disableFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._disableFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._invertFeedbackBP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._invertFeedbackWP": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": false
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._simulationFeedback": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT3S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._timeout": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "PT5S"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._id": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Infeed Food Cut Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._name": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Cut Cylinder"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Infeed Food"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._fbSubElements._unit": {
+                    "timestamp": "2024-11-06T13:28:30.3664637Z",
+                    "value": "px"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nMaxResolution": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 100.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nMinResolution": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 30.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nResolution": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 34.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._sImage": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Vision/normal.svg"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Inspection"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nMaxSpeed": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 3000.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nMinSpeed": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 0.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nSpeed": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 0.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Labeling"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._nMaxPickPosition": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 3000.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._nPickPosition": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 0.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Outfeed"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nMaxTemperature": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 100.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nMinTemperature": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 30.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nTemperature": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": 0.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._sStationName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Sealing"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing.nTemperature": {
+                    "timestamp": "2024-11-06T10:54:52.5553122Z",
+                    "value": 0.0
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._sMachineName": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "Machine"
+                },
+                "TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._sMachineVersion": {
+                    "timestamp": "2024-11-13T07:43:08.11324Z",
+                    "value": "1.0.0.0"
+                }
+            }
+        }
+    }
+}

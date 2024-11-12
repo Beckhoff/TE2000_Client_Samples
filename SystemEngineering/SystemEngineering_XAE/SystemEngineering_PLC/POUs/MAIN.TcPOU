@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{6897fa1c-d9fc-4690-9cab-da7b27af73be}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Machine'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Portal/normal.svg'}	
+	fbMachine					: FB_MachineUnit;
+	
+	_isInit      				: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

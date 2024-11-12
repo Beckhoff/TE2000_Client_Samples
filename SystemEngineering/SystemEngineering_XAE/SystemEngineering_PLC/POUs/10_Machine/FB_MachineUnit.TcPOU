@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_MachineUnit" Id="{71aa57a0-97e1-4ce9-9cca-14210aa3658c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_MachineUnit
+VAR	
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Machine name'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Enter the name from the machine'}
+	_sMachineName				: STRING;
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Machine version'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Enter the version from the machine'}
+	_sMachineVersion			: STRING := '1.0.0.0';
+		
+	// stations
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Infeed Container'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Conveyor/normal.svg'}	
+	_fbInfeedContainer			: FB_InfeedContainerUnit;
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Infeed Food'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'TrayFeeder/normal.svg'}	
+	_fbInfeedFood				: FB_InfeedFoodUnit;
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= '@this._sStationName'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= '@this._sImage'}	
+	_fbInspection				: FB_InspectionUnit;
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Labeling'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Packaging/normal.svg'}	
+	_fbLabeling					: FB_LabelingUnit;
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Sealing'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Temperature/normal.svg'}
+	_fbSealing					: FB_SealingUnit;
+	{attribute 'TcHmiSystemEng.Parameter.Name' 				:= 'Outfeed'}
+	{attribute 'TcHmiSystemEng.Parameter.TreeViewImage'	 	:= 'Handling/normal.svg'}	
+	_fbOutfeed					: FB_OutfeedUnit;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// cycle
+Ac_Cycle();]]></ST>
+    </Implementation>
+    <Action Name="Ac_Cycle" Id="{4c20dad1-4808-4a36-b593-940b318ac63d}">
+      <Implementation>
+        <ST><![CDATA[
+_fbInfeedContainer();
+_fbInfeedFood();
+_fbInspection();
+_fbLabeling();
+_fbSealing();
+_fbOutfeed();]]></ST>
+      </Implementation>
+    </Action>
+  </POU>
+</TcPlcObject>

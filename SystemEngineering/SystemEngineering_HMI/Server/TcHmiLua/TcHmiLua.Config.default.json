@@ -1,0 +1,5 @@
+{
+    "HTML_ERRORS": false,
+    "LOG_PAGE_MAX_ENTRIES": 200,
+    "SCRIPT_TIMEOUT": "PT10S"
+}

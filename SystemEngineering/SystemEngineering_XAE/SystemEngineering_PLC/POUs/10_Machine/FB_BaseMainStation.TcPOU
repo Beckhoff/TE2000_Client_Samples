@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_BaseMainStation" Id="{b048aa58-d9b1-4a92-878d-9373fbf932da}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_BaseMainStation
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Station name'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Enter the name from the station'}
+	_sStationName					: STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

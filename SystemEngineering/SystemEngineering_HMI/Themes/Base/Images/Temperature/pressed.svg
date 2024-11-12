@@ -1,0 +1,31 @@
+<svg id="pfade" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #000000;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M44.1019,22.3888V46.0591a8.32977,8.32977,0,1,1-8.058-.0807V22.3888a4.029,4.029,0,0,1,8.058,0Z"/>
+  <line class="cls-2" x1="44.1019" y1="23.4364" x2="48.2014" y2="23.4364"/>
+  <line class="cls-2" x1="44.1019" y1="28.0295" x2="48.2014" y2="28.0295"/>
+  <line class="cls-2" x1="44.1019" y1="32.6223" x2="48.2014" y2="32.6223"/>
+  <line class="cls-2" x1="44.1019" y1="37.2153" x2="48.2014" y2="37.2153"/>
+  <line class="cls-2" x1="44.1019" y1="41.8087" x2="48.2014" y2="41.8087"/>
+  <path class="cls-3" d="M42.2289,53.25A2.2289,2.2289,0,1,1,40,51.0211,2.22905,2.22905,0,0,1,42.2289,53.25Z"/>
+  <line class="cls-1" x1="40" y1="51.0211" x2="40" y2="32.6223"/>
+</svg>

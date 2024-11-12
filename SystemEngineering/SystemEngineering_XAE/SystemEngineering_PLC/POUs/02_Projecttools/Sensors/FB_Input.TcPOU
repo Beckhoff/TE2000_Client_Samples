@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Input" Id="{8bf5768c-e549-4d65-bc26-19c1c7a30ae6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Input
+VAR_INPUT
+	force													:	BOOL := FALSE; 	//simulates Input
+	invert													:	BOOL := FALSE; 	//inverts the Hardware Input
+	pt_ON													:	TIME := T#0MS;	//on delay
+	pt_OFF													:	TIME := T#0MS;	//off delay
+END_VAR             										
+VAR_OUTPUT          										
+	q														:	BOOL;	//Signal Delay
+	q_RT													:	BOOL;	//R_Trig Signal of Q
+	q_FT													:	BOOL;	//F_Trig Signal of Q
+	q_DIRECT												:	BOOL; 	//Signal direct
+	in												AT  %I* : 	BOOL; 	//Hardware Input
+END_VAR
+VAR
+	ton														:	TON;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(* Input/Sensor Functionblock with On/Off	attenuation and rising / fallen edge 	V2.0	*)
+(********************************************************************************************)
+
+(************************************)
+IF NOT q THEN
+	ton(IN := (in OR force) XOR invert, PT := pt_ON);
+	q 														:= ton.Q;
+	q_RT 													:= q;
+	q_FT 													:= FALSE;
+	q_DIRECT 												:= ton.IN;
+ELSE
+	ton(IN := NOT ((in OR force) XOR invert), PT := pt_OFF);
+	q 														:= q AND NOT ton.Q;
+	q_RT 													:= FALSE;
+	q_FT 													:= NOT q;
+	q_DIRECT 												:= q AND NOT ton.IN;
+END_IF
+(********************************************************************************************)]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

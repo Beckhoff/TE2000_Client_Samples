@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f0b4a6cd-0966-4cb9-b2df-0d60823e54ef}</ProjectGuid>
+    <SubObjectsSortedByName>true</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>false</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>SystemEngineering_PLC</Name>
+    <ProgramVersion>3.1.4026.11</ProgramVersion>
+    <Application>{a7aa8f64-6652-4331-961a-d4f9293bfc07}</Application>
+    <TypeSystem>{c8ed63ec-3e19-4bcc-9707-b60e8047d05a}</TypeSystem>
+    <Implicit_Task_Info>{a66686f3-33c7-41d0-a1d9-5a1b8cb8b2c2}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{35054689-9b97-494b-9c79-0cb7208ddc0e}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{3aad5524-3e2f-44ff-a82e-10bd92a0edab}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{40d79ef4-55da-4477-a148-0d980616a1cb}</LibraryReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DUTs\ST_HmiEventJson.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\02_Projecttools\Actuator\FB_Cylinder.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\02_Projecttools\Actuator\ST_CylinderConfig.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\02_Projecttools\Sensors\FB_Input.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\01_InfeedContainer\FB_InfeedContainerUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\02_InfeedFood\FB_InfeedFoodUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\03_Inspection\FB_InspectionUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\04_Labeling\FB_LabelingUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\05_Sealing\FB_SealingUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\06_Outfeed\FB_OutfeedUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\FB_BaseMainStation.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\10_Machine\FB_MachineUnit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
+    <Folder Include="POUs\02_Projecttools" />
+    <Folder Include="POUs\02_Projecttools\Actuator" />
+    <Folder Include="POUs\02_Projecttools\Sensors" />
+    <Folder Include="POUs\10_Machine" />
+    <Folder Include="POUs\10_Machine\01_InfeedContainer" />
+    <Folder Include="POUs\10_Machine\02_InfeedFood" />
+    <Folder Include="POUs\10_Machine\03_Inspection" />
+    <Folder Include="POUs\10_Machine\04_Labeling" />
+    <Folder Include="POUs\10_Machine\05_Sealing" />
+    <Folder Include="POUs\10_Machine\06_Outfeed" />
+    <Folder Include="VISUs" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_EventLogger">
+      <DefaultResolution>Tc3_EventLogger, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_EventLogger</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_JsonXml">
+      <DefaultResolution>Tc3_JsonXml, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_JsonXml</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+      <SystemLibrary>true</SystemLibrary>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SystemEngineering_PLC.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
+        <v>{29BD8D0C-3586-4548-BB48-497B9A01693F}</v>
+        <o>
+          <v n="Name">"{29BD8D0C-3586-4548-BB48-497B9A01693F}"</v>
+          <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
+            <v>Rules</v>
+            <o>
+              <v n="Name">"Rules"</v>
+              <d n="SubKeys" t="Hashtable" />
+              <d n="Values" t="Hashtable" />
+            </o>
+          </d>
+          <d n="Values" t="Hashtable" />
+        </o>
+        <v>{8A0FB252-96EB-4DCC-A5B4-B4804D05E2D6}</v>
+        <o>
+          <v n="Name">"{8A0FB252-96EB-4DCC-A5B4-B4804D05E2D6}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" ckt="String" cvt="Boolean">
+            <v>WriteLineIDs</v>
+            <v>False</v>
+          </d>
+        </o>
+        <v>{8F99A816-E488-41E4-9FA3-846536012284}</v>
+        <o>
+          <v n="Name">"{8F99A816-E488-41E4-9FA3-846536012284}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" ckt="String" cvt="String">
+            <v>DisabledWarningIds</v>
+            <v>410,5410</v>
+          </d>
+        </o>
+        <v>{F66C7017-BDD8-4114-926C-81D6D687E35F}</v>
+        <o>
+          <v n="Name">"{F66C7017-BDD8-4114-926C-81D6D687E35F}"</v>
+          <d n="SubKeys" t="Hashtable" />
+          <d n="Values" t="Hashtable" ckt="String" cvt="Boolean">
+            <v>CalcActiveTransOnly</v>
+            <v>True</v>
+          </d>
+        </o>
+      </d>
+      <d n="Values" t="Hashtable" />
+    </o>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

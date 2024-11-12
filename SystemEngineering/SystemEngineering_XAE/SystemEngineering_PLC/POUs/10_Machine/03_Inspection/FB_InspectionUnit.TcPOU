@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_InspectionUnit" Id="{2aff0d1c-5c37-45e0-b3fb-fda275347434}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_InspectionUnit EXTENDS FB_BaseMainStation
+VAR CONSTANT
+END_VAR
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Station Image'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Image of the station'}
+	_sImage					: STRING := 'Vision/normal.svg';
+	{attribute 'TcHmiSystemEng.Parameter.Name' := 'Resolution'}
+	{attribute 'TcHmiSystemEng.Parameter.Info' := 'Resolution of the image'}
+    {attribute 'TcHmiSystemEng.Parameter.Unit' := 'TcHmiSystemEng.Preset.Unit'}
+    {attribute 'TcHmiSystemEng.Parameter.Min' := '@_nMinResolution'}
+    {attribute 'TcHmiSystemEng.Parameter.Max' := '@_nMaxResolution'}
+    _nResolution			: REAL;
+    _nMinResolution			: REAL := 30;
+    _nMaxResolution			: REAL := 100;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

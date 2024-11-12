@@ -1,0 +1,19 @@
+{
+    "runtimes": {
+        "Runtime1": {
+            "adsRuntime": "PLC1",
+            "autoSymbolUpdate": false,
+            "enableAuditTrail": false,
+            "enabled": false,
+            "entryPath": "",
+            "isInitializedSymbol": "",
+            "schema": {
+                "definitions": {},
+                "properties": {},
+                "type": ""
+            },
+            "schemaHash": "",
+            "symbolValues": {}
+        }
+    }
+}

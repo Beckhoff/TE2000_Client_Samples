@@ -1,0 +1,302 @@
+{
+  "useIndirectInput": false,
+  "hasNumPad": true,
+  "displayName": "Numpad (+/-)",
+  "localeName": null,
+  "layouts":
+  [
+    {
+      "name": "default",
+      "dimensions":
+      {
+        "width": 230,
+        "height": 230
+      },
+      "keys":
+      [
+        {
+          "geometry":
+          {
+            "left": 0,
+            "top": 0,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad1",
+          "key": "1",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "1"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 26.08695652173913,
+            "top": 0,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad2",
+          "key": "2",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "2"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 52.17391304347826,
+            "top": 0,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad3",
+          "key": "3",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "3"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 0,
+            "top": 26.08695652173913,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad4",
+          "key": "4",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "4"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 26.08695652173913,
+            "top": 26.08695652173913,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad5",
+          "key": "5",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "5"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 52.17391304347826,
+            "top": 26.08695652173913,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad6",
+          "key": "6",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "6"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 0,
+            "top": 52.17391304347826,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad7",
+          "key": "7",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "7"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 26.08695652173913,
+            "top": 52.17391304347826,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad8",
+          "key": "8",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "8"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 52.17391304347826,
+            "top": 52.17391304347826,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad9",
+          "key": "9",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "9"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 26.08695652173913,
+            "top": 78.26086956521739,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "Numpad0",
+          "key": "0",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "0"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 0,
+            "top": 78.26086956521739,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "PlusMinus",
+          "key": "PlusMinus",
+          "type": "edit",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "+/-"
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 52.17391304347826,
+            "top": 78.26086956521739,
+            "width": 21.73913043478261,
+            "height": 21.73913043478261
+          },
+          "code": "NumpadDecimal",
+          "key": ".",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        },
+        {
+          "geometry":
+          {
+            "left": 78.26086956521739,
+            "top": 0,
+            "width": 21.73913043478261,
+            "height": 47.82608695652174
+          },
+          "code": "Backspace",
+          "key": "Backspace",
+          "type": "edit",
+          "labels":
+          [
+            {
+              "type": "svg",
+              "svg":
+              {
+                "path": "M 0.5 7 L 7 0.5 L 21.5 0.5 L 21.5 13.5 L 7 13.5 Z M 10 3 L 18 11 M 10 11 L 18 3",
+                "dimensions":
+                {
+                  "width": 22,
+                  "height": 14
+                }
+              }
+            }
+          ],
+          "longpressAction": "repeat"
+        },
+        {
+          "geometry":
+          {
+            "left": 78.26086956521739,
+            "top": 52.17391304347826,
+            "width": 21.73913043478261,
+            "height": 47.82608695652174
+          },
+          "code": "NumpadEnter",
+          "key": "Enter",
+          "location": "numpad",
+          "labels":
+          [
+            {
+              "type": "svg",
+              "svg":
+              {
+                "path": "M 21.5 8.5 L 21.5 0.5 L 21.5 8.5 L 5.5 8.5 M 5.5 3.5 L 0.5 8.5 L 5.5 13.5",
+                "dimensions":
+                {
+                  "width": 22,
+                  "height": 14
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
