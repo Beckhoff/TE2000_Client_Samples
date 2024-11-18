@@ -14,7 +14,21 @@
       "background-container"
       ]
     </script>
-<div id="Station1_SystemEngineeringControl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiParametersAndFunctions" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-runtime="Runtime1" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="8" data-tchmi-bottom="8" data-tchmi-image-base-path="%tr%TR_SystemEngineering_ImagePath%/tr%" data-tchmi-target-path="fbMachine::_fbInfeedContainer" data-tchmi-show-symbol-mapping="false" data-tchmi-show-tree-view="true" data-tchmi-show-breadcrumb="false" data-tchmi-show-navigation="true" data-tchmi-use-value-as-default-prepared-value="true">
+<div id="Station1_SystemEngineeringControl" 
+     data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiParametersAndFunctions" 
+     data-tchmi-height-unit="px" data-tchmi-left="8" 
+     data-tchmi-left-unit="px" 
+     data-tchmi-runtime="Runtime1" 
+     data-tchmi-top="8" data-tchmi-top-unit="px" 
+     data-tchmi-width-unit="px" data-tchmi-right="8" 
+     data-tchmi-bottom="8" 
+     data-tchmi-image-base-path="%tr%TR_SystemEngineering_ImagePath%/tr%" 
+     data-tchmi-root-path="fbMachine::_fbInfeedContainer" 
+     data-tchmi-show-symbol-mapping="false" 
+     data-tchmi-show-tree-view="true" 
+     data-tchmi-show-breadcrumb="false"
+     data-tchmi-show-navigation="true" 
+     data-tchmi-use-value-as-default-prepared-value="true">
 </div>
 </div>    
 </div>
