@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkControlJs1", "FrameworkControlJs1\FrameworkControlJs1.csproj", "{4524982E-C533-4E60-BB63-23A6701DFF75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4478906B-1D96-4984-9C15-E6D46F64950D}"
+	ProjectSection(SolutionItems) = preProject
+		Gruntfile.js = Gruntfile.js
+		package.json = package.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4524982E-C533-4E60-BB63-23A6701DFF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4524982E-C533-4E60-BB63-23A6701DFF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4524982E-C533-4E60-BB63-23A6701DFF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4524982E-C533-4E60-BB63-23A6701DFF75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0F0AA89-CE12-4331-AEBC-6E472DB2D3C0}
+	EndGlobalSection
+EndGlobal

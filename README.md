@@ -7,6 +7,7 @@ This repository contains examples that showcase many features of the Framework, 
 Here is a list of all samples:
 
 - [SwipeContentOfRegion](SwipeContentOfRegion/README.md) This sample shows how to create animated content switching in a region which reacts on touch swipe gestures.
+- [UglifyJsDuringBuild:](UglifyJsDuringBuild) This sample shows how to uglify JavaScript in a Framework Project
 
 ## Requirements
 

@@ -1,0 +1,679 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "description": "Description of one TcHmi control",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "URL to a schema file"
+    },
+    "name": {
+      "description": "control type name",
+      "type": "string",
+      "minLength": 1
+    },
+    "classNamespace": {
+      "description": "control class namespace",
+      "type": "string",
+      "minLength": 1
+    },
+    "className": {
+      "description": "control class name",
+      "type": "string",
+      "minLength": 1
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Name which should be presented the user."
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "full": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "major": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "build": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [ "full", "major", "minor", "revision", "build" ]
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "description": "Determine if a control is shown in the toolbox to the user."
+    },
+    "themeable": {
+      "type": "string",
+      "enum": [ "None", "Standard", "Advanced" ],
+      "default": "Standard",
+      "description": "Determine if the control can be changed by a theme. Defaults to Standard. Controls with Advanced will be hidden by default in the theme editor."
+    },
+    "base": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Base control of this control."
+    },
+    "uses": {
+      "description": "List of Controls used in this control. For example [\"tchmi-button\", \"tchmi-region\"].",
+      "default": [ ],
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "description": {
+      "type": "string",
+      "default": "",
+      "description": "A long description of this control."
+    },
+    "defaultDesignerEvent": {
+      "type": "string",
+      "default": "",
+      "description": "The event which is manipulated on double click in designer."
+    },
+    "properties": {
+      "type": "object",
+      "description": "Information for the engineering process.",
+      "properties": {
+        "containerControl": {
+          "type": "boolean",
+          "default": false,
+          "description": "Can contain other controls while engineering. Only used in system controls."
+        },
+        "geometry": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "number",
+              "minimum": 0
+            },
+            "height": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "description": "Default size of control after instanciation in the engineering.",
+          "required": [ "width", "height" ]
+        }
+      },
+      "required": [ "geometry" ]
+    },
+    "icons": {
+      "type": "array",
+      "description": "Definition of the icon of this control.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^(?!(\/Controls\/)).*$",
+            "description": "Path to the file",
+            "minLength": 1
+          },
+          "width": {
+            "type": "number",
+            "description": "Width which should match this file",
+            "minimum": 0
+          },
+          "height": {
+            "type": "number",
+            "description": "Height which should match this file",
+            "minimum": 0
+          }
+        },
+        "required": [ "name", "width", "height" ]
+      }
+    },
+    "dependencyFiles": {
+      "type": "array",
+      "description": "All files which will be included in the HTML file of the HMI.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^(?!(\/Controls\/)|(.*THEMENAME)).*$",
+            "description": "Path to the file",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [ "Stylesheet", "JavaScript" ],
+            "description": "Type of the control asset."
+          },
+          "description": {
+            "type": "string",
+            "default": "",
+            "description": "A long description of this file."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "type" ]
+      }
+    },
+    "themes": {
+      "type": "object",
+      "description": "All files which will be loaded based on the theme settings.",
+      "additionalProperties": {
+        "type": "object",
+        "description": "Name of the theme this file is registered",
+        "properties": {
+          "resources": {
+            "type": "array",
+            "description": "Resources for this theme.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^(?!.*THEMENAME).*$",
+                  "description": "Path to the file",
+                  "minLength": 1
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [ "Stylesheet", "ThemedValues" ],
+                  "description": "Type of the control asset."
+                },
+                "description": {
+                  "type": "string",
+                  "default": "",
+                  "description": "A long description of this file."
+                }
+              },
+              "additionalProperties": false,
+              "required": [ "name", "type" ]
+            }
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "description": "A list of attributes of this control.",
+      "items": {
+        "type": "object",
+         "properties": {
+            "name": {
+               "type": "string",
+               "minLength": 1,
+               "pattern": "id|^data-tchmi",
+               "description": "Name of the attribute in the HTML."
+            },
+            "propertyName": {
+               "type": "string",
+               "minLength": 1,
+               "description": "Name of the attribute property."
+            },
+            "propertySetterName": {
+               "type": "string",
+               "description": "Name of the attribute property setter (can be empty string if the attribute is readonly)."
+            },
+            "propertyGetterName": {
+               "type": "string",
+               "minLength": 1,
+               "description": "Name of the attribute property getter."
+            },
+            "displayName": {
+               "type": "string",
+               "description": "Name which should be presented the user."
+            },
+            "refTo": {
+               "type": "string",
+               "description": "The name of an attribute which contains information relevant for this attribute.\nThe engineering will use this information to optimize position of attribute inputs.\nExample: MeasurementUnits are shown in the same row as the main value."
+            },
+            "searchTerms": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "description": "A list of search terms/alias names for populating a search. For example [\"source\", \"image\", \"picture\"]."
+            },
+            "visible": {
+               "type": "boolean",
+               "default": true,
+               "description": "Determine if an attribute is shown to the user."
+            },
+            "themeable": {
+               "type": "string",
+               "enum": [ "None", "Standard", "Advanced" ],
+               "default": "Standard",
+               "description": "Determine if the attribute can be changed by a theme. Defaults to Standard. Attributes with Advanced will be hidden by default in the theme editor."
+            },
+            "type": {
+               "type": "string",
+               "minLength": 6,
+               "pattern": "^tchmi:",
+               "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+            },
+            "displayPriority": {
+               "type": "integer",
+               "default": 10,
+               "description": "Display priority of the Attribute.\nA low number means higher priority (is shown on top). Attributes with a priority above 50 are collapsed by default.\nAttributes which are used often should get a high priority. Common attributes derived from TcHmiControl like top, left etc. have a priority of 10. Attributes without this property are handled as priority 10."
+            },
+            "allowedFunctions": {
+               "type": "object",
+               "description": "A definition of functions which are allowed to use here. The functions must match the requiredArguments signature.",
+               "properties": {
+                  "returnType": {
+                     "type": "string",
+                     "minLength": 1,
+                     "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+                  },
+                  "requiredArguments": {
+                     "description": "A list of arguments which will be filled from the control itself. They are not changeable in the creator.",
+                     "type": "array",
+                     "items": {
+                        "type": "object",
+                        "properties": {
+                           "type": {
+                              "type": "string",
+                              "minLength": 6,
+                              "pattern": "^tchmi:",
+                              "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+                           },
+                           "description": {
+                              "type": "string",
+                              "description": "Tooltip in Visual Studio."
+                           }
+                        }
+                     }
+                  },
+                  "requiredWaitMode": {
+                     "type": "string",
+                     "enum": [ "Synchronous", "Asynchronous" ]
+                  }
+               }
+            },
+            "category": {
+               "type": "string",
+               "default": "General",
+               "description": "Name of the area this attribute will be listed in the creator. The ordering can be manipulated with the attributeCategories block."
+            },
+            "description": {
+               "type": "string",
+               "default": "",
+               "description": "A long description of this attribute."
+            },
+            "requiredOnCompile": {
+               "type": "boolean",
+               "default": false,
+               "description": "The attribute has to be set in the HTML. Otherwise the control is not valid."
+            },
+            "readOnly": {
+               "type": "boolean",
+               "default": false,
+               "description": "Readonly attributes do not need a setter. propertySetterName should be empty in that case."
+            },
+            "bindable": {
+               "type": "boolean",
+               "description": "Defines if this is bindable to a Symbol."
+            },
+            "heritable": {
+               "type": "boolean",
+               "default": true,
+               "description": "The attribute is also usable on inheritance childs."
+            },
+            "allowSymbolExpressionsInObject": {
+               "type": "boolean",
+               "default": true,
+               "description": "Allows symbol expressions in properties of object or array values."
+            },
+            "defaultValue": {
+               "default": null,
+               "description": "This value will be used as sample value while control is generated in engineering (for example while drop). If set to null the attribute will not be set."
+            },
+            "defaultValueInternal": {
+               "default": null,
+               "description": "This value is the internal default value of the attribute if no valid value exists. This value must be valid for this attributes."
+            }
+         },
+        "additionalProperties": false,
+        "required": [ "name", "displayName", "propertyName", "propertySetterName", "propertyGetterName", "type" ]
+      }
+    },
+    "themedResources": {
+      "type": "array",
+      "description": "Resources of the control.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of the resource."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name which should be presented the user."
+          },
+          "description": {
+            "type": "string",
+            "default": "",
+            "description": "A long description of this resource."
+          },
+          "type": {
+            "type": "string",
+            "minLength": 6,
+            "pattern": "^tchmi:",
+            "description": "The type of the resource gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+          }
+        },
+        "additionalProperties": false,
+        "required": ["name", "displayName", "type"]
+      }
+    },
+    "attributeCategories": {
+      "type": "array",
+      "description": "Holds information about the categories of the attributes itself.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the Category."
+          },
+          "displayPriority": {
+            "type": "integer",
+            "description": "An optional display priority of the attributeCategory. Categories with higher numbers are shown below lower numbers. Few main attributes should be in Common which is shown by default.\n-10 are Colors as they must be always on top.\nCustom categories should start at 500. Common is 100, Layout is 200, Border is 300 and Background Image is 400."
+          },
+          "defaultCollapsed": {
+            "type": "boolean",
+            "default": false,
+            "description": "The Category should be collapsed as default."
+          },
+          "description": {
+            "type": "string",
+            "description": "A long description of this Category."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "displayPriority" ]
+      }
+    },
+    "functions": {
+      "type": "array",
+      "description": "A list of API Functions of this Control.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Internal name of function.",
+            "type": "string",
+            "minLength": 1
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name which should be presented the user."
+          },
+          "visible": {
+            "type": "boolean",
+            "description": "Determine if a function is shown to the user."
+          },
+          "description": {
+            "type": "string",
+            "description": "A long description of this function."
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "searchTerms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of search terms/alias names for populating a search."
+          },
+          "params": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the parameter"
+                },
+                "displayName": {
+                  "type": "string",
+                  "description": "Name which should be presented the user."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "A long description of this parameter."
+                },
+                "type": {
+                  "type": "string",
+                  "minLength": 6,
+                  "pattern": "^tchmi:",
+                  "description": "The type of the parameter gives the tchmi creator a hint to use a custom editor.\nThe corresponding schemas are described as dataTypes."
+                },
+                "bindable": {
+                  "type": "boolean",
+                  "description": "Defines if this is bindable to a Symbol.",
+                  "default": true
+                },
+                "visible": {
+                  "type": "boolean",
+                  "description": "Determine if a parameter is shown to the user."
+                }
+              },
+              "required": [ "name", "displayName", "type", "visible" ]
+            }
+          },
+          "type": {
+            "description": "Datatype of return value.",
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^tchmi:",
+                "minLength": 6
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "heritable": {
+            "type": "boolean",
+              "description": "The function is also usable on inheritance childs."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "displayName", "visible", "category", "type", "heritable" ]
+      }
+    },
+    "events": {
+      "type": "array",
+      "description": "A list of events associated to this control.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Internal name of the Event."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name which should be presented the user."
+          },
+          "description": {
+            "type": "string",
+            "description": "A long description of this event."
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [ "Operator", "Control", "Framework" ]
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "description": "The category of this event. Used to sort and priorize the events in the creator."
+          },
+          "displayPriority": {
+            "type": "integer",
+            "description": "An optional display priority of the event. Events with higher numbers are shown below lower numbers. Most users will only use events with a low number.\nEvents without this value are very rare used.\nOwn primary control events should be 5, secondary events 7. 10 is load, unload, pressed. 15 are major interaction events like click, right click, double click. 50 are enter, leave, mousedown, mouseup. Events without this property are hidden by default."
+          },
+          "visible": {
+            "type": "boolean",
+            "default": true,
+            "description": "Determine if an event is shown to the user."
+          },
+          "heritable": {
+            "type": "boolean",
+            "default": true,
+            "description": "The event is also usable on inheritance childs."
+          },
+          "allowsPreventDefault": {
+            "type": "boolean",
+            "default": false,
+            "description": "The event can have the option preventDefault."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "displayName", "category", "visible", "heritable" ]
+      }
+    },
+    "dataTypes": {
+      "type": "array",
+      "description": "List of custom data types.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Describing name of the datatype."
+          },
+          "schema": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?!(\/Controls\/)).*$",
+            "description": "Path to the schema describing the datatype."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "schema" ]
+      }
+    },
+    "access": {
+      "type": "array",
+      "description": "A list of access rights which is checked by this control.",
+      "items": {
+        "$schema": "http://json-schema.org/draft-04/schema",
+        "type": "object",
+        "description": "An access right which is checked by controls. In the Schema a defaultValue of true mean access is granted, false is denied, null is ask parent.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of the access definition in the HTML."
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Name which should be presented the user."
+          },
+          "visible": {
+            "type": "boolean",
+            "default": true,
+            "description": "Determine if an access definition is shown to the user."
+          },
+          "description": {
+            "type": "string",
+            "default": "",
+            "description": "A long description of this access definition."
+          },
+          "defaultValueInternal": {
+            "oneOf": [
+              {
+                "type": "boolean"
+
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Defines the default of this control access right. This will be used if the check for this access right does not return a result. true mean access is granted, false is denied, null is ask parent."
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "name", "displayName", "visible", "defaultValueInternal" ]
+      }
+    },
+    "creator": {
+      "type": "object",
+      "description": "Information which are only used in the engineering process.  Only used in system controls.",
+      "properties": {
+        "attributes": {
+          "type": "array",
+          "description": "A list of attributes of this control which are only used while the design process.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Name of the attribute in the HTML."
+              },
+              "type": {
+                "type": "string",
+                "minLength": 6,
+                "pattern": "^tchmi:",
+                "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+              },
+              "description": {
+                "type": "string",
+                "description": "A long description of this attribute."
+              },
+              "required": { "type": "boolean" },
+              "defaultValue": {
+                "description": "This value will be used as sample value while control is generated in engineering."
+              },
+              "defaultValueInternal": {
+                "description": "This value is the internal default value of the attribute if no valid value exists."
+              }
+            },
+            "additionalProperties": false,
+            "required": [ "name", "type", "required", "defaultValue", "defaultValueInternal" ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [ "name", "displayName", "version", "visible", "base", "description", "properties", "icons", "dependencyFiles", "attributes" ]
+}

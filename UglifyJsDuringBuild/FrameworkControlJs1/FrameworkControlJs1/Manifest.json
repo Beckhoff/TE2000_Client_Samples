@@ -1,0 +1,63 @@
+﻿{
+  "metadata": {
+    "industrialField": "--",
+    "packageType": "FrameworkExtPrj",
+    "id": "FrameworkControlJs1",
+    "version": "1.0.0.0",
+    "guid": "4524982e-c533-4e60-bb63-23a6701dff75",
+    "configurationName": "",
+    "platformName": "",
+    "creationTime": 1595503555,
+    "authors": "",
+    "owners": "",
+    "summary": "",
+    "licenseUrl": "",
+    "projectUrl": "",
+    "iconUrl": "",
+    "requireLicenseAcceptance": false,
+    "description": "",
+    "releaseNotes": "",
+    "copyright": "",
+    "tags": "",
+    "dependencies": [],
+    "references": []
+  },
+  "files": [
+    {
+      "target": "Description.json"
+    },
+    {
+      "target": "Source.js"
+    },
+    {
+      "target": "Style.css"
+    },
+    {
+      "target": "Template.html"
+    },
+    {
+      "target": "Icons\\16x16.png"
+    },
+    {
+      "target": "Icons\\24x24.png"
+    },
+    {
+      "target": "Icons\\32x32.png"
+    },
+    {
+      "target": "Icons\\64x64.png"
+    },
+    {
+      "target": "Schema\\ControlDescription.Schema.json"
+    },
+    {
+      "target": "Schema\\TypeDefinitions\\FrameworkControlJs1.Schema.json"
+    },
+    {
+      "target": "Themes\\Base\\Style.css"
+    }
+  ],
+  "symbols": [],
+  "flags": {},
+  "fileformat": 1
+}

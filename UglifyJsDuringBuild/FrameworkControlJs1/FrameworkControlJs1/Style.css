@@ -1,0 +1,34 @@
+﻿/* General theme independed control css. */
+
+/* Styles for the main element */
+.framework-control-js1
+{
+    overflow: hidden;
+
+}
+
+.framework-control-js1-template
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* If the main use for this control is interaction
+    uncomment the following lines to give user feedback:
+    This overlays the whole control with a white color
+    and change the mouse cursor */
+
+/*
+.framework-control-js1.tchmi-control-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}
+*/
