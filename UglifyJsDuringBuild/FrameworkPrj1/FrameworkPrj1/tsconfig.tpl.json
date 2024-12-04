@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "none",
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2023"
+    ],
+    "types": [],
+    "declaration": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": false
+  },
+  "include": [
+    "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"
+  ],
+  "files": [
+    "FrameworkPrj1Control/FrameworkPrj1Control.ts"
+  ]
+}

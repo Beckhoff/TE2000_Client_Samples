@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<package xmlns="">
+	<metadata>
+		<id>FrameworkPrj1</id>
+		<version>1.0.0</version>
+		<description>-.-</description>
+		<authors>AUTHOR_HERE</authors>
+		<title>FrameworkPrj1</title>
+		<owners>OWNER_HERE</owners>
+		<projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+		<copyright>Copyright 2024</copyright>
+		<tags>TwinCAT HMI</tags>
+		<dependencies>
+			<group targetFramework="native1.12-tchmi">
+				<dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.2.110" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!-- Add additional files here to include them in the nuget package -->
+		<file src="images\logo.png" target="images\" />
+		<file
+			src="Manifest.json"
+			target="runtimes\native1.12-tchmi\"
+			exclude=""/>
+		<file
+			src="**/*.function.json"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/Description.json"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/Types.Schema.json"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.html"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.css"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.png"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.svg"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.jpg"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.ico"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.theme"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<file
+			src="**/*.js"
+			target="runtimes\native1.12-tchmi\"
+			exclude="Gruntfile.js;node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<!-- Make sure '**/*.d.ts' files are added to the package regardless of the '**/*.ts' filter. -->
+		<file
+			src="**/*.d.ts"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+		<!-- Add the following commented out parts to add debugging related source files to the package. -->
+		<!--
+		<file
+			src="**/*.js.map"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"
+		/>
+		<file
+			src="**/*.ts"
+			target="runtimes\native1.12-tchmi\"
+			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"
+		/>
+		-->
+	</files>
+</package>

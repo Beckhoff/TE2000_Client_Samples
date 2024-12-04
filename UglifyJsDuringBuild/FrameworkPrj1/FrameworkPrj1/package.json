@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "devDependencies": {
+    "grunt": "1.6.1",
+    "grunt-cli": "1.4.3",
+    "grunt-terser": "2.0.0"
+  }
+}

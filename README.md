@@ -14,6 +14,7 @@ Here is a list of all samples:
 - [RecipeManagementFilter:](RecipeManagementFilter) This sample shows how to use the RecipeManagement Framework API with added filter functionality.
 - [SymbolPaging:](SymbolPaging) This demonstrates the basics of server side symbol paging, filering and sorting via CodeBehind files.
 - [PagingInControl:](PagingInControl) This demonstrates how to implement a control that requests paged data from the server and can also write modified data back.
+- [UglifyJsDuringBuild:](UglifyJsDuringBuild) This sample shows how to uglify JavaScript in a Framework Project
 - [AuditTrailReporting:](AuditTrailReporting) This sample demonstrates how to configure the TcHmiReporting extension in combination with the TcHmiAuditTrail Extension.
 - [SystemEngineering:](SystemEngineering) This sample demonstrates how to use the TcHmiParametersAndFunctions control.
 

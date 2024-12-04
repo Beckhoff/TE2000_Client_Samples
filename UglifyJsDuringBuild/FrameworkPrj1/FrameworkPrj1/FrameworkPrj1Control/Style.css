@@ -1,0 +1,30 @@
+﻿/* General theme independed control css. */
+
+.TcHmi_Controls_FrameworkPrj1_FrameworkPrj1Control {
+    overflow: hidden;
+}
+
+.TcHmi_Controls_FrameworkPrj1_FrameworkPrj1Control-Template {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* If the main use for this control is interaction
+    uncomment the following lines to give user feedback:
+    This overlays the whole control with a white color
+    and change the mouse cursor */
+
+/*
+.TcHmi_Controls_$default_namespace$_FrameworkPrj1.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}
+*/
