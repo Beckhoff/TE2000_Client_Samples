@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "FrameworkPrj1", "FrameworkPrj1\FrameworkPrj1.hmiextproj", "{17E91A4D-416B-4325-9E65-EF8118755934}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17E91A4D-416B-4325-9E65-EF8118755934}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{17E91A4D-416B-4325-9E65-EF8118755934}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{17E91A4D-416B-4325-9E65-EF8118755934}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{17E91A4D-416B-4325-9E65-EF8118755934}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E091158A-662A-4496-9F76-E6B32DA9B2EC}
+	EndGlobalSection
+EndGlobal

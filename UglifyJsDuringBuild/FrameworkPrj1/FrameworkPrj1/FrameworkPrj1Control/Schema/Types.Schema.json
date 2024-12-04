@@ -1,0 +1,11 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.FrameworkPrj1.FrameworkPrj1Control": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "FrameworkPrj1Control",
+      "frameworkControlNamespace": "TcHmi.Controls.FrameworkPrj1"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.3.9.9\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.3.9.9\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">TwinCAT HMI</Platform>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <TcHmiCreatorVersion>[1.12,]</TcHmiCreatorVersion>
+    <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
+    <TargetFramework>native1.12-tchmi</TargetFramework>
+    <ProjectTypeGuids>{3B740506-4966-4147-AB1F-357FE08946EA}</ProjectTypeGuids>
+    <ProjectGuid>17e91a4d-416b-4325-9e65-ef8118755934</ProjectGuid>
+    <ProjectName>FrameworkPrj1</ProjectName>
+    <Name>FrameworkPrj1</Name>
+    <HmiRecent>1.12.756.1</HmiRecent>
+    <TcHmiDirectory>$(registry:HKEY_CURRENT_USER\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
+    <TcHmiDirectory Condition="'$(TcHmiDirectory)'==''">$(registry:HKEY_LOCAL_MACHINE\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
+    <TcHmiDirectory Condition="'$(TcHmiDirectory)'==''">$(registry:HKEY_LOCAL_MACHINE\Software\Wow6432Node\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|TwinCAT HMI' ">
+    <PlatformTarget>TwinCAT HMI</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefaultNamespace>FrameworkPrj1</DefaultNamespace>
+    <PreBuildEvent />
+    <PostBuildEvent>@echo off
+call npm install
+call  "$(ProjectDir)node_modules\.bin\grunt" Uglify --no-color</PostBuildEvent>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|TwinCAT HMI' ">
+    <PlatformTarget>TwinCAT HMI</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefaultNamespace>FrameworkPrj1</DefaultNamespace>
+    <PreBuildEvent />
+    <PostBuildEvent>@echo off
+call npm install
+call  "$(ProjectDir)node_modules\.bin\grunt" Uglify --no-color</PostBuildEvent>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Label="TwinCatHMI">
+    <TcHmiExtensionTypes>{CC169D49-EEDD-4BAF-8151-63DF12EDD7B4}</TcHmiExtensionTypes>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
+    <TwinCATHmi_Targets>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.targets</TwinCATHmi_Targets>
+  </PropertyGroup>
+  <Target Name="GetFrameworkPaths" />
+  <Import Project="$(TwinCATHmi_Tasks)" />
+  <Import Project="$(TwinCATHmi_Targets)" />
+  <ItemGroup>
+    <Content Include="Gruntfile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="tsconfig.tpl.json">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="tsconfig.json">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+      <DependentUpon>tsconfig.tpl.json</DependentUpon>
+    </Content>
+    <HmiManifest Include="Manifest.json" />
+    <Content Include="Images\logo.png" />
+    <Content Include="FrameworkPrj1.nuspec" />
+    <Content Include=".eslintrc.json">
+      <Visible>false</Visible>
+    </Content>
+    <Content Include="FrameworkPrj1Control\Icons\16x16.png" />
+    <Content Include="FrameworkPrj1Control\Icons\24x24.png" />
+    <Content Include="FrameworkPrj1Control\Icons\32x32.png" />
+    <Content Include="FrameworkPrj1Control\Icons\64x64.png" />
+    <Content Include="FrameworkPrj1Control\Template.html" />
+    <Content Include="FrameworkPrj1Control\Themes\Base\Style.css" />
+    <Content Include="FrameworkPrj1Control\FrameworkPrj1Control.ts" />
+    <Content Include="FrameworkPrj1Control\Style.css" />
+    <Content Include="FrameworkPrj1Control\Description.json" />
+    <Content Include="FrameworkPrj1Control\Schema\Types.Schema.json" />
+    <Content Include="packages.xsd">
+      <SubType>Content</SubType>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FrameworkPrj1Control\" />
+    <Folder Include="FrameworkPrj1Control\Icons\" />
+    <Folder Include="FrameworkPrj1Control\Schema\" />
+    <Folder Include="FrameworkPrj1Control\Themes\" />
+    <Folder Include="FrameworkPrj1Control\Themes\Base\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEventDependsOn>
+    </PreBuildEventDependsOn>
+    <PostBuildEventDependsOn>
+    </PostBuildEventDependsOn>
+  </PropertyGroup>
+  <Target Name="PreBuildEvent" Condition="'$(PreBuildEvent)'!=''" DependsOnTargets="$(PreBuildEventDependsOn)">
+    <Exec WorkingDirectory="$(OutDir)" Command="$(PreBuildEvent)" />
+  </Target>
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
+    <Exec WorkingDirectory="$(OutDir)" Command="$(PostBuildEvent)" />
+  </Target>
+  <PropertyGroup>
+    <BuiltProjectOutputGroupDependsOn>
+      PreBuildEvent;
+      CoreBuild;
+      PostBuildEvent
+    </BuiltProjectOutputGroupDependsOn>
+    <CleanDependsOn>
+		BaseClean
+	</CleanDependsOn>
+  </PropertyGroup>
+  <Target Name="CoreBuild">
+    <Message Text="Microsoft.TypeScript.targets: $(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Importance="high" />
+    <Message Text="TypeScriptSdkDir: $(TypeScriptSdkDir)" Importance="high" />
+    <Message Text="TypeScriptToolsVersion: $(TypeScriptToolsVersion)" Importance="high" />
+    <Message Text="LastKnownTypeScriptVersion: $(LastKnownTypeScriptVersion)" Importance="high" />
+  </Target>
+  <Target Name="Build" DependsOnTargets="$(BuiltProjectOutputGroupDependsOn)" />
+  <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
+  <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.3.9.9\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.3.9.9\build\Microsoft.TypeScript.MSBuild.targets')" />
+</Project>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<package xmlns="">
+  <metadata>
+    <id>FrameworkPrj1</id>
+    <version>1.0.0</version>
+    <description>-.-</description>
+    <authors>AUTHOR_HERE</authors>
+    <title>FrameworkPrj1</title>
+    <owners>OWNER_HERE</owners>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>TwinCAT HMI</tags>
+    <dependencies>
+      <group targetFramework="native1.12-tchmi">
+        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="12.756.1" />
+        <dependency id="Microsoft.TypeScript.MSBuild" version="3.9.9" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="**\*" target="runtimes\native1.12-tchmi\" exclude="**\*\node_modules\**\*;**\*.ts;**\*.js.map;\**\*.nuspec;**\*.tpl.json;**\*.hmi*proj;**\~*;**\*.tmp;**\tmp*;**\*.user;**\tsconfig.json;**\*.log;**\*.bak;**\obj\**\*;packages.config;packages.xsd;.hmiframework\**\*;.git;.gitignore;.gitattributes" />
+    <file src="images\logo.png" target="images\" />
+  </files>
+</package>
