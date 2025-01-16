@@ -1,6 +1,6 @@
 # Control unit tests
 
-This project is an example to create unit tests for a frameowrk control. The tests are working on the `ColorChange` control in the `ExampleControl` Visual Studio project.
+This project is an example to create unit tests for a framework control. The tests are working on the `ColorChange` control in the `ExampleControl` Visual Studio project.
 
 ## Preparation
 
