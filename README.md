@@ -16,6 +16,7 @@ Here is a list of all samples:
 - [PagingInControl:](PagingInControl) This demonstrates how to implement a control that requests paged data from the server and can also write modified data back.
 - [UglifyJsDuringBuild:](UglifyJsDuringBuild) This sample shows how to uglify JavaScript in a Framework Project
 - [AuditTrailReporting:](AuditTrailReporting) This sample demonstrates how to configure the TcHmiReporting extension in combination with the TcHmiAuditTrail Extension.
+- [Reporting:](Reporting) This sample demonstrates how to configure the content of a generic report with TcHmiReporting.
 - [SystemEngineering:](SystemEngineering) This sample demonstrates how to use the TcHmiParametersAndFunctions control.
 
 ## Requirements

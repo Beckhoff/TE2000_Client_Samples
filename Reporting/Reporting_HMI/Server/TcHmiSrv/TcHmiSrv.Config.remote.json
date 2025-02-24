@@ -1,0 +1,9 @@
+{
+    "BASE_HMI_URL": "",
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "www",
+        "/TcHmiReporting": "..\\..\\.engineering_servers\\Reporting_HMI\\TcHmiReporting"
+    }
+}

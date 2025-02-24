@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.11">
+	<Project ProjectGUID="{AFCFF341-7F4C-45EE-B21E-2E180A8961CA}" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Settings MaxCpus="6" NonWinCpus="1">
+				<Cpu CpuId="5"/>
+			</Settings>
+			<Licenses>
+				<Target>
+					<ManualSelect>{99A3CF49-FFBF-49D4-BA30-F4C0593B5161}</ManualSelect>
+					<ManualSelect>{2D2E5D68-23A1-4B53-BDF7-41C3861F6DB7}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{B7D11065-609A-454B-B155-620758C16956}" Name="Reporting_PLC" PrjFilePath="Reporting_PLC\Reporting_PLC.plcproj" TmcFilePath="Reporting_PLC\Reporting_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{F28801FB-EC04-01E6-5B88-4836406DF441}" TmcPath="Reporting_PLC\Reporting_PLC.tmc">
+					<Name>Reporting_PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_TableData" Id="{7912ef5b-9426-4045-b3df-7969acc3d264}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_TableData
+VAR_INPUT
+	nId		: USINT;
+	sName	: STRING;
+	nValue	: LREAL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

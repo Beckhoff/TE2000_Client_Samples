@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{b40823a4-447a-487a-9783-c9b24cc6d933}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	{ attribute 'TcHmiSymbol.AddSymbol' }
+	_sProjectName	: STRING := 'Reporting sample project';
+	{ attribute 'TcHmiSymbol.AddSymbol' }
+	_aTableData		: ARRAY[0..10] OF FB_TableData;
+	{ attribute 'TcHmiSymbol.AddSymbol' }
+	_temperature	: LREAL;
+	
+	_fbSinus		: FB_CTRL_SIGNAL_GENERATOR := (
+						eState 			:= E_CTRL_STATE.eCTRL_STATE_ACTIVE);
+	_stSinusParams	: ST_CTRL_SIGNAL_GENERATOR_PARAMS := (
+						tCtrlCycleTime 	:= TIME#200MS, 
+						tTaskCycleTime 	:= TIME#200MS, 
+						eSignalType 	:= E_CTRL_SIGNAL_TYPE.eCTRL_SINUS, 
+						tCylceDuration 	:= TIME#40S, 
+						fAmplitude 		:= 30, 
+						fOffset 		:= 5, 
+						tStart 			:= TIME#20MS);
+						
+	_i				: USINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+FOR _i := 0 TO 10 DO
+	_aTableData[_i].nId := _i;
+	_aTableData[_i].sName := CONCAT ('Hello World ',TO_STRING(_i));
+	_aTableData[_i].nValue := _i * 1.35;
+END_FOR
+
+_fbSinus(
+	stParams	:= _stSinusParams);
+	
+_temperature	:= _fbSinus.fOut;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

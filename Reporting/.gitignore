@@ -1,0 +1,48 @@
+### TwinCAT3 ###
+# website: https://www.beckhoff.com/twincat3/
+*.tpy
+*.tclrs
+*.compiled-library
+*.compileinfo
+
+# ignoring the TMC file is only useful for plain PLC programming
+# as soon as shared data types (via tmc), C++ or in general TcCom-Module are used, the TMC file has to be part of the repository
+*.tmc
+*.tmcRefac
+*.library
+*.tsproj.bak
+*.plcproj.bak
+*.xti.bak
+*.tsproj.orig
+*.plcproj.orig
+*.xti.orig
+
+LineIDs.dbg
+LineIDs.dbg.bak
+
+# exclude not required folders
+_Boot/
+_CompileInfo/
+_Libraries/
+_ModuleInstall/
+_Deployment/
+_Repository/
+
+# project specific files
+*.~u
+*.project.~u
+*.suo
+
+# Multiuser specific
+.TcGit/
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
