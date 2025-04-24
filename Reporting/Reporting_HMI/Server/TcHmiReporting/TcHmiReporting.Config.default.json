@@ -3,6 +3,7 @@
     "exportPath": "",
     "generationTimeout": "PT1M",
     "overwriteReports": true,
+    "removeRemoteFile": true,
     "reports": {
         "TestReport": {
             "config": "Reporting",

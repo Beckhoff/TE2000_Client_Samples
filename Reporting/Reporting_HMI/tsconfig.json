@@ -22,6 +22,6 @@
     "bin/"
   ],
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.65/runtimes/native1.12-tchmi/TcHmi.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ]
 }

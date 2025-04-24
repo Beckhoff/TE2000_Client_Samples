@@ -85,7 +85,7 @@
           "category": "general",
           "displayName": "Top Left",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top left corner radius of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -95,7 +95,7 @@
           "refTo": "topLeft",
           "displayName": "Top Left Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top left corner radius unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -104,7 +104,7 @@
           "category": "general",
           "displayName": "Top Right",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top right corner radius of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -114,7 +114,7 @@
           "refTo": "topRight",
           "displayName": "Top Right Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top right corner radius unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -123,7 +123,7 @@
           "category": "general",
           "displayName": "Bottom Right",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom right corner radius of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -133,7 +133,7 @@
           "refTo": "bottomRight",
           "displayName": "Bottom Right Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom right corner radius unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -142,7 +142,7 @@
           "category": "general",
           "displayName": "Bottom Left",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom left corner radius of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -152,7 +152,7 @@
           "refTo": "bottomLeft",
           "displayName": "Bottom Left Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom left corner radius unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         }
@@ -264,7 +264,7 @@
           "category": "general",
           "displayName": "Left",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the left border width of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -274,7 +274,7 @@
           "refTo": "left",
           "displayName": "Left Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the left border width unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -283,7 +283,7 @@
           "category": "general",
           "displayName": "Top",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top border width of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -293,7 +293,7 @@
           "refTo": "top",
           "displayName": "Top Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top border width unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -302,7 +302,7 @@
           "category": "general",
           "displayName": "Right",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the right border width of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -312,7 +312,7 @@
           "refTo": "right",
           "displayName": "Right Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the right border width unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -321,7 +321,7 @@
           "category": "general",
           "displayName": "Bottom",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom border width of the element.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -331,7 +331,7 @@
           "refTo": "bottom",
           "displayName": "Bottom Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom border width unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         }
@@ -721,13 +721,15 @@
                   ]
                 },
                 "valueType": {
-                  "type": "string"
+                  "type": "string",
+                  "minLength": 6,
+                  "pattern": "^tchmi:",
+                  "description": "Information about the used type as a tchmi reference name for re-edit scenarios."
                 }
               },
               "required": [
                 "objectType",
-                "value",
-                "valueType"
+                "value"
               ],
               "additionalProperties": false
             },
@@ -755,6 +757,7 @@
             {
               "title": "ControlApiFunction",
               "type": "object",
+              "description": "Defines an API of the control.",
               "properties": {
                 "objectType": {
                   "description": "An enum defining the variable type.",
@@ -988,7 +991,7 @@
           "refTo": "left",
           "displayName": "Left Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the left padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1007,7 +1010,7 @@
           "refTo": "top",
           "displayName": "Top Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1026,7 +1029,7 @@
           "refTo": "right",
           "displayName": "Right Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the right padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1045,7 +1048,7 @@
           "refTo": "bottom",
           "displayName": "Bottom Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         }
@@ -1135,7 +1138,7 @@
           "refTo": "left",
           "displayName": "Left Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the left padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1154,7 +1157,7 @@
           "refTo": "top",
           "displayName": "Top Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the top padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1173,7 +1176,7 @@
           "refTo": "right",
           "displayName": "Right Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the right padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -1192,7 +1195,7 @@
           "refTo": "bottom",
           "displayName": "Bottom Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Sets the bottom padding unit of the element.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         }
@@ -1625,7 +1628,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Translate",
                   "defaultValueInternal": "Translate"
                 },
@@ -1634,7 +1637,7 @@
                   "category": "general",
                   "displayName": "X",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x translation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1644,7 +1647,7 @@
                   "refTo": "x",
                   "displayName": "X Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x translation unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 },
@@ -1653,7 +1656,7 @@
                   "category": "general",
                   "displayName": "Y",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y translation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1663,7 +1666,7 @@
                   "refTo": "y",
                   "displayName": "Y Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y translation unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 },
@@ -1672,7 +1675,7 @@
                   "category": "general",
                   "displayName": "Z",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the z translation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1682,7 +1685,7 @@
                   "refTo": "z",
                   "displayName": "Z Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the z translation unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 }
@@ -1727,7 +1730,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Rotate",
                   "defaultValueInternal": "Rotate"
                 },
@@ -1736,7 +1739,7 @@
                   "category": "general",
                   "displayName": "Angle",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the angle of rotation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1746,7 +1749,7 @@
                   "refTo": "angle",
                   "displayName": "Angle Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the angle unit of rotation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "deg"
                 },
@@ -1755,7 +1758,7 @@
                   "category": "General",
                   "displayName": "Vector",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the vector of rotation of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 }
@@ -1782,7 +1785,7 @@
                       "category": "general",
                       "displayName": "X",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the x component of the vector of rotation applied to the element.",
                       "defaultValue": null,
                       "defaultValueInternal": null
                     },
@@ -1791,7 +1794,7 @@
                       "category": "general",
                       "displayName": "Y",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the y component of the vector of rotation applied to the element.",
                       "defaultValue": null,
                       "defaultValueInternal": null
                     },
@@ -1800,7 +1803,7 @@
                       "category": "general",
                       "displayName": "Z",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the z component of the vector of rotation applied to the element.",
                       "defaultValue": null,
                       "defaultValueInternal": null
                     }
@@ -1839,7 +1842,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Scale",
                   "defaultValueInternal": "Scale"
                 },
@@ -1848,7 +1851,7 @@
                   "category": "general",
                   "displayName": "X",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x scale of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1857,7 +1860,7 @@
                   "category": "general",
                   "displayName": "Y",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y scale of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1866,7 +1869,7 @@
                   "category": "general",
                   "displayName": "Z",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the z scale of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 }
@@ -1902,7 +1905,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Skew",
                   "defaultValueInternal": "Skew"
                 },
@@ -1911,7 +1914,7 @@
                   "category": "general",
                   "displayName": "X Angle",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x angle of skew of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1921,7 +1924,7 @@
                   "refTo": "xAngle",
                   "displayName": "X Angle Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x angle unit of skew of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "deg"
                 },
@@ -1930,7 +1933,7 @@
                   "category": "general",
                   "displayName": "Y Angle",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y angle of skew of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1940,7 +1943,7 @@
                   "refTo": "yAngle",
                   "displayName": "Y Angle Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y angle unit of skew of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "deg"
                 }
@@ -1979,7 +1982,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Origin",
                   "defaultValueInternal": "Origin"
                 },
@@ -1988,7 +1991,7 @@
                   "category": "general",
                   "displayName": "X",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x origin of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -1998,7 +2001,7 @@
                   "refTo": "x",
                   "displayName": "X Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the x origin unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 },
@@ -2007,7 +2010,7 @@
                   "category": "general",
                   "displayName": "Y",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y origin of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -2017,7 +2020,7 @@
                   "refTo": "y",
                   "displayName": "Y Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the y origin unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 },
@@ -2026,7 +2029,7 @@
                   "category": "general",
                   "displayName": "Z",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the z origin of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -2036,7 +2039,7 @@
                   "refTo": "z",
                   "displayName": "Z Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the z origin unit of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 }
@@ -2081,7 +2084,7 @@
                   "category": "general",
                   "displayName": "Transform Type",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the type of transform to be applied to the element.",
                   "defaultValue": "Perspective",
                   "defaultValueInternal": "Perspective"
                 },
@@ -2090,7 +2093,7 @@
                   "category": "general",
                   "displayName": "Distance",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the distance of the perspective of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 },
@@ -2100,7 +2103,7 @@
                   "refTo": "distance",
                   "displayName": "Distance Unit",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the distance unit of the perspective of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": "px"
                 },
@@ -2109,7 +2112,7 @@
                   "category": "General",
                   "displayName": "Origin",
                   "displayPriority": 10,
-                  "description": "",
+                  "description": "Sets the origin of the perspective of the element.",
                   "defaultValue": null,
                   "defaultValueInternal": null
                 }
@@ -2136,7 +2139,7 @@
                       "category": "general",
                       "displayName": "X",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the x origin of the perspective of the element.",
                       "defaultValue": null,
                       "defaultValueInternal": null
                     },
@@ -2146,7 +2149,7 @@
                       "refTo": "x",
                       "displayName": "X Unit",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the x origin unit of the perspective of the element.",
                       "defaultValue": null,
                       "defaultValueInternal": "px"
                     },
@@ -2155,7 +2158,7 @@
                       "category": "general",
                       "displayName": "Y",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the y origin of the perspective of the element.",
                       "defaultValue": null,
                       "defaultValueInternal": null
                     },
@@ -2165,7 +2168,7 @@
                       "refTo": "y",
                       "displayName": "Y Unit",
                       "displayPriority": 10,
-                      "description": "",
+                      "description": "Sets the y origin unit of the perspective of the element.",
                       "defaultValue": null,
                       "defaultValueInternal": "px"
                     }
@@ -2565,7 +2568,7 @@
             {
               "title": "ControlApiFunction",
               "type": "object",
-              "description": "",
+              "description": "Defines an API of the control.",
               "properties": {
                 "objectType": {
                   "type": "string",
@@ -2662,27 +2665,9 @@
                     "Comment"
                   ]
                 },
-                "target": {
-                  "$ref": "#/definitions/Trigger/definitions/comment"
-                },
-                "success": {
-                  "$ref": "#/definitions/Trigger/definitions/actionList"
-                },
-                "error": {
-                  "$ref": "#/definitions/Trigger/definitions/actionList"
-                },
-                "active": {
-                  "type": "boolean",
-                  "description": "Should action be active? Defaults to true.",
-                  "default": true
-                },
-                "collapsed": {
-                  "type": "boolean",
-                  "description": "Should action be collapsed? Not used in runtime",
-                  "default": false
-                },
-                "asyncWait": {
-                  "type": "boolean"
+                "comment": {
+                  "type": "string",
+                  "description": "Free comment. Will be ignored on runtime."
                 }
               },
               "required": [
@@ -2730,13 +2715,15 @@
                   ]
                 },
                 "valueType": {
-                  "type": "string"
+                  "type": "string",
+                  "minLength": 6,
+                  "pattern": "^tchmi:",
+                  "description": "Information about the used type as a tchmi reference name for re-edit scenarios while Engineering."
                 }
               },
               "required": [
                 "objectType",
-                "value",
-                "valueType"
+                "value"
               ],
               "additionalProperties": false
             },
@@ -2745,10 +2732,17 @@
               "type": "object",
               "properties": {
                 "objectType": {
+                  "description": "Value referenced via a Symbol",
                   "type": "string",
                   "enum": [
                     "Symbol"
                   ]
+                },
+                "valueType": {
+                  "type": "string",
+                  "minLength": 6,
+                  "pattern": "^tchmi:",
+                  "description": "Information about the expected type as a tchmi reference name."
                 },
                 "symbolExpression": {
                   "$ref": "#/definitions/Trigger/definitions/symbolExpression"
@@ -2811,7 +2805,7 @@
             {
               "title": "ControlAttributeBindingTarget",
               "type": "object",
-              "description": "",
+              "description": "a ControlAttributeBindingTarget",
               "properties": {
                 "objectType": {
                   "type": "string",
@@ -2907,11 +2901,13 @@
         },
         "symbolExpression": {
           "title": "SymbolExpression",
+          "description": "Reference to a Symbol Expression",
           "type": "string",
           "pattern": "^%(s|i|l|pp|tp|f|ctrl|ctx|tr|t)%.+%\\/\\1%$"
         },
         "controlSymbolExpression": {
           "title": "controlSymbolExpression",
+          "description": "Reference to a Control Symbol Expression",
           "type": "string",
           "pattern": "^%(ctrl)%.+%\\1%$"
         },
@@ -2925,6 +2921,7 @@
       "properties": {
         "event": {
           "type": "string",
+          "description": "Event name",
           "minLength": 1
         },
         "preventDefault": {
@@ -2938,6 +2935,7 @@
         "actions": {
           "type": "array",
           "minItems": 1,
+          "description": "List of actions to trigger.",
           "items": {
             "$ref": "#/definitions/Trigger/definitions/action"
           }
@@ -3739,7 +3737,7 @@
             "category": "Layout",
             "displayName": "Max Width Unit",
             "displayPriority": 60,
-            "description": "",
+            "description": "Max Width Unit of the column.",
             "defaultValueInternal": "px"
           },
           {
@@ -3756,7 +3754,7 @@
             "category": "Layout",
             "displayName": "Min Width Unit",
             "displayPriority": 61,
-            "description": "",
+            "description": "Min Width Unit of the column.",
             "defaultValueInternal": "px"
           },
           {
@@ -3838,7 +3836,7 @@
               },
               {
                 "title": "MaxWidthUnit",
-                "description": "",
+                "description": "Max Width Unit of the column.",
                 "default": "px",
                 "category": "Layout",
                 "displayPriority": 60,
@@ -3867,7 +3865,7 @@
               },
               {
                 "title": "MinWidthUnit",
-                "description": "",
+                "description": "Min Width Unit of the column.",
                 "default": "px",
                 "refTo": "minWidth",
                 "category": "Layout",
@@ -3958,7 +3956,7 @@
             "category": "Layout",
             "displayName": "Max Height Unit",
             "displayPriority": 60,
-            "description": "",
+            "description": "Max Height Unit of the row.",
             "defaultValueInternal": "px"
           },
           {
@@ -3975,7 +3973,7 @@
             "category": "Layout",
             "displayName": "Min Height Unit",
             "displayPriority": 61,
-            "description": "",
+            "description": "Min Height Unit of the row.",
             "defaultValueInternal": "px"
           },
           {
@@ -4058,7 +4056,7 @@
               },
               {
                 "title": "MaxHeightUnit",
-                "description": "",
+                "description": "Max Height Unit of the row.",
                 "default": "px",
                 "category": "Layout",
                 "displayPriority": 60
@@ -4086,7 +4084,7 @@
               },
               {
                 "title": "MinHeightUnit",
-                "description": "",
+                "description": "Min Height Unit of the row.",
                 "default": "px",
                 "refTo": "minHeight",
                 "category": "Layout",
@@ -4248,7 +4246,7 @@
               "displayName": "Icon Width",
               "category": "General",
               "displayPriority": 11,
-              "description": "",
+              "description": "The preferred width of the icon.",
               "defaultValue": null,
               "defaultValueInternal": 32
             },
@@ -4257,7 +4255,7 @@
               "displayName": "Icon Width Unit",
               "category": "General",
               "displayPriority": 11,
-              "description": "",
+              "description": "The unit of preferred width of the icon.",
               "defaultValue": null,
               "defaultValueInternal": "px",
               "refTo": "iconWidth"
@@ -4267,7 +4265,7 @@
               "displayName": "Icon Height",
               "category": "General",
               "displayPriority": 12,
-              "description": "",
+              "description": "The preferred height of the icon.",
               "defaultValue": null,
               "defaultValueInternal": 32
             },
@@ -4276,7 +4274,7 @@
               "displayName": "Icon Height Unit",
               "category": "General",
               "displayPriority": 12,
-              "description": "",
+              "description": "The unit of preferred height of the icon.",
               "defaultValue": null,
               "defaultValueInternal": "px",
               "refTo": "iconHeight"
@@ -4312,7 +4310,7 @@
           "displayName": "Target File",
           "category": "General",
           "displayPriority": 12,
-          "description": "",
+          "description": "The content or usercontrol to show.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -4656,30 +4654,6 @@
           "source",
           "type"
         ],
-        "properties": {
-          "source": {
-            "$ref": "tchmi:framework#/definitions/Path"
-          },
-          "type": {
-            "type": "string",
-            "category": "Common",
-            "enum": [
-              "",
-              "audio/mpeg",
-              "audio/ogg",
-              "audio/wav",
-              "application/dash+xml",
-              "application/vnd.apple.mpegurl"
-            ],
-            "options": [
-              {
-                "label": "<auto detect>",
-                "value": ""
-              }
-            ],
-            "default": ""
-          }
-        },
         "propertiesMeta": [
           {
             "name": "source",
@@ -4700,6 +4674,31 @@
             "defaultValueInternal": null
           }
         ],
+        "properties": {
+          "source": {
+            "$ref": "tchmi:framework#/definitions/Path"
+          },
+          "type": {
+            "type": "string",
+            "category": "Common",
+            "enum": [
+              "",
+              "audio/mpeg",
+              "audio/ogg",
+              "audio/wav",
+              "audio/flac",
+              "application/dash+xml",
+              "application/vnd.apple.mpegurl"
+            ],
+            "options": [
+              {
+                "label": "<auto detect>",
+                "value": ""
+              }
+            ],
+            "default": ""
+          }
+        },
         "additionalProperties": false,
         "required": [
           "source"
@@ -4980,7 +4979,7 @@
           "category": "General",
           "displayName": "Show",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -4989,7 +4988,7 @@
           "category": "General",
           "displayName": "Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the name of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": ""
         },
@@ -4998,7 +4997,7 @@
           "category": "General",
           "displayName": "Orientation",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is vertical or horizontal.",
           "defaultValue": "Horizontal",
           "defaultValueInternal": "Horizontal"
         },
@@ -5007,16 +5006,25 @@
           "category": "General",
           "displayName": "Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the value of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 0
+        },
+        {
+          "name": "valueUnit",
+          "category": "General",
+          "displayName": "Value Unit",
+          "displayPriority": 10,
+          "description": "Describes the unit of the value of the reference line (Value or %).",
+          "defaultValue": "Value",
+          "defaultValueInternal": "Value"
         },
         {
           "name": "color",
           "category": "Colors",
           "displayName": "Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the reference line.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiBarChart::ReferenceLineColor%/tr%",
           "defaultValueInternal": {
             "color": "#4794da"
@@ -5027,7 +5035,7 @@
           "category": "General",
           "displayName": "Line Width",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the line thickness of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 1
         },
@@ -5036,7 +5044,7 @@
           "category": "General",
           "displayName": "Show Label",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the description of the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -5045,7 +5053,7 @@
           "category": "General",
           "displayName": "Label Horizontal Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the horizontal alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Right"
         },
@@ -5054,7 +5062,7 @@
           "category": "General",
           "displayName": "Label Vertical Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the vertical alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Top"
         },
@@ -5063,7 +5071,7 @@
           "category": "General",
           "displayName": "Label Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font of the description of the reference line. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -5072,7 +5080,7 @@
           "category": "General",
           "displayName": "Label Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 12
         },
@@ -5082,7 +5090,7 @@
           "category": "General",
           "displayName": "Label Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size unit of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -5091,7 +5099,7 @@
           "category": "General",
           "displayName": "Label Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font weight of the description of the reference line. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Auto"
         }
@@ -5112,6 +5120,9 @@
         },
         "value": {
           "type": "number"
+        },
+        "valueUnit": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
         },
         "color": {
           "$ref": "tchmi:framework#/definitions/SolidColor"
@@ -5179,6 +5190,12 @@
     },
     "GaugeTickDefinition": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.GaugeTickDefinition"
+    },
+    "GaugeMarkerDefinitionList": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.GaugeMarkerDefinitionList"
+    },
+    "ChartReferenceLineValueUnit": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
     },
     "TcHmi.Controls.Beckhoff.ChartLineStyle": {
       "title": "ChartLineStyle",
@@ -5278,7 +5295,9 @@
             "category": "Colors",
             "displayPriority": 10,
             "description": "Color of this range",
-            "defaultValue": "rgba(0, 0, 0, 1)",
+            "defaultValue": {
+              "color": "rgb(0, 128, 0)"
+            },
             "defaultValueInternal": null
           },
           {
@@ -5338,6 +5357,76 @@
         "subTickRange"
       ],
       "additionalProperties": false
+    },
+    "TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit": {
+      "title": "ChartReferenceLineValueUnit",
+      "type": "string",
+      "enum": [
+        "Value",
+        "%"
+      ],
+      "default": "Value"
+    },
+    "TcHmi.Controls.Beckhoff.GaugeMarkerDefinitionList": {
+      "title": "GaugeMarkerDefinitionList",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Marker Definition",
+        "engineeringColumns": [
+          "label",
+          "value",
+          "color"
+        ],
+        "propertiesMeta": [
+          {
+            "name": "color",
+            "displayName": "Color",
+            "category": "Colors",
+            "displayPriority": 10,
+            "description": "Color of this marker",
+            "defaultValue": {
+              "color": "rgba(0, 0, 0, 1)"
+            },
+            "defaultValueInternal": null
+          },
+          {
+            "name": "label",
+            "displayName": "Label",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Name of this marker",
+            "defaultValue": "",
+            "defaultValueInternal": null
+          },
+          {
+            "name": "value",
+            "displayName": "Value",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Value of this marker",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          }
+        ],
+        "properties": {
+          "color": {
+            "$ref": "tchmi:framework#/definitions/SolidColor"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "color",
+          "label",
+          "value"
+        ]
+      }
     },
     "TcHmi.Controls.Beckhoff.TcHmiCheckbox": {
       "$schema": "http://json-schema.org/draft-04/schema",
@@ -5743,6 +5832,15 @@
                 "description": "When set to true all text within the control will be selected when the control gains focus",
                 "defaultValue": false,
                 "defaultValueInternal": false
+              },
+              {
+                "name": "maxTextLength",
+                "displayName": "Max Text Length",
+                "category": "General",
+                "displayPriority": 27,
+                "description": "Maximum number of characters that can be entered in the TextBox",
+                "defaultValue": null,
+                "defaultValueInternal": null
               }
             ],
             "properties": {
@@ -5827,6 +5925,10 @@
               },
               "autoSelectText": {
                 "type": "boolean"
+              },
+              "maxTextLength": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -6038,6 +6140,15 @@
               "description": "When set to true all text within the control will be selected when the control gains focus",
               "defaultValue": false,
               "defaultValueInternal": false
+            },
+            {
+              "name": "maxTextLength",
+              "displayName": "Max Text Length",
+              "category": "General",
+              "displayPriority": 27,
+              "description": "Maximum number of characters that can be entered in the TextBox",
+              "defaultValue": null,
+              "defaultValueInternal": null
             }
           ],
           "properties": {
@@ -6118,6 +6229,10 @@
             },
             "autoSelectText": {
               "type": "boolean"
+            },
+            "maxTextLength": {
+              "type": "integer",
+              "minimum": 0
             }
           },
           "required": [
@@ -7024,7 +7139,7 @@
             "category": "General",
             "displayPriority": 10,
             "description": "Name of the property to sort by",
-            "defaultValue": null,
+            "defaultValue": "name",
             "defaultValueInternal": null
           },
           {
@@ -7033,7 +7148,7 @@
             "category": "General",
             "displayPriority": 10,
             "description": "Sort definition",
-            "defaultValue": null,
+            "defaultValue": "Ascending",
             "defaultValueInternal": null
           }
         ],
@@ -7045,7 +7160,8 @@
               "type",
               "fileSize",
               "modificationTime"
-            ]
+            ],
+            "default": "name"
           },
           "order": {
             "type": "string",
@@ -7303,7 +7419,7 @@
           "category": "General",
           "displayName": "Show",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -7312,7 +7428,7 @@
           "category": "General",
           "displayName": "Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the name of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": ""
         },
@@ -7321,7 +7437,7 @@
           "category": "General",
           "displayName": "Orientation",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is vertical or horizontal.",
           "defaultValue": "Horizontal",
           "defaultValueInternal": "Horizontal"
         },
@@ -7330,16 +7446,25 @@
           "category": "General",
           "displayName": "Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the value of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 0
+        },
+        {
+          "name": "valueUnit",
+          "category": "General",
+          "displayName": "Value Unit",
+          "displayPriority": 10,
+          "description": "Describes the unit of the value of the reference line (Value or %).",
+          "defaultValue": "Value",
+          "defaultValueInternal": "Value"
         },
         {
           "name": "color",
           "category": "Colors",
           "displayName": "Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the reference line.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiHorizontalBarChart::ReferenceLineColor%/tr%",
           "defaultValueInternal": {
             "color": "#4794da"
@@ -7350,7 +7475,7 @@
           "category": "General",
           "displayName": "Line Width",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the line thickness of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 1
         },
@@ -7359,7 +7484,7 @@
           "category": "General",
           "displayName": "Show Label",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the description of the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -7368,7 +7493,7 @@
           "category": "General",
           "displayName": "Label Horizontal Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the horizontal alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Right"
         },
@@ -7377,7 +7502,7 @@
           "category": "General",
           "displayName": "Label Vertical Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the vertical alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Top"
         },
@@ -7386,7 +7511,7 @@
           "category": "General",
           "displayName": "Label Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font of the description of the reference line. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -7395,7 +7520,7 @@
           "category": "General",
           "displayName": "Label Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 12
         },
@@ -7405,7 +7530,7 @@
           "category": "General",
           "displayName": "Label Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size unit of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -7414,7 +7539,7 @@
           "category": "General",
           "displayName": "Label Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font weight of the description of the reference line. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Auto"
         }
@@ -7435,6 +7560,9 @@
         },
         "value": {
           "type": "number"
+        },
+        "valueUnit": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
         },
         "color": {
           "$ref": "tchmi:framework#/definitions/SolidColor"
@@ -8062,8 +8190,8 @@
             "displayName": "Fill Transparency",
             "category": "General",
             "displayPriority": 10,
-            "description": "Fill transparency for the fill area",
-            "defaultValue": 50,
+            "description": "Fill transparency for the fill area (0-255)",
+            "defaultValue": null,
             "defaultValueInternal": 50
           },
           {
@@ -8096,7 +8224,8 @@
             "$ref": "tchmi:framework#/definitions/SolidColor"
           },
           "yAxisId": {
-            "type": "number"
+            "type": "integer",
+            "minimum": 0
           },
           "lineWidth": {
             "type": "number"
@@ -8136,7 +8265,9 @@
             "$ref": "tchmi:framework#/definitions/SolidColor"
           },
           "fillTransparency": {
-            "type": "number"
+            "type": "number",
+            "minimum": 0,
+            "maximum": 255
           },
           "colorRanges": {
             "type": "array",
@@ -8237,7 +8368,7 @@
           "category": "Colors",
           "displayName": "Label Font Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Color of the label text.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisLabelFontColor%/tr%",
           "defaultValueInternal": null
         },
@@ -8246,7 +8377,7 @@
           "category": "Colors",
           "displayName": "Axis Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Color of the axis.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisColor%/tr%",
           "defaultValueInternal": null
         },
@@ -8255,7 +8386,7 @@
           "category": "Colors",
           "displayName": "Axis Name Font Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Color of the axis name.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisNameFontColor%/tr%",
           "defaultValueInternal": null
         },
@@ -8264,7 +8395,7 @@
           "category": "General",
           "displayName": "Id",
           "displayPriority": 10,
-          "description": "",
+          "description": "Id of the axis.",
           "defaultValue": 1,
           "defaultValueInternal": null
         },
@@ -8273,7 +8404,7 @@
           "category": "General",
           "displayName": "Position",
           "displayPriority": 10,
-          "description": "",
+          "description": "Position of this axis.",
           "defaultValue": "Left",
           "defaultValueInternal": "Left"
         },
@@ -8282,7 +8413,7 @@
           "category": "General",
           "displayName": "Logarithmic Scale",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defined if the axis should be rendered in a logarithmic scale.",
           "defaultValue": null,
           "defaultValueInternal": false
         },
@@ -8291,7 +8422,7 @@
           "category": "General",
           "displayName": "Axis Labeling",
           "displayPriority": 10,
-          "description": "",
+          "description": "Number format for this axis.",
           "defaultValue": null,
           "defaultValueInternal": "Number"
         },
@@ -8300,7 +8431,7 @@
           "category": "General",
           "displayName": "Main Tick Min Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines the minimum value for the values of this axis.",
           "defaultValue": null,
           "defaultValueInternal": 0
         },
@@ -8309,7 +8440,7 @@
           "category": "General",
           "displayName": "Main Tick Max Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines the maximum value for the values of this axis.",
           "defaultValue": null,
           "defaultValueInternal": 100
         },
@@ -8318,7 +8449,7 @@
           "category": "General",
           "displayName": "Auto Scaling",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defined if the axis should be scaled automatically (ignoring min and max).",
           "defaultValue": null,
           "defaultValueInternal": false
         },
@@ -8327,7 +8458,7 @@
           "category": "General",
           "displayName": "Decimal Places",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines how many decimal places are shown.",
           "defaultValue": null,
           "defaultValueInternal": 2
         },
@@ -8336,7 +8467,7 @@
           "category": "General",
           "displayName": "Show Axis",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines if the axis is visible.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -8345,7 +8476,7 @@
           "category": "General",
           "displayName": "Show Labels",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines if the label is visible.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -8354,7 +8485,7 @@
           "category": "General",
           "displayName": "Show Axis Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines if the axis name is visible.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -8363,7 +8494,7 @@
           "category": "General",
           "displayName": "Axis Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Defines the axis name.",
           "defaultValue": null,
           "defaultValueInternal": "y axis 1"
         },
@@ -8372,7 +8503,7 @@
           "category": "General",
           "displayName": "Axis Name Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font family of the description of the y-axis. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -8381,7 +8512,7 @@
           "category": "General",
           "displayName": "Axis Name Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size of the description of the y-axis.",
           "defaultValue": null,
           "defaultValueInternal": 15
         },
@@ -8391,7 +8522,7 @@
           "category": "General",
           "displayName": "Axis Name Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size unit of the description of the y-axis.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -8400,7 +8531,7 @@
           "category": "General",
           "displayName": "Axis Name Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font weight of the description of the y-axis. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Bold"
         },
@@ -8409,7 +8540,7 @@
           "category": "General",
           "displayName": "Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the unit of the description of the y-axis. Is written after the value on the axis.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -8537,7 +8668,7 @@
           "category": "General",
           "displayName": "Show",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -8546,7 +8677,7 @@
           "category": "General",
           "displayName": "Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the name of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -8555,7 +8686,7 @@
           "category": "General",
           "displayName": "Orientation",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is vertical or horizontal.",
           "defaultValue": "Horizontal",
           "defaultValueInternal": "Horizontal"
         },
@@ -8564,7 +8695,7 @@
           "category": "General",
           "displayName": "Y Axis Id",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the assignment to the y-axis if it is a horizontal reference line.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -8573,16 +8704,34 @@
           "category": "General",
           "displayName": "Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the value of the reference line.",
           "defaultValue": 0,
           "defaultValueInternal": 0
+        },
+        {
+          "name": "valueUnit",
+          "category": "General",
+          "displayName": "Value Unit",
+          "displayPriority": 10,
+          "description": "Describes the unit of the value of the reference line (Value or %).",
+          "defaultValue": "Value",
+          "defaultValueInternal": "Value"
+        },
+        {
+          "name": "locked",
+          "category": "General",
+          "displayName": "Locked",
+          "displayPriority": 10,
+          "description": "Describes whether the reference line is fixed to the axis.",
+          "defaultValue": null,
+          "defaultValueInternal": true
         },
         {
           "name": "color",
           "category": "Colors",
           "displayName": "Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the reference line.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::ReferenceLineColor%/tr%",
           "defaultValueInternal": {
             "color": "#4794da"
@@ -8593,7 +8742,7 @@
           "category": "General",
           "displayName": "Line Width",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the line thickness of the reference line.",
           "defaultValue": 1,
           "defaultValueInternal": null
         },
@@ -8602,7 +8751,7 @@
           "category": "General",
           "displayName": "Show Label",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the description of the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -8611,7 +8760,7 @@
           "category": "General",
           "displayName": "Label Horizontal Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the horizontal alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Right"
         },
@@ -8620,7 +8769,7 @@
           "category": "General",
           "displayName": "Label Vertical Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the vertical alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Top"
         },
@@ -8629,7 +8778,7 @@
           "category": "General",
           "displayName": "Label Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font of the description of the reference line. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -8638,7 +8787,7 @@
           "category": "General",
           "displayName": "Label Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 15
         },
@@ -8648,7 +8797,7 @@
           "category": "General",
           "displayName": "Label Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size unit of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -8657,7 +8806,7 @@
           "category": "General",
           "displayName": "Label Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font weight of the description of the reference line. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Auto"
         }
@@ -8681,6 +8830,12 @@
         },
         "value": {
           "type": "number"
+        },
+        "valueUnit": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
+        },
+        "locked": {
+          "type": "boolean"
         },
         "color": {
           "$ref": "tchmi:framework#/definitions/SolidColor"
@@ -9528,7 +9683,7 @@
               "displayName": "Icon Width",
               "category": "General",
               "displayPriority": 11,
-              "description": "",
+              "description": "The preferred width of the icon.",
               "defaultValue": null,
               "defaultValueInternal": 32
             },
@@ -9537,7 +9692,7 @@
               "displayName": "Icon Width Unit",
               "category": "General",
               "displayPriority": 11,
-              "description": "",
+              "description": "The unit of preferred width of the icon.",
               "defaultValue": null,
               "defaultValueInternal": "px",
               "refTo": "iconWidth"
@@ -9547,7 +9702,7 @@
               "displayName": "Icon Height",
               "category": "General",
               "displayPriority": 12,
-              "description": "",
+              "description": "The preferred height of the icon.",
               "defaultValue": null,
               "defaultValueInternal": 32
             },
@@ -9556,7 +9711,7 @@
               "displayName": "Icon Height Unit",
               "category": "General",
               "displayPriority": 12,
-              "description": "",
+              "description": "The unit of preferred height of the icon.",
               "defaultValue": null,
               "defaultValueInternal": "px",
               "refTo": "iconHeight"
@@ -9592,7 +9747,7 @@
           "displayName": "Target File",
           "category": "General",
           "displayPriority": 11,
-          "description": "",
+          "description": "The content or usercontrol to show.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -9749,6 +9904,15 @@
     "TcHmiThemeSelect": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiThemeSelect"
     },
+    "TcHmi.Controls.Beckhoff.TcHmiThermometer": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiThermometer",
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+    },
+    "TcHmiThermometer": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiThermometer"
+    },
     "TcHmi.Controls.Beckhoff.TcHmiTimespanInput": {
       "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
@@ -9783,6 +9947,18 @@
       ],
       "default": "None"
     },
+    "TcHmi.Controls.Beckhoff.TcHmiTimespanInput.ValueSymbol": {
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/String"
+          }
+        }
+      ]
+    },
     "TcHmi.Controls.Beckhoff.TcHmiTimespanPicker": {
       "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
@@ -9792,6 +9968,18 @@
     },
     "TcHmiTimespanPicker": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTimespanPicker"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTimespanPicker.ValueSymbol": {
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/String"
+          }
+        }
+      ]
     },
     "TcHmi.Controls.Beckhoff.TcHmiToggleButton": {
       "$schema": "http://json-schema.org/draft-04/schema",
@@ -10061,6 +10249,15 @@
                 "description": "When set to true all text within the control will be selected when the control gains focus",
                 "defaultValue": false,
                 "defaultValueInternal": false
+              },
+              {
+                "name": "maxTextLength",
+                "displayName": "Max Text Length",
+                "category": "General",
+                "displayPriority": 27,
+                "description": "Maximum number of characters that can be entered in the TextBox",
+                "defaultValue": null,
+                "defaultValueInternal": null
               }
             ],
             "properties": {
@@ -10145,6 +10342,10 @@
               },
               "autoSelectText": {
                 "type": "boolean"
+              },
+              "maxTextLength": {
+                "type": "integer",
+                "minimum": 0
               }
             },
             "required": [
@@ -10360,6 +10561,15 @@
               "description": "When set to true all text within the control will be selected when the control gains focus",
               "defaultValue": false,
               "defaultValueInternal": false
+            },
+            {
+              "name": "maxTextLength",
+              "displayName": "Max Text Length",
+              "category": "General",
+              "displayPriority": 27,
+              "description": "Maximum number of characters that can be entered in the TextBox",
+              "defaultValue": null,
+              "defaultValueInternal": null
             }
           ],
           "properties": {
@@ -10441,6 +10651,10 @@
             },
             "autoSelectText": {
               "type": "boolean"
+            },
+            "maxTextLength": {
+              "type": "integer",
+              "minimum": 0
             }
           },
           "required": [
@@ -10656,7 +10870,7 @@
             "displayName": "Fill Transparency",
             "category": "General",
             "displayPriority": 10,
-            "description": "Fill transparency for the fill area",
+            "description": "Fill transparency for the fill area (0-255)",
             "defaultValue": null,
             "defaultValueInternal": 50
           },
@@ -10681,7 +10895,8 @@
         ],
         "properties": {
           "symbol": {
-            "type": "string"
+            "type": "string",
+            "frameworkMetaType": "historizedSymbol"
           },
           "yAxisId": {
             "type": "integer"
@@ -10731,7 +10946,9 @@
             "$ref": "tchmi:framework#/definitions/SolidColor"
           },
           "fillTransparency": {
-            "type": "number"
+            "type": "number",
+            "minimum": 0,
+            "maximum": 255
           },
           "colorRanges": {
             "type": "array",
@@ -10942,7 +11159,7 @@
           "category": "Colors",
           "displayName": "Label Font Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the axis label.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
           "defaultValueInternal": null
         },
@@ -10951,7 +11168,7 @@
           "category": "Colors",
           "displayName": "Axis Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the axis.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
           "defaultValueInternal": null
         },
@@ -10960,7 +11177,7 @@
           "category": "Colors",
           "displayName": "Axis Name Font Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the axis name.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%",
           "defaultValueInternal": null
         },
@@ -10969,7 +11186,7 @@
           "category": "General",
           "displayName": "Id",
           "displayPriority": 10,
-          "description": "",
+          "description": "The id of the axis.",
           "defaultValue": 1,
           "defaultValueInternal": null
         },
@@ -10978,7 +11195,7 @@
           "category": "General",
           "displayName": "Position",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the position of the axis (horizontal or vertical).",
           "defaultValue": "Left",
           "defaultValueInternal": "Left"
         },
@@ -10987,7 +11204,7 @@
           "category": "General",
           "displayName": "Logarithmic Scale",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis should be displayed logarithmically.",
           "defaultValue": null,
           "defaultValueInternal": false
         },
@@ -10996,7 +11213,7 @@
           "category": "General",
           "displayName": "Axis Labeling",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes how the axis labeling should be displayed (Number, Scientific or auto).",
           "defaultValue": null,
           "defaultValueInternal": "Number"
         },
@@ -11005,7 +11222,7 @@
           "category": "General",
           "displayName": "Main Tick Min Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "The start value of the y axis.",
           "defaultValue": null,
           "defaultValueInternal": 0
         },
@@ -11014,7 +11231,7 @@
           "category": "General",
           "displayName": "Main Tick Max Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "The end value of the y axis.",
           "defaultValue": null,
           "defaultValueInternal": 100
         },
@@ -11023,7 +11240,7 @@
           "category": "General",
           "displayName": "Auto Scaling",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis should be autoscaled.",
           "defaultValue": null,
           "defaultValueInternal": false
         },
@@ -11032,7 +11249,7 @@
           "category": "General",
           "displayName": "Decimal Places",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the decimal places of the axis labeling.",
           "defaultValue": null,
           "defaultValueInternal": 2
         },
@@ -11041,7 +11258,7 @@
           "category": "General",
           "displayName": "Show Axis",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis should be displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -11050,7 +11267,7 @@
           "category": "General",
           "displayName": "Show Labels",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis labels should be displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -11059,7 +11276,7 @@
           "category": "General",
           "displayName": "Show Axis Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis name should be displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -11068,7 +11285,7 @@
           "category": "General",
           "displayName": "Axis Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the axis name.",
           "defaultValue": null,
           "defaultValueInternal": "y axis 1"
         },
@@ -11077,7 +11294,7 @@
           "category": "General",
           "displayName": "Axis Name Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the axis name font family. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -11086,7 +11303,7 @@
           "category": "General",
           "displayName": "Axis Name Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the axis name font size.",
           "defaultValue": null,
           "defaultValueInternal": 15
         },
@@ -11096,7 +11313,7 @@
           "category": "General",
           "displayName": "Axis Name Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the axis name font size unit.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -11105,7 +11322,7 @@
           "category": "General",
           "displayName": "Axis Name Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the axis name font weight. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Bold"
         },
@@ -11114,7 +11331,7 @@
           "category": "General",
           "displayName": "Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the unit of the description of the y-axis. Is written after the value on the axis.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -11252,11 +11469,20 @@
       ],
       "propertiesMeta": [
         {
+          "name": "orientation",
+          "category": "General",
+          "displayName": "Orientation",
+          "displayPriority": 10,
+          "description": "Describes the orientation of the reference line.",
+          "defaultValue": "Horizontal",
+          "defaultValueInternal": "Horizontal"
+        },
+        {
           "name": "show",
           "category": "General",
           "displayName": "Show",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -11265,25 +11491,16 @@
           "category": "General",
           "displayName": "Name",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the name of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": null
-        },
-        {
-          "name": "orientation",
-          "category": "General",
-          "displayName": "Orientation",
-          "displayPriority": 10,
-          "description": "",
-          "defaultValue": "Horizontal",
-          "defaultValueInternal": "Horizontal"
         },
         {
           "name": "yAxisId",
           "category": "General",
           "displayName": "Y Axis Id",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the assignment to the y-axis if it is a horizontal reference line.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -11292,16 +11509,52 @@
           "category": "General",
           "displayName": "Value",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the value of the reference line.",
           "defaultValue": 0,
           "defaultValueInternal": 0
+        },
+        {
+          "name": "valueUnit",
+          "category": "General",
+          "displayName": "Value Unit",
+          "displayPriority": 10,
+          "description": "Describes the unit of the value of the reference line (Value or %).",
+          "defaultValue": "Value",
+          "defaultValueInternal": "Value"
+        },
+        {
+          "name": "locked",
+          "category": "General",
+          "displayName": "Locked",
+          "displayPriority": 10,
+          "description": "Describes whether the reference line is fixed to the axis.",
+          "defaultValue": null,
+          "defaultValueInternal": true
+        },
+        {
+          "name": "showTooltip",
+          "category": "General",
+          "displayName": "Show Tooltip",
+          "displayPriority": 10,
+          "description": "Describes whether the tooltip should be displayed.",
+          "defaultValue": null,
+          "defaultValueInternal": false
+        },
+        {
+          "name": "highlightDataPoints",
+          "category": "General",
+          "displayName": "Highlight Data Points",
+          "displayPriority": 10,
+          "description": "Describes whether the datapoints should be highlighted.",
+          "defaultValue": null,
+          "defaultValueInternal": false
         },
         {
           "name": "color",
           "category": "Colors",
           "displayName": "Color",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the color of the reference line.",
           "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::ReferenceLineColor%/tr%",
           "defaultValueInternal": {
             "color": "#4794da"
@@ -11312,7 +11565,7 @@
           "category": "General",
           "displayName": "Line Width",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the line thickness of the reference line.",
           "defaultValue": 1,
           "defaultValueInternal": null
         },
@@ -11321,7 +11574,7 @@
           "category": "General",
           "displayName": "Show Label",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes whether the description of the reference line is displayed.",
           "defaultValue": null,
           "defaultValueInternal": true
         },
@@ -11330,7 +11583,7 @@
           "category": "General",
           "displayName": "Label Horizontal Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the horizontal alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Right"
         },
@@ -11339,7 +11592,7 @@
           "category": "General",
           "displayName": "Label Vertical Alignment",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the vertical alignment of the reference line description.",
           "defaultValue": null,
           "defaultValueInternal": "Top"
         },
@@ -11348,7 +11601,7 @@
           "category": "General",
           "displayName": "Label Font Family",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font of the description of the reference line. Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -11357,7 +11610,7 @@
           "category": "General",
           "displayName": "Label Font Size",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": 12
         },
@@ -11367,7 +11620,7 @@
           "category": "General",
           "displayName": "Label Font Size Unit",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font size unit of the description of the reference line.",
           "defaultValue": null,
           "defaultValueInternal": "px"
         },
@@ -11376,29 +11629,42 @@
           "category": "General",
           "displayName": "Label Font Weight",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the font weight of the description of the reference line. 'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
           "defaultValue": null,
           "defaultValueInternal": "Auto"
         }
       ],
       "properties": {
+        "orientation": {
+          "type": "string",
+          "enum": [
+            "Horizontal",
+            "Vertical"
+          ]
+        },
         "show": {
           "type": "boolean"
         },
         "name": {
           "type": "string"
         },
-        "orientation": {
-          "type": "string",
-          "enum": [
-            "Horizontal"
-          ]
-        },
         "yAxisId": {
           "type": "integer"
         },
         "value": {
           "type": "number"
+        },
+        "valueUnit": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
+        },
+        "locked": {
+          "type": "boolean"
+        },
+        "showTooltip": {
+          "type": "boolean"
+        },
+        "highlightDataPoints": {
+          "type": "boolean"
         },
         "color": {
           "$ref": "tchmi:framework#/definitions/SolidColor"
@@ -11452,6 +11718,145 @@
       ],
       "default": "Background"
     },
+    "TcHmi.Controls.Beckhoff.TcHmiUserGuidance": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiUserGuidance",
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiUserGuidance.UserControlInterop": {
+      "type": "object",
+      "title": "User Control Interop",
+      "description": "The User Control Interop object used by the User Guidance control. A User Control with a parameter of this type can enable the 'Next' button of the User Guidance control.",
+      "properties": {
+        "confirmNext": {
+          "type": "boolean"
+        }
+      },
+      "frameworkMetaType": "TcHmi.Controls.Beckhoff.TcHmiUserGuidance.UserControlInterop",
+      "additionalProperties": false
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiUserGuidance.Page": {
+      "type": "object",
+      "title": "Page",
+      "description": "A single page",
+      "engineeringColumns": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "targetFile": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile"
+        },
+        "scrolling": {
+          "$ref": "tchmi:framework#/definitions/ScrollMode"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "horizontalAlignment": {
+          "$ref": "tchmi:framework#/definitions/HorizontalAlignment"
+        },
+        "verticalAlignment": {
+          "$ref": "tchmi:framework#/definitions/VerticalAlignment"
+        }
+      },
+      "propertiesMeta": [
+        {
+          "name": "name",
+          "displayName": "Name",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "Name of the Page. Please select a unique name for each page!",
+          "defaultValue": "newPage",
+          "defaultValueInternal": null
+        },
+        {
+          "name": "displayName",
+          "displayName": "Display Name",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "Name of the Page that will be displayed in the progress bar.",
+          "defaultValue": "New Page",
+          "defaultValueInternal": null
+        },
+        {
+          "name": "targetFile",
+          "displayName": "Target File",
+          "category": "General",
+          "displayPriority": 11,
+          "description": "The content or usercontrol to show.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "scrolling",
+          "displayName": "Scrolling",
+          "category": "General",
+          "displayPriority": 16,
+          "description": "Defines whether a content is scrollable. Possible values are No, Yes, Auto. Does not affect user controls.",
+          "defaultValue": null,
+          "defaultValueInternal": "Auto"
+        },
+        {
+          "name": "hidden",
+          "displayName": "Hidden",
+          "category": "General",
+          "displayPriority": 17,
+          "description": "Defines whether the page is hidden or not.",
+          "defaultValue": null,
+          "defaultValueInternal": false
+        },
+        {
+          "name": "horizontalAlignment",
+          "displayName": "Horizontal Alignment",
+          "category": "General",
+          "displayPriority": 20,
+          "description": "Horizontal alignment of the text in the progress bar.",
+          "defaultValue": "Left",
+          "defaultValueInternal": "Left"
+        },
+        {
+          "name": "verticalAlignment",
+          "displayName": "Vertical Alignment",
+          "category": "General",
+          "displayPriority": 21,
+          "description": "Vertical alignment of the text in the progress bar.",
+          "defaultValue": "Center",
+          "defaultValueInternal": "Center"
+        }
+      ],
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiUserGuidance.ProgressBarAlignment": {
+      "type": "string",
+      "enum": [
+        "Top",
+        "Bottom",
+        "Right",
+        "Left"
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiUserGuidance.PageList": {
+      "type": "array",
+      "title": "Pages",
+      "description": "A list of pages",
+      "items": {
+        "$ref": "#/definitions/TcHmi.Controls.Beckhoff.TcHmiUserGuidance.Page"
+      }
+    },
+    "TcHmiUserGuidance": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiUserGuidance"
+    },
     "TcHmi.Controls.Beckhoff.TcHmiUserManagement": {
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
@@ -11474,9 +11879,30 @@
       "type": "array",
       "items": {
         "type": "object",
+        "title": "Video Source",
         "engineeringColumns": [
           "source",
           "type"
+        ],
+        "propertiesMeta": [
+          {
+            "name": "source",
+            "displayName": "Source",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "The source path of the video source",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "type",
+            "displayName": "Type",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "The type of the video source.",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          }
         ],
         "properties": {
           "source": {
@@ -11492,6 +11918,12 @@
               "video/ogg",
               "application/dash+xml",
               "application/vnd.apple.mpegurl"
+            ],
+            "options": [
+              {
+                "label": "<auto detect>",
+                "value": ""
+              }
             ],
             "default": ""
           }
@@ -11665,7 +12097,7 @@
           "displayName": "Icon Width",
           "category": "Icon",
           "displayPriority": 13,
-          "description": "",
+          "description": "The preferred width of the icon.",
           "defaultValue": null,
           "defaultValueInternal": 48
         },
@@ -11674,7 +12106,7 @@
           "displayName": "Icon Width Unit",
           "category": "Icon",
           "displayPriority": 13,
-          "description": "",
+          "description": "The unit of preferred width of the icon.",
           "defaultValue": null,
           "defaultValueInternal": "px",
           "refTo": "iconWidth"
@@ -11684,7 +12116,7 @@
           "displayName": "Icon Height",
           "category": "Icon",
           "displayPriority": 14,
-          "description": "",
+          "description": "The preferred height of the icon.",
           "defaultValue": null,
           "defaultValueInternal": 48
         },
@@ -11693,7 +12125,7 @@
           "displayName": "Icon Height Unit",
           "category": "Icon",
           "displayPriority": 14,
-          "description": "",
+          "description": "The unit of preferred height of the icon.",
           "defaultValue": null,
           "defaultValueInternal": "px",
           "refTo": "iconHeight"
@@ -14100,7 +14532,7 @@
           "displayName": "Name",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the name of the media query.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14109,7 +14541,7 @@
           "displayName": "Max Width",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the maximum width of the media query.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14118,7 +14550,7 @@
           "displayName": "Min Width",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the minimum width of the media query.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14127,7 +14559,7 @@
           "displayName": "Control Behaviour List",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the control behaviour list of the media query.",
           "defaultValue": null,
           "defaultValueInternal": null
         }
@@ -14182,7 +14614,7 @@
               "displayName": "Control Type",
               "category": "General",
               "displayPriority": 10,
-              "description": "",
+              "description": "Describes the type of the control.",
               "defaultValue": null,
               "defaultValueInternal": null
             },
@@ -14191,7 +14623,7 @@
               "displayName": "Control ID",
               "category": "General",
               "displayPriority": 10,
-              "description": "",
+              "description": "Describes the ID of the control.",
               "defaultValue": null,
               "defaultValueInternal": null
             },
@@ -14200,7 +14632,7 @@
               "displayName": "Display Option",
               "category": "General",
               "displayPriority": 10,
-              "description": "",
+              "description": "Describes the display option of the control.",
               "defaultValue": null,
               "defaultValueInternal": null
             }
@@ -14311,7 +14743,7 @@
           "displayName": "Control ID",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the ID of the control.",
           "defaultValue": null,
           "defaultValueInternal": ""
         },
@@ -14320,7 +14752,7 @@
           "displayName": "Position",
           "category": "General",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the position of the control.",
           "defaultValue": null,
           "defaultValueInternal": "Center"
         },
@@ -14329,7 +14761,7 @@
           "displayName": "Default Height",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default height of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14338,7 +14770,7 @@
           "displayName": "Default Width",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default width of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14347,7 +14779,7 @@
           "displayName": "Default Top",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default top position of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14356,7 +14788,7 @@
           "displayName": "Default Bottom",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default bottom position of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14365,7 +14797,7 @@
           "displayName": "Default Left",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default left position of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         },
@@ -14374,7 +14806,7 @@
           "displayName": "Default Right",
           "category": "Default Control Sizes",
           "displayPriority": 10,
-          "description": "",
+          "description": "Describes the default right position of the control.",
           "defaultValue": null,
           "defaultValueInternal": null
         }
