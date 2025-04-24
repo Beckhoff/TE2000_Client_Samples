@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-event",
+      "displayName": "Event",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/ServerEvent",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Event",
+      "propertySetterName": "setEvent",
+      "propertyGetterName": "getEvent",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-popupcontrol",
+      "displayName": "PopUpControl",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "PopUpControl",
+      "propertySetterName": "setPopUpControl",
+      "propertyGetterName": "getPopUpControl",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.106/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

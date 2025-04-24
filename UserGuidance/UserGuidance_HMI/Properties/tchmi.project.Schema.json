@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "UserGuidanceEvent": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UserGuidanceEvent.usercontrol.json",
+      "id": "tchmi:project#/definitions/UserGuidanceEvent",
+      "type": "object"
+    },
+    "EventInfos": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EventInfos.usercontrol.json",
+      "id": "tchmi:project#/definitions/EventInfos",
+      "type": "object"
+    },
+    "EventErrorInstructions": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EventErrorInstructionsPDF.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/EventErrorInstructions"
+    },
+    "EventErrorInstructionsMP4": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EventErrorInstructionsMP4.usercontrol.json",
+      "id": "tchmi:project#/definitions/EventErrorInstructionsMP4",
+      "type": "object"
+    },
+    "UserGuidanceRecipe": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UserGuidanceRecipe.usercontrol.json",
+      "id": "tchmi:project#/definitions/UserGuidanceRecipe",
+      "type": "object"
+    },
+    "RecipeInfo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\RecipeInfo.usercontrol.json",
+      "id": "tchmi:project#/definitions/RecipeInfo",
+      "type": "object"
+    },
+    "RecipeProduct": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\RecipeProduct.usercontrol.json",
+      "id": "tchmi:project#/definitions/RecipeProduct",
+      "type": "object"
+    },
+    "RecipeOverview": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\RecipeOverview.usercontrol.json",
+      "id": "tchmi:project#/definitions/RecipeOverview",
+      "type": "object"
+    },
+    "BottleType": {
+      "type": "integer",
+      "enum": [
+        1,
+        2
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Plastic large opening"
+        },
+        {
+          "value": 2,
+          "label": "Plastic small opening"
+        }
+      ]
+    },
+    "BottleColor": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Transparent"
+        },
+        {
+          "value": 2,
+          "label": "Red"
+        },
+        {
+          "value": 3,
+          "label": "Blue"
+        },
+        {
+          "value": 4,
+          "label": "Green"
+        },
+        {
+          "value": 5,
+          "label": "Yellow"
+        }
+      ]
+    },
+    "RecipeStruct": {
+      "properties": {
+        "Amount": {
+          "$ref": "tchmi:general#/definitions/LREAL"
+        },
+        "Color": {
+          "$ref": "tchmi:project#/definitions/BottleColor"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "RecipeType": {
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "tchmi:project#/definitions/BottleType"
+        }
+      },
+      "type": "object",
+      "id": "tchmi:project#/definitions/RecipeStruct"
+    }
+  }
+}

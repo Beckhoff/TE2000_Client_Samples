@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{f6e84080-761d-4928-b350-ecd69bc0a128}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bSendMessagePDF	: BOOL;
+	bSendMessageMP4	: BOOL;
+	
+	bIsInitalized 	: BOOL;
+	
+	fbMessagePDF	: FB_TcMessage;	
+	fbMessageMP4	: FB_TcMessage;
+	
+	hr 				: HRESULT;
+	hrLastError 	: HRESULT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// init
+IF NOT bIsInitalized THEN	
+	bIsInitalized := TRUE;	
+	hr := fbMessagePDF.CreateEx(TC_EVENTS.TestEvents.Event_PDF, 0);
+	hr := fbMessageMP4.CreateEx(TC_EVENTS.TestEvents.Event_MP4, 0);
+END_IF
+
+// send message for pdf user guidance
+IF bSendMessagePDF THEN
+	bSendMessagePDF := FALSE;
+	hr := fbMessagePDF.Send(0);
+END_IF
+// send message for mp4 user guidance
+IF bSendMessageMP4 THEN
+	bSendMessageMP4 := FALSE;
+	hr := fbMessageMP4.Send(0);
+END_IF
+
+// error feedback
+IF FAILED(hr) THEN
+	hrLastError := hr;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

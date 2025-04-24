@@ -1,0 +1,145 @@
+<div id="UserGuidanceEvent_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1000" data-tchmi-creator-viewport-height="700">
+
+<div id="TcHmiUserGuidance_event" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserGuidance" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-right="8" data-tchmi-bottom="8" data-tchmi-progress-bar-alignment="Top">
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onCancelButtonPress",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onFinishButtonPress",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onFinished",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "let userGuidanceControl = ctx.owner;",
+          "let eventData = TcHmi.Symbol.readEx('%pp%Event%/pp%');",
+          "if (userGuidanceControl && eventData) {",
+          "    let pagesData = [",
+          "        {",
+          "            \"displayName\": \"Overview\",",
+          "            \"hidden\": false,",
+          "            \"horizontalAlignment\": \"Left\",",
+          "            \"name\": \"overview\",",
+          "            \"scrolling\": \"Auto\",",
+          "            \"targetFile\": {",
+          "                \"path\": \"UserControls/EventInfos.usercontrol\",",
+          "                \"attributes\": {",
+          "                    \"data-tchmi-events\": \"%pp%Event%/pp%\"",
+          "                }",
+          "            },",
+          "            \"verticalAlignment\": \"Center\"",
+          "        }",
+          "    ];",
+          "    if (eventData?.params?.details?.DescriptionUrl?.text) {",
+          "        let format = eventData.params.details.DescriptionUrl.text.split(\".\");",
+          "        format = format[format.length - 1].toLowerCase();",
+          "        let targetFile = {};",
+          "        switch(format){",
+          "            case \"pdf\":",
+          "                targetFile = {",
+          "                    \"path\": \"UserControls/EventErrorInstructionsPDF.usercontrol\",",
+          "                    \"attributes\": {",
+          "                        \"data-tchmi-file\": eventData.params.details.DescriptionUrl.text",
+          "                    }",
+          "                }",
+          "                break;",
+          "                ",
+          "            case \"mp4\":",
+          "                targetFile = {",
+          "                    \"path\": \"UserControls/EventErrorInstructionsMP4.usercontrol\",",
+          "                    \"attributes\": {",
+          "                        \"data-tchmi-file\": eventData.params.details.DescriptionUrl.text",
+          "                    }",
+          "                }",
+          "                break;",
+          "        }",
+          "        pagesData.push(",
+          "            {",
+          "                \"displayName\": \"Description\",",
+          "                \"hidden\": false,",
+          "                \"horizontalAlignment\": \"Left\",",
+          "                \"name\": \"description\",",
+          "                \"scrolling\": \"Auto\",",
+          "                \"targetFile\": targetFile,",
+          "                \"verticalAlignment\": \"Center\"",
+          "            }",
+          "        );",
+          "    }",
+          "    userGuidanceControl.setPages(pagesData);",
+          "}"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ],
+    "displayName": "setup steps with event data"
+  }
+]
+</script>
+</div>
+</div>

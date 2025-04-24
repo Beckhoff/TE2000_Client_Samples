@@ -1,0 +1,16 @@
+<div id="EventErrorInstructionsMP4_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="TcHmiVideo_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiVideo" data-tchmi-controls="True" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-mute="True" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-right="8" data-tchmi-bottom="44" data-tchmi-autoplay="True" data-tchmi-loop="True">
+
+<script data-tchmi-target-attribute="data-tchmi-src-list" type="application/json">
+[
+  {
+    "source": "%pp%File%/pp%",
+    "type": "video/mp4"
+  }
+]
+</script>
+</div>
+<div id="TcHmiCheckbox_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-text="%l%TheStepsWereSuccessfullyCompleted%/l%" data-tchmi-width="260" data-tchmi-width-unit="px" data-tchmi-bottom="8" data-tchmi-state-symbol="%pp%Confirm::confirmNext%/pp%">
+</div>
+</div>

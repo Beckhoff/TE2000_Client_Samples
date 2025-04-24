@@ -1,0 +1,41 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-file",
+      "displayName": "File",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/Path",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "File",
+      "propertySetterName": "setFile",
+      "propertyGetterName": "getFile",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-confirm",
+      "displayName": "Confirm",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiUserGuidance.UserControlInterop",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Confirm",
+      "propertySetterName": "setConfirm",
+      "propertyGetterName": "getConfirm",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.106/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

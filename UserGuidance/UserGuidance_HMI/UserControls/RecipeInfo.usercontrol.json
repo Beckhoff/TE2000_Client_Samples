@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-recipename",
+      "displayName": "RecipeName",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "RecipeName",
+      "propertySetterName": "setRecipeName",
+      "propertyGetterName": "getRecipeName",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-recipetype",
+      "displayName": "RecipeType",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "RecipeType",
+      "propertySetterName": "setRecipeType",
+      "propertyGetterName": "getRecipeType",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-confirm",
+      "displayName": "Confirm",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiUserGuidance.UserControlInterop",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Confirm",
+      "propertySetterName": "setConfirm",
+      "propertyGetterName": "getConfirm",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.106/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

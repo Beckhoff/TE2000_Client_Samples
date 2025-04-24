@@ -1,0 +1,71 @@
+<div id="Recipe_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%">
+  
+  <div id="TcHmiTextblock_Recipe_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="32" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Recipe%/l%" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="16">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "headline-2"
+      ]
+    </script>
+  </div>
+
+  <div id="TcHmiContainer_Recipe_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-top="64" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "background-container"
+      ]
+    </script>
+  <div id="TcHmiRecipeSelect_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeSelect" data-tchmi-height="101" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-server-interval="1000" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="350" data-tchmi-width-unit="px">
+</div>
+<div id="TcHmiButton_CreateRecipe" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-text="%l%CreateNewRecipe%/l%" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="330" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiPopup_2::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/UserGuidanceRecipe.usercontrol",
+            "attributes": {
+              "data-tchmi-popupcontrol": "%ctrl%TcHmiPopup_2%/ctrl%"
+            }
+          }
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiPopup_2::HeaderText%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%%l%CreateNewRecipe%/l%%/f%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiPopup_2",
+        "fn": "open",
+        "asyncWait": true
+      }
+    ],
+    "displayName": "configure and open Popup"
+  }
+]
+</script>
+</div>
+<div id="TcHmiPopup_2" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="520" data-tchmi-height-unit="px" data-tchmi-left="148" data-tchmi-left-unit="px" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="640" data-tchmi-width-unit="px" data-tchmi-modal="True">
+</div>
+<div id="TcHmiRecipeEdit_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeEdit" data-tchmi-height="342" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="418" data-tchmi-width-unit="px">
+</div>
+</div>    
+</div>

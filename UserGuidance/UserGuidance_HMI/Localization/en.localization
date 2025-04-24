@@ -1,0 +1,30 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "en",
+  "localizedText": {
+    "L_StartPage": "Start Page",
+    "L_Events": "Events",
+    "L_Localization": "Localization",
+    "L_Theme": "Theme",
+    "L_Settings": "Settings",
+    "L_Recipe": "Recipe",
+    "L_Testing": "Testing",
+    "L_Checklist": "Checklist",
+    "L_CreateReport": "CreateReport",
+    "CreateNewRecipe": "Create new recipe",
+    "ProductName": "Product Name",
+    "ProductValue": "Product Value",
+    "Type": "Type",
+    "Amount": "Amount",
+    "Color": "Color",
+    "Overview": "Overview",
+    "DefineNewProduct": "Define New Product",
+    "RecipeType": "Recipe Type",
+    "RecipeInfoText": "This a new product for the machine. Please define all necessary parameter on the next steps. This is a short wizzard to help you to provide the new product.",
+    "TheStepsWereSuccessfullyCompleted": "The steps were successfully completed",
+    "Message": "Message",
+    "TimeRaised": "Time Raised",
+    "Name": "Name",
+    "State": "State"
+  }
+}

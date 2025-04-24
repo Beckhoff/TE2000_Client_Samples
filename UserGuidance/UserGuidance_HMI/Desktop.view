@@ -1,0 +1,245 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100">
+  
+<div id="Header_Top" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiHeader" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
+"divider",
+"divider-top"
+]
+</script><script data-tchmi-target-attribute="data-tchmi-header-items" type="application/json">[
+                {
+                    "itemType": "Image",
+                    "priority": "2",
+                    "itemAlign": "Left",
+                    "prefWidth": 288.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 95.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 128.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "image": "Images/Beckhoff_Logo.svg",
+                    "altText": "Beckhoff",
+                    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+                    "targetContent": "Pages/StartPage.content"
+                },
+                {
+                    "itemType": "Text",
+                    "priority": "1",
+                    "itemAlign": "Left",
+                    "prefWidth": 288.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 95.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 128.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "text": "UserGuidance_HMI"
+                },
+                {
+                    "itemType": "EventLine",
+                    "priority": "5",
+                    "itemAlign": "Right",
+                    "prefWidth": 800.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 48.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 288.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "messageFormat": [
+                        {
+                            "name": "timeRaised"
+                        },
+                        {
+                            "text": " | "
+                        },
+                        {
+                            "name": "domain"
+                        },
+                        {
+                            "text": " | "
+                        },
+                        {
+                            "name": "text"
+                        }
+                    ],
+                    "filter": [
+                        {
+                            "path": "domain",
+                            "comparator": "==",
+                            "value": "TcHmiEventLogger"
+                        },
+                        {
+                            "logic": "OR"
+                        },
+                        {
+                            "path": "domain",
+                            "comparator": "==",
+                            "value": "TcHmiAlarm"
+                        }
+                    ]
+                    ,
+                    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+                    "targetContent": "Pages/Events.content"
+                
+                },
+                {
+                    "itemType": "AdsState",
+                    "priority": "3",
+                    "itemAlign": "Right",
+                    "prefWidth": 160.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 48.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 48.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "adsRuntime": "TcSysService",
+                    "iconWidth": 48,
+                    "iconWidthUnit": "px",
+                    "text": "TwinCAT",
+                    "textPosition": "Left",
+                    "serverInterval": 1000,
+                    "serverDomain": "ADS",
+                    "stateImages": {
+                        "Fallback": "%tr%TwinCAT_Fallback%/tr%",
+                        "Run": "%tr%TwinCAT_Run%/tr%",
+                        "Stop": "%tr%TwinCAT_Stop%/tr%",
+                        "Config": "%tr%TwinCAT_Config%/tr%",
+                        "Exception": "%tr%TwinCAT_Exception%/tr%"
+                    }
+                },
+                {
+                    "itemType": "AdsState",
+                    "priority": "3",
+                    "itemAlign": "Right",
+                    "prefWidth": 160.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 48.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 48.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "adsRuntime": "PLC1",
+                    "iconWidth": 48,
+                    "iconWidthUnit": "px",
+                    "text": "PLC",
+                    "textPosition": "Left",
+                    "serverInterval": 1000,
+                    "serverDomain": "ADS",
+                    "stateImages": {
+                        "Fallback": "%tr%PLC_Fallback%/tr%",
+                        "Run": "%tr%PLC_Run%/tr%",
+                        "Stop": "%tr%PLC_Stop%/tr%",
+                        "Config": "%tr%PLC_Config%/tr%",
+                        "Exception": "%tr%PLC_Exception%/tr%"
+                    }
+                },
+                {
+                    "itemType": "UserManagement",
+                    "priority": "3",
+                    "itemAlign": "Right",
+                    "prefWidth": 288.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 48.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 176.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "allowLogout": true,
+                    "allowSwitchUser": false
+                },
+                {
+                    "itemType": "Time",
+                    "priority": "4",
+                    "itemAlign": "Right",
+                    "prefWidth": 128.0,
+                    "prefWidthUnit": "px",
+                    "prefHeight": 48.0,
+                    "prefHeightUnit": "px",
+                    "minWidth": 96.0,
+                    "minWidthUnit": "px",
+                    "classList": [],
+                    "accessRights": [],
+                    "timeDisplayLayout": "TimeDateMultiLine"
+                }
+            ]</script></div><div id="Accordion_Navigation_Right" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation" data-tchmi-width="320" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-show-back-button="true">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
+"divider",
+"divider-right"
+]
+</script><script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">
+[
+  {
+    "content": "Pages/Recipe.content",
+    "icon": "%tr%TR_Icon_Recipe_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Recipe_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Recipe_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Recipe",
+    "name": "%l%L_Recipe%/l%"
+  },
+  {
+    "content": "Pages/Events.content",
+    "icon": "%tr%TR_Icon_Events_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Events_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Events_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Events",
+    "name": "%l%L_Events%/l%"
+  },
+  {
+    "content": "Pages/Settings.content",
+    "icon": "%tr%TR_Icon_Settings_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Settings_active%/tr%",
+    "iconHeight": 48,
+    "iconHeightUnit": "px",
+    "iconPressed": "%tr%TR_Icon_Settings_pressed%/tr%",
+    "iconWidth": 48,
+    "iconWidthUnit": "px",
+    "id": "Settings",
+    "name": "%l%L_Settings%/l%"
+  }
+]
+</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="0" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json"></script></div><script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[ 
+                {   
+                    "event": "%ctx%owner::RenderedWidth%/ctx%", 
+                    "actions": [ 
+                        {  
+                            "objectType": "Function",
+                            "active": true,  
+                            "fn":  "TcHmiResponsiveBehaviour", 
+                            "fnParams": [ 
+                                {  
+                                    "objectType": "Symbol",  
+                                    "valueType":  "tchmi:general#/definitions/String",  
+                                    "symbolExpression":  "%i%MediaQueryList%/i%" 
+                                }, 
+                                {  
+                                    "objectType": "Symbol", 
+                                    "valueType": "tchmi:general#/definitions/String", 
+                                    "symbolExpression": "%i%AffectedControls%/i%" 
+                                }
+                            ], 
+                            "asyncWait": true 
+                        } 
+                    ] 
+                } 
+            ]</script>
+</div>

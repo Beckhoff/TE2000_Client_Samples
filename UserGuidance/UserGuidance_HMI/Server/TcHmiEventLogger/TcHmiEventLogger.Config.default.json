@@ -1,0 +1,11 @@
+{
+    "LIMIT_EVENT_COUNT": 1000,
+    "PRELOAD_TRANSLATIONS": false,
+    "TARGET_SYSTEMS": {
+        "Local": {
+            "ADDRESS": "127.0.0.1.1.1",
+            "ENABLED": true
+        }
+    },
+    "TIMEOUT": "PT5S"
+}

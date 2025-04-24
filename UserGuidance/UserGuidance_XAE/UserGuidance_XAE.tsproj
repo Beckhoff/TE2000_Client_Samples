@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.14">
+	<Translations>
+		<Text TxtId="TwinCAT_HMI_PDF">
+			<Text LcId="7"><![CDATA[TwinCAT HMI PDF]]></Text>
+			<Text LcId="9"><![CDATA[TwinCAT HMI PDF]]></Text>
+		</Text>
+		<Text TxtId="All information about the TwinCAT HMI">
+			<Text LcId="7"><![CDATA[Alle Inforationen zur TwinCAT HMI]]></Text>
+			<Text LcId="9"><![CDATA[All information about the TwinCAT HMI]]></Text>
+		</Text>
+		<Text TxtId="Documentation of TwinCAT HMI">
+			<Text LcId="7"><![CDATA[Dokumentation der TwinCAT HMI]]></Text>
+			<Text LcId="9"><![CDATA[Documentation of TwinCAT HMI]]></Text>
+		</Text>
+		<Text TxtId="TwinCAT_HMI_MP4">
+			<Text LcId="7"><![CDATA[TwinCAT HMI MP4]]></Text>
+			<Text LcId="9"><![CDATA[TwinCAT HMI MP4]]></Text>
+		</Text>
+	</Translations>
+	<DataTypes>
+		<DataType>
+			<Name GUID="{43E48F91-5570-4410-92D1-D0DAD78322DB}" PersistentType="true">TestEvents</Name>
+			<DisplayName TxtId=""><![CDATA[TestEventClass]]></DisplayName>
+			<EventId>
+				<Name Id="1">Event_PDF</Name>
+				<DisplayName TxtId=""><![CDATA[TwinCAT_HMI_PDF]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[All information about the TwinCAT HMI]]></DescriptionText>
+				<DescriptionUrl TxtId=""><![CDATA[/Imports/PDF/Beckhoff_TwinCAT_HMI_e.pdf]]></DescriptionUrl>
+				<Severity>Warning</Severity>
+				<Comment TxtId=""><![CDATA[Documentation of TwinCAT HMI]]></Comment>
+			</EventId>
+			<EventId>
+				<Name Id="2">Event_MP4</Name>
+				<DisplayName TxtId=""><![CDATA[TwinCAT_HMI_MP4]]></DisplayName>
+				<DescriptionText TxtId=""><![CDATA[All information about the TwinCAT HMI]]></DescriptionText>
+				<DescriptionUrl TxtId=""><![CDATA[/Imports/Videos/NavigationTemplates.mp4]]></DescriptionUrl>
+				<Severity>Error</Severity>
+				<Comment TxtId=""><![CDATA[Documentation of TwinCAT HMI]]></Comment>
+			</EventId>
+			<Translations>
+				<Text TxtId="All information about the TwinCAT HMI">
+					<Text LcId="7"><![CDATA[Alle Inforationen zur TwinCAT HMI]]></Text>
+					<Text LcId="9"><![CDATA[All information about the TwinCAT HMI]]></Text>
+				</Text>
+				<Text TxtId="Documentation of TwinCAT HMI">
+					<Text LcId="7"><![CDATA[Dokumentation der TwinCAT HMI]]></Text>
+					<Text LcId="9"><![CDATA[Documentation of TwinCAT HMI]]></Text>
+				</Text>
+			</Translations>
+			<Hides>
+				<Hide GUID="{C6BF4B39-2B67-4E2D-9789-1242CDCB7923}"/>
+				<Hide GUID="{8FE02F15-E3BA-4D21-9234-84DB8B168BDD}"/>
+				<Hide GUID="{893D491A-B868-4AC7-B727-37EED3A38AA2}"/>
+				<Hide GUID="{49A1A5D1-495A-4FC2-B9BA-3937CC3E09CB}"/>
+				<Hide GUID="{6ED3024D-48B8-4BFF-B7C4-3798081C05A8}"/>
+				<Hide GUID="{913113EA-9695-4939-B67E-BB7B544D76B1}"/>
+				<Hide GUID="{1E94A823-F9E5-4966-8A71-E7D19B4971C1}"/>
+				<Hide GUID="{67F4419F-D079-4348-9A45-4BC2A713200E}"/>
+				<Hide GUID="{69264D5D-A582-461A-A8F0-5ABFD6767909}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{09734E07-F11D-6BC5-E6B1-9A48C5300FBE}" Target64Bit="true" ShowHideConfigurations="#x6">
+		<System>
+			<Settings MaxCpus="6" NonWinCpus="1">
+				<Cpu CpuId="5"/>
+			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{A4B13A37-1B67-45E3-8C50-50F20B348BB4}" Name="UserGuidance_PLC" PrjFilePath="UserGuidance_PLC\UserGuidance_PLC.plcproj" TmcFilePath="UserGuidance_PLC\UserGuidance_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{104015BA-A9AD-4C74-1384-6CEB5509DE23}" TmcPath="UserGuidance_PLC\UserGuidance_PLC.tmc">
+					<Name>UserGuidance_PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

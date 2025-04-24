@@ -1,0 +1,43 @@
+{
+    "recipeList": {},
+    "recipeTypeList": {
+        "Bottle": {
+            "members": {
+                "RecipeBottleAmount": {
+                    "defaultValue": 300.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {},
+                    "symbol": "RecipeBottleAmount",
+                    "unit": "",
+                    "version": 1.0
+                },
+                "RecipeBottleColor": {
+                    "defaultValue": 1,
+                    "enabled": true,
+                    "group": "",
+                    "order": 2,
+                    "schema": {},
+                    "symbol": "RecipeBottleColor",
+                    "unit": "",
+                    "version": 1.0
+                },
+                "RecipeBottleType": {
+                    "defaultValue": 1,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "RecipeBottleType",
+                    "unit": "",
+                    "version": 1.0
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        }
+    }
+}

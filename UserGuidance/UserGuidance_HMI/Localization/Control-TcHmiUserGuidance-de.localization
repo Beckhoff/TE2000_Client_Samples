@@ -1,0 +1,13 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.113/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "de",
+  "scope": "Control",
+  "source": "TcHmi.Controls.Beckhoff.TcHmiUserGuidance",
+  "localizedText": {
+    "Cancel": "Abbrechen",
+    "Next": "Weiter >",
+    "Finish": "Fertigstellen",
+    "Back": "< Zurück",
+    "UserGuidanceFinished": "Die Benutzerführung ist beendet!"
+  }
+}

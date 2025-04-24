@@ -1,0 +1,185 @@
+<div id="UserGuidanceRecipe_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="TcHmiUserGuidance_recipe" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserGuidance" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-right="8" data-tchmi-bottom="8" data-tchmi-progress-bar-alignment="Top">
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%Recipe::RecipeType%/pp%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "let userGuidanceControl = ctx.owner;",
+          "let recipeData = TcHmi.Symbol.readEx('%pp%Recipe%/pp%');",
+          "",
+          "if (userGuidanceControl && recipeData) {",
+          "    let pagesData = [",
+          "        {",
+          "            \"displayName\": \"\",",
+          "            \"hidden\": false,",
+          "            \"horizontalAlignment\": \"Left\",",
+          "            \"name\": \"info\",",
+          "            \"scrolling\": \"Auto\",",
+          "            \"targetFile\": {",
+          "                \"path\": \"UserControls/RecipeInfo.usercontrol\",",
+          "                \"attributes\": {",
+          "                    \"data-tchmi-recipename\": \"%pp%Recipe::Name%/pp%\",",
+          "                    \"data-tchmi-recipetype\": \"%pp%Recipe::RecipeType%/pp%\"",
+          "                }",
+          "            },",
+          "            \"verticalAlignment\": \"Center\"",
+          "        }",
+          "    ];",
+          "    if (recipeData.RecipeType) {",
+          "        switch (recipeData.RecipeType) {",
+          "            case \"Bottle\":",
+          "                pagesData.push({",
+          "                    \"displayName\": \"\",",
+          "                    \"hidden\": false,",
+          "                    \"horizontalAlignment\": \"Left\",",
+          "                    \"name\": \"product\",",
+          "                    \"scrolling\": \"Auto\",",
+          "                    \"targetFile\": {",
+          "                        \"path\": \"UserControls/RecipeProduct.usercontrol\",",
+          "                        \"attributes\": {",
+          "                        \t\"data-tchmi-recipe\": \"%pp%Recipe%/pp%\"",
+          "                        }",
+          "                    },",
+          "                    \"verticalAlignment\": \"Center\"",
+          "                });",
+          "                pagesData.push({",
+          "                    \"displayName\": \"\",",
+          "                    \"hidden\": false,",
+          "                    \"horizontalAlignment\": \"Left\",",
+          "                    \"name\": \"overview\",",
+          "                    \"scrolling\": \"Auto\",",
+          "                    \"targetFile\": {",
+          "                        \"path\": \"UserControls/RecipeOverview.usercontrol\",",
+          "                        \"attributes\": {",
+          "                        \t\"data-tchmi-recipe\": \"%pp%Recipe%/pp%\"",
+          "                        }",
+          "                    },",
+          "                    \"verticalAlignment\": \"Center\"",
+          "                });",
+          "                break;",
+          "        }",
+          "    }",
+          "    userGuidanceControl.setPages(pagesData);",
+          "}"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ],
+    "displayName": "setup steps with recipe data"
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onFinishButtonPress",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "let recipeData = TcHmi.Symbol.readEx('%pp%Recipe%/pp%');",
+          "",
+          "let recipe = {",
+          "    'recipeTypeName': recipeData.RecipeType,",
+          "    'values': {",
+          "        'RecipeBottleType': recipeData.Type,",
+          "        'RecipeBottleAmount': recipeData.Amount,",
+          "        'RecipeBottleColor': recipeData.Color",
+          "    }",
+          "};",
+          "",
+          "if(recipeData){",
+          "\tTcHmi.Server.RecipeManagement.createRecipeEx(",
+          "\t    recipeData.Name, ",
+          "\t    null, // or ''",
+          "\t    recipe, ",
+          "\t    null, ",
+          "\t    {timeout: 2000}, ",
+          "\t    function(data) {",
+          "\t        if (data.error === TcHmi.Errors.NONE) {",
+          "\t            // Success",
+          "\t        } else {",
+          "\t    \t\tconsole.warn(data);",
+          "\t            // Error",
+          "\t        }",
+          "\t    }",
+          "\t);",
+          "}"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ],
+    "displayName": "createRecipe and close poup"
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onCancelButtonPress",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ],
+    "displayName": "close popup"
+  },
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onFinished",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2('%pp%PopUpControl%/pp%', function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Close popup",
+          "        data.value.close();",
+          "    } else {",
+          "        // Handle error... ",
+          "    }",
+          "});"
+        ],
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ],
+    "displayName": "close popup"
+  }
+]
+</script>
+</div>
+</div>

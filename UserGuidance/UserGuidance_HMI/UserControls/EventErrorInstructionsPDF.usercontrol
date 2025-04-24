@@ -1,0 +1,5 @@
+<div id="EventErrorInstructions_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="TcHmiPdfViewer_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPdfViewer" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-right="8" data-tchmi-bottom="8" data-tchmi-allow-fullscreen="False" data-tchmi-disallow-file-operations="True" data-tchmi-file="%pp%File%/pp%">
+</div>
+</div>
