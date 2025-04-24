@@ -3,6 +3,7 @@
     "exportPath": "",
     "generationTimeout": "PT1M",
     "overwriteReports": false,
+    "removeRemoteFile": true,
     "reports": {
         "Beckhoff": {
             "config": "Beckhoff",

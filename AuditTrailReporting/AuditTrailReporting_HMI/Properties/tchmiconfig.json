@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -12,7 +12,7 @@
     "websocketIntervalTime": 500,
     "websocketTimeout": 20000,
     "websocketSystemTimeout": 60000,
-    "websocketSubscriptionMode": "Change"
+    "websocketSubscriptionMode": null
   },
   "activeTheme": "Base",
   "themes": {
@@ -69,8 +69,10 @@
   "userFunctions": [],
   "symbols": {
     "internal": {},
-    "themedResources": {}
+    "themedResources": {},
+    "timer": {}
   },
+  "intervals": {},
   "trigger": [],
   "actionTemplates": [],
   "languages": {
@@ -86,7 +88,8 @@
     }
   },
   "binding": {
-    "symbolError": "Ignore"
+    "symbolError": "Ignore",
+    "symbolWriteError": "ReadBack"
   },
   "packages": [
     {
