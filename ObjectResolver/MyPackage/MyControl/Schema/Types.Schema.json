@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.MyPackage.MyControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "MyControl",
+      "frameworkControlNamespace": "TcHmi.Controls.MyPackage"
+    },
+    "TcHmi.Controls.MyPackage.MyControl.MyObjectType": {
+      "type": "object",
+      "properties": {
+        "number1": {
+          "type": "number"
+        },
+        "number2": {
+          "type": "number"
+        },
+        "number3": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
