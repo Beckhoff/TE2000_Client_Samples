@@ -4036,6 +4036,7 @@
         "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.3.133\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.3.133\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.PDFViewer": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.PDFViewer.14.3.133\\runtimes\\native1.12-tchmi",
+        "/TcHmiReporting": "..\\..\\.engineering_servers\\Reporting_HMI\\TcHmiReporting",
         "/bin": "..\\..\\Reporting_HMI\\bin\\"
     }
 }
