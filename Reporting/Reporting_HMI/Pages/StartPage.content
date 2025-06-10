@@ -1,6 +1,11 @@
 <div id="StartPage_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
 
-<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-text="Create" data-tchmi-top="20" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" 
+     data-tchmi-height="50" data-tchmi-height-unit="px" 
+     data-tchmi-left="20" data-tchmi-left-unit="px" 
+     data-tchmi-text="Create" 
+     data-tchmi-width="100" data-tchmi-width-unit="px" 
+     data-tchmi-word-wrap="True" data-tchmi-top="20">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -27,19 +32,26 @@
           "        let requestGuid = data.value.currentGuid;",
           "        let reportsInProgress = data.value.inProgress;",
           "    } else {",
-          "        // Handle error... ",
+          "        TcHmi.Log.errorEx('Activating OrderReport failed:', TcHmi.Log.buildMessage(data.details));",
           "    }",
           "});"
         ],
         "asyncWait": true,
         "waitMode": "Synchronous"
       }
-    ]
+    ],
+    "displayName": "Clear PDF view and create new report"
   }
 ]
 </script>
 </div>
-<div id="TcHmiPdfViewer_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPdfViewer" data-tchmi-height-unit="px" data-tchmi-left="140" data-tchmi-left-unit="px" data-tchmi-top="20" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="20" data-tchmi-bottom-unit="px" data-tchmi-bottom="20" data-tchmi-file="../TcHmiReporting/reports/TestReport.pdf">
+<div id="TcHmiPdfViewer_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPdfViewer"
+     data-tchmi-height-unit="px" data-tchmi-left="140" data-tchmi-left-unit="px"
+     data-tchmi-top="20" data-tchmi-top-unit="px" data-tchmi-width-unit="px" 
+     data-tchmi-right-unit="px" data-tchmi-right="20" data-tchmi-bottom-unit="px" 
+     data-tchmi-bottom="20" 
+     data-tchmi-file="../TcHmiReporting/reports/TestReport.pdf"
+>
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -87,7 +99,8 @@
         ],
         "asyncWait": true
       }
-    ]
+    ],
+    "displayName": "Reload PDF when ready"
   }
 ]
 </script>
