@@ -79,6 +79,12 @@
     },
     "BorderRadius": {
       "type": "object",
+      "engineeringColumns": [
+        "topLeft",
+        "topRight",
+        "bottomRight",
+        "bottomLeft"
+      ],
       "propertiesMeta": [
         {
           "name": "topLeft",
@@ -233,6 +239,12 @@
         }
       },
       "type": "object",
+      "engineeringColumns": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
       "properties": {
         "left": {
           "$ref": "#/definitions/BorderStyle/definitions/style"
@@ -256,8 +268,13 @@
       ]
     },
     "BorderWidth": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
+      "engineeringColumns": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
       "propertiesMeta": [
         {
           "name": "left",
@@ -399,11 +416,15 @@
       ]
     },
     "BoxShadowList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "array",
       "items": {
         "title": "BoxShadow definition",
         "type": "object",
+        "engineeringColumns": [
+          "color",
+          "offsetX",
+          "offsetY"
+        ],
         "propertiesMeta": [
           {
             "name": "color",
@@ -537,7 +558,6 @@
       "minItems": 0
     },
     "ClassNameList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "array",
       "items": {
         "type": "string"
@@ -559,16 +579,13 @@
       "default": null
     },
     "ContentPath": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
     "ContextReference": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object"
     },
     "Control": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
       "frameworkControlType": "TcHmiControl",
@@ -620,7 +637,6 @@
       "type": "string"
     },
     "ControlNamespace": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
@@ -628,12 +644,10 @@
       "type": "string"
     },
     "ControlType": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
     "Empty": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "enum": [
         ""
@@ -647,8 +661,16 @@
         }
       }
     },
+    "FilterStrategy": {
+      "title": "Filter Strategy",
+      "description": "The strategy to use while filtering a tree structure.",
+      "type": "string",
+      "enum": [
+        "DepthFirst",
+        "BreadthFirst"
+      ]
+    },
     "FontFamily": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string"
     },
     "FontSizeUnit": {
@@ -679,13 +701,11 @@
       "default": "Normal"
     },
     "Fraction": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "number",
       "minimum": 0,
       "maximum": 1
     },
     "Function": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "definitions": {
         "value": {
@@ -843,14 +863,12 @@
       ]
     },
     "FunctionList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Function"
       }
     },
     "HorizontalAlignment": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "enum": [
         "Left",
@@ -859,7 +877,6 @@
       ]
     },
     "Id": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
@@ -890,9 +907,6 @@
     },
     "LinearGradientColor": {
       "type": "object",
-      "engineeringColumns": [
-        "angle"
-      ],
       "propertiesMeta": [
         {
           "name": "angle",
@@ -975,6 +989,12 @@
     },
     "Padding": {
       "type": "object",
+      "engineeringColumns": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
       "propertiesMeta": [
         {
           "name": "left",
@@ -1116,12 +1136,17 @@
       ]
     },
     "Path": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
     "PixelPadding": {
       "type": "object",
+      "engineeringColumns": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
       "propertiesMeta": [
         {
           "name": "left",
@@ -1263,7 +1288,6 @@
       ]
     },
     "PixelUnit": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "enum": [
         "px"
@@ -1301,7 +1325,6 @@
       "default": "None"
     },
     "ScrollMode": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "enum": [
         "No",
@@ -1577,10 +1600,6 @@
     "StopPoint": {
       "title": "StopPoint definition",
       "type": "object",
-      "engineeringColumns": [
-        "color",
-        "stop"
-      ],
       "properties": {
         "color": {
           "description": "Defining a color as CSS color: #-hexadecimal, rgb(), rgba(), hsl(), hsla(), lowercase css color keyword or transparent.",
@@ -1598,7 +1617,6 @@
       ]
     },
     "Symbol": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "object",
       "frameworkInstanceOf": "TcHmi.Symbol"
     },
@@ -1615,7 +1633,6 @@
       "default": "Normal"
     },
     "TransformList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "definitions": {
         "transform": {
           "anyOf": [
@@ -2214,7 +2231,6 @@
       }
     },
     "Trigger": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "definitions": {
         "action": {
           "anyOf": [
@@ -2948,7 +2964,6 @@
       ]
     },
     "TriggerList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Trigger"
@@ -2956,16 +2971,13 @@
       "minItems": 1
     },
     "TypeRef": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string"
     },
     "UserControlPath": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "minLength": 1
     },
     "VerticalAlignment": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "string",
       "enum": [
         "Top",
@@ -2974,7 +2986,6 @@
       ]
     },
     "VirtualControlRightMappingList": {
-      "$schema": "http://json-schema.org/draft-04/schema",
       "type": "array",
       "items": {
         "type": "object",
@@ -5427,6 +5438,14 @@
           "value"
         ]
       }
+    },
+    "TcHmi.Controls.Beckhoff.InputProcessingPoint": {
+      "type": "string",
+      "enum": [
+        "Change",
+        "InteractionFinished"
+      ],
+      "default": "Change"
     },
     "TcHmi.Controls.Beckhoff.TcHmiCheckbox": {
       "$schema": "http://json-schema.org/draft-04/schema",
@@ -8727,6 +8746,24 @@
           "defaultValueInternal": true
         },
         {
+          "name": "showTooltip",
+          "category": "General",
+          "displayName": "Show Tooltip",
+          "displayPriority": 10,
+          "description": "Describes whether the tooltip should be displayed.",
+          "defaultValue": null,
+          "defaultValueInternal": false
+        },
+        {
+          "name": "highlightDataPoints",
+          "category": "General",
+          "displayName": "Highlight Data Points",
+          "displayPriority": 10,
+          "description": "Describes whether the datapoints should be highlighted.",
+          "defaultValue": null,
+          "defaultValueInternal": false
+        },
+        {
           "name": "color",
           "category": "Colors",
           "displayName": "Color",
@@ -8835,6 +8872,12 @@
           "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.ChartReferenceLineValueUnit"
         },
         "locked": {
+          "type": "boolean"
+        },
+        "showTooltip": {
+          "type": "boolean"
+        },
+        "highlightDataPoints": {
           "type": "boolean"
         },
         "color": {
@@ -9489,6 +9532,13 @@
       "frameworkControlType": "TcHmiRecipeSelect",
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
     },
+    "TcHmi.Controls.Beckhoff.TcHmiRecipeSelect.NameArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "TcHmiRecipeSelect": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRecipeSelect"
     },
@@ -9501,6 +9551,285 @@
     },
     "TcHmiRectangle": {
       "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRectangle"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiSparkline",
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+    },
+    "TcHmiSparkline": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiSparkline"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.LineGraphDescriptionList": {
+      "title": "LineGraphDescriptionList",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "engineeringColumns": [
+          "lineWidth"
+        ],
+        "propertiesMeta": [
+          {
+            "name": "lineColor",
+            "displayName": "Line Color",
+            "category": "Colors",
+            "displayPriority": 10,
+            "description": "Color for this line",
+            "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionLineColor%/tr%",
+            "defaultValueInternal": null
+          },
+          {
+            "name": "lineWidth",
+            "displayName": "Line Width",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Line width in pixel",
+            "defaultValue": 1,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "displayName",
+            "displayName": "Display Name",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Display name of the historized Symbol",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "referenceLines",
+            "displayName": "Reference Lines",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Reference lines",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          }
+        ],
+        "properties": {
+          "lineColor": {
+            "$ref": "tchmi:framework#/definitions/SolidColor"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "lineWidth": {
+            "type": "number"
+          },
+          "referenceLines": {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiSparkline.ReferenceLineDefinitionList"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "lineWidth"
+        ]
+      }
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.LineGraphDataList": {
+      "title": "LineGraphDataList",
+      "anyOf": [
+        {
+          "type": "array",
+          "title": "Array<Array<Coordinate pair>>",
+          "items": {
+            "type": "array",
+            "title": "List of coordinate pairs",
+            "items": {
+              "type": "object",
+              "title": "Coordinate pair",
+              "engineeringColumns": [
+                "x",
+                "y"
+              ],
+              "propertiesMeta": [
+                {
+                  "name": "x",
+                  "displayName": "X",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "x coordinate",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+                },
+                {
+                  "name": "y",
+                  "displayName": "Y",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "y coordinate",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+                }
+              ],
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        {
+          "type": "array",
+          "title": "Array<Array<number>>",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "type": "array",
+          "title": "Array<number>",
+          "items": {
+            "type": "number"
+          }
+        }
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.ChartStart": {
+      "anyOf": [
+        {
+          "title": "Time",
+          "$ref": "tchmi:general#/definitions/DateTime"
+        },
+        {
+          "title": "Timespan",
+          "$ref": "tchmi:general#/definitions/TimeSpan"
+        },
+        {
+          "title": "KeyWords",
+          "type": "string",
+          "enum": [
+            "First"
+          ]
+        }
+      ],
+      "default": "First"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.ChartEnd": {
+      "anyOf": [
+        {
+          "title": "Time",
+          "$ref": "tchmi:general#/definitions/DateTime"
+        },
+        {
+          "title": "Timespan",
+          "$ref": "tchmi:general#/definitions/TimeSpan"
+        },
+        {
+          "title": "KeyWords",
+          "type": "string",
+          "enum": [
+            "Latest"
+          ]
+        }
+      ],
+      "default": "Latest"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.ReferenceLineDefinition": {
+      "title": "ReferenceLineDefinition",
+      "type": "object",
+      "engineeringColumns": [
+        "value"
+      ],
+      "propertiesMeta": [
+        {
+          "name": "show",
+          "category": "General",
+          "displayName": "Show",
+          "displayPriority": 10,
+          "description": "Describes whether the reference line is displayed.",
+          "defaultValue": null,
+          "defaultValueInternal": true
+        },
+        {
+          "name": "value",
+          "category": "General",
+          "displayName": "Value",
+          "displayPriority": 10,
+          "description": "Describes the value of the reference line.",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        },
+        {
+          "name": "color",
+          "category": "Colors",
+          "displayName": "Color",
+          "displayPriority": 10,
+          "description": "Describes the color of the reference line.",
+          "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiSparkline::ReferenceLineColor%/tr%",
+          "defaultValueInternal": {
+            "color": "#4794da"
+          }
+        },
+        {
+          "name": "lineWidth",
+          "category": "General",
+          "displayName": "Line Width",
+          "displayPriority": 10,
+          "description": "Describes the line thickness of the reference line.",
+          "defaultValue": 1,
+          "defaultValueInternal": null
+        }
+      ],
+      "properties": {
+        "show": {
+          "type": "boolean"
+        },
+        "value": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "tchmi:framework#/definitions/SolidColor"
+        },
+        "lineWidth": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.ReferenceLineDefinitionList": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "ReferenceLineDefinitionList",
+      "type": "array",
+      "items": {
+        "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiSparkline.ReferenceLineDefinition"
+      }
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.AxisPosition": {
+      "title": "AxisPosition",
+      "type": "string",
+      "enum": [
+        "Right",
+        "Left"
+      ],
+      "default": "Right"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiSparkline.LabelPosition": {
+      "title": "LabelPosition",
+      "type": "string",
+      "enum": [
+        "Right",
+        "Center",
+        "Left"
+      ],
+      "default": "Right"
     },
     "TcHmi.Controls.Beckhoff.TcHmiSpinboxInput": {
       "$schema": "http://json-schema.org/draft-04/schema",
@@ -11075,6 +11404,101 @@
       ],
       "default": "First"
     },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.TimePreset": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "TimePreset",
+      "type": "object",
+      "description": "Datetime entries in the start or end combo box.",
+      "propertiesMeta": [
+        {
+          "name": "name",
+          "displayName": "Name",
+          "category": "Common",
+          "displayPriority": 10,
+          "description": "Name of entry.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "value",
+          "displayName": "Value",
+          "category": "Common",
+          "displayPriority": 10,
+          "description": "Value of entry.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        }
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "title": "Time",
+          "$ref": "tchmi:general#/definitions/DateTime"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.TimespanPreset": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "TimespanPreset",
+      "type": "object",
+      "description": "Timespan entries in the start or end combo box.",
+      "propertiesMeta": [
+        {
+          "name": "name",
+          "displayName": "Name",
+          "category": "Common",
+          "displayPriority": 10,
+          "description": "Name of entry.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "value",
+          "displayName": "Value",
+          "category": "Common",
+          "displayPriority": 10,
+          "description": "Value of entry.",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        }
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "title": "Timespan",
+          "$ref": "tchmi:general#/definitions/TimeSpan"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.TimeOrTimespanPreset": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "TimeOrTimespanPreset",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.TimePreset"
+          },
+          {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.TimespanPreset"
+          }
+        ]
+      }
+    },
     "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationList": {
       "$schema": "http://json-schema.org/draft-04/schema",
       "title": "ChartTooltipErrorInformationList",
@@ -11717,6 +12141,226 @@
         "Foreground"
       ],
       "default": "Background"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiTrendSparkline",
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+    },
+    "TcHmiTrendSparkline": {
+      "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendSparkline"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.HistorizedSymbolList": {
+      "title": "HistorizedSymbolList",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Historized symbol description",
+        "description": "Defines a historized symbol.",
+        "propertiesMeta": [
+          {
+            "name": "symbol",
+            "displayName": "Symbol",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Name of the historized Symbol",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "displayName",
+            "displayName": "Display Name",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Display name of the historized Symbol",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "lineWidth",
+            "category": "General",
+            "displayName": "Line Width",
+            "displayPriority": 10,
+            "description": "Describes the line thickness of the line.",
+            "defaultValue": 1,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "lineColor",
+            "displayName": "Line Color",
+            "category": "Colors",
+            "displayPriority": 10,
+            "description": "Color for this line",
+            "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendSparkline::DefaultGraphColor%/tr%",
+            "defaultValueInternal": null
+          },
+          {
+            "name": "referenceLines",
+            "displayName": "Reference Lines",
+            "category": "General",
+            "displayPriority": 10,
+            "description": "Reference lines",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          }
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string",
+            "frameworkMetaType": "historizedSymbol"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "lineWidth": {
+            "type": "number"
+          },
+          "lineColor": {
+            "$ref": "tchmi:framework#/definitions/SolidColor"
+          },
+          "referenceLines": {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ReferenceLineDefinitionList"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "symbol"
+        ]
+      }
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ChartStart": {
+      "anyOf": [
+        {
+          "title": "Time",
+          "$ref": "tchmi:general#/definitions/DateTime"
+        },
+        {
+          "title": "Timespan",
+          "$ref": "tchmi:general#/definitions/TimeSpan"
+        },
+        {
+          "title": "KeyWords",
+          "type": "string",
+          "enum": [
+            "First"
+          ]
+        }
+      ],
+      "default": "First"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ChartEnd": {
+      "anyOf": [
+        {
+          "title": "Time",
+          "$ref": "tchmi:general#/definitions/DateTime"
+        },
+        {
+          "title": "Timespan",
+          "$ref": "tchmi:general#/definitions/TimeSpan"
+        },
+        {
+          "title": "KeyWords",
+          "type": "string",
+          "enum": [
+            "Latest"
+          ]
+        }
+      ],
+      "default": "Latest"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ReferenceLineDefinition": {
+      "title": "ReferenceLineDefinition",
+      "type": "object",
+      "engineeringColumns": [
+        "value"
+      ],
+      "propertiesMeta": [
+        {
+          "name": "show",
+          "category": "General",
+          "displayName": "Show",
+          "displayPriority": 10,
+          "description": "Describes whether the reference line is displayed.",
+          "defaultValue": null,
+          "defaultValueInternal": true
+        },
+        {
+          "name": "value",
+          "category": "General",
+          "displayName": "Value",
+          "displayPriority": 10,
+          "description": "Describes the value of the reference line.",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        },
+        {
+          "name": "color",
+          "category": "Colors",
+          "displayName": "Color",
+          "displayPriority": 10,
+          "description": "Describes the color of the reference line.",
+          "defaultValue": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendSparkline::ReferenceLineColor%/tr%",
+          "defaultValueInternal": {
+            "color": "#4794da"
+          }
+        },
+        {
+          "name": "lineWidth",
+          "category": "General",
+          "displayName": "Line Width",
+          "displayPriority": 10,
+          "description": "Describes the line thickness of the reference line.",
+          "defaultValue": 1,
+          "defaultValueInternal": null
+        }
+      ],
+      "properties": {
+        "show": {
+          "type": "boolean"
+        },
+        "value": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "tchmi:framework#/definitions/SolidColor"
+        },
+        "lineWidth": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "value"
+      ]
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ReferenceLineDefinitionList": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "ReferenceLineDefinitionList",
+      "type": "array",
+      "items": {
+        "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.ReferenceLineDefinition"
+      }
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.AxisPosition": {
+      "title": "AxisPosition",
+      "type": "string",
+      "enum": [
+        "Right",
+        "Left"
+      ],
+      "default": "Right"
+    },
+    "TcHmi.Controls.Beckhoff.TcHmiTrendSparkline.LabelPosition": {
+      "title": "LabelPosition",
+      "type": "string",
+      "enum": [
+        "Right",
+        "Center",
+        "Left"
+      ],
+      "default": "Right"
     },
     "TcHmi.Controls.Beckhoff.TcHmiUserGuidance": {
       "$schema": "http://json-schema.org/draft-04/schema",

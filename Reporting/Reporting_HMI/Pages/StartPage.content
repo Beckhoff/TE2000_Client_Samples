@@ -50,7 +50,7 @@
      data-tchmi-top="20" data-tchmi-top-unit="px" data-tchmi-width-unit="px" 
      data-tchmi-right-unit="px" data-tchmi-right="20" data-tchmi-bottom-unit="px" 
      data-tchmi-bottom="20" 
-     data-tchmi-file="../TcHmiReporting/reports/TestReport.pdf"
+     data-tchmi-file="%f%TcHmi.Environment.getHostBaseUri() + '/TcHmiReporting/reports/TestReport.pdf'%/f%" 
 >
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
@@ -85,9 +85,8 @@
                 "active": true,
                 "symbolExpression": "%ctx%owner::File%/ctx%",
                 "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "../TcHmiReporting/reports/TestReport.pdf"
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "TcHmi.Environment.getHostBaseUri() + '/TcHmiReporting/reports/TestReport.pdf'"
                 },
                 "asyncWait": true
               }

@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.212/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
