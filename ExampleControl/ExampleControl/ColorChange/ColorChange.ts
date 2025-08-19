@@ -1,7 +1,3 @@
-/*
- * Generated 9/1/2023 12:57:14 AM
- * Copyright (C) 2023
- */
 module TcHmi {
     export module Controls {
         export module ExampleControl {

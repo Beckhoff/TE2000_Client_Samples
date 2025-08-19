@@ -1,7 +1,3 @@
-/*
- * Generated 5/27/2024 1:22:11 PM
- * Copyright (C) 2024
- */
 // Reference global object in this module scope for easier handling
 /** TwinCAT HMI API */
 const TcHmi = window.TcHmi;
@@ -21,7 +17,9 @@ import defaultNumber from "./someNumbers.js";
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap 
 // for background information.
 import { TcHmiShortName } from "textmodule";
-class ControlWithImport extends TcHmi.Controls.System.TcHmiControl {
+// Note: no export is needed for plain usage. Just registration via TcHmi.Controls.registerEx() call.
+// But for inerhitance, the class must be exported.
+export class ControlWithImport extends TcHmi.Controls.System.TcHmiControl {
     /*
     Attribute philosophy
     --------------------

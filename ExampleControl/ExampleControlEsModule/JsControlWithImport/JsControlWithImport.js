@@ -1,12 +1,6 @@
 // Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
 /// <reference path="../.hmiframework/TcHmi.d.ts" />
 
-/*
- * Generated 5/27/2024 4:21:23 PM
- * Copyright (C) 2024
- */
-
-
 // We can import a variable from another js module with this syntax
 // because we are loaded as a module ourself (see Description.json#dependencyFiles).
 
@@ -25,7 +19,9 @@ import defaultNumber from "./someNumbers.js";
 // for background information.
 import { TcHmiShortName } from "textmodule";
 
-class JsControlWithImport extends TcHmi.Controls.System.TcHmiControl {
+// Note: no export is needed for plain usage. Just registration via TcHmi.Controls.registerEx() call.
+// But for inheritance, the class must be exported.
+export class JsControlWithImport extends TcHmi.Controls.System.TcHmiControl {
 
     /*
     Attribute philosophy
