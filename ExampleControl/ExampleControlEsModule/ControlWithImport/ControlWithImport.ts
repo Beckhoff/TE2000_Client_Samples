@@ -1,7 +1,3 @@
-// Reference global object in this module scope for easier handling
-/** TwinCAT HMI API */
-const TcHmi = window.TcHmi;
-
 // We can import a variable from another js module with this syntax
 // because we are loaded as a module ourself (see Description.json#dependencyFiles).
 
