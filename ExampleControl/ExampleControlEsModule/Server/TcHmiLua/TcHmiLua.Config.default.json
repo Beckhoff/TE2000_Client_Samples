@@ -1,0 +1,6 @@
+{
+    "CONFIG_PAGE_ARRAY_LIMIT": 100,
+    "HTML_ERRORS": false,
+    "LOG_PAGE_MAX_ENTRIES": 200,
+    "SCRIPT_TIMEOUT": "PT10S"
+}

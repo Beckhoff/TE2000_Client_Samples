@@ -16,7 +16,10 @@
     <icon>images/logo.png</icon>
     <dependencies>
       <group targetFramework="native1.12-tchmi">
+        <dependency id="Beckhoff.TwinCAT.HMI.Server.Engineering" version="22.0.7563" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="14.2.110" />
         <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.2.110" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Functions" version="14.3.8" />
       </group>
     </dependencies>
   </metadata>

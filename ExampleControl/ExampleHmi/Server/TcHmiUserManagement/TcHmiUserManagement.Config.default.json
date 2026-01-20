@@ -1,7 +1,10 @@
 {
+    "EXCLUDE_SYSTEM_ADMINISTRATOR_FROM_LOCKOUT": false,
+    "MAX_INVALID_LOGIN_ATTEMPTS": 0,
     "PASSWORD_BLACKLIST": "",
     "PASSWORD_ENABLE_AGING": false,
     "PASSWORD_FORCE_COMPLEX": 0,
+    "PASSWORD_HISTORY_SIZE": 0,
     "PASSWORD_MAXIMUM_AGE": "P90D",
     "PASSWORD_MINIMUM_LENGTH": 1,
     "USERS": {
@@ -9,6 +12,7 @@
             "ALGORITHM": 0,
             "ENABLED": false,
             "PASSWORD": "",
+            "PASSWORD_HISTORY": [],
             "SALT": "",
             "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         },
@@ -16,6 +20,7 @@
             "ALGORITHM": 0,
             "ENABLED": true,
             "PASSWORD": "",
+            "PASSWORD_HISTORY": [],
             "SALT": "",
             "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         },
@@ -23,6 +28,7 @@
             "ALGORITHM": 0,
             "ENABLED": true,
             "PASSWORD": "",
+            "PASSWORD_HISTORY": [],
             "SALT": "",
             "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         }
