@@ -55,6 +55,11 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "usesPackageImport.js",
+      "description": "",
+      "type": "EsModule"
     }
   ],
   "userControls": [],

@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "none",
+    "module": "es2022",
     "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
@@ -10,6 +10,11 @@
       "DOM.Iterable",
       "ES2023"
     ],
+    "paths": {
+      "ExampleControlEsModule/*": [
+        "../ExampleControlEsModule/*"
+      ]
+    },
     "types": [],
     "declaration": true,
     "sourceMap": true,
@@ -27,5 +32,8 @@
   ],
   "include": [
     "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"
+  ],
+  "files": [
+    "usesPackageImport.ts"
   ]
 }
