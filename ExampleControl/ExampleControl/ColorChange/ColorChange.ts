@@ -1,6 +1,6 @@
-module TcHmi {
-    export module Controls {
-        export module ExampleControl {
+namespace TcHmi {
+    export namespace Controls {
+        export namespace ExampleControl {
             export class ColorChange extends TcHmi.Controls.System.TcHmiControl {
 
                 /*

@@ -2,9 +2,9 @@
  * Generated 7/16/2021 11:50:16 AM
  * Copyright (C) 2021
  */
-module TcHmi {
-    export module Controls {
-        export module StringPager {
+namespace TcHmi {
+    export namespace Controls {
+        export namespace StringPager {
             export class StringPagerControl extends TcHmi.Controls.System.TcHmiControl {
 
                 /*
