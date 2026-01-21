@@ -4,6 +4,12 @@
   "compilerOptions": {
     "module": "ES2022",
     "paths": {
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls/*": [
+        "$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/*"
+      ],
       "textmodule": [
         "./ControlWithImport/someText.ts"
       ]

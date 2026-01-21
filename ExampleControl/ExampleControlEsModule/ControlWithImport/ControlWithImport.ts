@@ -14,13 +14,22 @@ import defaultNumber from "./someNumbers.js";
 // Typescript has a path mapping in the tsconfig(.tpl).json in the compilerOptions property.
 // For the browser we have a esmoduleImports property in the Manifest.json of this package.
 // See https://www.typescriptlang.org/docs/handbook/modules/reference.html#paths and
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
 // for background information.
 import { TcHmiShortName } from "textmodule";
 
-// Note: no export is needed for plain usage. Just registration via TcHmi.Controls.registerEx() call.
-// But for inerhitance, the class must be exported.
-export class ControlWithImport extends TcHmi.Controls.System.TcHmiControl {
+// Import all API stuff from the framework main export file.
+// Note: All package names are automatically added to the importmap, but not to the tsconfig paths.
+import {
+    // The control for inheritance
+    TcHmiControl,
+    // The Controls API to register the control (same as TcHmi.Controls.registerEx)
+    Controls
+} from "Beckhoff.TwinCAT.HMI.Framework/index.esm.js";
+
+// Note: no export is needed for plain usage. Just registration via Controls.registerEx() call.
+// But for inheritance, the class must be exported.
+export class ControlWithImport extends TcHmiControl.Control {
 
     /*
     Attribute philosophy
@@ -119,4 +128,4 @@ export class ControlWithImport extends TcHmi.Controls.System.TcHmiControl {
 /*
  * Register Control class object for control
  */
-TcHmi.Controls.registerEx('ControlWithImport', 'TcHmi.Controls.ExampleControlEsModule', ControlWithImport);
+Controls.registerEx('ControlWithImport', 'TcHmi.Controls.ExampleControlEsModule', ControlWithImport);
