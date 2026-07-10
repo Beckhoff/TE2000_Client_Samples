@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "none",
+    "module": "es2022",
     "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
@@ -10,8 +10,27 @@
       "DOM.Iterable",
       "ES2023"
     ],
-    "types": [],
-    "declaration": true,
+    "paths": {
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/index.esm.d.ts"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls/*": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.6.28/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.6.28/runtimes/native1.12-tchmi/index.esm.d.ts"
+      ],
+      "ExampleControl/*": [
+        "../ExampleControl/*"
+      ]
+    },
+    "types": [
+      "jasmine"
+    ],
+    "declaration": false,
     "sourceMap": true,
     "noEmitOnError": true,
     "noImplicitAny": false,
@@ -20,16 +39,13 @@
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "include": [
-    "node_modules/@types/jasmine/index.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "../ExampleControl/ColorChange/ColorChange.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ],
   "files": [
-    "spec/ColorChange/mainSpec.ts",
+    "spec/ColorChange/mainSpec.esm.ts",
     "spec/helpers/mockupHelper.ts"
   ]
 }

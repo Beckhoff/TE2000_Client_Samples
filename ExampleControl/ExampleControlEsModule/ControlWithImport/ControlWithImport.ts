@@ -28,7 +28,7 @@ import {
 } from "Beckhoff.TwinCAT.HMI.Framework/index.esm.js";
 
 // Note: no export is needed for plain usage. Just registration via Controls.registerEx() call.
-// But for inheritance, the class must be exported.
+// But for inheritance or unit tests, the class must be exported.
 export class ControlWithImport extends TcHmiControl.Control {
 
     /*

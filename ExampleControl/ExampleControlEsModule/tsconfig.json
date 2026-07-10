@@ -5,10 +5,16 @@
     "module": "ES2022",
     "paths": {
       "Beckhoff.TwinCAT.HMI.Framework/*": [
-        "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/*"
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/index.esm.d.ts"
       ],
       "Beckhoff.TwinCAT.HMI.Controls/*": [
-        "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.4.1/runtimes/native1.12-tchmi/*"
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.6.28/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.6.28/runtimes/native1.12-tchmi/index.esm.d.ts"
       ],
       "textmodule": [
         "./ControlWithImport/someText.ts"
@@ -31,11 +37,10 @@
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/TcHmi.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ],
   "files": [
     "ControlWithImport/ControlWithImport.ts",

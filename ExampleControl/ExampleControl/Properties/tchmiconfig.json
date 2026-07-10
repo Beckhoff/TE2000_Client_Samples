@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": null,
@@ -52,35 +52,14 @@
   },
   "dependencyFiles": [
     {
-      "name": "ColorChange/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "ColorChange/Themes/Base-Dark/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "ColorChange/Themes/Base/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
-    },
-    {
-      "name": "ColorChange/ColorChange.js",
-      "description": "",
-      "type": "JavaScript"
     }
   ],
   "userControls": [],
   "controls": [
     {
-      "type": "Control",
       "basePath": "./ColorChange",
       "descriptionFile": "Description.json",
       "toolboxCategory": ""

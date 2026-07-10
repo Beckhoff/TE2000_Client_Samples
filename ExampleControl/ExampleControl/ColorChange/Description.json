@@ -33,7 +33,7 @@
   "dependencyFiles": [
     {
       "name": "ColorChange.js",
-      "type": "JavaScript",
+      "type": "EsModule",
       "description": "Contains all the main logic."
     },
     {

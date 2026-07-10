@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": null,
@@ -52,11 +52,6 @@
   },
   "dependencyFiles": [
     {
-      "name": "JsControlWithImport/JsControlWithImport.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
       "name": "JsControlWithImport/someText.js",
       "description": "",
       "type": "JavaScript"
@@ -67,44 +62,9 @@
       "type": "JavaScript"
     },
     {
-      "name": "ControlWithImport/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "ControlWithImport/Themes/Base-Dark/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "ControlWithImport/Themes/Base/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "JsControlWithImport/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "JsControlWithImport/Themes/Base-Dark/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
-      "name": "JsControlWithImport/Themes/Base/Style.css",
-      "description": "",
-      "type": "Stylesheet"
-    },
-    {
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
-    },
-    {
-      "name": "ControlWithImport/ControlWithImport.js",
-      "description": "",
-      "type": "JavaScript"
     },
     {
       "name": "ControlWithImport/someNumbers.js",
@@ -120,13 +80,11 @@
   "userControls": [],
   "controls": [
     {
-      "type": "Control",
       "basePath": "./ControlWithImport",
       "descriptionFile": "Description.json",
       "toolboxCategory": ""
     },
     {
-      "type": "Control",
       "basePath": "./JsControlWithImport",
       "descriptionFile": "Description.json",
       "toolboxCategory": ""

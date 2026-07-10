@@ -1,18 +1,22 @@
+// MockupHelper also loads TcHmi.* API
+import { cleanupSystem, createControl, prepareSystemForControlType } from "../helpers/mockupHelper.js";
+import { ColorChange } from "ExampleControl/ColorChange/ColorChange.js";
 const controlType = "TcHmi.Controls.ExampleControl.ColorChange";
+
 describe("ColorChange", () => {
     beforeEach(() => {
-        TcHmiTest.ControlHelper.prepareSystemForControlType(controlType, TcHmi.Controls.ExampleControl.ColorChange);
+        prepareSystemForControlType(controlType, ColorChange);
     });
     afterEach(() => {
         // cleanup all mockup'ed (internal?) controls after each run
-        TcHmiTest.ControlHelper.cleanupSystem();
+        cleanupSystem();
     });
     describe("Attributes", () => {
-        let rawControl: TcHmi.Controls.ExampleControl.ColorChange;
+        let rawControl: ColorChange;
         beforeEach(async () => {
-            rawControl = await TcHmiTest.ControlHelper.createControl(
+            rawControl = await createControl(
                 controlType,
-                TcHmi.Controls.ExampleControl.ColorChange
+                ColorChange
             );
         });
         describe("Value", () => {

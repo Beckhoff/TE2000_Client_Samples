@@ -30,7 +30,7 @@ This is the url you need to open with your chrome or firefox.
 
 - [spec/support/jasmine-browser.js](spec/support/jasmine-browser.js) has the config for the test runner. See comments for more information.
 - [spec/support/flags.js](spec/support/flags.js) disables Framework initialisation and Framework logging.
-- [helpers/mockupHelper.js](helpers/mockupHelper.js) contains code to instantiate controls outside the running framework environment.
+- [helpers/mockupHelper.ts](helpers/mockupHelper.ts) contains code to instantiate controls outside the running framework environment.
 
 The framework control project itself has the code under test:
 

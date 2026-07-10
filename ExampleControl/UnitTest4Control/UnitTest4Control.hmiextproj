@@ -112,7 +112,7 @@
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="spec\ColorChange\mainSpec.ts">
+    <Content Include="spec\ColorChange\mainSpec.esm.ts">
       <SubType>Content</SubType>
     </Content>
     <Content Include="spec\helpers\mockupHelper.ts">

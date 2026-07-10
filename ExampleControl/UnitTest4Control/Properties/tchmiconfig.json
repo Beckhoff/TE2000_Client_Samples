@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.4.70/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": null,
@@ -52,27 +52,27 @@
   },
   "dependencyFiles": [
     {
-      "name": "spec/support/flags.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
-      "name": "spec/support/jasmine-browser.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
     },
     {
-      "name": "spec/ColorChange/mainSpec.js",
+      "name": "spec/support/flags.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "spec/ColorChange/mainSpec.esm.js",
       "description": "",
       "type": "JavaScript"
     },
     {
       "name": "spec/helpers/mockupHelper.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "spec/support/jasmine-browser.js",
       "description": "",
       "type": "JavaScript"
     }

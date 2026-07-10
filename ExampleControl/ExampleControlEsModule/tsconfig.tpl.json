@@ -5,10 +5,16 @@
     "module": "ES2022",
     "paths": {
       "Beckhoff.TwinCAT.HMI.Framework/*": [
-        "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts"
       ],
       "Beckhoff.TwinCAT.HMI.Controls/*": [
-        "$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/*"
+        "./$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls": [
+        "./$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/index.esm.d.ts"
       ],
       "textmodule": [
         "./ControlWithImport/someText.ts"
@@ -31,8 +37,7 @@
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "include": [
     "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"

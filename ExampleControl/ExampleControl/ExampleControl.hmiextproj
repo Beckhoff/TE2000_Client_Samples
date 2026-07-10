@@ -19,10 +19,10 @@
     <ProjectName>ExampleControl</ProjectName>
     <Name>ExampleControl</Name>
     <HmiInitial>1.12.760.48</HmiInitial>
-    <HmiRecent>14.3.641.1</HmiRecent>
+    <HmiRecent>14.3.971.1</HmiRecent>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <HmiCommunicationServerPort>3000</HmiCommunicationServerPort>
+    <HmiCommunicationServerPort>3003</HmiCommunicationServerPort>
     <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
     <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>

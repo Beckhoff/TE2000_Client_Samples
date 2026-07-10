@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "none",
+    "module": "es2022",
     "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
@@ -10,6 +10,20 @@
       "DOM.Iterable",
       "ES2023"
     ],
+    "paths": {
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls/*": [
+        "./$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls": [
+        "./$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/index.esm.d.ts"
+      ]
+    },
     "types": [],
     "declaration": true,
     "sourceMap": true,
@@ -20,8 +34,7 @@
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "include": [
     "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"

@@ -5,6 +5,10 @@
       "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
     },
     {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
       "type": "Control",
       "basePath": "./ColorChange",
       "descriptionFile": "Description.json",
@@ -32,10 +36,45 @@
   "apiVersion": 1,
   "symbols": {
     "internal": {},
+    "themedResources": {},
     "timer": {},
     "package": {}
   },
   "intervals": {},
   "actionTemplates": [],
-  "dataTypes": []
+  "dataTypes": [],
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  }
 }

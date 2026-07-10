@@ -19,8 +19,8 @@
     <ProjectName>ExampleControlEsModule</ProjectName>
     <Name>ExampleControlEsModule</Name>
     <HmiInitial>14.1.361.1</HmiInitial>
-    <HmiRecent>14.3.641.1</HmiRecent>
-    <HmiCommunicationServerPort>3003</HmiCommunicationServerPort>
+    <HmiRecent>14.3.971.1</HmiRecent>
+    <HmiCommunicationServerPort>3009</HmiCommunicationServerPort>
     <HmiCommunicationServerAuthPort>13003</HmiCommunicationServerAuthPort>
     <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>

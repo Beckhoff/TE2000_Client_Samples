@@ -1,7 +1,12 @@
 {
+  "type": "module",
   "devDependencies": {
     "@types/jasmine": "5.1.15",
     "jasmine-browser-runner": "4.0.0",
     "jasmine-core": "6.0.1"
+  },
+  "scripts": {
+    "install": "npm install",
+    "test": "npx jasmine-browser-runner serve"
   }
 }

@@ -21,11 +21,11 @@
     "noEmitOnError": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
+    "strictBindCallApply": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "exclude": [
     "$(Output).Path/"
