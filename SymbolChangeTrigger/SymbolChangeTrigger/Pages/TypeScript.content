@@ -1,0 +1,107 @@
+<div id="TypeScriptContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="568">
+<div id="TypeScriptHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="TypeScript/JavaScript" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="TypeScriptContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-height="488">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="TypeScriptBadge" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-top="24" data-tchmi-right="24" data-tchmi-width="120" data-tchmi-height="28">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(231, 245, 234, 1)"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 14,
+  "topLeftUnit": "px",
+  "topRight": 14,
+  "topRightUnit": "px",
+  "bottomLeft": 14,
+  "bottomLeftUnit": "px",
+  "bottomRight": 14,
+  "bottomRightUnit": "px"
+}
+</script>
+<div id="TypeScriptBadgeText" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-width="120" data-tchmi-height="28" data-tchmi-text="Recommended" data-tchmi-text-font-weight="Bold">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-centered"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(30, 120, 50, 1)"
+}
+</script>
+</div>
+</div>
+<div id="TypeScriptDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="104" data-tchmi-right="168">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">The code-behind watches the symbol and receives the new value in the callback. It sends no additional request, handles errors explicitly and accesses the control directly. The logic can use everything TypeScript and JavaScript offer, from types and modules to libraries and the complete Framework API, so it is the right place for logic that is too complex for a trigger.</p>
+</div>
+<div id="TypeScriptCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="148" data-tchmi-height="312" data-tchmi-width="460">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">const machineRunning = new Symbol&lt;boolean&gt;(
+    '%s%MachineRunning%/s%'
+);
+
+machineRunning.watch((data) =&gt; {
+    if (data.error !== Errors.NONE) {
+        Log.errorEx('Watching failed');
+        return;
+    }
+    lamp.setFillColor(
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data.value</span> ? GREEN : RED
+    );
+});</pre>
+</div>
+<div id="TypeScriptLamp" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEllipse" data-tchmi-left="548" data-tchmi-top="234" data-tchmi-width="140" data-tchmi-height="140" data-tchmi-stroke-thickness="6" data-tchmi-stroke-thickness-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-fill-color" type="application/json">
+{
+  "color": "rgba(206, 212, 218, 1)"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-stroke-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 50,
+  "topLeftUnit": "%",
+  "topRight": 50,
+  "topRightUnit": "%",
+  "bottomLeft": 50,
+  "bottomLeftUnit": "%",
+  "bottomRight": 50,
+  "bottomRightUnit": "%"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-box-shadow" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 0, 0, 0.25)"
+    },
+    "offsetX": 0,
+    "offsetY": 2,
+    "blur": 8,
+    "spread": 0,
+    "inset": false,
+    "offsetXUnit": "px",
+    "offsetYUnit": "px",
+    "blurUnit": "px",
+    "spreadUnit": "px"
+  }
+]
+</script>
+</div>
+</div>
+</div>

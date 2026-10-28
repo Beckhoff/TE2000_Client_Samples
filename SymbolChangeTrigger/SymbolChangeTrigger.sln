@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.11.12324.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "SymbolChangeTrigger", "SymbolChangeTrigger\SymbolChangeTrigger.hmiproj", "{B477FA16-5766-4241-B70C-9C1B1E7B6430}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B477FA16-5766-4241-B70C-9C1B1E7B6430}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{B477FA16-5766-4241-B70C-9C1B1E7B6430}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{B477FA16-5766-4241-B70C-9C1B1E7B6430}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{B477FA16-5766-4241-B70C-9C1B1E7B6430}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94534079-B894-4D70-A5E4-02841CC87581}
+	EndGlobalSection
+EndGlobal

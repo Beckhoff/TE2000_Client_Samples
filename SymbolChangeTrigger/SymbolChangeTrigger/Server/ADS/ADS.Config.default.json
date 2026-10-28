@@ -1,0 +1,53 @@
+{
+    "ENABLE_READ_BEFORE_WRITE": true,
+    "IGNORED_PLC_ATTRIBUTES": [
+        "DisplayMinValue",
+        "DisplayMaxValue",
+        "LowerBorder",
+        "UpperBorder",
+        "TcRpcEnable",
+        "TcHmiSymbol.ReadOnly",
+        "TcHmiSymbol.AddSymbol",
+        "TcHmiSymbol.AddSymbol.UserGroups",
+        "TcHmiSymbol.AddSymbol.Hidden"
+    ],
+    "NEW_HANDLES_PER_SUM_REQUEST_LIMIT": 100,
+    "RESPONSE_SIZE_LIMIT": 2097152,
+    "RUNTIMES": {
+        "PLC1": {
+            "ENABLED": true,
+            "NETID": "127.0.0.1.1.1",
+            "PORT": 851,
+            "READ_ONLY": false,
+            "SYMBOLS": {},
+            "USE_WHITELISTING": false
+        }
+    },
+    "RUNTIME_STATE_CHECK_INTERVAL": "PT2S",
+    "RUNTIME_STATE_CHECK_TIMEOUT": "PT5S",
+    "SUM_REQUEST_LIMIT": 500,
+    "TIMEOUT": "PT1S",
+    "VISIBLE_RUNTIME_PORTS": [
+        301,
+        302,
+        303,
+        304,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        501,
+        801,
+        811,
+        821,
+        831,
+        851,
+        852,
+        853,
+        854,
+        10000,
+        19800
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "MAXREQUESTSIZE": 1048576,
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "www"
+    }
+}

@@ -8,6 +8,7 @@ This repository contains examples that showcase many features of the Framework, 
 
 Here is a list of all samples:
 
+- [SymbolChangeTrigger:](SymbolChangeTrigger) This sample shows how a trigger should react on the change of a server symbol without additional server requests. It compares the classic trigger, which should be avoided, with a trigger using the context symbol `%ctx%args[0]%/ctx%` and a TypeScript/JavaScript variant.
 - [ExampleControl:](ExampleControl) This sample shows how to create controls.
 - [ObjectResolver:](ObjectResolver) This sample shows how to use the ObjectResolver class in context of a control attribute.
 - [SwipeContentOfRegion:](SwipeContentOfRegion) This sample shows how to create animated content switching in a region which reacts on touch swipe gestures.
