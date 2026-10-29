@@ -1,46 +1,72 @@
-module TcHmi {
-    // If you want to unregister an event outside the event code you need to use the return value of the method register()
-    var destroyOnInitialized = TcHmi.EventProvider.register('onInitialized', function (e, data) {
-        // This event will be raised only once, so we can free resources. 
-        // It's best practice to use destroy function of the event object within the callback function to avoid conflicts.
-        e.destroy();
+// This code-behind file fills the result table in Pages/Combined.content.
+// It is loaded as an ES module (see "dependencyFiles" in Properties/tchmiconfig.json).
+// "Beckhoff.TwinCAT.HMI.Framework/*" is mapped to the package folder at runtime (import map) and in tsconfig.json (paths).
+import { Controls, Errors, EventProvider, Log, Server } from 'Beckhoff.TwinCAT.HMI.Framework/index.esm.js';
+import type { TcHmiDatagrid, TcHmiTextblock } from 'Beckhoff.TwinCAT.HMI.Controls/index.esm.js';
 
-        const textblock = Controls.get<Controls.Beckhoff.TcHmiTextbox>('TextblockCombined');
+/** Item of the server symbol LoremIpsumItems. */
+type LoremIpsumItem = {
+    text: string;
+    properties: {
+        length: number;
+        hasUppercase: boolean;
+        chars: string[];
+    };
+};
 
-        if (!textblock) {
-            return;
+// Filtering, sorting and paging in one subscription:
+// The server filters the array first, then sorts the matching items and finally returns the requested page.
+// The subscription is created when the table is attached to the DOM and removed when it is detached,
+// so it only exists while the page is shown.
+
+/** Id of the subscription. Only set while CombinedGrid is attached. */
+let subscriptionId: number | null = null;
+
+EventProvider.register('CombinedGrid.onAttached', () => {
+    const command: Server.ICommand<unknown, LoremIpsumItem[]> = {
+        symbol: 'LoremIpsumItems', // The symbol you want to subscribe to
+        filter: 'properties::hasUppercase == false', // Matches all items which start with a lowercase letter
+        orderBy: 'properties::length DESC, text ASC', // Longest strings first, then alphabetically
+        offset: 10, // The index of the first item to read, counted in the filtered and sorted items
+        limit: 20, // How many items to read
+        filterMap: [], // Asks the server for the original index of each item
+    };
+
+    subscriptionId = Server.subscribe<LoremIpsumItem[]>(
+        [command], // It is possible to subscribe to multiple commands simultaneously, so the command has to be wrapped in an array
+        500, // The polling interval of the subscription
+        (data) => {
+            // Called every time the value on the server changes
+            showResult('Combined', data, (item) => ({
+                text: item.text,
+                length: item.properties.length,
+                hasUppercase: item.properties.hasUppercase,
+            }));
         }
+    );
+});
 
-        const subscriptionCommand: Server.ICommand = {
-            symbol: 'PLC1.MAIN.loremIpsumItems', // The symbol you want to subscribe to
-            offset: 10, // The starting index from which to read
-            limit: 20, // How many items of the array to read
-            orderBy: 'properties::length DESC, text ASC', // The sort order is defined as a string containing a path to a property or {value} and the sort order (ASC or DESC).
-                                                          // Multiple sort criteria can be used by separating them with commas. Here we first sort by length, with the longest strings first,
-                                                          // then alphabetically, so strings with the same length are sorted in ascending order.
-            filter: 'properties::hasUppercase == false' // String syntax filter that matches all items where the hasUppercase field of the properties struct has the boolean value false
-        };
+EventProvider.register('CombinedGrid.onDetached', () => {
+    if (subscriptionId !== null) {
+        Server.unsubscribe(subscriptionId);
+        subscriptionId = null;
+    }
+});
 
-        Server.subscribe<LoremIpsumItem[]>(
-            [subscriptionCommand], // It is possible to subscribe to multiple commands simultaneously, so the command has to be wrapped in an array
-            500, // The polling interval of the subscription
-            (data) => { // The callback function receives the data from the server as its argument and is called every time the value on the server changes
-                const readValue = data.response?.commands?.[0].readValue; // The paged data
-                const maxEntries = data.response?.commands?.[0].maxEntries; // How many items of the array match the filter
+/**
+ * Shows the items of a response in the table <prefix>Grid and their number in <prefix>Label.
+ * readValue holds the requested items, maxEntries the number of items which match the filter
+ * and filterMap the original index of each item.
+ */
+function showResult<T>(prefix: string, data: Server.IResultObject<unknown, T[]>, toRow: (item: T) => object) {
+    const command = data.response?.commands?.[0];
+    if (data.error !== Errors.NONE || !command || command.error || !command.readValue) {
+        Log.errorEx('SymbolPaging: Reading %s failed: %s', prefix, Log.buildMessage(data.details ?? command?.error));
+        return;
+    }
 
-                if (readValue) {
-                    textblock.setText(readValue.map((item) => item.text).join('\n'));
-                }
-            }
-        );
-
-        type LoremIpsumItem = {
-            text: string;
-            properties: {
-                length: number;
-                hasUppercase: boolean;
-                chars: string;
-            }
-        }
-    });
+    const grid = Controls.get<TcHmiDatagrid.Control>(prefix + 'Grid');
+    const label = Controls.get<TcHmiTextblock.Control>(prefix + 'Label');
+    grid?.setSrcData(command.readValue.map((item, i) => ({ index: command.filterMap?.[i], ...toRow(item) })));
+    label?.setText(`Result: ${command.readValue.length} of ${command.maxEntries} items`);
 }

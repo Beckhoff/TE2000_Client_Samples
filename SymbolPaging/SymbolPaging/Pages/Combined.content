@@ -1,0 +1,142 @@
+<div id="CombinedContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="932" data-tchmi-height="790">
+<div id="CombinedHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Filtering, sorting and paging combined" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="CombinedContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="900" data-tchmi-height="710">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="CombinedDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="72" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">One command can contain <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">filter</code>, <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">orderBy</code>, <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">offset</code> and <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">limit</code>. The server filters the array first, then sorts the matching items and returns the requested part of them. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">maxEntries</code> contains the number of matching items, not the length of the array.</p>
+</div>
+<div id="CombinedCommandText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="120" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. Filter, sort and page</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The items 10 to 29 of all lowercase items, longest strings first.</p>
+</div>
+<div id="CombinedCommandCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="176" data-tchmi-height="211" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">const command: Server.ICommand&lt;unknown, LoremIpsumItem[]&gt; = {
+    symbol: 'LoremIpsumItems',
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">filter: 'properties::hasUppercase == false'</span>,
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">orderBy: 'properties::length DESC, text ASC'</span>,
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">offset: 10</span>,
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">limit: 20</span>,
+    filterMap: [],
+};
+
+subscriptionId = Server.subscribe&lt;LoremIpsumItem[]&gt;(
+    [command], 500, (data) =&gt; { /* showResult(...) */ });</pre>
+</div>
+<div id="CombinedLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="576" data-tchmi-top="120" data-tchmi-height="24" data-tchmi-width="300" data-tchmi-text="Result" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="CombinedGrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-left="576" data-tchmi-top="152" data-tchmi-height="235" data-tchmi-width="300" data-tchmi-header-height="32" data-tchmi-row-height="28" data-tchmi-show-row-numbers="False">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "index",
+    "label": "Index",
+    "control": "TextBlock",
+    "width": 52,
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 40,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "sortable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "format": null
+  },
+  {
+    "name": "text",
+    "label": "Text",
+    "control": "TextBlock",
+    "width": 100,
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 40,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "sortable": false,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Left",
+    "headerVerticalAlignment": "Center",
+    "format": null
+  },
+  {
+    "name": "length",
+    "label": "Length",
+    "control": "TextBlock",
+    "width": 56,
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 40,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "sortable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "format": null
+  },
+  {
+    "name": "hasUppercase",
+    "label": "Upper",
+    "control": "CheckBox",
+    "width": 52,
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 40,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "editable": false,
+    "sortable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "format": null
+  }
+]
+</script>
+</div>
+<div id="CombinedLifecycleText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="419" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Subscribe only while the table is shown</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The subscription is removed when the page and its table are detached.</p>
+</div>
+<div id="CombinedLifecycleCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="475" data-tchmi-height="211" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">EventProvider.register(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'CombinedGrid.onAttached'</span>, () =&gt; {
+    // ... create the command
+    subscriptionId = Server.subscribe(...);
+});
+
+EventProvider.register(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'CombinedGrid.onDetached'</span>, () =&gt; {
+    if (subscriptionId !== null) {
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Server.unsubscribe</span>(subscriptionId);
+        subscriptionId = null;
+    }
+});</pre>
+</div>
+</div>
+</div>

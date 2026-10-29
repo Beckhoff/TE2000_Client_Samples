@@ -1,5 +1,7 @@
 {
+    "ALLOWED_ORIGINS": [],
     "ALLOW_REMOTE_ADMIN": true,
+    "ALLOW_SSL_CERTIFICATES_HOSTS_ORIGINS": true,
     "AUTO_LOGINUSER": "",
     "AUTO_LOGOFF": "P30D",
     "BASE_HMI_URL": "",
@@ -7,7 +9,7 @@
     "CACHEMAXAGE": "P30D",
     "CACHEMAXENTRYSIZE": 1048576,
     "CACHEMAXSIZE": 2097152,
-    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR4VENDQXEyZ0F3SUJBZ0lKQUtiQ0ZGTFlBT1d1TUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVodgpiR2RsY2tvdFRrSXdNbDl5YjI5ME1DQVhEVEkwTVRFd05qRXpNamswT0ZvWUR6SXdOak13TXpBM01UTXlPVFE0CldqQkJNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1SVXcKRXdZRFZRUUREQXhJYjJ4blpYSktMVTVDTURJd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFSwpBb0lCQVFEV0ExbkZuNUVBcEpnc1V3aWlpYnVjMXRWUkptZGszSmR6RENnME43NGFWd2JWcXpGamlIQ0JzVVIyCnljZHd1Yzg0dmtnOVhYTEtRMjdCKzhSRkFJd2VENERuVkdWalZ0YkEwb3dWaHgrRDBnM1Mvai8rMFgveXBDcHcKcWxSYUdpR25JOGVnalVPRUltbnZwejdHTkxuU3VPSjg0Y1VlbEZyYmUwNWdYY2tUQ0FuU2duUGRVZGt5VUpiNwpiMWtGNDlHb0FQTVhRK01pcXRZeTdEREp4V0QreURRZjVtei9TQVpGOFVwSXd1UHRLbktHSERYdlJQdVBkR1hTCmdOcHh3QVpXVGJxVSt6N2MzMzlhdzYyQlI1T2hlOVQ2RGhjakVjQnNaaW4wNm1ObXNHbTBTMFphVlZ1OHZZMkoKTkVidWYvMnNmSnBqdXN6STVNRE03Zk9DZWZYekFnTUJBQUdqZ2Jnd2diVXdnWVVHQTFVZEVRUitNSHlDQ1d4dgpZMkZzYUc5emRJY0Vmd0FBQVljUUFBQUFBQUFBQUFBQUFBQUFBQUFBQVlJTVNHOXNaMlZ5U2kxT1FqQXlnaGxJCmIyeG5aWEpLTFU1Q01ESXVZbVZqYTJodlptWXVZMjl0aHdTc0VUem9od1RBcURnQmh4RCtnQUFBQUFBQUFMOXkKUlU2UU4xLzdoeEQrZ0FBQUFBQUFBTkxIY3ppZnUvbDFNQjBHQTFVZERnUVdCQlJvbDJweFdNK0dWcmxPTi9DMQo0eHVlbStURi9UQU1CZ05WSFJNQkFmOEVBakFBTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBU1lvK1M4bHpSCkJiaHJkeVpJWTUzSDh5aWlWVVhPcEhlWDBwQWx5b1F6NlFyb3ROZXlMUDFtVFpQWEhRZ3hWUFgvVmtzUUcrcUIKcEpLZjAvSVp5TTFrTFNueWFYbmVWdFQwaDNKWUFlYUdUSDl2RFFlNWRUbG9Hd0xIUFNWS3d4NjBjWHVxdFF5UAozZXRsNXhrVDRTSStHcGYvMy92bkR5SU80aXBlazNzcE5wR2E0RXE3eVR1OER3N01XbHRjbjhrWU9oa2IvSjBFCkUwQjkyNHQ2ZnBEZE4zSmwxMURLby9WN0x4anNLejRSSXd3dGV4VXZOSjRSam85SU03NmlJVjBmTHN0bnZnYnIKMHlLU3VnWGJjM1VNMG91eFNvYWlTSDhNYUpjRlp0cWo4YThid3B6U0ZiTmN4a2ZqZTBNdm4vZnhIVjZFRlMyTApNSC81Vm16Q0pVQ1cKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRHpUQ0NBcldnQXdJQkFnSUpBSWRkNU1JUDZmZGRNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1FWXhDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhHakFZQmdOVkJBTU1FVWh2CmJHZGxja290VGtJd01sOXliMjkwTUNBWERUSTBNVEV3TmpFek1qazBPRm9ZRHpJd05qTXdNekEzTVRNeU9UUTQKV2pCR01Rc3dDUVlEVlFRR0V3SkVSVEViTUJrR0ExVUVDZ3dTVkhkcGJrTkJWQ0JJVFVrZ1UyVnlkbVZ5TVJvdwpHQVlEVlFRRERCRkliMnhuWlhKS0xVNUNNREpmY205dmREQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQCkFEQ0NBUW9DZ2dFQkFMc0p5Mi9tUkZNb3FaOXh4WkcvKzlvcWhYVGJ4bUZURW5IK1ZRREE5ekJiTHNsRG4xSTkKL1VSdDBwbTd3YnRvMHJKdjNMVHFIVlhDU2tEUWdvemFkTzlLZU5UNURnZmp0OStvVnk4SUJSdHBJS2dXM2VqYQpIRkFVRTIwMTRHY0ZaQXJMY3Q4aFFNY2tjVDFTczhYODZsTGdCRVRxWk5oSEM2ek1xaHRWTnRQSCtGVFI1U2FYCng2dXgwelY0MlN2STB4TGxtM3pvSktqVk1hNzNsQTlxeUhLeXVacWRQcy9vdnJTUDZZV0cxUkgrZXdFRkREZkcKKzJVUjhuU2g5RFNHZWFybXorV1FWVmhCejZKODJId1J4bXFEbUdRNnJGWjJ6Ykx3cGdNQTB3SFlabUlHSm02ZgpDZnhnaXM1ZU1sNit3S2JRbTBuVjVUbGNzc3VrRnVrWVZWY0NBd0VBQWFPQnV6Q0J1RENCaFFZRFZSMFJCSDR3CmZJSUpiRzlqWVd4b2IzTjBod1IvQUFBQmh4QUFBQUFBQUFBQUFBQUFBQUFBQUFBQmdneEliMnhuWlhKS0xVNUMKTURLQ0dVaHZiR2RsY2tvdFRrSXdNaTVpWldOcmFHOW1aaTVqYjIySEJLd1JQT2lIQk1Db09BR0hFUDZBQUFBQQpBQUFBdjNKRlRwQTNYL3VIRVA2QUFBQUFBQUFBMHNkek9KKzcrWFV3SFFZRFZSME9CQllFRk9sMkNWdUxtaURDClhQcEVjRU9VTGpWZW9wcE5NQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUIKQUdXeHc4S01xRVZPSFV0QmloR3liZWE3bE1PdmZvb2taeTQzMlY4RXBtc052T0xkcXdtTzIrZlN0WUxtdTFwdQoyd1pkUTk3UGpZSCtRMkJjWm83SGZHRnJTR1ExSUtSYlFIWWNFaWVBYUxQZVpjeERiK3F4c1QxSC9FelZrMUZ0CldkOXprODlJK3BwKzA0Tk1OZzFvRmFkZmlDSE9HSlNuQmFWWmpJbWx1UHZLR2VPQmFhSVZyQytmMkhiMnQ5YlYKemRneUpGL1FtUE5GUmdNUlRreXJOa1hhdnB6aGRmcWtsRXc0TG1MSG5LRndiRVdFN294TWk0Y054OEZjVzhuQgpFWXZSVHowZkdSTEREcS80WnZKTFREYXVoT25iYzdlaXlBZllZNitMMFVDOTg3amNKdmpxMWpCUVFENlBFQitECkZMeUR2VldZOU5CS2pQWWdCOXo3c25FPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVDakNDQXZLZ0F3SUJBZ0lKQUlGd2wyMW5VY1RDTUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXlPVEV5TlRnMU5Wb1lEekl3TmpVd01qSTJNVEkxCk9EVTFXakJFTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVJnd0ZnWURWUVFEREE5Q1FVUkZWMDVDTUMxTlRHWlZWWEV3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQgpEd0F3Z2dFS0FvSUJBUUMrRTNQUnRBd3ozeWcza2IzVUtZUzl3N012UGFkWDVOYkFEUlAyMzlvdVNlMlljM3VICldGVVMvbXRlWTJ3cUcrWFlpZ2Juam9MLzY5dkQ2aWQvQ3RJaUlIRE52Q0Niekp2LzNSTU5FSDVxMnE3VCtIQ2MKeGl2NzNlWTFLYmhhRFR0emVGZHM0Uit6VWhzUFBMVkRRSUJIWFllanBCTUEzN2t4cFRvVFo4eHZjWDJNREZXdwptaEdKT1RVWWduMHc0UDgvd1pid1MzVEY3VjNONk5ic25UaXRIOTRZcVNuVDR1UEhUYmdIT3h6SlBQbTQ5a0xUCk43R1g4TGxiN3ZRL0JUQXV1QXJXMGUwdTRtNkZJbHJ2UkFvSzVmY2VaUkwyanF1VDJSSDRORHBCcnFmM0pYREsKSjQrT01qQUlLWWpMaDZMU29KdVBVclpEM0FMQjdaM1lUK3NYQWdNQkFBR2pnZmN3Z2ZRd2daTUdBMVVkRVFTQgppekNCaUlJSmJHOWpZV3hvYjNOMGh3Ui9BQUFCaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCZ2c5Q1FVUkZWMDVDCk1DMU5UR1pWVlhHQ0hFSkJSRVZYVGtJd0xVMU1abFZWY1M1aVpXTnJhRzltWmk1amIyMkhCS3dSZ1BPSEJNQ28KdkhlSEJNQ29PQUdIRVA2QUFBQUFBQUFBSWxQeHk2RVBadHlIRVA2QUFBQUFBQUFBZkNLQzgrSnQrNmt3SFFZRApWUjBPQkJZRUZEWjVadTBFQmt0NmRmZ2ROajZMRmk0L2pseXZNQjhHQTFVZEl3UVlNQmFBRkdvbzliVEFNb2gyCkVSSUpVaE8zdzIrbml1SGlNQXdHQTFVZEV3RUIvd1FDTUFBd0RnWURWUjBQQVFIL0JBUURBZ1dnTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQldkaVNUMGFSbkZkSnNpM3RQUmNxcWhlWXcwMXZFRWszcUZyRjR5ZGRpOTlDego2Sys3RjlNT0tnbEwxb1dTZUxiRUFKcjdJbVhyb01ESElOcHZqR2trUW5lMXVEY1NXSUxabHRFR3ErNUt6d3BNClNHeHAvNkdzclRsNU90VTVjeUJUOHFOVS8yWE1FeExWT0JmOVlzQkNuWlgybWIwNDhpRnJWUHhyaS9mUm1wK1AKeGYvNTlSU3lDK1Z4d1g4MTJsWk1FQWE4R3dQTm51eDRwcFZPL0lJVkRlZmlNcXgzMm5FeSsvdHBJNXpiUXRMZwpZamo0eCtGTHRBTEUrcjdSd1hNeVRpMytIQlRoZWRWdFVyeDNLT0FNeGI4aWRrNFFzd2I1VXR2dm1uU1BHV3pZCjdLMFpJVERLdzJtNTRSdk1YUXRBdVJMTmxFLzZLLzhmSlU4Y1pGZkwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRUVqQ0NBdnFnQXdJQkFnSUpBUDFLUVFrVEQ5UDhNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1Fa3hDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhIVEFiQmdOVkJBTU1GRUpCClJFVlhUa0l3TFUxTVpsVlZjVjl5YjI5ME1DQVhEVEkyTVRBeU9URXlOVGcxTkZvWUR6SXdOalV3TWpJMk1USTEKT0RVMFdqQkpNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeQpNUjB3R3dZRFZRUUREQlJDUVVSRlYwNUNNQzFOVEdaVlZYRmZjbTl2ZERDQ0FTSXdEUVlKS29aSWh2Y05BUUVCCkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUxuMEcwanFVRmg1TFdTZTdUWDRzYnFSS0oxZ29COWNzN3pwNTJMUXBUbkgKd0tWa2hLWStBYUowTXlwTzBGNGlUMW9wK2czbUVQZUdJeDF1ci8wbEZ2ZVdxU3ArY1V3ZjhCYWhEcmZGcis4egpnWnlEekZOdUNVVFM3SWdQOEJzOHhKUC9GaEl0algzMUZGeXVZL3R2bDdoZ21EN2IwYkFuQnJTQVRydUtjbmV0CmZaNXcrQTVRN1NvQVpaWUp2d2Q1YjBRMWk2VW14Tkpmc08vOFEwbTRVeUhGR2orRlpuYlh5ZjlNRlg5ZjE4Z2IKbDlVUENocVZDcW96YkJEd0ZWRGtCNzFSQVFQc2pqMEdGYzRmMU1RbXlsTHFNQ0tyR2sydDJzeEVaMlYwTWdaaQprazkyK1dHWHV4YVp1OVVseFRLK3BFT0xmb1hodDl2YjU3elRGdW5JeXlNQ0F3RUFBYU9CK2pDQjl6Q0Jrd1lEClZSMFJCSUdMTUlHSWdnbHNiMk5oYkdodmMzU0hCSDhBQUFHSEVBQUFBQUFBQUFBQUFBQUFBQUFBQUFHQ0QwSkIKUkVWWFRrSXdMVTFNWmxWVmNZSWNRa0ZFUlZkT1FqQXRUVXhtVlZWeExtSmxZMnRvYjJabUxtTnZiWWNFckJHQQo4NGNFd0tpOGQ0Y0V3S2c0QVljUS9vQUFBQUFBQUFBaVUvSExvUTltM0ljUS9vQUFBQUFBQUFCOElvTHo0bTM3CnFUQWRCZ05WSFE0RUZnUVVhaWoxdE1BeWlIWVJFZ2xTRTdmRGI2ZUs0ZUl3SHdZRFZSMGpCQmd3Rm9BVWFpajEKdE1BeWlIWVJFZ2xTRTdmRGI2ZUs0ZUl3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFPQmdOVkhROEJBZjhFQkFNQwpBUVl3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUJvMVJxQWp2STg0SzNKMTZZNVVaWXpHMThLMGVIem95a0RTCkFOZ0QxaWxWalpBV3NhM0MyT0xvTUxEaFFPdTlMSXBIOXhOZWNqbUdIU1pQcW03UG81b2JrSWNWYXBWNi9OMUYKU3lqclRQRVMwNkpNZ1pXY2xnaCtOandNTzFLUHE3YmovSUI3TUsrWVorUUJZOHA1T0toQXMxb21JeTJ6bWExLwpSaEJhcXFRWmFFWlFkOWxDUDNUWktOazZmRTNFSG1nSXc4b3VEUWo0ejl0dDNBVmoyckZ4MFQ2VEFuT0c2UWNCCnB3Z0VlbVlocjA5L1dZT0dxamF2R1RPcWpaK1owVnkzYmZ2Y2hqaVZVeVhKWnBZNThCUTYvaTJnS0Z6RTk1dlYKUkZjWWxkZUN0WDVWVkQyNWQ0QW9rR3FyM2RmVG95a1FWbEI5dUt5dnM3YXJsUVhQVHJzPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
     "CERTIFICATEEXPIRATION": "P14000D",
     "CHECKSUMENABLED": true,
     "CHUNKSIZE": 1048576,
@@ -208,8 +210,8 @@
     "FILESREGEX": [
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self'\r\n Content-Type: text/html",
-            "REGEX": ".*\\.(xml|htm|html|shtml)$"
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-src 'self'; media-src 'self'; frame-ancestors 'self'\r\n Content-Type: text/html",
+            "REGEX": ".*\\.(htm|html|shtml)$"
         },
         {
             "ENABLE_GZIP": true,
@@ -218,7 +220,7 @@
         },
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Type: text/xml",
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self' 127.0.0.1:* localhost:* *.localhost:*\r\n Content-Type: text/xml",
             "REGEX": ".*\\.(config|xml)$"
         },
         {
@@ -338,6 +340,11 @@
             "ENABLE_CHUNKING": false,
             "FILESHTTPHEADERS": "Content-Type: application/x-x509-ca-cert",
             "REGEX": ".*\\.(pem)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: application/wasm",
+            "REGEX": ".*\\.(wasm)$"
         }
     ],
     "FLOODPROTECTION": 500,
@@ -348,27 +355,30 @@
     "HTTP_FLOODPROTECTION": 10,
     "INITTIMEOUT": "PT10S",
     "KEEP_ALIVE": "PT40S",
-    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRRFdBMW5GbjVFQXBKZ3MKVXdpaWlidWMxdFZSSm1kazNKZHpEQ2cwTjc0YVZ3YlZxekZqaUhDQnNVUjJ5Y2R3dWM4NHZrZzlYWExLUTI3QgorOFJGQUl3ZUQ0RG5WR1ZqVnRiQTBvd1ZoeCtEMGczUy9qLyswWC95cENwd3FsUmFHaUduSThlZ2pVT0VJbW52CnB6N0dOTG5TdU9KODRjVWVsRnJiZTA1Z1hja1RDQW5TZ25QZFVka3lVSmI3YjFrRjQ5R29BUE1YUStNaXF0WXkKN0RESnhXRCt5RFFmNW16L1NBWkY4VXBJd3VQdEtuS0dIRFh2UlB1UGRHWFNnTnB4d0FaV1RicVUrejdjMzM5YQp3NjJCUjVPaGU5VDZEaGNqRWNCc1ppbjA2bU5tc0dtMFMwWmFWVnU4dlkySk5FYnVmLzJzZkpwanVzekk1TURNCjdmT0NlZlh6QWdNQkFBRUNnZ0VBSmJoYmQwQ0RqeWh6aGNSd3ppMFdlek5HVDlKRUFQdjhXWk8zOWxRbzFuMm0KUDd5M3JNSmNpZzlUY05ocHBZMnFYMmJ5VnBhRTUrOXdzeElMNnRtSTJMZUUwY0VIU2JZQmplVE9PZkVoOWRydApBdFk3TTA5N2pLbXdyVURvTXlWTjd5YVlSYzBBTEdiZ1l4UUlOV2tQbzN0Z3VBQVcvU2ZLeDhwNDZ2VTh2blNtCmd4a0hoV0xDRTBKM3ZuU3oxdDBoZ1YybTE5WHlQd3NKWDQ4N2QyZGN6V2dGRFI3Z25WQWM2ZnZaSHhtUWlMVWoKdlRicDFLdkcrUGtVaEJNREdzR3NPWTl3Y1JqeUdpTE03WiszSVNNYWJocDRZNi9DamsvVGxwNnlNUHFPRGlsQwpqYStsbWt0NnJ4dGtBT2piQUdabm81THF5UVNvRTg0dDVhMnZza3BDcVFLQmdRRDczSnZjL2ZBYUQwbzA2MDZaCmczZDk5TUQ5eUkwMVovTmVRZHM5RDc0ZjNjMDdLaDAxRzA1QSsyMnl6dGxiOVR4K1Iwa2hPUFBGN0ppVUhHbk0KT1ZINGdXdUQ1am1QYkNJYjhBNjlLSDlUeFUxRmQwUDZjaVhad1IrZmsycmFEUUZmTnplejlSd0hGVEpOREVXUgptM3FUbTBBVlptRUI0RGtISzJnRnB3Y05CUUtCZ1FEWmg0cU9mR1hGSHMxUWQ3UzRtcmJJK1R4Yy90SjMvRDdECkNaWTNFSTRLN0owMjhodk5Ubk5rMWwxOTdJV2JyK2lKV1BDVUM2RXp3Z1NodjM5WlJKL1BONVRCWFR2b1ZIWm0KY1pYSW9uMWswcHdmR1VyVHRVZHZTcDVEcFNUZVgwNWFHUWUxWG9kdW5iTzlrU1haekZvdmNxRHVJV0NZS3lGMQptRkFRMUk2b2x3S0JnQkpwZXo5NWxPN2l4VUwvSEx6ZVBvTUh2SUFSQkRtdVFyMVdSU2UrbWVDTWYyOWUwY25MCkdEcHA1d2dXVlErQzZ3dzBPK1ZnMjNsUnBZbldWZW1uR3hYMnFCeDVYU1hkK3RSZUJVWFF5eFlkcTF0enI1V0UKZUwzbGYyRlVEcENvT0x4ME5lOUM4T3lYb1JpKzErc2dHYUxteTVXRTZYeVFucnFtY3JGUEY1WGRBb0dCQUs1TQpESmxlMDZ5K29ZUjRaallFd2JFSEEzY0FOMlFzbVoxdGNROXVGR0pzZFF3eHNsVXZKd2NGUEtSSmdFVGZEbFAvCkQ4V1FDL3FNMjJrL0o2cy9jVTE0RzVsVU8weE5ZUkYwc2EreGd3Zm1PWEl4c2VNd3ZheE8vY0QxOGpTNzZPd0kKWWtUUkdYTm9xVHlic05oekJWQS9hUE5saXlCaWJzenEzanllRkREQkFvR0FFeThTc25qSWlZeGpkV0x5ekVxYwowQVkxYmRUTk0vV0Z4MW9uOW81TnRkZzV3WnZEazhGQ3poU3poajJJVXI3SDhsMnNjOVFxZlpOVkZzTkhEbWloClhLTlkrZ0REM25iNDU4R2F1M2t6Y1g5NWJXUnNpQkRINTJLOTJoSU1RTmgrQTBpTngwbXpwdElHM3ByclE5Q1UKcWZid0NYOTlWbGx6anVnNXl1c0MveDg9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRQytFM1BSdEF3ejN5ZzMKa2IzVUtZUzl3N012UGFkWDVOYkFEUlAyMzlvdVNlMlljM3VIV0ZVUy9tdGVZMndxRytYWWlnYm5qb0wvNjl2RAo2aWQvQ3RJaUlIRE52Q0Niekp2LzNSTU5FSDVxMnE3VCtIQ2N4aXY3M2VZMUtiaGFEVHR6ZUZkczRSK3pVaHNQClBMVkRRSUJIWFllanBCTUEzN2t4cFRvVFo4eHZjWDJNREZXd21oR0pPVFVZZ24wdzRQOC93WmJ3UzNURjdWM04KNk5ic25UaXRIOTRZcVNuVDR1UEhUYmdIT3h6SlBQbTQ5a0xUTjdHWDhMbGI3dlEvQlRBdXVBclcwZTB1NG02RgpJbHJ2UkFvSzVmY2VaUkwyanF1VDJSSDRORHBCcnFmM0pYREtKNCtPTWpBSUtZakxoNkxTb0p1UFVyWkQzQUxCCjdaM1lUK3NYQWdNQkFBRUNnZ0VBRUFPUWl2YnAza2JyV3Y4dTZKeVUzKzRJZnk3cEZla2tSS3IxWnlQRi9JZGkKK3Fpa0hDdVBnMW1uRHgwK1JDLzBoZkZmRW93NXNqa2JXMTZ6ZENzanVCZFdtYWJEY296akNjUUU4bUZVM1VqTwpXUEtCL2x0ZDRrcjROYnR0bWp5cUtSalcrTWZneFZsaUNUOGFvRzlqUDEvOGFRZU9TRkVSQjhNOWFOd2laN01aClpJeENyemEwZU9xMStSK1Q1ZHZqSFE4OHovUzB6WG01Tk1DVjRnT1FTYmlFWDUzcytOUEhUcTcvcVhMU1Yvb1MKeldFODcxaWd5VU9VZDd5MmgzOEFGKzNRTmdZREJjRzROMExzTXc0RUxybmNmaXJBNENoYTZ2S1Fhek9WWGlWMgpZRkd1NEduanA3TUVJTDAvNkNsQlhUb2pXdW9HSHBnOXFtM0FDcDdQVlFLQmdRRG5EUEhhMGcxRHRRbEo5Qjg5CmRPcmZmckZKd0pvMG5VMTU3WDg2bDZrNFNKV3FuTEVreGVBQkxwZ21LWEM1ejhJSDBoRzl4U3daaFJNd1dXV3kKNkloQTZaaXJmQzVsOVJ5RTJJTnEzVUNWdGdVNmpEZG1SLzFOT2xaNjVkRGFabUYwb1VhRDBxZ08xUlB5Sk03ZgpIR1pCWWI2U0RSVkZBWDI1czd2aStZdkdIUUtCZ1FEU21kTkc1WEN5M01kOC9RdVlyOWplbDN0Y3gyVXRtc1dsCk4yeTE5M1pSUFIyNlNEQjJ6QytIRTBnMEtxKzJzY2dtemorS2tYd2pGQitYN0tyRG9vQXkvUHZ4bUNkYzNBbGYKdmR5bWZjemZhL0VwbmtxT3Rpa3ZScVFHWVViYmMvYXZFWWIyc3VQUEFVYXQ2bFp2MlZCMldoNDJ6ZDJiSk5GTgppMzlZVkR5Znd3S0JnSFZLTC9pS1N5dUUybXROWHhKK3FNQzkrdGZheXkxTWNVa2xGRUkxUFRVU084LzViVCtpCnA1MVIvdkRZZHA0TTVvMjd5VC9SdVJwWFlLOVpvblBZOFZvcWUxTUtYaTlwNTRsVXRCbnFxVitXb0Q3aGNUb2QKNzJ0bDR3TE9hV0NGT3BIUFVSR1lQYklSM3VjOFlqd0dtYTQxSlYzVkFHZ2dZcWVEb3l5TXk3VE5Bb0dBQng0cAoxT0NXVVlWQ3ZNZTBwNkZ4Mi93VXNFc1E4VnlreDNPN0dkOVdRV0ttYVpCZEN2YlZ1R1AvY2J2cm1tb2gwS1h4CjRkWU84d1NRR010bjdockU2SFJDYzZUbjE2eWNLSDg3UU9sSmpsZVFuQTU4aUp4QmdoYUtIcWtWQXYvRlc1OWwKQjF0K2RaV2VkT3hScFpBYnR4Uk9weDJJR3VGQXJiVkVSWkQ3UjQ4Q2dZRUF5bzMrWUM4Vm41czQ4RXF2dHJVQwppRkRodjVNdW9Ia1lFZEdXZm8zK3VvYUU4bWdxSC8vTGRndmFjNDg0TlJPN2NFaWRQYjNZeUd4WXlZRExQMlZlCktUbEY1ZXc3eThZeUw2eTlmd2xCdzhidlVFZ05kaTdlN3dSZjV1NzNOcnpuMGRYSi91TUR2eXRQZmpwRGxaa0sKblVnQU5Ca3dIeWJKOXhaZTE1MnJjQkU9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "KEYPASSWORD": "",
     "MAXCONNECTIONSPERCLIENT": 32,
     "MAXHTTPHEADERSIZE": 32768,
     "MAXREQUESTSIZE": 1048576,
     "MAXSESSIONS": 128,
+    "OAUTHAUTHORIZATION_2_0": {},
     "PERMESSAGEDEFLATEENABLED": true,
     "PROJECTNAME": "SymbolPaging",
     "PROJECTVERSION": "1.0.0.0",
+    "RECORDING_MESSAGE_MAX_LENGTH": 5120,
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
-    "REQUIREAUTH": 0,
+    "REQUIREAUTH": 1,
     "REQUIRE_CLIENT_CERTIFICATE": false,
     "SAMESITE_ATTRIBUTE": 2,
-    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUR6VENDQXJXZ0F3SUJBZ0lKQUlkZDVNSVA2ZmRkTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVodgpiR2RsY2tvdFRrSXdNbDl5YjI5ME1DQVhEVEkwTVRFd05qRXpNamswT0ZvWUR6SXdOak13TXpBM01UTXlPVFE0CldqQkdNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1Sb3cKR0FZRFZRUUREQkZJYjJ4blpYSktMVTVDTURKZmNtOXZkRENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUApBRENDQVFvQ2dnRUJBTHNKeTIvbVJGTW9xWjl4eFpHLys5b3FoWFRieG1GVEVuSCtWUURBOXpCYkxzbERuMUk5Ci9VUnQwcG03d2J0bzBySnYzTFRxSFZYQ1NrRFFnb3phZE85S2VOVDVEZ2ZqdDkrb1Z5OElCUnRwSUtnVzNlamEKSEZBVUUyMDE0R2NGWkFyTGN0OGhRTWNrY1QxU3M4WDg2bExnQkVUcVpOaEhDNnpNcWh0Vk50UEgrRlRSNVNhWAp4NnV4MHpWNDJTdkkweExsbTN6b0pLalZNYTczbEE5cXlIS3l1WnFkUHMvb3ZyU1A2WVdHMVJIK2V3RUZERGZHCisyVVI4blNoOURTR2Vhcm16K1dRVlZoQno2SjgySHdSeG1xRG1HUTZyRloyemJMd3BnTUEwd0hZWm1JR0ptNmYKQ2Z4Z2lzNWVNbDYrd0tiUW0wblY1VGxjc3N1a0Z1a1lWVmNDQXdFQUFhT0J1ekNCdURDQmhRWURWUjBSQkg0dwpmSUlKYkc5allXeG9iM04waHdSL0FBQUJoeEFBQUFBQUFBQUFBQUFBQUFBQUFBQUJnZ3hJYjJ4blpYSktMVTVDCk1ES0NHVWh2YkdkbGNrb3RUa0l3TWk1aVpXTnJhRzltWmk1amIyMkhCS3dSUE9pSEJNQ29PQUdIRVA2QUFBQUEKQUFBQXYzSkZUcEEzWC91SEVQNkFBQUFBQUFBQTBzZHpPSis3K1hVd0hRWURWUjBPQkJZRUZPbDJDVnVMbWlEQwpYUHBFY0VPVUxqVmVvcHBOTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCCkFHV3h3OEtNcUVWT0hVdEJpaEd5YmVhN2xNT3Zmb29rWnk0MzJWOEVwbXNOdk9MZHF3bU8yK2ZTdFlMbXUxcHUKMndaZFE5N1BqWUgrUTJCY1pvN0hmR0ZyU0dRMUlLUmJRSFljRWllQWFMUGVaY3hEYitxeHNUMUgvRXpWazFGdApXZDl6azg5SStwcCswNE5NTmcxb0ZhZGZpQ0hPR0pTbkJhVlpqSW1sdVB2S0dlT0JhYUlWckMrZjJIYjJ0OWJWCnpkZ3lKRi9RbVBORlJnTVJUa3lyTmtYYXZwemhkZnFrbEV3NExtTEhuS0Z3YkVXRTdveE1pNGNOeDhGY1c4bkIKRVl2UlR6MGZHUkxERHEvNFp2SkxURGF1aE9uYmM3ZWl5QWZZWTYrTDBVQzk4N2pjSnZqcTFqQlFRRDZQRUIrRApGTHlEdlZXWTlOQktqUFlnQjl6N3NuRT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
-    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRQzdDY3R2NWtSVEtLbWYKY2NXUnYvdmFLb1YwMjhaaFV4SngvbFVBd1Bjd1d5N0pRNTlTUGYxRWJkS1p1OEc3YU5LeWI5eTA2aDFWd2twQQowSUtNMm5UdlNualUrUTRINDdmZnFGY3ZDQVViYVNDb0Z0M28yaHhRRkJOdE5lQm5CV1FLeTNMZklVREhKSEU5ClVyUEYvT3BTNEFSRTZtVFlSd3VzektvYlZUYlR4L2hVMGVVbWw4ZXJzZE0xZU5rcnlOTVM1WnQ4NkNTbzFUR3UKOTVRUGFzaHlzcm1hblQ3UDZMNjBqK21GaHRVUi9uc0JCUXczeHZ0bEVmSjBvZlEwaG5tcTVzL2xrRlZZUWMraQpmTmg4RWNacWc1aGtPcXhXZHMyeThLWURBTk1CMkdaaUJpWnVud244WUlyT1hqSmV2c0NtMEp0SjFlVTVYTExMCnBCYnBHRlZYQWdNQkFBRUNnZ0VBUktWS29nNGNJMzA0REFuZ25pYWRFNndwZ1FNc1l3bnZLaUZUSjB5ckxIYzYKeTZsaTd2ZExYZk1FcVdHc3I5REFDN2RjaEpXc0lJNkhYQlJxNWJGRDI1TTBsODIwcFphaEpKZ1BMM2E5RVJ0YgpYZlhPaWlpSzNhVVFvRE4yNGJpcngvNTFjWWt0MGlrQTJxWGd6eGlORTgrZUlZRDVkQnRYSUp1WkR5RU9WMWxiCllsOU9BL1JhSWQ2Z0UxLzJaT0RkdEtnejNJMFNvSjBXUXdWSE1UWkxpTDM2T0tFZnZNS1dBelV2bVZOZ0JwOTgKZjQzclVMRW14bE8wTDR3cUVYZUZHVG5LYUpSaWxUK0ZHN1NRM25rR2JkYlZpVnlFUzY3V25mcGVVQzJqWWZvQwp1anFxZm5mZEkyOWIwSVhPRnBWcFJpMzMzWDl0aGZMQWV1MnRJSzZJbVFLQmdRRG5CWmFNWjI5ZGZBc01HL254CnRSYUVQdEVVQ0RnSFRkb0NYZXE0NmtYNCtYRCtPd0x0SjRTd2lISUFMMkI5YW50SE5QdmRjZ3hPVGJ3d0JIYXYKUkxKSzFBWkJ3ZlN6ODlNbEJWOURHTElUSDhPV0JjMkk2Y3dBVzY2QnQ1TEJaUUJlOUR0dktrY2lBWmgxMC85UgpUVzc1cVJreDd0bm9aR1Bvd3IvTEpOcDNnd0tCZ1FEUFFzc1VGYnh3WU1zbFlIRlF0ekQ2QktWYkU1SGRhaVBkClJHNnMwaUh3Z25maWZjTUpLeDRNQzcrMS9RdWxSbU5ndzVIeTRIVzVpZDhpMGVsL3BnQm84VzdiczlpbFhibmIKU3d5eWgxd0hqaXZ5dmh1WUY3dTdjT1hjeWI1WUhma2g1VmVpWWpjRjRqdXZjWWtZRnJFVzJlRGJCUGxMY0RYSAoxY0ttL3ZhdW5RS0JnUUNCTzNJRkp0TjRjeXhtNEx1SUI2b0ozbTN0QzgvejNnd0hhT3dsOXYrZmtFSXlKV2EwCnJYZWZuU1JRa0RBazJFMFAvMGFwa09QclpiYlJFWjRtMjRIMU0vZ3dEc1RKYWFzQ3VhZVpqQllKZHFwZG9POWkKR0k5QzRBYVZqOUJybVFtRkZKQ3UxZktteGtlNEdoaG9MYTNYd1UxVHptNWRmdE1ZNE9DVFRoRmI2d0tCZ0hiTQpwVlM4NU1kUlkvL25tT3dZSlJXYUppSGZSTU95UEI1dlJEVUJPWHovZTdJeVBlSDZlZjJUbW02NVBieWRiUWNnCjhuNVIxSWptRXlXRlJwN3BTdURjU3B2YUtYc1lEeGs0bW0yV2t0U3QxRmtPU1FqVHljSzJBcnVjVStOMFFzSUEKRUV3K21hVmd1SzltbDV0Y0htT252WEF0R0t2NkJJbW42Q3dLaHVFdEFvR0FNeFp1UFFGV1JDVm5MelBjOC9NdAoyK1p6N0I5MUdab2IrT2k2NHNUWGNLSCtJRHRMdXdKLzhra2xNRWJrYjdTQll3a2xaS3Zyc01XbXdnTElISERpCkhSdEFJSlhoRWFJUXc4RVlZTEU4anBONEM1QnVRZUNONS81QUJwSHdyY0k2OWVMb1c3aXEwbGdZMUhHOXU3dFgKTytUTEd4QzNlMit4R3Y4Z1lnclpGQ3M9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVFakNDQXZxZ0F3SUJBZ0lKQVAxS1FRa1REOVA4TUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXlPVEV5TlRnMU5Gb1lEekl3TmpVd01qSTJNVEkxCk9EVTBXakJKTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVIwd0d3WURWUVFEREJSQ1FVUkZWMDVDTUMxTlRHWlZWWEZmY205dmREQ0NBU0l3RFFZSktvWklodmNOQVFFQgpCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFMbjBHMGpxVUZoNUxXU2U3VFg0c2JxUktKMWdvQjljczd6cDUyTFFwVG5ICndLVmtoS1krQWFKME15cE8wRjRpVDFvcCtnM21FUGVHSXgxdXIvMGxGdmVXcVNwK2NVd2Y4QmFoRHJmRnIrOHoKZ1p5RHpGTnVDVVRTN0lnUDhCczh4SlAvRmhJdGpYMzFGRnl1WS90dmw3aGdtRDdiMGJBbkJyU0FUcnVLY25ldApmWjV3K0E1UTdTb0FaWllKdndkNWIwUTFpNlVteE5KZnNPLzhRMG00VXlIRkdqK0ZabmJYeWY5TUZYOWYxOGdiCmw5VVBDaHFWQ3FvemJCRHdGVkRrQjcxUkFRUHNqajBHRmM0ZjFNUW15bExxTUNLckdrMnQyc3hFWjJWME1nWmkKa2s5MitXR1h1eGFadTlVbHhUSytwRU9MZm9YaHQ5dmI1N3pURnVuSXl5TUNBd0VBQWFPQitqQ0I5ekNCa3dZRApWUjBSQklHTE1JR0lnZ2xzYjJOaGJHaHZjM1NIQkg4QUFBR0hFQUFBQUFBQUFBQUFBQUFBQUFBQUFBR0NEMEpCClJFVlhUa0l3TFUxTVpsVlZjWUljUWtGRVJWZE9RakF0VFV4bVZWVnhMbUpsWTJ0b2IyWm1MbU52YlljRXJCR0EKODRjRXdLaThkNGNFd0tnNEFZY1Evb0FBQUFBQUFBQWlVL0hMb1E5bTNJY1Evb0FBQUFBQUFBQjhJb0x6NG0zNwpxVEFkQmdOVkhRNEVGZ1FVYWlqMXRNQXlpSFlSRWdsU0U3ZkRiNmVLNGVJd0h3WURWUjBqQkJnd0ZvQVVhaWoxCnRNQXlpSFlSRWdsU0U3ZkRiNmVLNGVJd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBT0JnTlZIUThCQWY4RUJBTUMKQVFZd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFCbzFScUFqdkk4NEszSjE2WTVVWll6RzE4SzBlSHpveWtEUwpBTmdEMWlsVmpaQVdzYTNDMk9Mb01MRGhRT3U5TElwSDl4TmVjam1HSFNaUHFtN1BvNW9ia0ljVmFwVjYvTjFGClN5anJUUEVTMDZKTWdaV2NsZ2grTmp3TU8xS1BxN2JqL0lCN01LK1laK1FCWThwNU9LaEFzMW9tSXkyem1hMS8KUmhCYXFxUVphRVpRZDlsQ1AzVFpLTms2ZkUzRUhtZ0l3OG91RFFqNHo5dHQzQVZqMnJGeDBUNlRBbk9HNlFjQgpwd2dFZW1ZaHIwOS9XWU9HcWphdkdUT3FqWitaMFZ5M2JmdmNoamlWVXlYSlpwWTU4QlE2L2kyZ0tGekU5NXZWClJGY1lsZGVDdFg1VlZEMjVkNEFva0dxcjNkZlRveWtRVmxCOXVLeXZzN2FybFFYUFRycz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQzU5QnRJNmxCWWVTMWsKbnUwMStMRzZrU2lkWUtBZlhMTzg2ZWRpMEtVNXg4Q2xaSVNtUGdHaWRETXFUdEJlSWs5YUtmb041aEQzaGlNZApicS85SlJiM2xxa3FmbkZNSC9BV29RNjN4YS92TTRHY2c4eFRiZ2xFMHV5SUQvQWJQTVNUL3hZU0xZMTk5UlJjCnJtUDdiNWU0WUpnKzI5R3dKd2EwZ0U2N2luSjNyWDJlY1BnT1VPMHFBR1dXQ2I4SGVXOUVOWXVsSnNUU1g3RHYKL0VOSnVGTWh4Um8vaFdaMjE4bi9UQlYvWDlmSUc1ZlZEd29hbFFxcU0yd1E4QlZRNUFlOVVRRUQ3STQ5QmhYTwpIOVRFSnNwUzZqQWlxeHBOcmRyTVJHZGxkRElHWXBKUGR2bGhsN3NXbWJ2VkpjVXl2cVJEaTM2RjRiZmIyK2U4CjB4YnB5TXNqQWdNQkFBRUNnZ0VBSDFEeDYyU3lwVU83RmxBQmlPNWFHQjVzSlp6cE9uN2xNakorS2xFVEVsa0cKbzVQN0Z2Z29WRkNYY1UrV25kUFBZMUxnYnNqSklMWnhZWHFMbnVsSkplYzBsQmg1UWlXNnpFVFJjcmVUT29pRgpFblBMekYwaXFIbVJKaFR4RGRVOUVlT0t0d0wrNmpDRS9sck1NY01JWFIrL1pBNm5FTEJ4MjZJa0lFZGZvYkhICmtIYk9qWjR3cjQvclBWY3Z0anZuR1k4bVkzY042UUF1RmxUOGFLYUt6Yk9SNHIwUnlrTnQyUTE5eEdRZkVESVIKRWJlU0hqQkRjZE9PczZSZStEYWYxdmFuN1hrei9ZY3RSYmlwaFpFQ0tHZ2VKQnpiUk5HYmNta0JGWGVNZDlDRgp3SXdVZ0k1NkdJUlJseEJEeDFZRFZieE9HYlRCS0lkMC9nTStyaytaVVFLQmdRRGMxZ0xEQmszL2xUcDNJYlo5CmNlZTE0RTkyd25HZTQ5bDFNMkNkbll1Qm56U3dTUmcwVFBYeEJhYUwzbldnNnY4bkV4T1Y2aThNTUxlVnBJS2UKajlCVHRoUFBqNWJEcTIxUlNUUTJ1VW5iM0xYWDJONjBvNis4V3NwRnRseElJWDdqdHVNRmc5M3dlTXJFVDFHTQpra0hPZk5ES0xBTU1SVStuVjRMQlRRVDZxUUtCZ1FEWGtDeTZaQm15dmU0RU9tdmRVN1NJSFN3YmpTZSttUmljCjlRUU5kRUQyelN3KzNCUVIwb3lPMjE2aXRHeWF1NWQ3ZEp6d2N0MllMdzFIaEMxaXl3OWpSaHUvdWs5K3FLQU8KTUI4K1BqUXNWZWs2U3N1OUk0a3FQN3kyVGdKR1JTdThIZTJmU0kraHJZeE5oUmNTYnpvV25JQUdrM2N6cWpQawpDL1pZbDNKaTZ3S0JnQzJSVDJLVW8zV1FnazdndXZvcGpjbGVycWJ2dW1neDFjWTBRc1JqSk0wclg4RGNaRTB1CmNEVTZtRUlXTmlsdE5CY0kvYXFhZHZqSitLZTlHV0xFaEJVeDVlYVhWMkdxdHRUbUNRc2RzcHJXY1FOSDhiUk8KYmsyc1lqNStRWTUwc3UwajZMWlRubkVuUzVlMFVqeHlWWGZaRTNBVUl0RGVZSEJFUTJ2Rmk3aDVBb0dBTTBNTQo3L0pZRGlLT2xLRFQvOWtsQ0cxdmpNbS9sdHJQZUp2bnI4OWlsNDVwSkRXdjdDRVczZTRiRGpRNzAzd2k1Ty94ClZsanFpNE04OURIaG5Tbk82ZnZGSTQ0SjA0UUVNL3VMb29DbVpaaTBrdkV3akRVRUxIRGx6ckMwWjhPUlIvWVMKQ1J2M1ZDcHlRQWtUV0lYczJXMjBJRnczTDZrZEYvRWtUeU1NeDZzQ2dZQTZKSHlNTjV3MGo2SU1NbWtqWWZQYQpGVXQwQVdGKzFucEpNQ3JTc1hsTTdJNTFtYis1dm5NY0ZzRUVPd0FzaUlDTS9udTYxS2RFb25HazkvUEh3THZjCjlIWGJHQ1NrSVhVMzdMVTIwRlNQWHU4NVVHZnlvUkFUS3lwVzZ3bHFCcGJjRjdkRWRWcE82bEQ4aUVzZjljRUMKZHExVmg1UEswTXdraGpGc29IZktyUT09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "SESSIONSTORAGE": {},
     "SHOW_CONFIGURATION_HINTS": true,
     "SHOW_MAINTENANCE_MODE": true,
     "SHUTDOWNTIMEOUT": "PT10S",
     "SOCKET_TIMEOUT": "PT10S",
+    "SUBSCRIPTION_FLOODPROTECTION": 100,
     "SYMBOLS": {
         "ADS.AdsSyncReadDeviceInfoReq": {
             "ACCESS": 3,
@@ -639,70 +649,168 @@
             "MAPPING": "Diagnostics",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
-                "properties": {
-                    "runtimes": {
-                        "additionalProperties": {
-                            "properties": {
-                                "adsApplicationName": {
-                                    "propertyOrder": 5,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
+                "allOf": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "object"
+                                    }
                                 },
-                                "adsProjectCompiledAt": {
-                                    "format": "date-time",
-                                    "propertyOrder": 7,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "adsProjectName": {
-                                    "propertyOrder": 6,
-                                    "type": "string"
-                                },
-                                "adsState": {
-                                    "propertyOrder": 3,
-                                    "type": "string"
-                                },
-                                "adsVersion": {
-                                    "propertyOrder": 8,
-                                    "type": "string"
-                                },
-                                "adsVersionBuild": {
-                                    "minimum": 0,
-                                    "propertyOrder": 9,
-                                    "type": "integer",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "connectionState": {
-                                    "propertyOrder": 1,
-                                    "type": "string"
-                                },
-                                "deviceName": {
-                                    "propertyOrder": 4,
-                                    "type": "string"
-                                },
-                                "isUserModeRuntime": {
-                                    "propertyOrder": 10,
-                                    "type": "boolean",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "systemServiceAdsState": {
-                                    "propertyOrder": 2,
-                                    "type": "string"
-                                }
+                                "type": "object",
+                                "versions": [
+                                    1.0
+                                ]
                             },
-                            "required": [
-                                "deviceName",
-                                "adsVersion",
-                                "adsState",
-                                "connectionState"
-                            ],
-                            "type": "object"
-                        },
-                        "type": "object"
+                            {
+                                "properties": {
+                                    "domainError": {
+                                        "format": "multiline",
+                                        "propertyOrder": 3,
+                                        "type": "string"
+                                    },
+                                    "domainState": {
+                                        "enum": [
+                                            "Good",
+                                            "Bad"
+                                        ],
+                                        "propertyOrder": 2,
+                                        "type": "string"
+                                    },
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "propertyOrder": 1,
+                                        "type": "object"
+                                    }
+                                },
+                                "required": [
+                                    "domainState"
+                                ],
+                                "type": "object",
+                                "versions": [
+                                    2.0
+                                ]
+                            }
+                        ]
                     }
-                },
-                "type": "object"
+                ]
             },
             "USEMAPPING": true
         },
@@ -1085,6 +1193,10 @@
                 },
                 "function": true,
                 "type": "object",
+                "versions": [
+                    1.0,
+                    2.0
+                ],
                 "writeValue": {
                     "properties": {
                         "domain": {
@@ -1934,28 +2046,122 @@
             "MAPPING": "IsSymbolOutdated",
             "OPTIONS": {},
             "SCHEMA": {
-                "enum": [
-                    "SYMBOL_UP_TO_DATE",
-                    "SYMBOL_SCHEMA_DIFFERENCE",
-                    "SYMBOL_INVALID_DOMAIN",
-                    "SYMBOL_INVALID_SYMBOL"
-                ],
-                "function": true,
-                "type": "string",
-                "writeValue": {
-                    "properties": {
-                        "symbol": {
-                            "description": "Name of the symbol.",
-                            "type": "string"
+                "anyOf": [
+                    {
+                        "enum": [
+                            "SYMBOL_UP_TO_DATE",
+                            "SYMBOL_SCHEMA_DIFFERENCE",
+                            "SYMBOL_INVALID_DOMAIN",
+                            "SYMBOL_INVALID_SYMBOL"
+                        ],
+                        "function": true,
+                        "type": "string",
+                        "versions": [
+                            1.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
                         }
                     },
-                    "required": [
-                        "symbol"
-                    ],
-                    "type": "object"
-                }
+                    {
+                        "function": true,
+                        "properties": {
+                            "mappedSymbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            },
+                            "state": {
+                                "enum": [
+                                    "SYMBOL_UP_TO_DATE",
+                                    "SYMBOL_SCHEMA_DIFFERENCE",
+                                    "SYMBOL_INVALID_DOMAIN",
+                                    "SYMBOL_INVALID_SYMBOL"
+                                ],
+                                "type": "string"
+                            },
+                            "symbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            }
+                        },
+                        "required": [
+                            "state"
+                        ],
+                        "type": "object",
+                        "versions": [
+                            2.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ]
             },
             "USEMAPPING": true
+        },
+        "JumbledAlphabet": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": true,
+            "MAPPING": "",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "items": {
+                            "$ref": "tchmi:general#/definitions/String"
+                        },
+                        "type": "array"
+                    },
+                    {
+                        "default": [
+                            "d",
+                            "k",
+                            "i",
+                            "o",
+                            "e",
+                            "b",
+                            "p",
+                            "n",
+                            "j",
+                            "c",
+                            "a",
+                            "u",
+                            "m",
+                            "x",
+                            "w",
+                            "s",
+                            "g",
+                            "y",
+                            "z",
+                            "f",
+                            "v",
+                            "t",
+                            "h",
+                            "l",
+                            "r",
+                            "q"
+                        ]
+                    }
+                ]
+            },
+            "USEMAPPING": false
         },
         "ListActiveSessions": {
             "ACCESS": 3,
@@ -2132,7 +2338,7 @@
                             "type": "string"
                         },
                         "debuggerAttached": {
-                            "description": "indicates whether a debugger is or will be attached to the extension",
+                            "description": "Indicates whether a debugger is or will be attached to the extension.",
                             "type": "boolean"
                         },
                         "error": {
@@ -2150,9 +2356,57 @@
                             "description": "The globally unique identifier associated with the extension.",
                             "type": "string"
                         },
-                        "licensed": {
-                            "description": "indicate the extension is license status",
+                        "hideDomainOnLoginPage": {
+                            "description": "Shows if the domain should be hidden on the login page.",
                             "type": "boolean"
+                        },
+                        "licensed": {
+                            "description": "Indicate the extension is license status.",
+                            "type": "boolean"
+                        },
+                        "oauthConfig": {
+                            "additionalProperties": false,
+                            "description": "The OAuth provider configuration information that is associated with the extension.",
+                            "properties": {
+                                "authorizationEndpoint": {
+                                    "description": "The OAuth authorization endpoint.",
+                                    "type": "string"
+                                },
+                                "clientId": {
+                                    "description": "The application (client) ID for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "displayName": {
+                                    "description": "The display name of the OAuth provider configuration.",
+                                    "type": "string"
+                                },
+                                "domainHint": {
+                                    "description": "The domain hint for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "error": {
+                                    "$ref": "tchmi:general#/definitions/errorDetails"
+                                },
+                                "prompt": {
+                                    "description": "The prompt behavior for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "responseType": {
+                                    "description": "The response type expected from the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "scope": {
+                                    "description": "The scope of access requested from the OAuth provider.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "displayName",
+                                "authorizationEndpoint",
+                                "clientId",
+                                "responseType"
+                            ],
+                            "type": "object"
                         },
                         "packageVersion": {
                             "description": "The version of the NuGet package that contains the extension.",
@@ -2180,7 +2434,7 @@
                             "type": "string"
                         },
                         "thirdParty": {
-                            "description": "indicate the extension is a customer extension",
+                            "description": "Indicate the extension is a customer extension.",
                             "type": "boolean"
                         },
                         "updated": {
@@ -2520,6 +2774,22 @@
             },
             "USEMAPPING": true
         },
+        "ListUserGroups": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSrv",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListUserGroups",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "USEMAPPING": true
+        },
         "ListUserNames": {
             "ACCESS": 3,
             "CUSTOMERDATA": "",
@@ -2547,26 +2817,71 @@
             "MAPPING": "ListUsers",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
-                "items": {
-                    "description": "List of all users and their permissions.",
-                    "properties": {
-                        "domain": {
-                            "type": "string"
-                        },
-                        "groups": {
-                            "items": {
-                                "type": "string"
+                "anyOf": [
+                    {
+                        "function": true,
+                        "items": {
+                            "description": "List of all users and their permissions.",
+                            "properties": {
+                                "domain": {
+                                    "type": "string"
+                                },
+                                "groups": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "name": {
+                                    "type": "string"
+                                }
                             },
-                            "type": "array"
+                            "type": "object"
                         },
-                        "name": {
-                            "type": "string"
-                        }
+                        "type": "array",
+                        "versions": [
+                            1.0
+                        ]
                     },
-                    "type": "object"
-                },
-                "type": "array"
+                    {
+                        "function": true,
+                        "items": {
+                            "description": "List of all users and their permissions.",
+                            "properties": {
+                                "autoLogoff": {
+                                    "format": "timespan",
+                                    "type": "string"
+                                },
+                                "domain": {
+                                    "type": "string"
+                                },
+                                "groups": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "locale": {
+                                    "$ref": "tchmi:server#/definitions/userLocale"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "timeFormatLocale": {
+                                    "$ref": "tchmi:server#/definitions/userLocale"
+                                },
+                                "timeZone": {
+                                    "$ref": "tchmi:server#/definitions/userTimeZone"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array",
+                        "versions": [
+                            2.0
+                        ]
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -2649,6 +2964,10 @@
                             "type": "string"
                         }
                     },
+                    "required": [
+                        "userName",
+                        "password"
+                    ],
                     "type": "object"
                 }
             },
@@ -2663,48 +2982,1574 @@
             "MAPPING": "Logout",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true
+                "function": true,
+                "properties": {
+                    "redirectUrl": {
+                        "description": "URL to redirect to after logout. If not specified, the user will be redirected to the login page.",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             },
             "USEMAPPING": true
         },
-        "PLC1.MAIN.jumbledAlphabet": {
+        "LoremIpsum": {
             "ACCESS": 3,
-            "CUSTOMERDATA": "",
-            "DOMAIN": "ADS",
+            "DOMAIN": "TcHmiSrv",
             "DYNAMIC": true,
-            "HIDDEN": false,
-            "MAPPING": "PLC1::MAIN::jumbledAlphabet",
+            "MAPPING": "",
             "OPTIONS": {},
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY (0..25) OF STRING(80)"
+                "allOf": [
+                    {
+                        "items": {
+                            "$ref": "tchmi:general#/definitions/String"
+                        },
+                        "type": "array"
+                    },
+                    {
+                        "default": [
+                            "Lorem",
+                            "ipsum",
+                            "dolor",
+                            "sit",
+                            "amet,",
+                            "consetetur",
+                            "sadipscing",
+                            "elitr,",
+                            "sed",
+                            "diam",
+                            "nonumy",
+                            "eirmod",
+                            "tempor",
+                            "invidunt",
+                            "ut",
+                            "labore",
+                            "et",
+                            "dolore",
+                            "magna",
+                            "aliquyam",
+                            "erat,",
+                            "sed",
+                            "diam",
+                            "voluptua.",
+                            "At",
+                            "vero",
+                            "eos",
+                            "et",
+                            "accusam",
+                            "et",
+                            "justo",
+                            "duo",
+                            "dolores",
+                            "et",
+                            "ea",
+                            "rebum.",
+                            "Stet",
+                            "clita",
+                            "kasd",
+                            "gubergren,",
+                            "no",
+                            "sea",
+                            "takimata",
+                            "sanctus",
+                            "est",
+                            "Lorem",
+                            "ipsum",
+                            "dolor",
+                            "sit",
+                            "amet.",
+                            "Lorem",
+                            "ipsum",
+                            "dolor",
+                            "sit",
+                            "amet,",
+                            "consetetur",
+                            "sadipscing",
+                            "elitr,",
+                            "sed",
+                            "diam",
+                            "nonumy",
+                            "eirmod",
+                            "tempor",
+                            "invidunt",
+                            "ut",
+                            "labore",
+                            "et",
+                            "dolore",
+                            "magna",
+                            "aliquyam",
+                            "erat,",
+                            "sed",
+                            "diam",
+                            "voluptua.",
+                            "At",
+                            "vero",
+                            "eos",
+                            "et",
+                            "accusam",
+                            "et",
+                            "justo",
+                            "duo",
+                            "dolores",
+                            "et",
+                            "ea",
+                            "rebum.",
+                            "Stet",
+                            "clita",
+                            "kasd",
+                            "gubergren,",
+                            "no",
+                            "sea",
+                            "takimata",
+                            "sanctus",
+                            "est",
+                            "Lorem",
+                            "ipsum",
+                            "dolor",
+                            "sit",
+                            "amet."
+                        ]
+                    }
+                ]
             },
-            "USEMAPPING": true
+            "USEMAPPING": false
         },
-        "PLC1.MAIN.loremIpsum": {
+        "LoremIpsumItems": {
             "ACCESS": 3,
-            "CUSTOMERDATA": "",
-            "DOMAIN": "ADS",
+            "DOMAIN": "TcHmiSrv",
             "DYNAMIC": true,
-            "HIDDEN": false,
-            "MAPPING": "PLC1::MAIN::loremIpsum",
+            "MAPPING": "",
             "OPTIONS": {},
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY (0..99) OF STRING(80)"
+                "allOf": [
+                    {
+                        "items": {
+                            "properties": {
+                                "properties": {
+                                    "properties": {
+                                        "chars": {
+                                            "items": {
+                                                "$ref": "tchmi:general#/definitions/String"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "hasUppercase": {
+                                            "type": "boolean"
+                                        },
+                                        "length": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "text": {
+                                    "$ref": "tchmi:general#/definitions/String"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    {
+                        "default": [
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "L",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "m"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 5
+                                },
+                                "text": "Lorem"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "u",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "ipsum"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "dolor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "i",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sit"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "m",
+                                        "e",
+                                        "t",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "amet,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "c",
+                                        "o",
+                                        "n",
+                                        "s",
+                                        "e",
+                                        "t",
+                                        "e",
+                                        "t",
+                                        "u",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "consetetur"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "a",
+                                        "d",
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "c",
+                                        "i",
+                                        "n",
+                                        "g"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "sadipscing"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "l",
+                                        "i",
+                                        "t",
+                                        "r",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "elitr,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sed"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "i",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "diam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "n",
+                                        "o",
+                                        "n",
+                                        "u",
+                                        "m",
+                                        "y"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "nonumy"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "i",
+                                        "r",
+                                        "m",
+                                        "o",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "eirmod"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "t",
+                                        "e",
+                                        "m",
+                                        "p",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "tempor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "n",
+                                        "v",
+                                        "i",
+                                        "d",
+                                        "u",
+                                        "n",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "invidunt"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "u",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "ut"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "l",
+                                        "a",
+                                        "b",
+                                        "o",
+                                        "r",
+                                        "e"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "labore"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r",
+                                        "e"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "dolore"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "m",
+                                        "a",
+                                        "g",
+                                        "n",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "magna"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "l",
+                                        "i",
+                                        "q",
+                                        "u",
+                                        "y",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "aliquyam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "r",
+                                        "a",
+                                        "t",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "erat,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sed"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "i",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "diam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "v",
+                                        "o",
+                                        "l",
+                                        "u",
+                                        "p",
+                                        "t",
+                                        "u",
+                                        "a",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 9
+                                },
+                                "text": "voluptua."
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "A",
+                                        "t"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 2
+                                },
+                                "text": "At"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "v",
+                                        "e",
+                                        "r",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "vero"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "o",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "eos"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "c",
+                                        "c",
+                                        "u",
+                                        "s",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "accusam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "j",
+                                        "u",
+                                        "s",
+                                        "t",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "justo"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "u",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "duo"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "dolores"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "ea"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "r",
+                                        "e",
+                                        "b",
+                                        "u",
+                                        "m",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "rebum."
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "S",
+                                        "t",
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 4
+                                },
+                                "text": "Stet"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "c",
+                                        "l",
+                                        "i",
+                                        "t",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "clita"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "k",
+                                        "a",
+                                        "s",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "kasd"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "g",
+                                        "u",
+                                        "b",
+                                        "e",
+                                        "r",
+                                        "g",
+                                        "r",
+                                        "e",
+                                        "n",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "gubergren,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "n",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "no"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sea"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "t",
+                                        "a",
+                                        "k",
+                                        "i",
+                                        "m",
+                                        "a",
+                                        "t",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "takimata"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "a",
+                                        "n",
+                                        "c",
+                                        "t",
+                                        "u",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "sanctus"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "s",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "est"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "L",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "m"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 5
+                                },
+                                "text": "Lorem"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "u",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "ipsum"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "dolor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "i",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sit"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "m",
+                                        "e",
+                                        "t",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "amet."
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "L",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "m"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 5
+                                },
+                                "text": "Lorem"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "u",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "ipsum"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "dolor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "i",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sit"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "m",
+                                        "e",
+                                        "t",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "amet,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "c",
+                                        "o",
+                                        "n",
+                                        "s",
+                                        "e",
+                                        "t",
+                                        "e",
+                                        "t",
+                                        "u",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "consetetur"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "a",
+                                        "d",
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "c",
+                                        "i",
+                                        "n",
+                                        "g"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "sadipscing"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "l",
+                                        "i",
+                                        "t",
+                                        "r",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "elitr,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sed"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "i",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "diam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "n",
+                                        "o",
+                                        "n",
+                                        "u",
+                                        "m",
+                                        "y"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "nonumy"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "i",
+                                        "r",
+                                        "m",
+                                        "o",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "eirmod"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "t",
+                                        "e",
+                                        "m",
+                                        "p",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "tempor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "n",
+                                        "v",
+                                        "i",
+                                        "d",
+                                        "u",
+                                        "n",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "invidunt"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "u",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "ut"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "l",
+                                        "a",
+                                        "b",
+                                        "o",
+                                        "r",
+                                        "e"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "labore"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r",
+                                        "e"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "dolore"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "m",
+                                        "a",
+                                        "g",
+                                        "n",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "magna"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "l",
+                                        "i",
+                                        "q",
+                                        "u",
+                                        "y",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "aliquyam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "r",
+                                        "a",
+                                        "t",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "erat,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sed"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "i",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "diam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "v",
+                                        "o",
+                                        "l",
+                                        "u",
+                                        "p",
+                                        "t",
+                                        "u",
+                                        "a",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 9
+                                },
+                                "text": "voluptua."
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "A",
+                                        "t"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 2
+                                },
+                                "text": "At"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "v",
+                                        "e",
+                                        "r",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "vero"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "o",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "eos"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "c",
+                                        "c",
+                                        "u",
+                                        "s",
+                                        "a",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "accusam"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "j",
+                                        "u",
+                                        "s",
+                                        "t",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "justo"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "u",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "duo"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "dolores"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "et"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "ea"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "r",
+                                        "e",
+                                        "b",
+                                        "u",
+                                        "m",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 6
+                                },
+                                "text": "rebum."
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "S",
+                                        "t",
+                                        "e",
+                                        "t"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 4
+                                },
+                                "text": "Stet"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "c",
+                                        "l",
+                                        "i",
+                                        "t",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "clita"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "k",
+                                        "a",
+                                        "s",
+                                        "d"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 4
+                                },
+                                "text": "kasd"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "g",
+                                        "u",
+                                        "b",
+                                        "e",
+                                        "r",
+                                        "g",
+                                        "r",
+                                        "e",
+                                        "n",
+                                        ","
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 10
+                                },
+                                "text": "gubergren,"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "n",
+                                        "o"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 2
+                                },
+                                "text": "no"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "e",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sea"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "t",
+                                        "a",
+                                        "k",
+                                        "i",
+                                        "m",
+                                        "a",
+                                        "t",
+                                        "a"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 8
+                                },
+                                "text": "takimata"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "a",
+                                        "n",
+                                        "c",
+                                        "t",
+                                        "u",
+                                        "s"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 7
+                                },
+                                "text": "sanctus"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "e",
+                                        "s",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "est"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "L",
+                                        "o",
+                                        "r",
+                                        "e",
+                                        "m"
+                                    ],
+                                    "hasUppercase": true,
+                                    "length": 5
+                                },
+                                "text": "Lorem"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "i",
+                                        "p",
+                                        "s",
+                                        "u",
+                                        "m"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "ipsum"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "d",
+                                        "o",
+                                        "l",
+                                        "o",
+                                        "r"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "dolor"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "s",
+                                        "i",
+                                        "t"
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 3
+                                },
+                                "text": "sit"
+                            },
+                            {
+                                "properties": {
+                                    "chars": [
+                                        "a",
+                                        "m",
+                                        "e",
+                                        "t",
+                                        "."
+                                    ],
+                                    "hasUppercase": false,
+                                    "length": 5
+                                },
+                                "text": "amet."
+                            }
+                        ]
+                    }
+                ]
             },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.loremIpsumItems": {
-            "ACCESS": 3,
-            "CUSTOMERDATA": "",
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "HIDDEN": false,
-            "MAPPING": "PLC1::MAIN::loremIpsumItems",
-            "OPTIONS": {},
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY (0..99) OF LoremItem"
-            },
-            "USEMAPPING": true
+            "USEMAPPING": false
         },
         "RefreshDefinitions": {
             "ACCESS": 3,
@@ -3735,7 +5580,7 @@
     "SYMBOL_COMPLEXITY_LIMIT": 100,
     "TEMPDH": "",
     "THREADPOOLSIZE": 32,
-    "UPLOADTIMEOUT": "PT20S",
+    "UPLOADTIMEOUT": "PT1M",
     "USEINT64STRING": true,
     "USERGROUPS": {
         "__SystemAdministrators": {
@@ -3861,10 +5706,10 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\SymbolPaging\\",
-        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.2.110\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.2.110\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.2.90\\runtimes\\native1.12-tchmi",
-        "/StringPager": "..\\..\\StringPager",
+        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.7.4\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.9.11\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.7.23\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.7.3\\runtimes\\native1.12-tchmi",
         "/bin": "..\\..\\SymbolPaging\\bin\\"
     }
 }

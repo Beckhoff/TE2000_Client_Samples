@@ -1,149 +1,190 @@
-<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-
-  <div id="ContainerFiltering" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="308" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="826" data-tchmi-width-unit="px">
-      <div id="TextblockValueFilter" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-      <div id="TextblockPropertyFilter" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="128" data-tchmi-height-unit="px" data-tchmi-left="214" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-      <div id="TextblockComplexFilter" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="288" data-tchmi-height-unit="px" data-tchmi-left="418" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-      <div id="TextblockComplexStringFilter" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="288" data-tchmi-height-unit="px" data-tchmi-left="622" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-  
-<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
-{
-  "left": 1,
-  "right": 1,
-  "top": 1,
-  "bottom": 1,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::RenderedWidth%/ctx%",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmiResponsiveBehaviour",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%MediaQueryList%/i%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%AffectedControls%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
 </script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "Solid",
-  "right": "Solid",
-  "top": "Solid",
-  "bottom": "Solid"
-}
+<div id="Header_Top" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiHeader" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-top"
+]
 </script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="LabelFiltering" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Filtering" data-tchmi-top="-20" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-is-enabled="true">
-</div>
-</div>
-  <div id="ContainerSorting" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="1620" data-tchmi-height-unit="px" data-tchmi-left="846" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="418" data-tchmi-width-unit="px">
-      <div id="TextblockSortingSubscription" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-      <div id="TextblockSortingReadWrite" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="1600" data-tchmi-height-unit="px" data-tchmi-left="214" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-  <div id="LabelSorting" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Sorting" data-tchmi-top="-20" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
-</div>
-
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
-{
-  "left": 1,
-  "right": 1,
-  "top": 1,
-  "bottom": 1,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "Solid",
-  "right": "Solid",
-  "top": "Solid",
-  "bottom": "Solid"
-}
-</script>
-</div>
-  <div id="ContainerPaging" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="120" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="378" data-tchmi-top-unit="px" data-tchmi-width="418" data-tchmi-width-unit="px">
-      <div id="TextblockPagingSubscription" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-      <div id="TextblockPagingReadWrite" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="214" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-is-enabled="true">
-      </div>
-  <div id="LabelPaging" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Paging" data-tchmi-top="-20" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
-</div>
-
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
-{
-  "left": 1,
-  "right": 1,
-  "top": 1,
-  "bottom": 1,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "Solid",
-  "right": "Solid",
-  "top": "Solid",
-  "bottom": "Solid"
-}
+<script data-tchmi-target-attribute="data-tchmi-header-items" type="application/json">
+[
+  {
+    "itemType": "Image",
+    "priority": "2",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "image": "Images/Beckhoff_Logo.svg",
+    "altText": "Beckhoff",
+    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+    "targetContent": "Pages/Paging.content"
+  },
+  {
+    "itemType": "Text",
+    "priority": "1",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "text": "SymbolPaging"
+  },
+  {
+    "itemType": "Time",
+    "priority": "4",
+    "itemAlign": "Right",
+    "prefWidth": 128.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 96.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "timeDisplayLayout": "TimeDateMultiLine"
+  }
+]
 </script>
 </div>
-  <div id="ContainerCombined" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="340" data-tchmi-height-unit="px" data-tchmi-left="438" data-tchmi-left-unit="px" data-tchmi-top="378" data-tchmi-top-unit="px" data-tchmi-width="214" data-tchmi-width-unit="px">
-      <div id="TextblockCombined" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="320" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="194" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-is-enabled="true">
-      </div>
-  
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+<div id="Accordion_Navigation_Right" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation" data-tchmi-width="320" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-show-back-button="false">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-right"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">
+[
+  {
+    "id": "Paging",
+    "name": "Paging",
+    "content": "Pages/Paging.content",
+    "icon": "%tr%TR_Icon_Paging_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Paging_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Paging_pressed%/tr%"
+  },
+  {
+    "id": "Sorting",
+    "name": "Sorting",
+    "content": "Pages/Sorting.content",
+    "icon": "%tr%TR_Icon_Sorting_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Sorting_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Sorting_pressed%/tr%"
+  },
+  {
+    "id": "Filtering",
+    "name": "Filtering",
+    "content": "Pages/Filtering.content",
+    "icon": "%tr%TR_Icon_Filtering_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Filtering_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Filtering_pressed%/tr%"
+  },
+  {
+    "id": "Combined",
+    "name": "Combined",
+    "content": "Pages/Combined.content",
+    "icon": "%tr%TR_Icon_Combined_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Combined_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Combined_pressed%/tr%"
+  }
+]
+</script>
+</div>
+<div id="Container_Bottom" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-bottom="0" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-height="96">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-bottom"
+]
+</script>
+<div id="LoremIpsumName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="160" data-tchmi-text="LoremIpsum" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="LoremIpsumType" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="100 strings" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="LoremIpsumItemsName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="200" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="160" data-tchmi-text="LoremIpsumItems" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="LoremIpsumItemsType" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="200" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="100 structs" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="JumbledAlphabetName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="368" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="160" data-tchmi-text="JumbledAlphabet" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="JumbledAlphabetType" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="368" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="26 strings" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="FooterDivider" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="536" data-tchmi-top="20" data-tchmi-width="1" data-tchmi-height="56">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
-  "color": "rgba(0, 0, 0, 1)"
+  "color": "#a3b0bb"
 }
 </script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
-{
-  "left": 1,
-  "right": 1,
-  "top": 1,
-  "bottom": 1,
-  "leftUnit": "px",
-  "rightUnit": "px",
-  "topUnit": "px",
-  "bottomUnit": "px"
-}
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
-{
-  "left": "Solid",
-  "right": "Solid",
-  "top": "Solid",
-  "bottom": "Solid"
-}
-</script>
-<div id="LabelCombined" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Textblock" data-tchmi-top="-20" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="FooterHint" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="560" data-tchmi-top="18" data-tchmi-height="60" data-tchmi-right="32" data-tchmi-text="All examples use these offline server symbols. The server filters, sorts and pages them and only sends the result to the client." data-tchmi-word-wrap="True" data-tchmi-text-font-size="14" data-tchmi-text-font-size-unit="px" data-tchmi-text-vertical-alignment="Center">
 </div>
 </div>
+<div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="%ctrl%Container_Bottom::Height%/ctrl%" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-target-content="Pages/Paging.content"></div>
 </div>

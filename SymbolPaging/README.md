@@ -1,86 +1,123 @@
 # SymbolPaging
 
-This sample consists of a collection of CodeBehind files that demonstrates how to filter, sort and page data on the server.
+This sample shows how a client lets the server filter, sort and page a server symbol which contains an array, so that only the requested items are sent to the client.
 
-## CodeBehindFiltering
+![Start page of the sample](README/StartPage.png)
 
-This file demonstrates the basics of filtering data on the server by requesting filtered data and writing the filtered data into a textblock. Any server symbol that returns an array can be filtered.
+[Desktop.view](SymbolPaging/Desktop.view) uses the layout of the TwinCAT HMI BaseTemplate from the `Beckhoff.TwinCAT.HMI.BaseTemplate` package: a header at the top, a navigation on the right, a region for the pages in the center and a container at the bottom which lists the symbols used. There is one page per topic: `Paging`, `Sorting`, `Filtering` and `Combined`. Each page shows the relevant code next to a table with the result. The column `Index` of each table contains the original index of an item in the array.
 
-### Requesting filtered data
+## Scenario
 
-To request filtered data, a command must be sent to the server that contains the `orderBy` property.
+The examples use three server symbols:
 
-`filter` contains either a JSON object or a string which defines which array items are returned. This is done by defining a path to the property by which to filter, a comparator and a static value to compare against. Arrays can be filtered by the value of their items if they contain primitive data types like strings, numbers, or booleans by defining `'{value}'` as the path.
+| Symbol            | Content                                                                                                                            |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `LoremIpsum`      | An array of 100 strings.                                                                                                           |
+| `LoremIpsumItems` | An array of 100 structs. Each struct contains a string `text` and a struct `properties` with `length`, `hasUppercase` and `chars`. |
+| `JumbledAlphabet` | An array of the 26 letters of the alphabet in random order.                                                                        |
 
-Valid comparators are:
+To keep the sample lean they are offline symbols: server symbols without a mapping, defined in the `SYMBOLS` of [TcHmiSrv.Config.default.json](SymbolPaging/Server/TcHmiSrv/TcHmiSrv.Config.default.json). The server keeps their values itself, so no PLC is needed. In a real project they are typically mapped PLC arrays like `%s%PLC1.MAIN.aItems%/s%`. Filtering, sorting and paging work exactly the same for any server symbol which contains an array.
 
-- `'=='` for strings, numbers and booleans
-- `'!='` for strings, numbers and booleans
-- `'<'` for numbers
-- `'>'` for numbers
-- `'<='` for numbers
-- `'>='` for numbers
-- `'contains'` for strings and arrays
-- `'contains not'` for strings and arrays
-- `'== [ignore case]'` for strings
-- `'!= [ignore case]'` for strings
-- `'contains [ignore case]'` for strings
-- `'contains not [ignore case]'` for strings
+## Requesting data
 
-Filters can be combined with `and` or `or` logic and can be nested to indicate precedence. Nested filters will be evaluated first.
+Each example sends a command for one of the symbols to the server, either with a subscription or with a single request:
 
-### Example
+- `Server.subscribe` sends the result every time the value on the server changes. The code-behind subscribes when the result table is attached and calls `Server.unsubscribe` when it is detached, so the subscription only exists while the page is shown.
+- `Server.request` with the request type `ReadWrite` reads the result once.
 
-To see this in action please take a look at the [CodeBehindFiltering.ts file](SymbolPaging/CodeBehindFiltering.ts). This file contains examples for subscribing to and reading from a symbol using different filters. Remember to activate the SampleSymbols PLC to have access to the symbols used in the example.
+The command contains the properties which define the result. All of them can be combined:
 
-## CodeBehindSorting
+| Property    | Meaning                                                                                 |
+| ----------- | --------------------------------------------------------------------------------------- |
+| `filter`    | Only the items which match are returned.                                                |
+| `orderBy`   | Sorts the items.                                                                        |
+| `offset`    | The index of the first item which is returned. An `offset` of 5 skips the items 0 to 4. |
+| `limit`     | The maximum number of items which are returned.                                         |
+| `filterMap` | An empty array asks the server to fill in the original index of each returned item.     |
 
-This file demonstrates the basics of sorting data on the server by requesting sorted data and writing the sorted data into a textblock. Any server symbol that returns an array can be sorted.
+The server sends the command back. `readValue` contains the items, `maxEntries` the number of items which match the filter, or the length of the array without a filter. `filterMap` contains the original indices. The function `showResult` in each code-behind writes them into the table.
 
-### Requesting sorted data
+## Paging
 
-To request sorted data, a command must be sent to the server that contains the `orderBy` property.
+The `Paging` page subscribes to the items 10 to 29 of `LoremIpsum` and reads the items 30 to 39 once:
 
-`orderBy` defines the criteria by which to sort and in which direction. This is done by defining a path to the property by which to sort and `'ASC'` or `'DESC'` for ascending or descending order. Arrays can be sorted by the value of their items if they contain primitive data types like strings, numbers, or booleans by defining `'{value}'` as the path.
+```ts
+const command: Server.ICommand<unknown, string[]> = {
+    symbol: 'LoremIpsum',
+    offset: 10, // The index of the first item to read
+    limit: 20, // How many items of the array to read
+    filterMap: [],
+};
+```
 
-For example to sort an array of numbers in ascending order (lowest first), use an `orderBy` value of `'{value} ASC'`. To access struct fields simply specify the fields name: `'myField DESC'`. To access nested structs use `'myField::nestedValue ASC'` and to access array items use `'myArray[2] DESC'`.
+With `maxEntries` a client can calculate the number of pages. See [CodeBehindPaging.ts](SymbolPaging/CodeBehindPaging.ts).
 
-### Example
+## Sorting
 
-To see this in action please take a look at the [CodeBehindSorting.ts file](SymbolPaging/CodeBehindSorting.ts). This file contains an example for subscribing to a symbol using sorting and reading from a symbol using sorting. Remember to activate the SampleSymbols PLC to have access to the symbols used in the example.
+`orderBy` contains the path to a property followed by `ASC` for ascending or `DESC` for descending order. Arrays of strings, numbers or booleans are sorted by their values with the path `{value}`:
 
-## CodeBehindPaging
+- `'{value} ASC'` sorts `JumbledAlphabet` alphabetically.
+- `'myField DESC'` sorts structs by the field `myField`.
+- `'myField::nestedValue ASC'` sorts by a field of a nested struct.
+- `'myArray[2] DESC'` sorts by an item of an array.
 
-This file demonstrates the basics of paging a server symbol by requesting paged data and writing the paged data into a textblock. Any server symbol that returns an array can be paged.
+Several criteria are separated by commas. `'properties::length DESC, text ASC'` sorts `LoremIpsumItems` by length, longest strings first, and strings with the same length alphabetically. See [CodeBehindSorting.ts](SymbolPaging/CodeBehindSorting.ts).
 
-### Requesting paged data
+## Filtering
 
-To request paged data, a command must be sent to the server that contains one or both of the properties `offset` and `limit`.
+A filter consists of comparisons. Each comparison has a `path` to a property, or `{value}`, a `comparator` and a static `value` to compare against. Valid comparators are:
 
-`offset` defines the index of the first item that should be returned. For example an `offset` of 5 would lead to the first 5 items with indices 0-4 to be skipped while the 6th item with index 5 would be returned to the client.
+- `'=='` and `'!='` for strings, numbers and booleans
+- `'<'`, `'>'`, `'<='` and `'>='` for numbers
+- `'contains'` and `'contains not'` for strings and arrays
+- `'== [ignore case]'`, `'!= [ignore case]'`, `'contains [ignore case]'` and `'contains not [ignore case]'` for strings
 
-`limit` simply defines how many items should be returned.
+Comparisons are combined with `AND` or `OR` logic and can be nested to indicate precedence. Nested filters are evaluated first. A filter is written in JSON object syntax or in string syntax:
 
-### The server response
+```ts
+// JSON object syntax
+filter: [
+    { path: 'properties::hasUppercase', comparator: '==', value: true },
+    { logic: 'OR' },
+    [
+        { path: 'properties::chars[1]', comparator: '==', value: 'o' },
+        { logic: 'AND' },
+        { path: 'properties::length', comparator: '>=', value: 6 },
+    ],
+],
 
-The server will send back the command, with its `readValue` containing the paged data. The command will also contain the property `maxEntries`, which specifies how many items the array holds in total. This can be used to calculate and display the number of pages.
+// The same filter in string syntax
+filter: 'properties::hasUppercase == true || (properties::chars[1] == "o" && properties::length >= 6)',
+```
 
-### Example
+The `Filtering` page shows a filter by value, a filter by a property and the combined filter above in both syntaxes. See [CodeBehindFiltering.ts](SymbolPaging/CodeBehindFiltering.ts).
 
-To see this in action please take a look at the [CodeBehindPaging.ts file](SymbolPaging/CodeBehindPaging.ts). This file contains an example for subscribing to a symbol using paging and reading from a symbol using paging. Remember to activate the SampleSymbols PLC to have access to the symbols used in the example.
+## Combined
 
-## CodeBehindCombined
+The server filters the array first, then sorts the matching items and finally applies `offset` and `limit`. The `Combined` page subscribes to the items 10 to 29 of all items of `LoremIpsumItems` which start with a lowercase letter, longest strings first:
 
-This file demonstrates how to combine filtering, sorting and paging in one request.
+```ts
+const command: Server.ICommand<unknown, LoremIpsumItem[]> = {
+    symbol: 'LoremIpsumItems',
+    filter: 'properties::hasUppercase == false',
+    orderBy: 'properties::length DESC, text ASC',
+    offset: 10,
+    limit: 20,
+    filterMap: [],
+};
+```
 
-### Requesting data
+See [CodeBehindCombined.ts](SymbolPaging/CodeBehindCombined.ts).
 
-To request filtered, sorted and paged data, include the properties `offset`, `limit`, `orderBy` and `filter` in the request to the server.
+## Running the sample
 
-### Example
+1. Open [SymbolPaging.sln](SymbolPaging.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Restore the NuGet packages, build the solution and start the Live-View of the `SymbolPaging` project. No PLC is needed.
+3. Select the pages in the navigation and compare the code with the tables.
 
-To see this in action please take a look at the [CodeBehindCombined.ts file](SymbolPaging/CodeBehindCombined.ts). This file contains an example for subscribing to a symbol using filtering, sorting and paging. Remember to activate the SampleSymbols PLC to have access to the symbols used in the example.
+## Files
 
-## Sample PLC
-
-The samples use symbols that are mapped to variables in the [SampleSymbols PLC](SampleSymbols). If you want to run the samples you should activate that PLC project so the samples have access to the symbol values.
+- [SymbolPaging/Desktop.view](SymbolPaging/Desktop.view): the BaseTemplate layout with the navigation, the region which hosts the pages and the list of symbols.
+- [SymbolPaging/Pages](SymbolPaging/Pages): one page per topic with the code excerpts and the result tables.
+- `SymbolPaging/CodeBehind*.ts`: one code-behind file per page. They are loaded as ES modules (`dependencyFiles` in [tchmiconfig.json](SymbolPaging/Properties/tchmiconfig.json)) and fill the tables while they are attached.
+- [SymbolPaging/Server/TcHmiSrv/TcHmiSrv.Config.default.json](SymbolPaging/Server/TcHmiSrv/TcHmiSrv.Config.default.json): server configuration with the offline symbols.
