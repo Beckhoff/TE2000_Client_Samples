@@ -1,0 +1,111 @@
+<div id="ImplementationContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="932" data-tchmi-height="1782">
+<div id="ImplementationHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Implementation" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ImplementationContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="900" data-tchmi-height="1702">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ImplementationDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="48" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">The region <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">SlideRegion</code> on the Usage page shows the content <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">SlideStrip</code>, which is three times as wide as the region. Switching a slide only changes the left position of the strip, a CSS transition animates it.</p>
+</div>
+<div id="ImplementationStripText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="96" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. A strip with three slides</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Slides/SlideStrip.content</code> holds one region per slide, sized in %.</p>
+</div>
+<div id="ImplementationStripCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="152" data-tchmi-height="228" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&lt;div id="SlideStrip"
+     data-tchmi-type="TcHmi.Controls.System.TcHmiContent"
+     data-tchmi-left="0" <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data-tchmi-left-unit="%"</span>
+     <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data-tchmi-width="300" data-tchmi-width-unit="%"</span> ...&gt;
+  &lt;div id="SlideRegion1"
+       data-tchmi-type="TcHmi.Controls.System.TcHmiRegion"
+       <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data-tchmi-left="0"</span> data-tchmi-left-unit="%"
+       <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data-tchmi-width="33.3334"</span> data-tchmi-width-unit="%"
+       data-tchmi-target-content="Slides/Slide1.content" ...&gt;
+  &lt;/div&gt;
+  &lt;!-- SlideRegion2 at 33.3333 %, SlideRegion3 at 66.6667 % --&gt;
+&lt;/div&gt;</pre>
+</div>
+<div id="ImplementationTransitionText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="412" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Animate the move</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Swipe.css</code> animates the move and leaves horizontal touches to the code.</p>
+</div>
+<div id="ImplementationTransitionCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="468" data-tchmi-height="228" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">#SlideStrip {
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">transition-property: left;</span>
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">transition-duration: 0.5s;</span>
+    transition-timing-function: ease-out;
+    user-select: none; /* No text selection with the mouse */
+}
+
+/* The slide regions are scroll containers and need it too */
+#SlideStrip,
+#SlideStrip * {
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">touch-action: pan-y;</span> /* Horizontal moves are swipes */
+}</pre>
+</div>
+<div id="ImplementationShowText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="728" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. Show a slide</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">-100</code> with the unit % moves the strip by exactly one slide.</p>
+</div>
+<div id="ImplementationShowCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="784" data-tchmi-height="160" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">function <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">showSlide</span>(index: number) {
+    const strip = Controls.get&lt;TcHmiContent.Control&gt;('SlideStrip');
+    if (!strip) {
+        return;
+    }
+    slideIndex = Math.min(Math.max(index, 0), SLIDE_COUNT - 1);
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">strip.setLeft(-slideIndex * 100);</span>
+}</pre>
+</div>
+<div id="ImplementationSwipeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="976" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">4. Detect a swipe</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Pointer events cover fingers, pens and the mouse with one code path.</p>
+</div>
+<div id="ImplementationSwipeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1032" data-tchmi-height="313" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">const onPointerDown = (event: PointerEvent) =&gt; {
+    startX = event.clientX;
+};
+
+const onPointerMove = (event: PointerEvent) =&gt; {
+    if (startX === null) {
+        return;
+    }
+    const deltaX = event.clientX - startX;
+    if (<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">deltaX &lt;= -SWIPE_DISTANCE</span>) {
+        showSlide(slideIndex + 1); // Moved to the left
+        startX = null; // One swipe switches only one slide
+    } else if (<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">deltaX &gt;= SWIPE_DISTANCE</span>) {
+        showSlide(slideIndex - 1); // Moved to the right
+        startX = null;
+    }
+};</pre>
+</div>
+<div id="ImplementationLifecycleText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1377" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">5. Listen only while the strip is attached</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The listeners are added in <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">onAttached</code> and removed in <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">onDetached</code>.</p>
+</div>
+<div id="ImplementationLifecycleCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1433" data-tchmi-height="245" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">EventProvider.register(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'SlideStrip.onAttached'</span>,
+        (e, <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">strip: TcHmiContent.Control</span>) =&gt; {
+    const element = strip.getElement()[0];
+    element.addEventListener('pointerdown', onPointerDown);
+    element.addEventListener('pointermove', onPointerMove);
+    // ... pointerup, pointercancel and pointerleave end a swipe
+    removePointerListeners = () =&gt; { /* removeEventListener */ };
+});
+
+EventProvider.register(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'SlideStrip.onDetached'</span>, () =&gt; {
+    removePointerListeners?.();
+    removePointerListeners = null;
+});</pre>
+</div>
+</div>
+</div>

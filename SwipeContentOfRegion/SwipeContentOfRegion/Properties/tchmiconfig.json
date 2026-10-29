@@ -1,0 +1,326 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": "",
+  "splash": {
+    "versionSource": "Framework"
+  },
+  "projectVersion": "1.0.0.0",
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": null,
+    "disableOptionalSystemSubscriptions": false
+  },
+  "activeTheme": "Base",
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "CodeBehindSwipe.js",
+      "description": "",
+      "type": "EsModule"
+    },
+    {
+      "name": "Swipe.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [],
+  "controls": [],
+  "content": [
+    {
+      "url": "Pages/Implementation.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Usage.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Slides/Slide1.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Slides/Slide2.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Slides/Slide3.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Slides/SlideStrip.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {
+      "MediaQueryList": {
+        "value": [
+          {
+            "name": "Mobile",
+            "maxWidth": 800,
+            "minWidth": 0,
+            "controlBehaviourList": [
+              {
+                "controlType": "TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation",
+                "controlID": "Accordion_Navigation_Right",
+                "displayOption": "burger_top"
+              }
+            ]
+          },
+          {
+            "name": "Tablet",
+            "maxWidth": 1280,
+            "minWidth": 800,
+            "controlBehaviourList": [
+              {
+                "controlType": "TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation",
+                "controlID": "Accordion_Navigation_Right",
+                "displayOption": "icons"
+              }
+            ]
+          },
+          {
+            "name": "Desktop",
+            "maxWidth": 1920,
+            "minWidth": 1280,
+            "controlBehaviourList": [
+              {
+                "controlType": "TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation",
+                "controlID": "Accordion_Navigation_Right",
+                "displayOption": "full"
+              }
+            ]
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.MediaQueryList",
+        "persist": true,
+        "readonly": true
+      },
+      "AffectedControls": {
+        "value": [
+          {
+            "controlID": "Header_Top",
+            "position": "Top",
+            "onlyIconsSize": 65
+          },
+          {
+            "controlID": "Accordion_Navigation_Right",
+            "position": "Right",
+            "onlyIconsSize": 128
+          },
+          {
+            "controlID": "Container_Bottom",
+            "position": "Bottom"
+          },
+          {
+            "controlID": "Region_Center",
+            "position": "Center",
+            "onlyIconsSize": 65
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.AffectedControlList",
+        "persist": true,
+        "readonly": true
+      }
+    },
+    "themedResources": {
+      "TR_Icon_Usage_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Normal Icon of page: Usage",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_Usage_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Pressed Icon of page: Usage",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_Usage_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Active Icon of page: Usage",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_active.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_active.svg"
+        }
+      },
+      "TR_Icon_Implementation_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Normal Icon of page: Implementation",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_Implementation_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Pressed Icon of page: Implementation",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_Implementation_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Active Icon of page: Implementation",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_active.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_active.svg"
+        }
+      }
+    },
+    "timer": {},
+    "package": {}
+  },
+  "intervals": {},
+  "trigger": [],
+  "actionTemplates": [],
+  "languages": {
+    "de-DE": "Localization/de-DE.localization",
+    "en-US": "Localization/en-US.localization"
+  },
+  "languageFallback": "",
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 1000,
+      "defaultHeight": 600
+    }
+  },
+  "binding": {
+    "symbolError": "Ignore",
+    "symbolWriteError": "ReadBack"
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "symbols": {
+        "package": {}
+      }
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls",
+      "symbols": {
+        "package": {}
+      }
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Framework",
+      "symbols": {
+        "package": {}
+      }
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions",
+      "symbols": {
+        "package": {}
+      }
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/German - compact.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - compact.keyboard.json"
+    }
+  ],
+  "systemKeyboard": {
+    "providerName": "",
+    "autoOpen": false,
+    "projectKeyboardMapping": {
+      "de-DE": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      },
+      "en-US": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      }
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
+}

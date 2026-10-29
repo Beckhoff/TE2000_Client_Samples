@@ -1,0 +1,160 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::RenderedWidth%/ctx%",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmiResponsiveBehaviour",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%MediaQueryList%/i%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%AffectedControls%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+<div id="Header_Top" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiHeader" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-top"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-header-items" type="application/json">
+[
+  {
+    "itemType": "Image",
+    "priority": "2",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "image": "Images/Beckhoff_Logo.svg",
+    "altText": "Beckhoff",
+    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+    "targetContent": "Pages/Usage.content"
+  },
+  {
+    "itemType": "Text",
+    "priority": "1",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "text": "SwipeContentOfRegion"
+  },
+  {
+    "itemType": "Time",
+    "priority": "4",
+    "itemAlign": "Right",
+    "prefWidth": 128.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 96.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "timeDisplayLayout": "TimeDateMultiLine"
+  }
+]
+</script>
+</div>
+<div id="Accordion_Navigation_Right" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation" data-tchmi-width="320" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-show-back-button="false">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-right"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">
+[
+  {
+    "id": "Usage",
+    "name": "Usage",
+    "content": "Pages/Usage.content",
+    "icon": "%tr%TR_Icon_Usage_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Usage_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Usage_pressed%/tr%"
+  },
+  {
+    "id": "Implementation",
+    "name": "Implementation",
+    "content": "Pages/Implementation.content",
+    "icon": "%tr%TR_Icon_Implementation_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Implementation_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Implementation_pressed%/tr%"
+  }
+]
+</script>
+</div>
+<div id="Container_Bottom" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-bottom="0" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-height="96">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-bottom"
+]
+</script>
+<div id="StripName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="160" data-tchmi-text="SlideStrip" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="StripText" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="300 % wide, 3 regions" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="TransitionName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="200" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="160" data-tchmi-text="Transition" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="TransitionText" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="200" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="left, 0.5 s, ease-out" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="FooterDivider" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="368" data-tchmi-top="20" data-tchmi-width="1" data-tchmi-height="56">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "#a3b0bb"
+}
+</script>
+</div>
+<div id="FooterHint" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="392" data-tchmi-top="18" data-tchmi-height="60" data-tchmi-right="32" data-tchmi-text="The strip with the slides moves by 100 % of the region per slide, so it fits every size of the region. Pointer events detect swipes of fingers, pens and the mouse." data-tchmi-word-wrap="True" data-tchmi-text-font-size="14" data-tchmi-text-font-size-unit="px" data-tchmi-text-vertical-alignment="Center">
+</div>
+</div>
+<div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="%ctrl%Container_Bottom::Height%/ctrl%" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-target-content="Pages/Usage.content"></div>
+</div>

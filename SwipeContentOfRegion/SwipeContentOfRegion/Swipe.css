@@ -1,0 +1,21 @@
+﻿/*
+    The strip with the three slides (Slides/SlideStrip.content).
+    CodeBehindSwipe.ts moves it by changing its left position, the transition animates this change.
+*/
+#SlideStrip {
+    transition-property: left; /* Use a transition animation if the css property left changes. */
+    transition-duration: 0.5s; /* The transition animation runs for 0.5 seconds. */
+    transition-timing-function: ease-out; /* The transition animation gets slower at the end. */
+    user-select: none; /* Swiping with the mouse does not select text. */
+}
+
+/*
+    Horizontal finger movements are swipes, the browser only scrolls vertically.
+    Otherwise the browser takes over the horizontal movement and cancels the pointer events.
+    The slide regions on the strip are scroll containers which do not inherit touch-action from the strip,
+    so the rule is needed for all elements on the strip as well.
+*/
+#SlideStrip,
+#SlideStrip * {
+    touch-action: pan-y;
+}
