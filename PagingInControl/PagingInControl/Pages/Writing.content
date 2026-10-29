@@ -1,0 +1,73 @@
+<div id="WritingContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="916" data-tchmi-height="1028">
+<div id="WritingHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Writing items" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="WritingContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="884" data-tchmi-height="948">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="WritingDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="120" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">Click an item to edit it. A page only holds some items of <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">LoremIpsum</code>, so the control needs the original index of an item to write it back. It requests the indices with <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">filterMap</code> and writes the new text directly to that index.</p>
+</div>
+<div id="WritingIndexText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="160" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. Remember the original index</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Each item keeps its index in the whole array from the <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">filterMap</code>.</p>
+</div>
+<div id="WritingIndexCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="216" data-tchmi-height="228" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__updateDisplay</span>(items, maxItems, filterMap) {
+    for (let i = 0; i &lt; items.length; i++) {
+        const itemDiv = document.createElement('div');
+        itemDiv.textContent = items[i];
+        const index = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">filterMap?.[i</span>];
+        if (index !== undefined) {
+            <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">itemDiv.dataset.index</span> = index.toString();
+        }
+        // ...
+    }
+    // ...
+}</pre>
+</div>
+<div id="WritingEditText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="468" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Finish the edit</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">When the edit is finished, the control passes the index and the text on.</p>
+</div>
+<div id="WritingEditCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="524" data-tchmi-height="177" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__onEditInteractionFinished</span> = () =&gt; {
+    const text = this.__editTextbox.getText() ?? '';
+    const textboxElement = this.__editTextbox.getElement()[0];
+    const itemDiv = textboxElement.parentElement;
+    // ...
+    const index = parseInt(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">itemDiv.dataset.index</span>, 10);
+    // ...
+    this.__writeToDataSymbol(index, text);
+};</pre>
+</div>
+<div id="WritingWriteText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="725" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. Write to the original index</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The index is appended to the symbol name, so only this item is written.</p>
+</div>
+<div id="WritingWriteCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="781" data-tchmi-height="143" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__writeToDataSymbol</span>(index: number, value: string) {
+    // ...
+    const symbol = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">expression.getName() + '[' + index + ']'</span>;
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">TcHmi.Server.writeSymbolEx</span>(symbol, value, null, (data) =&gt; {
+        this.__checkServerResult(data);
+    });
+}</pre>
+</div>
+<div id="WritingStringPagerLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="24" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="StringPagerControl" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="WritingStringPager" data-tchmi-type="TcHmi.Controls.StringPager.StringPagerControl" data-tchmi-left="600" data-tchmi-top="56" data-tchmi-width="260" data-tchmi-height="360" data-tchmi-data-symbol="%s%LoremIpsum%/s%" data-tchmi-items-per-page="%i%ItemsPerPage%/i%"></div>
+</div>
+</div>

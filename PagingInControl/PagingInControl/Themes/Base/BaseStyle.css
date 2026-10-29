@@ -1,4 +1,4 @@
-﻿/**
+/**
 * About font inclusion in TcHmi
 * 
 * As a default we include Roboto Condensed (in Fonts folder) as a webfont which will render latin, greek, vietnamese, cyrillic glyphs.
@@ -33,9 +33,7 @@ html {
 
 /*  Views */
 div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
-    background-image: url(Images/Background.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background: #E3E6E9;
 }
 
 /**
@@ -43,11 +41,7 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
  */
 #tchmi-splash-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(Images/Background.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: #E3E6E9;
     overflow: auto;
     display: flex;
 }
@@ -351,3 +345,27 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
         .tchmi-view-loading-spinner div:nth-child(3) {
             animation-delay: -0.15s;
         }
+
+/***************/
+/*TcHmiCombobox*/
+/***************/
+.TcHmi_Controls_Beckhoff_TcHmiCombobox-template-select-content {
+    padding-left: 8px;
+}
+
+/*****************/
+/*TcHmiNavigation*/
+/*****************/
+.TcHmi_Controls_BaseTemplate_TcHmiNavigation-Template.horizontal .TcHmi_Controls_BaseTemplate_TcHmiNavigation-Static {
+    border-color: #a3b0bb;
+    border-width: 0 1px 0 0;
+    border-style: none solid none none;
+    box-shadow: var(--tchmi-shadow-color-1) 0 32px 32px 0;
+}
+
+.TcHmi_Controls_BaseTemplate_TcHmiNavigation-Template.horizontal .TcHmi_Controls_BaseTemplate_TcHmiNavigation-Back {
+    border-color: #a3b0bb;
+    border-width: 0 1px 0 0;
+    border-style: none solid none none;
+    box-shadow: var(--tchmi-shadow-color-1) 0 32px 32px 0;
+}

@@ -1,19 +1,20 @@
-﻿/**
-* About font inclusion in TcHmi
-* 
-* As a default we include Roboto Condensed (in Fonts folder) as a webfont which will render latin, greek, vietnamese, cyrillic glyphs.
-* 
-* If Roboto does not render the glyphs we use some preinstalled fallback
-* 'Microsoft YaHei' (Windows), 'Hiragino Sans GB' (macOS/iOS), 'Noto Sans CJK SC/TC' (Android), 'WenQuanYi Micro Hei' (Linux) renders chinese
-* 'Meiryo' (Windows), 'Hiragino Kaku Gothic Pro' (macOS/iOS), 'Noto Sans CJK JP' (Android) renders japanese
-* 
-* For other fonts you can add the woff files into the TcHmi project and 
-* add a @font-face section yourself.
-* The noto family from Google tries to cover all of the world, is free to use and fits nicely with Roboto
-* see https://fonts.google.com/noto and https://fonts.google.com/earlyaccess 
-* 
-* The font usage is defined in the main CSS file of the active theme (for example Themes/Base/Style.css).
+/**
+    About font inclusion in TcHmi
+
+    As a default we include Roboto Condensed (in Fonts folder) as a webfont which will render latin, greek, vietnamese, cyrillic glyphs.
+
+    If Roboto does not render the glyphs we use some preinstalled fallback
+    'Microsoft YaHei' (Windows), 'Hiragino Sans GB' (macOS/iOS), 'Noto Sans CJK SC/TC' (Android), 'WenQuanYi Micro Hei' (Linux) renders chinese
+    'Meiryo' (Windows), 'Hiragino Kaku Gothic Pro' (macOS/iOS), 'Noto Sans CJK JP' (Android) renders japanese
+
+    For other fonts you can add the woff files into the TcHmi project and 
+    add a @font-face section yourself.
+    The noto family from Google tries to cover all of the world, is free to use and fits nicely with Roboto
+    see https://fonts.google.com/noto and https://fonts.google.com/earlyaccess 
+
+    The font usage is defined in the main CSS file of the active theme (for example Themes/Base/Style.css).
 */
+
 html {
     font-family: RobotoCondensed, 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', '冬青黑体', 'STXihei', '华文细黑', 'WenQuanYi Micro Hei', 'Meiryo', 'メイリオ', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ ProN', 'Noto Sans CJK SC', 'Noto Sans CJK TC', 'Noto Sans CJK JP', 'Noto Sans CJK KR', sans-serif;
     font-size: 12px;
@@ -33,9 +34,7 @@ html {
 
 /*  Views */
 div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
-    background-image: url(Images/Background.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background: #353434;
 }
 
 /**
@@ -43,13 +42,10 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
  */
 #tchmi-splash-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(Images/Background.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: #353434;
     overflow: auto;
     display: flex;
+    color: black;
 }
 
 
@@ -351,3 +347,27 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
         .tchmi-view-loading-spinner div:nth-child(3) {
             animation-delay: -0.15s;
         }
+
+.TcHmi_Controls_Beckhoff_TcHmiCombobox-template-select-content {
+    padding-left: 8px;
+}
+
+.tchmi-class-beckhoff-logo {
+    padding-right: 32px;
+}
+
+.TcHmi_Controls_BaseTemplate_TcHmiNavigation-Template.horizontal .TcHmi_Controls_BaseTemplate_TcHmiNavigation-Static {
+    border-color: #a3b0bb;
+    border-width: 0 1px 0 0;
+    border-style: none solid none none;
+    box-shadow: var(--tchmi-shadow-color-1) 0 32px 32px 0;
+}
+
+.TcHmi_Controls_BaseTemplate_TcHmiNavigation-Template.horizontal .TcHmi_Controls_BaseTemplate_TcHmiNavigation-Back {
+    border-color: #a3b0bb;
+    border-width: 0 1px 0 0;
+    border-style: none solid none none;
+    box-shadow: var(--tchmi-shadow-color-1) 0 32px 32px 0;
+}
+
+

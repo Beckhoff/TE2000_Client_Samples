@@ -1,7 +1,154 @@
-<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
-  <div id="ViewDesktopBeckhoffLogo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-src="Images/Beckhoff_Logo.svg" data-tchmi-left="20" data-tchmi-top="20" data-tchmi-width="194" data-tchmi-height="57">
-
-  </div>
-<div id="StringPagerControl" data-tchmi-type="TcHmi.Controls.StringPager.StringPagerControl" data-tchmi-height="310" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-top="87" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-is-enabled="true" data-tchmi-data-symbol="%s%PLC1.MAIN.loremIpsum%/s%">
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::RenderedWidth%/ctx%",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmiResponsiveBehaviour",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%MediaQueryList%/i%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%AffectedControls%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+<div id="Header_Top" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiHeader" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-top"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-header-items" type="application/json">
+[
+  {
+    "itemType": "Image",
+    "priority": "2",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "image": "Images/Beckhoff_Logo.svg",
+    "altText": "Beckhoff",
+    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+    "targetContent": "Pages/Reading.content"
+  },
+  {
+    "itemType": "Text",
+    "priority": "1",
+    "itemAlign": "Left",
+    "prefWidth": 288.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 95.0,
+    "prefHeightUnit": "px",
+    "minWidth": 128.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "text": "PagingInControl"
+  },
+  {
+    "itemType": "Time",
+    "priority": "4",
+    "itemAlign": "Right",
+    "prefWidth": 128.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 96.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "timeDisplayLayout": "TimeDateMultiLine"
+  }
+]
+</script>
 </div>
+<div id="Accordion_Navigation_Right" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiAccordionNavigation" data-tchmi-width="320" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-show-back-button="false">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-right"
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">
+[
+  {
+    "id": "Reading",
+    "name": "Reading pages",
+    "content": "Pages/Reading.content",
+    "icon": "%tr%TR_Icon_Reading_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Reading_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Reading_pressed%/tr%"
+  },
+  {
+    "id": "Writing",
+    "name": "Writing items",
+    "content": "Pages/Writing.content",
+    "icon": "%tr%TR_Icon_Writing_normal%/tr%",
+    "iconActive": "%tr%TR_Icon_Writing_active%/tr%",
+    "iconPressed": "%tr%TR_Icon_Writing_pressed%/tr%"
+  }
+]
+</script>
+</div>
+<div id="Container_Bottom" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-bottom="0" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-height="96">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "divider",
+  "divider-bottom"
+]
+</script>
+<div id="SymbolName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="18" data-tchmi-height="28" data-tchmi-width="170" data-tchmi-text="LoremIpsum" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="SymbolType" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="48" data-tchmi-height="24" data-tchmi-width="170" data-tchmi-text="Server symbol, 100 strings" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ItemsPerPageLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="216" data-tchmi-top="12" data-tchmi-height="24" data-tchmi-width="120" data-tchmi-text="Items per page" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ItemsPerPageInput" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-left="216" data-tchmi-top="40" data-tchmi-height="36" data-tchmi-width="120" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-min-value="1" data-tchmi-max-value="100" data-tchmi-reset-to-last-valid-value="True" data-tchmi-value="%i%ItemsPerPage|BindingMode=TwoWay%/i%"></div>
+<div id="FooterDivider" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="360" data-tchmi-top="20" data-tchmi-width="1" data-tchmi-height="56">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "#a3b0bb"
+}
+</script>
+</div>
+<div id="FooterHint" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="384" data-tchmi-top="18" data-tchmi-height="60" data-tchmi-right="32" data-tchmi-text="Change the number of items per page here. Click an item in StringPagerControl to edit it, the new text is written to its original index in LoremIpsum." data-tchmi-word-wrap="True" data-tchmi-text-font-size="14" data-tchmi-text-font-size-unit="px" data-tchmi-text-vertical-alignment="Center">
+</div>
+</div>
+<div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="%ctrl%Container_Bottom::Height%/ctrl%" data-tchmi-right="%ctrl%Accordion_Navigation_Right::Width%/ctrl%" data-tchmi-target-content="Pages/Reading.content"></div>
 </div>

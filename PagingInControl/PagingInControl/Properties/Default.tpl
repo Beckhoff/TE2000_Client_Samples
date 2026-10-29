@@ -19,12 +19,12 @@
 				"websocketIntervalTime": 200
 			}
 		};
-		TCHMI_ENGINEERING_VS_THEME = {{TCHMI_ENGINEERING_VS_THEME}};
 
    	    window.onload = function load() {
-			if((!this['TcHmi'] || !this['TcHmi'].System) && document.body){
-				document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded. Perhaps a more modern web browser (which supports ES6 JavaScript) is needed.';
+			if ((!('TcHmi' in window) || !window.TcHmi.System) && document.body) {
+				document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded.';
 			}
+			window.onload = null;
 		};
   </script>
   {{GLOBAL_JS_INCLUDES}}
@@ -59,9 +59,13 @@
   {{GLOBAL_JS_INCLUDES}}
   <script>
 	 window.onload = function load() {
-		if((!this['TcHmi'] || !this['TcHmi'].System) && document.body){
-			document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded. Perhaps a more modern web browser (which supports ES6 JavaScript) is needed.';
+		if ((!('TcHmi' in window) || !window.TcHmi.System) && document.body) {
+			document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded.';
+			if(!("Promise" in window)){
+				document.body.innerHTML += ' A more modern web browser (which supports ES6 JavaScript) is needed.';
+			}
 		}
+		window.onload = null;
       };
   </script>
 </head>

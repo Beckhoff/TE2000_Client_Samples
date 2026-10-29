@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
   "apiVersion": 1,
   "name": "StringPagerControl",
@@ -18,8 +18,8 @@
   "properties": {
     "containerControl": false,
     "geometry": {
-      "width": 150,
-      "height": 300
+      "width": 260,
+      "height": 360
     }
   },
   "template": "Template.html",
@@ -62,6 +62,15 @@
       "resources": [
         {
           "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
           "type": "Stylesheet",
           "description": "Theme dependent style"
         }

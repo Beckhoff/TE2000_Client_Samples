@@ -1,0 +1,14 @@
+/* Theme depended control css. */
+.TcHmi_Controls_StringPager_StringPagerControl-Template {
+    background-color: #2a2a30;
+    border: 1px solid #4b4b55;
+    color: #ffffff;
+}
+
+.TcHmi_Controls_StringPager_StringPagerControl-Template-item-container > div {
+    border-bottom: 1px solid #3a3a42;
+}
+
+    .TcHmi_Controls_StringPager_StringPagerControl-Template-item-container > div:hover {
+        background-color: #33333a;
+    }

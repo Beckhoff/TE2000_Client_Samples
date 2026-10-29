@@ -37,8 +37,6 @@ namespace TcHmi {
 
                 protected __editTextbox!: Beckhoff.TcHmiTextbox;
 
-                protected __eventDestroyers: DestroyFunction[] = [];
-
                 /** Internal reference to the attribute "data-tchmi-data-symbol" */
                 protected __dataSymbol: Symbol<string[]> | undefined | null;
 
@@ -114,12 +112,14 @@ namespace TcHmi {
                      * Initialize everything which is only available while the control is part of the active dom.
                      */
 
-                    this.__eventDestroyers.push(EventProvider.register(this.__prevButton.getId() + '.onPressed', this.__onPrevPressed));
-                    this.__eventDestroyers.push(EventProvider.register(this.__nextButton.getId() + '.onPressed', this.__onNextPressed));
+                    // The base class calls these destroy functions when the control is detached.
+                    this.__destroyOnDetach.push(
+                        EventProvider.register(this.__prevButton.getId() + '.onPressed', this.__onPrevPressed),
+                        EventProvider.register(this.__nextButton.getId() + '.onPressed', this.__onNextPressed),
+                        EventProvider.register(this.__editTextbox.getId() + '.onUserInteractionFinished', this.__onEditInteractionFinished),
+                    );
 
                     this.__elementItemContainer.addEventListener('click', this.__onItemClicked, { passive: true });
-
-                    this.__eventDestroyers.push(EventProvider.register(this.__editTextbox.getId() + '.onUserInteractionFinished', this.__onEditInteractionFinished));
 
                     this.__subscribeToDataSymbol();
                 }
@@ -135,11 +135,6 @@ namespace TcHmi {
                      * Disable everything which is not needed while the control is not part of the active dom.
                      * No need to listen to events for example!
                      */
-
-                    for (const destroy of this.__eventDestroyers) {
-                        destroy();
-                    }
-                    this.__eventDestroyers = [];
 
                     this.__elementItemContainer.removeEventListener('click', this.__onItemClicked);
 
@@ -198,9 +193,7 @@ namespace TcHmi {
                     if (expression.getType() === SymbolType.Server) { // Only symbols of type server can be paged server-side.
                         const expressionName = expression.getName();
                         if (!expressionName) {
-                            if (TCHMI_CONSOLE_LOG_LEVEL >= TcHmi.System.LOG_LEVEL.Error) {
-                                TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=${this.__dataSymbol?.getExpression().toString()}] DataSymbol is missing a name.`);
-                            }
+                            this.__logError('DataSymbol is missing a name.');
                             return;
                         }
 
@@ -220,12 +213,15 @@ namespace TcHmi {
                                           // We need to know these indices if we want to write data back to the symbol.
                         };
 
+                        // Check if the symbol has an interval configured. If not use the default interval from tchmiconfig.
+                        const interval = expression.getOptions().Interval ?? TcHmi.Config.get().tcHmiServer.websocketIntervalTime;
+
                         // Send the subscription command to the server
                         this.__subscriptionId = TcHmi.Server.subscribeEx<string[]>(
                             [
                                 command // subscribeEx can take an array of commands to subscribe to multiple symbols simultaneously. In this case we only need one command though.
                             ],
-                            expression.getOptions().Interval ?? TcHmi.Config.get().tcHmiServer.websocketIntervalTime, // Check if the symbol has an interval configured. If not use the default interval from tchmiconfig.
+                            interval,
                             null, // Use default request options
                             this.__onDataSymbolPage // The callback that receives the data from the server
                         );
@@ -243,9 +239,7 @@ namespace TcHmi {
                     if (this.__subscriptionId !== null) {
                         Server.unsubscribeEx(this.__subscriptionId, null, (data) => {
                             if (data.error !== TcHmi.Errors.NONE) {
-                                if (TCHMI_CONSOLE_LOG_LEVEL >= TcHmi.System.LOG_LEVEL.Error) {
-                                    TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=${this.__dataSymbol?.getExpression().toString()}] ` + Log.buildMessage(data.details));
-                                }
+                                this.__logError(Log.buildMessage(data.details));
                             }
                         });
 
@@ -299,51 +293,30 @@ namespace TcHmi {
                  */
                 protected __checkServerResult<W = any, R = W>(data: Server.IResultObject<W, R>): { hasError: true; } | { hasError: false; command: Server.ICommand<W, R>; readValue: R; } {
                     if (data.error !== TcHmi.Errors.NONE) {
-                        if (TCHMI_CONSOLE_LOG_LEVEL >= TcHmi.System.LOG_LEVEL.Error) {
-                            TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage(data.details));
-                        }
+                        this.__logError(Log.buildMessage(data.details));
                         return { hasError: true };
                     }
                     if (!data.response) {
-                        TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage({
-                            code: TcHmi.Errors.E_SERVER_RESPONSE_MISSING,
-                            message: TcHmi.Errors[TcHmi.Errors.E_SERVER_RESPONSE_MISSING],
-                            reason: 'Missing response from server.',
-                            domain: this.__type
-                        }));
+                        this.__logError('Missing response from server.');
                         return { hasError: true };
                     }
                     if (data.response.error) {
-                        if (TCHMI_CONSOLE_LOG_LEVEL >= TcHmi.System.LOG_LEVEL.Error) {
-                            TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage(data.response.error));
-                        }
+                        this.__logError(Log.buildMessage(data.response.error));
                         return { hasError: true };
                     }
                     if (!data.response.commands || data.response.commands.length === 0) {
-                        TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage({
-                            code: TcHmi.Errors.E_SERVER_COMMANDS_MISSING,
-                            message: TcHmi.Errors[TcHmi.Errors.E_SERVER_COMMANDS_MISSING],
-                            reason: 'Missing commands in response from server with id: \'' + data.response.id + '\'.',
-                            domain: this.__type
-                        }));
+                        this.__logError(`Missing commands in response from server with id: '${data.response.id}'.`);
                         return { hasError: true };
                     }
 
                     const command = data.response.commands[0];
 
                     if (command.error) {
-                        if (TCHMI_CONSOLE_LOG_LEVEL >= TcHmi.System.LOG_LEVEL.Error) {
-                            TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage(command.error));
-                        }
+                        this.__logError(Log.buildMessage(command.error));
                         return { hasError: true };
                     }
                     if (!command.readValue) {
-                        TcHmi.Log.error(`[Source=Control, Module=${this.__type}, Id=${this.getId()}, Property=DataSymbol, Symbol=%s%${this.__dataSymbol?.getExpression().toString()}%/s%] ` + Log.buildMessage({
-                            code: TcHmi.Errors.E_SERVER_READVALUE_MISSING,
-                            message: TcHmi.Errors[TcHmi.Errors.E_SERVER_READVALUE_MISSING],
-                            reason: 'Missing read value in response from server with id: \'' + data.response.id + '\'.',
-                            domain: this.__type
-                        }));
+                        this.__logError(`Missing read value in response from server with id: '${data.response.id}'.`);
                         return { hasError: true };
                     }
 
@@ -352,6 +325,18 @@ namespace TcHmi {
                         command: command,
                         readValue: command.readValue
                     };
+                }
+
+                /**
+                 * Logs an error with the control, the attribute DataSymbol and its symbol expression as context.
+                 * TcHmi.Log.Controls checks the log level itself.
+                 * @param message The error message.
+                 */
+                protected __logError(message: string) {
+                    TcHmi.Log.Controls.error(this, 'TcHmi.Controls.StringPager.StringPagerControl', {
+                        Attribute: 'DataSymbol',
+                        Symbol: this.__dataSymbol?.getExpression().toString(),
+                    }, message);
                 }
 
                 /**

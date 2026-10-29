@@ -7,7 +7,7 @@
     <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TcHmiCreatorVersion>[1.12,]</TcHmiCreatorVersion>
-    <HmiTitle>Please enter your Title...</HmiTitle>
+    <HmiTitle>PagingInControl</HmiTitle>
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <HmiCommunicationServerPort>3002</HmiCommunicationServerPort>
@@ -21,7 +21,7 @@
     <HmiCommunicationRouterPort>10100</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13005</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.754.0</HmiInitial>
-    <HmiRecent>14.2.149.1</HmiRecent>
+    <HmiRecent>14.20.16.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
     <TcHmiDirectory>$(registry:HKEY_CURRENT_USER\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
     <TcHmiDirectory Condition="'$(TcHmiDirectory)'==''">$(registry:HKEY_LOCAL_MACHINE\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
@@ -29,6 +29,7 @@
     <TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>false</TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -77,7 +78,7 @@
   <PropertyGroup>
     <PostBuildEventDependsOn />
   </PropertyGroup>
-  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnBuildSuccess' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
     <Exec WorkingDirectory="$(OutDir)" Command="$(PostBuildEvent)" />
   </Target>
   <Target Name="GetFrameworkPaths" />
@@ -136,6 +137,9 @@
       <WorkingDirectory>PagingInControl</WorkingDirectory>
     </Folder>
     <Folder Include="Properties" />
+    <Folder Include="Pages" />
+    <Folder Include="Themes\Base\Images\Placeholder\" />
+    <Folder Include="Themes\Base-Dark\Images\Placeholder\" />
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
     </Content>
@@ -243,7 +247,15 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Themes\Base\Images\Background.png">
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_normal.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_active.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_pressed.svg">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
@@ -267,7 +279,15 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Themes\Base-Dark\Images\Background.png">
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_normal.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_active.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_pressed.svg">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
@@ -322,6 +342,12 @@
     <Content Include="Desktop.view">
       <SubType>Content</SubType>
       <Visible>true</Visible>
+    </Content>
+    <Content Include="Pages\Reading.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pages\Writing.content">
+      <SubType>Content</SubType>
     </Content>
     <Folder Include="Server\ADS\" />
     <Folder Include="Server\TcHmiLua\" />

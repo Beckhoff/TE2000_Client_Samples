@@ -24,9 +24,9 @@
     "alwaysStrict": false
   },
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.2.110/runtimes/native1.12-tchmi/TcHmiButton/TcHmiButton.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.2.110/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/TcHmi.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/TcHmiButton/TcHmiButton.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts"
   ],
   "files": [
     "StringPagerControl/StringPagerControl.ts"

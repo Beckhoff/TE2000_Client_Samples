@@ -1,0 +1,79 @@
+<div id="ReadingContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="916" data-tchmi-height="1130">
+<div id="ReadingHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Reading pages" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ReadingContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="884" data-tchmi-height="1050">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ReadingDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="120" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">StringPagerControl shows the server symbol <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">LoremIpsum</code>, an array of 100 strings. It subscribes to the current page only: the server applies <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">offset</code> and <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">limit</code> and sends just these items and the total number of items. Changing the page or <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">ItemsPerPage</code> replaces the subscription.</p>
+</div>
+<div id="ReadingTypeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="160" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. Get the symbol, not its value</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The attribute type keeps the symbol reference, so the control can page it.</p>
+</div>
+<div id="ReadingTypeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="216" data-tchmi-height="194" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;"><span style="color: rgba(121, 184, 255, 1);">"TcHmi.Controls.StringPager.StringPagerControl.DataSymbol"</span>: {
+  "allOf": [
+    { <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"$ref": "tchmi:framework#/definitions/Symbol"</span> },
+    {
+      "frameworkSymbolSubType": {
+        "$ref": "tchmi:general#/definitions/Array"
+      }
+    }
+  ]
+}</pre>
+</div>
+<div id="ReadingSubscribeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="434" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Subscribe to one page</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">offset</code> and <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">limit</code> select the page, an empty <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">filterMap</code> asks for the indices.</p>
+</div>
+<div id="ReadingSubscribeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="490" data-tchmi-height="228" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__subscribeToDataSymbol</span>() {
+    // ...
+    const command: Server.ICommand = {
+        commandOptions: ['SendErrorMessage'],
+        symbol: expressionName,
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">offset</span>: this.__currentPage * this.__innerItemsPerPage,
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">limit</span>: this.__innerItemsPerPage,
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">filterMap</span>: [],
+    };
+    this.__subscriptionId = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">TcHmi.Server.subscribeEx</span>&lt;string[]&gt;(
+        [command], interval, null, this.__onDataSymbolPage);
+}</pre>
+</div>
+<div id="ReadingShowText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="742" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. Show the page</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The response holds the page, the total count and the original indices.</p>
+</div>
+<div id="ReadingShowCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="798" data-tchmi-height="228" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__onDataSymbolPage</span> = (data) =&gt; {
+    const checkedData = this.__checkServerResult(data);
+    if (checkedData.hasError) {
+        return;
+    }
+    this.__updateDisplay(
+        checkedData.readValue,
+        checkedData.command.<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">maxEntries</span>
+            ?? checkedData.readValue.length,
+        checkedData.command.<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">filterMap</span>,
+    );
+};</pre>
+</div>
+<div id="ReadingStringPagerLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="24" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="StringPagerControl" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ReadingStringPager" data-tchmi-type="TcHmi.Controls.StringPager.StringPagerControl" data-tchmi-left="600" data-tchmi-top="56" data-tchmi-width="260" data-tchmi-height="360" data-tchmi-data-symbol="%s%LoremIpsum%/s%" data-tchmi-items-per-page="%i%ItemsPerPage%/i%"></div>
+</div>
+</div>
