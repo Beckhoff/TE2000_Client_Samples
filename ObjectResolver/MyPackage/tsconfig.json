@@ -24,10 +24,10 @@
     "alwaysStrict": false
   },
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Controls/System/TcHmiControl/TcHmiControl.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.3.133/runtimes/native1.12-tchmi/TcHmiNumericInput/TcHmiNumericInput.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.3.133/runtimes/native1.12-tchmi/TcHmiSpinboxInput/TcHmiSpinboxInput.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/TcHmi.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Controls/System/TcHmiControl/TcHmiControl.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/TcHmiNumericInput/TcHmiNumericInput.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/TcHmiSpinboxInput/TcHmiSpinboxInput.d.ts"
   ],
   "files": [
     "MyControl/MyControl.ts"

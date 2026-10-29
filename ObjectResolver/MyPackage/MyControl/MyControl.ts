@@ -28,10 +28,11 @@ namespace TcHmi.Controls {
 
             protected __elementTemplateRoot!: JQuery;
 
-            protected __spinBox1: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
-            protected __spinBox2: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
-            protected __spinBox3: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
+            protected __spinBoxNumber1: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
+            protected __spinBoxNumber2: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
+            protected __spinBoxNumber3: TcHmi.Controls.Beckhoff.TcHmiSpinboxInput | undefined;
 
+            /** Resolved value of MyAttribute. It is only replaced by the watch callback of the ObjectResolver. */
             protected __myAttributeValue: MyControl.MyObjectType | null | undefined;
 
             /**
@@ -46,16 +47,15 @@ namespace TcHmi.Controls {
                 }
 
                 // Initialize reference variables for Spinbox controls from Template.html.
-                this.__spinBox1 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_1`);
-                this.__spinBox2 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_2`);
-                this.__spinBox3 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_3`);
-
+                this.__spinBoxNumber1 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_number1`);
+                this.__spinBoxNumber2 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_number2`);
+                this.__spinBoxNumber3 = TcHmi.Controls.get<TcHmi.Controls.Beckhoff.TcHmiSpinboxInput>(`${this.getId()}.SpinboxInput_number3`);
 
                 // Call __previnit of base class
                 super.__previnit();
             }
             /**
-             * Is called during control initialization after the attribute setters have been called. 
+             * Is called during control initialization after the attribute setters have been called.
              * This function is only to be used by the System. Other function calls are not intended.
              */
             public __init() {
@@ -73,60 +73,19 @@ namespace TcHmi.Controls {
                  * Initialize everything which is only available while the control is part of the active dom.
                  */
 
-                // Register Spinbox onValueChanged events.
-                // Spinbox 1
-                const destroy1 = TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_1.onValueChanged`, (data) => {
-                    if (!this.__myAttributeValue) {
-                        return;
-                    }
-                    // Read current value from Spinbox and forward it to the current value of MyAttribute.
-                    const value = this.__spinBox1?.getValue();
-                    if (value !== undefined && value !== null) {
-                        this.__myAttributeValue.number1 = value;
-                    }
-                    // Write updated MyAttribute value to the attributes ObjectResolver instance.
-                    // ObjectResolver will compare the current value with its last known value and write back value changes of object paths with
-                    // symbol expressions that have BindingMode=TwoWay back to the related symbol.
-                    this.__objectResolvers.get('MyAttribute')?.resolver.write(this.__myAttributeValue);
-                });
-                // Mark event destroy function for destruction at detach of the control.
-                this.__destroyOnDetach.push(destroy1);
-
-                // Spinbox 2
-                const destroy2 = TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_2.onValueChanged`, (data) => {
-                    if (!this.__myAttributeValue) {
-                        return;
-                    }
-                    // Read current value from Spinbox and forward it to the current value of MyAttribute.
-                    const value = this.__spinBox2?.getValue();
-                    if (value !== undefined && value !== null) {
-                        this.__myAttributeValue.number2 = value;
-                    }
-                    // Write updated MyAttribute value to the attributes ObjectResolver instance.
-                    // ObjectResolver will write back value changes of the given object paths with
-                    // symbol expressions that have BindingMode=TwoWay back to the related symbol.
-                    this.__objectResolvers.get('MyAttribute')?.resolver.write(this.__myAttributeValue, ["number2"]);
-                });
-                // Mark event destroy function for destruction at detach of the control.
-                this.__destroyOnDetach.push(destroy2);
-
-                // Spinbox 3
-                const destroy3 = TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_3.onValueChanged`, (data) => {
-                    if (!this.__myAttributeValue) {
-                        return;
-                    }
-                    // Read current value from Spinbox and forward it to the current value of MyAttribute.
-                    const value = this.__spinBox3?.getValue();
-                    if (value !== undefined && value !== null) {
-                        this.__myAttributeValue.number3 = value;
-                    }
-                    // Write updated MyAttribute value to the attributes ObjectResolver instance.
-                    // ObjectResolver will write back value changes of the given object paths with
-                    // symbol expressions that have BindingMode=TwoWay back to the related symbol.
-                    this.__objectResolvers.get('MyAttribute')?.resolver.write(this.__myAttributeValue, ["number3"]);
-                });
-                // Mark event destroy function for destruction at detach of the control.
-                this.__destroyOnDetach.push(destroy3);
+                // Each Spinbox edits one property of MyAttribute and writes it back when its value changes.
+                // Mark the event destroy functions for destruction at detach of the control.
+                this.__destroyOnDetach.push(
+                    TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_number1.onValueChanged`, () => {
+                        this.__writeMyAttributeProperty('number1', this.__spinBoxNumber1?.getValue());
+                    }),
+                    TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_number2.onValueChanged`, () => {
+                        this.__writeMyAttributeProperty('number2', this.__spinBoxNumber2?.getValue());
+                    }),
+                    TcHmi.EventProvider.register(`${this.getId()}.SpinboxInput_number3.onValueChanged`, () => {
+                        this.__writeMyAttributeProperty('number3', this.__spinBoxNumber3?.getValue());
+                    }),
+                );
             }
 
             /**
@@ -143,7 +102,7 @@ namespace TcHmi.Controls {
             }
 
             /**
-             * Destroy the current control instance. 
+             * Destroy the current control instance.
              * Will be called automatically if system destroys control!
              */
             public destroy() {
@@ -160,8 +119,9 @@ namespace TcHmi.Controls {
                  * Free resources like child controls etc.
                  */
 
-                // No need to destroy the Spinboxes here. Because they are defined in Template.html they are
-                // defined as child controls of MyControl and will be automatically destroyed when MyControl is destroyed.
+                // No need to destroy the Spinboxes or the ObjectResolver here. The Spinboxes are defined in Template.html,
+                // so they are child controls of MyControl and will be destroyed together with it.
+                // The ObjectResolver is registered in __objectResolvers, so the base class destroys it.
             }
 
             /**
@@ -192,8 +152,14 @@ namespace TcHmi.Controls {
                 }
 
                 // 2. Create a new ObjectResolver instance and related resources for the new value and add it to __objectResolvers.
+                // The parent control delays the resolution of control symbols until the partial of the control is initialized.
+                // The type of the attribute lets the resolver check and convert the resolved values.
+                // The base class watches the resolvers in __objectResolvers again when the control is attached and destroys them with the control.
 
-                let resolver = new Symbol.ObjectResolver(convertedValue, this);
+                let resolver = new TcHmi.ObjectResolver(convertedValue, {
+                    parentControl: this,
+                    type: this.getAttributeDescription('MyAttribute')?.type,
+                });
 
                 this.__objectResolvers.set('MyAttribute', {
                     resolver: resolver,
@@ -204,11 +170,11 @@ namespace TcHmi.Controls {
 
             /**
              * MyAttribute ObjectResolver watch callback
-             * @param valueNew
+             * @param data
              */
             @CallbackMethod
             protected __onMyAttributeWatchCallback(
-                data: Symbol.ObjectResolver.IWatchResultObject<MyControl.MyObjectType | null>,
+                data: TcHmi.ObjectResolver.IWatchResultObject<MyControl.MyObjectType | null>,
             ) {
                 if (!this.__isAttached) {
                     // While not attached attribute should only be processed once during initializing phase.
@@ -216,6 +182,12 @@ namespace TcHmi.Controls {
                 }
 
                 if (data.error !== TcHmi.Errors.NONE) {
+                    TcHmi.Log.Controls.error(
+                        this,
+                        'TcHmi.Controls.MyPackage.MyControl',
+                        { Attribute: 'MyAttribute' },
+                        `Resolving symbols from object failed with error: ${TcHmi.Log.buildMessage(data.details)}`,
+                    );
                     return;
                 }
 
@@ -241,15 +213,35 @@ namespace TcHmi.Controls {
              * Process current MyAttribute value
              */
             protected __processMyAttribute() {
-                if (this.__myAttributeValue) {
-                    this.__spinBox1?.setValue(this.__myAttributeValue.number1 ?? null);
-                    this.__spinBox2?.setValue(this.__myAttributeValue.number2 ?? null);
-                    this.__spinBox3?.setValue(this.__myAttributeValue.number3 ?? null);
-                } else {
-                    this.__spinBox1?.setValue(null);
-                    this.__spinBox2?.setValue(null);
-                    this.__spinBox3?.setValue(null);
+                this.__spinBoxNumber1?.setValue(this.__myAttributeValue?.number1 ?? null);
+                this.__spinBoxNumber2?.setValue(this.__myAttributeValue?.number2 ?? null);
+                this.__spinBoxNumber3?.setValue(this.__myAttributeValue?.number3 ?? null);
+            }
+
+            /**
+             * Writes a changed property of MyAttribute back through its ObjectResolver.
+             * @param property The changed property
+             * @param value The new value of the property
+             */
+            protected __writeMyAttributeProperty(property: keyof MyControl.MyObjectType, value: number | null | undefined) {
+                const resolverInfo = this.__objectResolvers.get('MyAttribute');
+                if (!resolverInfo || !this.__myAttributeValue || value === null || value === undefined) {
+                    return;
                 }
+
+                // __processMyAttribute sets the values of the Spinboxes, which raises onValueChanged again. Skip it.
+                if (this.__myAttributeValue[property] === value) {
+                    return;
+                }
+
+                // Write a changed copy of the resolved value. The current value is not modified here. The ObjectResolver
+                // reports the new value to the watch callback, which updates the control like for any other change.
+                const valueNew: MyControl.MyObjectType = { ...this.__myAttributeValue, [property]: value };
+
+                // Name the changed path. The ObjectResolver writes the value to the symbol behind the symbol expression
+                // of this path if the expression uses BindingMode=TwoWay. Without dirty paths it compares the whole object
+                // with its last value to find the changes.
+                resolverInfo.resolver.write(valueNew, [property]);
             }
         }
 

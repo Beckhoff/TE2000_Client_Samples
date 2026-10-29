@@ -16,8 +16,10 @@
     <icon>images/logo.png</icon>
     <dependencies>
       <group targetFramework="native1.12-tchmi">
-        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.3.133" />
-        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="14.3.133" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.7.23" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="14.9.11" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Functions" version="14.7.3" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Server.Engineering" version="25.0.122" />
       </group>
     </dependencies>
   </metadata>
@@ -28,7 +30,7 @@
     <file src="Manifest.json" target="runtimes\native1.12-tchmi\" />
     <file src="**/*.function.json" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />
     <file src="**/Description.json" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />
-    <file src="**/Types.Schema.json" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />
+    <file src="**/*.Schema.json" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**;Properties\tchmi.framework.Schema.json" />
     <file src="**/*.html" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />
     <file src="**/*.css" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />
     <file src="**/*.png" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**" />

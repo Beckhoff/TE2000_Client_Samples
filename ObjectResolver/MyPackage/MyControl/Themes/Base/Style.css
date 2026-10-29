@@ -2,3 +2,9 @@
 .TcHmi_Controls_MyPackage_MyControl {
 
 }
+
+    .TcHmi_Controls_MyPackage_MyControl-Template {
+        background-color: #ffffff;
+        border: 1px solid #a3b0bb;
+        color: #4c6374;
+    }

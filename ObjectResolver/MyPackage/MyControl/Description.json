@@ -18,8 +18,8 @@
   "properties": {
     "containerControl": false,
     "geometry": {
-      "width": 150,
-      "height": 150
+      "width": 260,
+      "height": 168
     }
   },
   "icons": [
@@ -74,13 +74,13 @@
       "displayPriority": 32,
       "type": "tchmi:framework#/definitions/TcHmi.Controls.MyPackage.MyControl.MyObjectType",
       "category": "Common",
-      "description": "MyAttribute",
+      "description": "Object with three numbers. Each property can contain a symbol expression.",
       "readOnly": false,
       "bindable": true,
       "defaultBindingMode": "OneWay",
       "heritable": true,
       "defaultValue": null,
-      "defaultValueInternal": "none",
+      "defaultValueInternal": null,
       "allowSymbolExpressionsInObject": true
     }
   ],
