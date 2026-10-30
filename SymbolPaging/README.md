@@ -4,6 +4,14 @@ This sample shows how a client lets the server filter, sort and page a server sy
 
 ![Start page of the sample](README/StartPage.png)
 
+## Running the sample
+
+1. Open [SymbolPaging.sln](SymbolPaging.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Restore the NuGet packages, build the solution and start the Live-View of the `SymbolPaging` project. No PLC is needed.
+3. Select the pages in the navigation and compare the code with the tables.
+
+## Overview
+
 [Desktop.view](SymbolPaging/Desktop.view) uses the layout of the TwinCAT HMI BaseTemplate from the `Beckhoff.TwinCAT.HMI.BaseTemplate` package: a header at the top, a navigation on the right, a region for the pages in the center and a container at the bottom which lists the symbols used. There is one page per topic: `Paging`, `Sorting`, `Filtering` and `Combined`. Each page shows the relevant code next to a table with the result. The column `Index` of each table contains the original index of an item in the array.
 
 ## Scenario
@@ -108,12 +116,6 @@ const command: Server.ICommand<unknown, LoremIpsumItem[]> = {
 ```
 
 See [CodeBehindCombined.ts](SymbolPaging/CodeBehindCombined.ts).
-
-## Running the sample
-
-1. Open [SymbolPaging.sln](SymbolPaging.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
-2. Restore the NuGet packages, build the solution and start the Live-View of the `SymbolPaging` project. No PLC is needed.
-3. Select the pages in the navigation and compare the code with the tables.
 
 ## Files
 
