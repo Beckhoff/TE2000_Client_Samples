@@ -23,7 +23,7 @@
     "image": "Images/Beckhoff_Logo.svg",
     "altText": "Beckhoff",
     "targetRegion": "%ctrl%Region_Center%/ctrl%",
-    "targetContent": "Pages/StartPage.content"
+    "targetContent": "Pages/Reporting.content"
   },
   {
     "itemType": "Text",
@@ -178,12 +178,12 @@
 ]
 </script><script data-tchmi-target-attribute="data-tchmi-navigation-items" type="application/json">[
 {
- "id": "StartPage",
- "name": "%l%L_StartPage%/l%",
- "content": "Pages/StartPage.content",
- "icon": "%tr%TR_Icon_StartPage_normal%/tr%",
- "iconActive": "%tr%TR_Icon_StartPage_active%/tr%",
- "iconPressed": "%tr%TR_Icon_StartPage_pressed%/tr%"},
+ "id": "Reporting",
+ "name": "%l%L_Reporting%/l%",
+ "content": "Pages/Reporting.content",
+ "icon": "%tr%TR_Icon_Reporting_normal%/tr%",
+ "iconActive": "%tr%TR_Icon_Reporting_active%/tr%",
+ "iconPressed": "%tr%TR_Icon_Reporting_pressed%/tr%"},
 {
  "id": "Events",
  "name": "%l%L_Events%/l%",

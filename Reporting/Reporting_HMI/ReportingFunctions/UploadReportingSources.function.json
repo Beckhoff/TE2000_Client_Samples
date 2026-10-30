@@ -1,0 +1,41 @@
+{
+  "function": {
+    "name": "UploadReportingSources",
+    "namespace": "TcHmi.Functions.ReportingSample",
+    "displayName": "UploadReportingSources",
+    "visible": true,
+    "category": "Reporting",
+    "waitMode": "Asynchronous",
+    "injectContextObject": true,
+    "description": "Uploads the stylesheet of ReportingSources to a runtime of the reporting server",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String",
+      "description": "A short text for the user"
+    },
+    "arguments": [
+      {
+        "name": "ctx",
+        "displayName": "ctx",
+        "type": "tchmi:framework#/definitions/ContextReference",
+        "description": "Context Reference",
+        "defaultValue": "",
+        "required": true,
+        "bindable": false,
+        "restParameter": false,
+        "asReference": false
+      },
+      {
+        "name": "runtime",
+        "displayName": "runtime",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Runtime of the reporting server, for example local",
+        "defaultValue": "local",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false
+      }
+    ]
+  },
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+}

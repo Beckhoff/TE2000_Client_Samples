@@ -1,5 +1,7 @@
 {
+    "ALLOWED_ORIGINS": [],
     "ALLOW_REMOTE_ADMIN": true,
+    "ALLOW_SSL_CERTIFICATES_HOSTS_ORIGINS": true,
     "AUTO_LOGINUSER": "",
     "AUTO_LOGOFF": "P30D",
     "BASE_HMI_URL": "",
@@ -7,7 +9,7 @@
     "CACHEMAXAGE": "P30D",
     "CACHEMAXENTRYSIZE": 1048576,
     "CACHEMAXSIZE": 2097152,
-    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURuekNDQW9lZ0F3SUJBZ0lKQU0vYlVnbmNIK0p2TUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVWRQphVjlVWTFCcloxOVdUVjl5YjI5ME1DQVhEVEkxTURFd01qQTVORFExTmxvWUR6SXdOak13TlRBek1EazBORFUyCldqQkJNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1SVXcKRXdZRFZRUUREQXhGUkdsZlZHTlFhMmRmVmswd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFSwpBb0lCQVFESHI1OFBZZHArS0I3WkloaWZ4WGRHQytENGdKMFI4R09JL0J2M1Q5b1hLbytXdlJmeWNMdnJWNDMvCk1MSzR5MktWUFJNRTdnOW96VVdHbGZZdEFEQ0JjTWJkbjdyZS9NYkdxbzRPR0szWURtZ21BMGdoa0dOK2tzOE0Kbm5tbHlnOHBsNTNDejlJd1NJVlVjdFdFMUhqWExUSUZQQVhYU3RITXlWN0Y5S1hWSXA5cnJsNWdEZElkQk9uawp3NzVmTU90ZkZZb0F5OURDTnI2UTNNTGcxSXdVRnFzOE41alJtVnNVeXpESlBnQlpDV0pTVXp3c0hxbEFkQUhRClovM3hxY0d2YkRuYmczYktQd3IvS256eGxsQ3ZnY0VnWEJ3SzFSNk1TRXFGWitOOXNYak5oVHFYaWx2SWk4cVkKT1NlN0RMK05HeStGTFlQa2tSN240Z01mOU1QbEFnTUJBQUdqZ1pJd2dZOHdZQVlEVlIwUkJGa3dWNElKYkc5agpZV3hvYjNOMGh3Ui9BQUFCaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCZ2d4RlJHbGZWR05RYTJkZlZrMkNERVZFCmFWOVVZMUJyWjE5V1RZY0V3S2krZ0ljUS9vQUFBQUFBQUFBNFo1M1hrWGJWZERBZEJnTlZIUTRFRmdRVWUrRFMKdXdNYWFmOENONGFDZnh0QU9NcWNhWG93REFZRFZSMFRBUUgvQkFJd0FEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQwpBUUVBQ1hZK3h2NTZQelp3Mnl2RmVXNVdPWCtrNUVYK0tUOGI4d21zb3FiMk5kNjBjMjhCK0hRd2JxeEVtZmJWCkdHUWdSelZXdGhSMzVMTHZkL3A3UjRKSHVZZVNWTjJ3cC93Y2ZWSUdZWWsrZzgvSnlhM085Sm90SHdVLzZ3YlgKZGMzUlF1TXhDTTdiMW5wa0MzVU5BcGtVekxBUzhGYkh3YmFkOTJ4VkltVDdBSjRmVk56MElWNklwTUdLNllDUAp2Ykh3UFp5MkxIUkNZM0tHc3MzQnU5eFArS0YxbkNHRnYvM2dZRHppakMzNHJpNWFVYVZKZGxIdWhTK2J2TXBYCm0zWFZlK1cwWjBHS2xVaFVDTVU5OWd5VkxnSHVUQW9DNkZXMjAwNVN2djNqSlhjMllLanNQQ01lajIxc3RhdjIKRFppSDZtcVR6Rkh0bkg2c01Yd211Mkt3MFE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlEcHpDQ0FvK2dBd0lCQWdJSkFQakVmcml3Q0pZM01BMEdDU3FHU0liM0RRRUJDd1VBTUVZeEN6QUpCZ05WCkJBWVRBa1JGTVJzd0dRWURWUVFLREJKVWQybHVRMEZVSUVoTlNTQlRaWEoyWlhJeEdqQVlCZ05WQkFNTUVVVkUKYVY5VVkxQnJaMTlXVFY5eWIyOTBNQ0FYRFRJMU1ERXdNakE1TkRRMU5sb1lEekl3TmpNd05UQXpNRGswTkRVMgpXakJHTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnlNUm93CkdBWURWUVFEREJGRlJHbGZWR05RYTJkZlZrMWZjbTl2ZERDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVAKQURDQ0FRb0NnZ0VCQU9IT2h2MUN2THhmSHFxQXJHbWhjVDUyVUEybEFuVGJNdTJteFF6MnhINkMwMGtXVVB0agpnVXZ2U3BlWGhKcDBvUGx0KzlTTnpxc0RPdXZQY2RiYzc1LzZINE1BQ2xJalJ0NUJheVVCT2YyakU1R1BOWW8xCmt2QVVTOVQvOTljckJsdXNCSUxGWFRiWXkvQW9QcktVS08wWlhBaW0ycFRKOGpFQTZUcThLZkgzZllJdTZJQysKbzQwSTNzN201NW1LczNmRStTUmdDa0QycnFmUy9BZG1sU1VNR21oSHBobzlLNUs5VFpva3FqSnBHd0RVZzRLbgptUEdrbzF5V0JGQUJVdjlDdGErTTdYMnBPd04xUWJ0M0FORkRSeXVuMkd1WFVxR0xMRGlwZ2oxQy9WaFhuRytlCjVDbDYxRXJzQm5kbmtoaGx1TSsxeW9MV3RZL21MdlNyUEFzQ0F3RUFBYU9CbFRDQmtqQmdCZ05WSFJFRVdUQlgKZ2dsc2IyTmhiR2h2YzNTSEJIOEFBQUdIRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUdDREVWRWFWOVVZMUJyWjE5VwpUWUlNUlVScFgxUmpVR3RuWDFaTmh3VEFxTDZBaHhEK2dBQUFBQUFBQURobm5kZVJkdFYwTUIwR0ExVWREZ1FXCkJCUkEzNGRiM2tzWmF3THYwaGJZb1dEZFM0aEZsVEFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFDMmlpNytrc3o0emN6RG5xcUxzZ09JY0tyRzA2VjgrdGxRMU5BVHdjOGZmL3dsN3l1bgpWWnFjL0lGKzZ4ZjdwVHlmT1crWDZobUFpM2ROb1RIZ1pOUFQxZGRnTEN6djEzSFdyN3YxKzVudHFYYlo4aVBkCjNYeGMybFMyYXB3T09OemlZTzUzS1dTMjVockordVNNUjA1RmpIM01VL244MkQ1NmZDYzJEYWs4cE1wZXprckQKQWt5R2JyZlhwaVNaZitKelZlN1oxWVlOOHEveWtObi9JeEQvZTlVTjFmTEFEUnl5UFoxbWpIRy9PZUhacUkwTAowMWsvZDJiSGh5elFuMlR5eHBnMXI5RkM3eERWSEk1bmFqNVN6V0ZrTzBQeHNoakxyTXVtWVovTm1tdFd1alRVCllzU3hFcXhDMFUwWk8yUWVJRFd5dmhhYllzUWtKUmlac2xnTgotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVDakNDQXZLZ0F3SUJBZ0lKQVBWNHZDMUVlV0J5TUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXpNREUxTWpVeU1sb1lEekl3TmpVd01qSTNNVFV5Ck5USXlXakJFTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVJnd0ZnWURWUVFEREE5Q1FVUkZWMDVDTUMxTlRHWlZWWEV3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQgpEd0F3Z2dFS0FvSUJBUURLZmcvcU9GMW13dWF5U0ZSQzVTeXdwU3VacjVJQW0rcGNnRnRDQjFZQTd2ZEFRZTJaCjkxbktQSVpTaWhxZUJrejV4bWlrd0VWV3JxRng3VkFiUURTQzV1OXAxVmY5SDI5dmZQWHM0NGEwdFRUSHV1SHYKZHU3V3dOTjB1VXl3SnF3eUFKSjBpTTFaRDBUWFNDTkNYL0hzeXBkdWJEQlprazc3WlVSVzh1cmtOZXhnSGVvMwo2dmFqdWwybHNzK2pNcXMxMHBFakZuaFR0V3hZbHo4TW82ekt4VnNqM3JBbFhCZUhHL2tHT0t6MHdlZDZVVzVCClQvQnRobHhjSFljVjZ5R0s5WWx4REdrN2MveUJXNkFkWkhGa01GcHVycXlzcHZMOUI0N09jcUpiYmVhaC9mZEUKeU1sMXdCR1h6QmFwWTV0cEdqcWJ4UnA4MVl5eFVRcTl2aTJ0QWdNQkFBR2pnZmN3Z2ZRd2daTUdBMVVkRVFTQgppekNCaUlJSmJHOWpZV3hvYjNOMGh3Ui9BQUFCaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCZ2c5Q1FVUkZWMDVDCk1DMU5UR1pWVlhHQ0hFSkJSRVZYVGtJd0xVMU1abFZWY1M1aVpXTnJhRzltWmk1amIyMkhCS3dSZ1RlSEJNQ28KdkhlSEJNQ29PQUdIRVA2QUFBQUFBQUFBSWxQeHk2RVBadHlIRVA2QUFBQUFBQUFBZkNLQzgrSnQrNmt3SFFZRApWUjBPQkJZRUZKQk9TeGJZdEQ3eHJMWDV4bW1qUVJ6NjV3NTJNQjhHQTFVZEl3UVlNQmFBRkZWbEZaaERDYndlCnZneHoxOGZydlR4V2djWWRNQXdHQTFVZEV3RUIvd1FDTUFBd0RnWURWUjBQQVFIL0JBUURBZ1dnTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQjZGa2FxMmxEaisyUDh0MCtyOG5ibDUrOWxUV2JObFJpa0lpOE1zaEh6WVBDUgpzR1VLdmdRWXEwbndPcCtuYVE1ZFJSQjZUSDZVMXZiNlpJdmNjL0t2NTJpSE5JbGQ1aGhBN2xrYnlZd0FJQkFKCnY1VHp4ZU4yeCt3MDMzSStNOFNwMzJnV1pJNnNPWldWck1tQURkbjBNTm1GYmI4T1pKcitvS21EQXdHbEdEV2sKd2g5ZnN6S1NvTWl6NWlxUHJIQytyMHZFeklaNklJN015K01pY2ppd0VqcjNGMlZZOGFhNFFuRTlQdUgvTnpkVgp5WGQ5Yll0NWEyRmJiU1UxYzBWK2dUZlVZQm5VbEhUVjNmNXBYNVR2ZEZPdlhZYkc2WDF5ZVFqM2U1QVZGT3JuCnUwckZRNTdIR0t4U2VUTmRndWNTY0ttbVc4YURsK2szU0h6ZVRkSFcKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRUVqQ0NBdnFnQXdJQkFnSUpBTnpGbnN3TERBM1lNQTBHQ1NxR1NJYjNEUUVCQ3dVQU1Fa3hDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhIVEFiQmdOVkJBTU1GRUpCClJFVlhUa0l3TFUxTVpsVlZjVjl5YjI5ME1DQVhEVEkyTVRBek1ERTFNalV5TWxvWUR6SXdOalV3TWpJM01UVXkKTlRJeVdqQkpNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeQpNUjB3R3dZRFZRUUREQlJDUVVSRlYwNUNNQzFOVEdaVlZYRmZjbTl2ZERDQ0FTSXdEUVlKS29aSWh2Y05BUUVCCkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUlzY0JnU2dzMkU1Yjd5MktPM3NiK3QzT2tqUlRKUWxhNmJQQVdtcjBhVGoKT0NEeXo3eHNsS1ZCaWlpdng3S0NOU2VLc2p1TU9KT2ZqMmI1VklmamxEV3dnUnplMlhiem4xKzR3UkFiVzhoNgpuOS8rYlEvTU9zZkR2KzFUdFM4SEVRbVVITTRaYWVPNDRzQVJDWWpnMzhzZXdtcmxydUJad3E1NkNJS05uMHA1ClN2cnFhM2RpZVdHN2ttZ05mYTNTZXdaOXJRbDdpRngyRWtDRnVoSmROVlY0K3FmYnVxYy90SVhxV2N2UklmSEcKa3ZWR1VTdzV2cURuTng4L0J6VDNzSFgzM3Vlek9kb1paY0JsSlozU3hBamYveVNiWFFCRjd4UDBscTdmNEIrSwpIclZrOEVRMUNxVy9VekorcGc3RUpqUW5PdUI2V1hDS3IyYi93TU9HR0tFQ0F3RUFBYU9CK2pDQjl6Q0Jrd1lEClZSMFJCSUdMTUlHSWdnbHNiMk5oYkdodmMzU0hCSDhBQUFHSEVBQUFBQUFBQUFBQUFBQUFBQUFBQUFHQ0QwSkIKUkVWWFRrSXdMVTFNWmxWVmNZSWNRa0ZFUlZkT1FqQXRUVXhtVlZWeExtSmxZMnRvYjJabUxtTnZiWWNFckJHQgpONGNFd0tpOGQ0Y0V3S2c0QVljUS9vQUFBQUFBQUFBaVUvSExvUTltM0ljUS9vQUFBQUFBQUFCOElvTHo0bTM3CnFUQWRCZ05WSFE0RUZnUVVWV1VWbUVNSnZCNitESFBYeCt1OVBGYUJ4aDB3SHdZRFZSMGpCQmd3Rm9BVVZXVVYKbUVNSnZCNitESFBYeCt1OVBGYUJ4aDB3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFPQmdOVkhROEJBZjhFQkFNQwpBUVl3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUM1akVJOWhMMXR4aEQwN25hRERPU3FrRjdQK0F6NEpBS3N4Cmt2cG95c2JXb0d5NnZKWmlDSlV3R2ZucHhuTFVreEFKOTc3bW5IUUtxOUM1Y3ZRbWNFcUtidis4aTdYQ1o3cWcKbEh0Z3BKSi9GNDF5L3hQRnlEeTR0SjA0M2M1ejlkTHA5a2JXQjhxa2dkQnZXQzg1VWxoRXdsN3VSUWNHa05RNQp0UGNTclkxWHVRMGorUzIweDJiWTVIb1dqcnEzVks3Z2RXRTVVTUtPU1EwVkZ0bjZ4WUtHckV3YTQyZXRlWGlECnBSRktycVVRUkVteC9qTkZPbVkyRFI0VTZQYU5CR1FVZzh4c1dsUGpBbmxzSnpyTldOY2xWK3hlQ1JFUFNMWG0KeWVnS0wycW1lZTlZaElaSjRCbmRjdjNkbnF1SHZybE9xS1IxcWxHUzZuSjZXWmI1VjNjPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
     "CERTIFICATEEXPIRATION": "P14000D",
     "CHECKSUMENABLED": true,
     "CHUNKSIZE": 1048576,
@@ -121,7 +123,7 @@
                 ]
             },
             "NAME": "TcHmiReporting",
-            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Reporting.14.2.6885\\runtimes\\any\\net8.0\\",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Reporting.25.0.122\\runtimes\\any\\net8.0\\",
             "REQUIRED": false,
             "STARTUPTYPE": 1
         },
@@ -169,8 +171,8 @@
     "FILESREGEX": [
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self' 127.0.0.1:* localhost:*\r\n Content-Type: text/html",
-            "REGEX": ".*\\.(xml|htm|html|shtml)$"
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-src 'self'; media-src 'self'; frame-ancestors 'self' 127.0.0.1:* localhost:*\r\n Content-Type: text/html",
+            "REGEX": ".*\\.(htm|html|shtml)$"
         },
         {
             "ENABLE_GZIP": true,
@@ -179,7 +181,7 @@
         },
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Type: text/xml",
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self' 127.0.0.1:* localhost:* *.localhost:*\r\n Content-Type: text/xml",
             "REGEX": ".*\\.(config|xml)$"
         },
         {
@@ -299,6 +301,11 @@
             "ENABLE_CHUNKING": false,
             "FILESHTTPHEADERS": "Content-Type: application/x-x509-ca-cert",
             "REGEX": ".*\\.(pem)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: application/wasm",
+            "REGEX": ".*\\.(wasm)$"
         }
     ],
     "FLOODPROTECTION": 500,
@@ -309,27 +316,30 @@
     "HTTP_FLOODPROTECTION": 100,
     "INITTIMEOUT": "PT10S",
     "KEEP_ALIVE": "PT40S",
-    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRREhyNThQWWRwK0tCN1oKSWhpZnhYZEdDK0Q0Z0owUjhHT0kvQnYzVDlvWEtvK1d2UmZ5Y0x2clY0My9NTEs0eTJLVlBSTUU3ZzlvelVXRwpsZll0QURDQmNNYmRuN3JlL01iR3FvNE9HSzNZRG1nbUEwZ2hrR04ra3M4TW5ubWx5ZzhwbDUzQ3o5SXdTSVZVCmN0V0UxSGpYTFRJRlBBWFhTdEhNeVY3RjlLWFZJcDlycmw1Z0RkSWRCT25rdzc1Zk1PdGZGWW9BeTlEQ05yNlEKM01MZzFJd1VGcXM4TjVqUm1Wc1V5ekRKUGdCWkNXSlNVendzSHFsQWRBSFFaLzN4cWNHdmJEbmJnM2JLUHdyLwpLbnp4bGxDdmdjRWdYQndLMVI2TVNFcUZaK045c1hqTmhUcVhpbHZJaThxWU9TZTdETCtOR3krRkxZUGtrUjduCjRnTWY5TVBsQWdNQkFBRUNnZ0VBSUZFeGRtMVpUYXFUbDRPWHBaL3hOa0pzNWZyMnNMVU5mdG1DY3l1V3VjSVgKSEFlOWJPekcxUWRHQVdOeHdVdVZTRjdxaVpVM3BEZjRoUmdYRCtCa2VVWjF3Tjk5Z0dJN2oyS0IvQkVOYlphagpUMmVma0dNTVh5dEdYQjMzeFJlbkRZMnVxQjAzUUw0ejZkOXQ1QUg1RHFZUFh0NkFlWC92NVdzL3Jkenl5OFAyCkJJc3o4dnBJbTY0dU4rZDJIWk9pS1hPaHVVRm9vdVhPSHQwNTEzaWhCQy9QT21qckZBUGhweSsvZHNia1licXIKeEVYSWt6T1ZKbTJWOTJrKysvVlBRWEJEbFFhR2NDSzU2MVR4TURBanQ1WlNIamVpS2VSTVg1S1pMSEFaa0oxYgoxY0tmM3NqMEdZcE90YzNFVjg0bm1YZ2M3bnl1ZFNjd1YvY2k4Y0NHN3dLQmdRRGx5YWhYVCs4TlJJNzJsRU82CldQWklMTllYZUlXY3N4ZllqNXAvbnJXRndEU29Od3lrUmExc3FFMkUzalBuOVhQVnJ5ekE2dUpyU2hadGZhODYKMlZzMlhONkxpek5iZ0U4b2JSTHpqMk03d3FXOGtaOCt3SGRpRWlUb0RGeEJhVXkrRFhBWWJPZnpVTVJmT01lNgpnaENpZlFzZzBXbTV5Yk8zaFFXcXdSTGhxd0tCZ1FEZWR1eFNvUDNrdDl1Z1cwS3NXVS9NazExVjlUV2k4ZmMwCnhPWG1tMkNhV05YQXNGTmlNdHcyODRYZnpGUmxBWm9yNmI5UXNPdm9rWVRnSlpzc2QrcEEzbGw1VS9GY2JhcXAKU0RvRHdDMkNNamEzYXVPMjQ2ZmRMMGZaTXBqMlZYRTFoeXVtT3NrbVBRdkJQeHorc0h1Z2g0SGl5TGxzb1REbgpKYW44d0tXQXJ3S0JnUURTenZwZGY3dXoxRjNENGFsdzRBU3htbENmSDdhVVY4bGNxQUg1YXNUbGU3dlRSdzJWCjkwWnZGTWhwU09FZHdKVVFTTEVxRzFLMVV6YllKQ0lLUHpYcTNiQmRITXQwK25Xa2hNeUtIZFhRRVhhelZIVmYKd0hyRndoZVJ1eVUzN1Q2MmJPV1Z3dlBZeVJRZXQ1eWtnb1o0UzNkV0dFaUNaWVUyckJiUzNHWlNHUUtCZ0VucgorSEVvZjlWTlp0UnRIc1dJVStUbG51RWVQdmxyTDdyQUpxaXZQclZyQ1hRaTQwSkJKajI0UStidXphaFdsUFU4CmtjN3RTeWFYbkRDakxtSGpZdHExUjhQeUtjU055R1RCMUUxRXdacCt0d0hScWVNdTJLdTl0MEVyOS9uNndFaUsKSnUzd29NQnREb2ZqUWU0N2xJanVIakhPZ3hiZXBSSlp5SmR0S0ZHUEFvR0FiRGE5MlFFK0FYMndhK3hJTFFSQQpYUEE5Z3hyNXdTcVRiaC9zTUJySzJYdkN6QmxyeDljQkVzL2RDZlB1aHNFUE9kR2hHcXl1akVOYlMwajNKWm1PCjFpRWJTd1poWTB5WURNV1NDVU4ybTRwcEhtb3RNemlQRDhOZ1hBa2J5OGI1Q2RxZVVkYk9OYms4cGRSZUVqQjgKcXJWWXlBWXJlcGdnbFJZb3hIZ1JIaTg9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRREtmZy9xT0YxbXd1YXkKU0ZSQzVTeXdwU3VacjVJQW0rcGNnRnRDQjFZQTd2ZEFRZTJaOTFuS1BJWlNpaHFlQmt6NXhtaWt3RVZXcnFGeAo3VkFiUURTQzV1OXAxVmY5SDI5dmZQWHM0NGEwdFRUSHV1SHZkdTdXd05OMHVVeXdKcXd5QUpKMGlNMVpEMFRYClNDTkNYL0hzeXBkdWJEQlprazc3WlVSVzh1cmtOZXhnSGVvMzZ2YWp1bDJsc3Mrak1xczEwcEVqRm5oVHRXeFkKbHo4TW82ekt4VnNqM3JBbFhCZUhHL2tHT0t6MHdlZDZVVzVCVC9CdGhseGNIWWNWNnlHSzlZbHhER2s3Yy95QgpXNkFkWkhGa01GcHVycXlzcHZMOUI0N09jcUpiYmVhaC9mZEV5TWwxd0JHWHpCYXBZNXRwR2pxYnhScDgxWXl4ClVRcTl2aTJ0QWdNQkFBRUNnZ0VBTXEzemFNRWJxMVQ3YlVLS0NFWVlkY3VaQ25sMU5yN1BITUNwVm5ERWx5NDMKNXJhNWMzQURZb2pjYTNzU0oxdlhWeXBQMVhBanlvcWhjSVNmS0hyY3lhaG40bHFaajRvWEYxVzByVW5TMUphSApzN2R6eGIzRUVDNnBuY3lrdzIraWFFOVpXRjVHMnRQbC9HV2JJWWttNFFkaGVDc092TlJQL1Q1K3FLNWFtS3Z1ClNueWxYODNaU3I5c2lxaGFwN0tyakM1NGVsYURhNTVlUzhzME9ldW00YXR3TXgzbHRabEZNMTBLenVwTGFlM3kKOEhBc2Q2S2VKOW0rTFgrWXV3Z2NWdGNkMmtoNVBNdnA5NVRENDNJcmttVTZCR3FlcHcwaDBjT0hnNmw0RVYrVQpFdUFoY2Z1a0JLeFVpSENPV3h2VXg1SHBXN1FwSUlldUlMM25peUJ4RndLQmdRRHJLeTQxdHU5NlN1K0RXWDZvCjk2MUtWYUZFaDFPd0hRYmFSQWE2YUlEczM3VE1QL1Q2bFlQaC80U2J1T1JVOEpOUDZZVnhEYzVZMHZtaUkwVDgKWjI5UnZEVWRoZGpuMUJCeEJiWi9NMkFMdmx2S2xvc0xmSk1GYlJsV1dNSytUY05OWldpNHNqUEFhR3JsQkdVUwpySFE1djFaU1lvajczQzZ6TDFSdFoyc2Mxd0tCZ1FEY2JlVitBdThIa0NuN3BEMGUwNVIvaGUxUm54UGJ2b0luClFzc25uSWR2bXY1c3A1YkNQREo0UGNXN05scVM1a1BKOXE0V09RbW5IREdvYndYSXNBditwV2lNakN1cmxoMXUKc2Z4OXlGUG1tRXRINEY2ejFnRFRtZG4xTkZ6WEpBZU1sRzBJNmFPRzI3WWZ1Z2w5MXcyVllUWWRmMS9FLzh3ZQpHbmhvYVgrVkd3S0JnQVFDRjJhSStLbnY3d2NoRmx5UTVCNDVPV2R1bXdtTVpScUJRRkFiQ2Q5L3JKZ3ltdDFPCmdSSHdCZldWZ0NiR2R1eE13WjU4cXNDdXo5eG9sM3RwMCtianUxQUdnUHpxaTJFeHhMdUVSNlhMbDhyckovR0oKTFFSUnFMWGxDMlNzOUtBMEUwWGFtN0V5MW1lUzNKb2w0RkUvcHB2KzIvRFcvdURFOUw1c25kRy9Bb0dBSTErTApaWFpwRDJpbUpCak9LaVUvL2xycW81K0ltMG51THdpNyswWldRYVc0MEl6d1Y0azdmQ3BGa2U1K0NIYmxTQUxMCkd3dmFMYlFMa0FFSkI1U2d5Q09aTEh6T0FVSWN4UWZSQWdwazFHdDZJVFd6WE42cDBVc3VPL2hFTWM0NVcrangKdW0xcjdaZFNtYkxNRlNLdXJsc2tTUVdJdzk5Y3pUUG9RTEUxWlNNQ2dZRUFoeXpnQmxLejRQQ21RQ1J1NlREWgpGb0lERkN0cURTTmlPa0k0Z2c3R085aVQvQXdtRGRZMDNNOVNBSGoyS3VaTmxxRWE5VkdiczVEV1Vtdno3KzFVCklRQ0M5ZW5VYVRIYmRxLzRVQWxZOHNQSW5PQWVKZ0hCQmRnbGtYMXc3WFM0VCtuRmFVL05BU2ROaWtkNmlnQjUKTlNSZzduL3JXZzBlckhhTkVaeXNuM0U9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "KEYPASSWORD": "",
     "MAXCONNECTIONSPERCLIENT": 32,
     "MAXHTTPHEADERSIZE": 32768,
     "MAXREQUESTSIZE": 1048576,
     "MAXSESSIONS": 128,
+    "OAUTHAUTHORIZATION_2_0": {},
     "PERMESSAGEDEFLATEENABLED": true,
     "PROJECTNAME": "Reporting_HMI",
     "PROJECTVERSION": "1.0.0.0",
+    "RECORDING_MESSAGE_MAX_LENGTH": 5120,
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
-    "REQUIREAUTH": 0,
+    "REQUIREAUTH": 1,
     "REQUIRE_CLIENT_CERTIFICATE": false,
     "SAMESITE_ATTRIBUTE": 2,
-    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURwekNDQW8rZ0F3SUJBZ0lKQVBqRWZyaXdDSlkzTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVWRQphVjlVWTFCcloxOVdUVjl5YjI5ME1DQVhEVEkxTURFd01qQTVORFExTmxvWUR6SXdOak13TlRBek1EazBORFUyCldqQkdNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1Sb3cKR0FZRFZRUUREQkZGUkdsZlZHTlFhMmRmVmsxZmNtOXZkRENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUApBRENDQVFvQ2dnRUJBT0hPaHYxQ3ZMeGZIcXFBckdtaGNUNTJVQTJsQW5UYk11Mm14UXoyeEg2QzAwa1dVUHRqCmdVdnZTcGVYaEpwMG9QbHQrOVNOenFzRE91dlBjZGJjNzUvNkg0TUFDbElqUnQ1QmF5VUJPZjJqRTVHUE5ZbzEKa3ZBVVM5VC85OWNyQmx1c0JJTEZYVGJZeS9Bb1ByS1VLTzBaWEFpbTJwVEo4akVBNlRxOEtmSDNmWUl1NklDKwpvNDBJM3M3bTU1bUtzM2ZFK1NSZ0NrRDJycWZTL0FkbWxTVU1HbWhIcGhvOUs1SzlUWm9rcWpKcEd3RFVnNEtuCm1QR2tvMXlXQkZBQlV2OUN0YStNN1gycE93TjFRYnQzQU5GRFJ5dW4yR3VYVXFHTExEaXBnajFDL1ZoWG5HK2UKNUNsNjFFcnNCbmRua2hobHVNKzF5b0xXdFkvbUx2U3JQQXNDQXdFQUFhT0JsVENCa2pCZ0JnTlZIUkVFV1RCWApnZ2xzYjJOaGJHaHZjM1NIQkg4QUFBR0hFQUFBQUFBQUFBQUFBQUFBQUFBQUFBR0NERVZFYVY5VVkxQnJaMTlXClRZSU1SVVJwWDFSalVHdG5YMVpOaHdUQXFMNkFoeEQrZ0FBQUFBQUFBRGhubmRlUmR0VjBNQjBHQTFVZERnUVcKQkJSQTM0ZGIza3NaYXdMdjBoYllvV0RkUzRoRmxUQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUMyaWk3K2tzejR6Y3pEbnFxTHNnT0ljS3JHMDZWOCt0bFExTkFUd2M4ZmYvd2w3eXVuClZacWMvSUYrNnhmN3BUeWZPVytYNmhtQWkzZE5vVEhnWk5QVDFkZGdMQ3p2MTNIV3I3djErNW50cVhiWjhpUGQKM1h4YzJsUzJhcHdPT056aVlPNTNLV1MyNWhySit1U01SMDVGakgzTVUvbjgyRDU2ZkNjMkRhazhwTXBlemtyRApBa3lHYnJmWHBpU1pmK0p6VmU3WjFZWU44cS95a05uL0l4RC9lOVVOMWZMQURSeXlQWjFtakhHL09lSFpxSTBMCjAxay9kMmJIaHl6UW4yVHl4cGcxcjlGQzd4RFZISTVuYWo1U3pXRmtPMFB4c2hqTHJNdW1ZWi9ObW10V3VqVFUKWXNTeEVxeEMwVTBaTzJRZUlEV3l2aGFiWXNRa0pSaVpzbGdOCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
-    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRRGh6b2I5UXJ5OFh4NnEKZ0t4cG9YRStkbEFOcFFKMDJ6THRwc1VNOXNSK2d0TkpGbEQ3WTRGTDcwcVhsNFNhZEtENWJmdlVqYzZyQXpycgp6M0hXM08rZitoK0RBQXBTSTBiZVFXc2xBVG45b3hPUmp6V0tOWkx3RkV2VS8vZlhLd1pickFTQ3hWMDIyTXZ3CktENnlsQ2p0R1Z3SXB0cVV5Zkl4QU9rNnZDbng5MzJDTHVpQXZxT05DTjdPNXVlWmlyTjN4UGtrWUFwQTlxNm4KMHZ3SFpwVWxEQnBvUjZZYVBTdVN2VTJhSktveWFSc0ExSU9DcDVqeHBLTmNsZ1JRQVZML1FyV3ZqTzE5cVRzRApkVUc3ZHdEUlEwY3JwOWhybDFLaGl5dzRxWUk5UXYxWVY1eHZudVFwZXRSSzdBWjNaNUlZWmJqUHRjcUMxcldQCjVpNzBxendMQWdNQkFBRUNnZ0VBVFdZOVh4SkJIMUI3Y25Zb293eHpoTFdKT3lRVWMzbXZPMGF1eElMUlY0d0EKWUUwRjlTVm1iR0RaY0p5L0Z6SmkreHgzOWFPbDgzaG4rZXhoV1FUaUhqUGVHVWtxUUgxWERWZmZJaEFKa0tjVgpUZytJaXBkU2huaHVoZFEzWDhtZnBFeVNQMERuY3FWZFFqU0pTU3ovMmtXWEJtQXJERlVzYngrZzBrRXRINExRCjd3dWFGTVltQ3lqa203Z2N3S2tsZS9uVkJTdlhZUjB5UkhjQUo3ZWs4SHZNaG1DQnpxNEJ1UTNzRi9RMjMydUcKdHNGT0ppQ3BPTlJRL0NDVjRYOGlkZkRYZm1NYXhYUG5jUzk5ZXd4YkpoWUh6N2tySDVlbE4vYTk4T2FJVTdoYwpSSEEzQ3liOVZhZWxaWXdSb2NYbStoMDRlVWRXOEcrbSszeTJXUEtZQVFLQmdRRHczSk5PcUFGSDdyVnE2aDNBCkpIVVhocXhhbjZkRVRKVS9WbE4wTFhuYzNrWUN5YWYwVzlTOGxlTzJUenoyMUZ6d1lhc080bXc4N3ljOHJDTGoKZlp3NE4vNHMzc3F1OEFDd3pkc0h3ZXYwTC8rdjUvdjdERXBLTklwOXh6UHc4eGI3SW5OQmFvR2x0bFRRZTZMMwpPaUwzcnNQY09QcmNSWU1mWjBGdXc1cWFXd0tCZ1FEdi83aXJ0aGZiRG5tUVNSdW41NFk1RHFSMXI3NUlYQlBuClJ0RXFKU1FCZTZTVGxWdkZvTEJ6cGVFd3dMRFVzWWU0ZEFvSnNUUGtHMURNbkRGSUxzaEFHWGEweEd2bEhIRlQKMExFSW43aSt2cHRSaTkyRTF1SERzSU5aWXkrZ3ErVngxalNpakc0YXdBbWdkKzM5OFNYZStJazNnQjlsTjJxbwpvVTdaZU0yMEVRS0JnRnJWSkN4V2lWMGlOWUpqVmVMZkhOVkpjWGdmbTBuVGc3bEdDZVRYUFl6QXVqQlU4aVRoCitNRkIyWVVvTHJwNjdhMnRkMy8rZllraE8yL1REcmt4NXBjQTdyYm5NaEowNmgzREZDWEJ5UVRta1FzNmRqbC8Kc2doMzlmNW5BRHlPd0F6bk9nWGliNUFaeWJSeDI4eFdQVmVncmJaQU9zS1U2RlVRY0ltZjlJN2ZBb0dBV2hVYgpKT0NSYmJpdUtsazJsenhRNWlPMzJUQ2c5Sm9USW5FelcyVmJjVzhPWkJMZ3ducEJJUGQzWWd4QmsyUWJkRUdoCjd1ZGplZEJDOExvRHlYczkwTWwrQS9YaUpib2FVNEoyb0swSzlCV3BTTjk5d3puQXZlb0lNMG9HZTRGcCt1T1QKR0J3cnk4Q2ZIR3RIbWxTa2lWK3lhWEdlMXlnSTBjalNSdENRTFhFQ2dZRUF5Wko4NjcwakIyYTVXZjl0NDBlTworSkg0UHhlQnVucGFOS3VhMUMwTEIyaUZuUmNDOW9nVlJmK3RBZ0FZUVRhVUxXZEZwckpGemlzRlplN1c3SHYxCkRHaTNsQzhJeW12bldyblcvbUlhMHZGbFNMaGExSWJhQkNSTGYxaUFibm9qMGRHVWwvanU0SUx4cjE5RnFDcVkKZXpmZEhmRGltMi9qOE8rRGxJaFU2NDQ9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVFakNDQXZxZ0F3SUJBZ0lKQU56Rm5zd0xEQTNZTUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXpNREUxTWpVeU1sb1lEekl3TmpVd01qSTNNVFV5Ck5USXlXakJKTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVIwd0d3WURWUVFEREJSQ1FVUkZWMDVDTUMxTlRHWlZWWEZmY205dmREQ0NBU0l3RFFZSktvWklodmNOQVFFQgpCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFJc2NCZ1NnczJFNWI3eTJLTzNzYit0M09ralJUSlFsYTZiUEFXbXIwYVRqCk9DRHl6N3hzbEtWQmlpaXZ4N0tDTlNlS3NqdU1PSk9majJiNVZJZmpsRFd3Z1J6ZTJYYnpuMSs0d1JBYlc4aDYKbjkvK2JRL01Pc2ZEdisxVHRTOEhFUW1VSE00WmFlTzQ0c0FSQ1lqZzM4c2V3bXJscnVCWndxNTZDSUtObjBwNQpTdnJxYTNkaWVXRzdrbWdOZmEzU2V3WjlyUWw3aUZ4MkVrQ0Z1aEpkTlZWNCtxZmJ1cWMvdElYcVdjdlJJZkhHCmt2VkdVU3c1dnFEbk54OC9CelQzc0hYMzN1ZXpPZG9aWmNCbEpaM1N4QWpmL3lTYlhRQkY3eFAwbHE3ZjRCK0sKSHJWazhFUTFDcVcvVXpKK3BnN0VKalFuT3VCNldYQ0tyMmIvd01PR0dLRUNBd0VBQWFPQitqQ0I5ekNCa3dZRApWUjBSQklHTE1JR0lnZ2xzYjJOaGJHaHZjM1NIQkg4QUFBR0hFQUFBQUFBQUFBQUFBQUFBQUFBQUFBR0NEMEpCClJFVlhUa0l3TFUxTVpsVlZjWUljUWtGRVJWZE9RakF0VFV4bVZWVnhMbUpsWTJ0b2IyWm1MbU52YlljRXJCR0IKTjRjRXdLaThkNGNFd0tnNEFZY1Evb0FBQUFBQUFBQWlVL0hMb1E5bTNJY1Evb0FBQUFBQUFBQjhJb0x6NG0zNwpxVEFkQmdOVkhRNEVGZ1FVVldVVm1FTUp2QjYrREhQWHgrdTlQRmFCeGgwd0h3WURWUjBqQkJnd0ZvQVVWV1VWCm1FTUp2QjYrREhQWHgrdTlQRmFCeGgwd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBT0JnTlZIUThCQWY4RUJBTUMKQVFZd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDNWpFSTloTDF0eGhEMDduYURET1Nxa0Y3UCtBejRKQUtzeAprdnBveXNiV29HeTZ2SlppQ0pVd0dmbnB4bkxVa3hBSjk3N21uSFFLcTlDNWN2UW1jRXFLYnYrOGk3WENaN3FnCmxIdGdwSkovRjQxeS94UEZ5RHk0dEowNDNjNXo5ZExwOWtiV0I4cWtnZEJ2V0M4NVVsaEV3bDd1UlFjR2tOUTUKdFBjU3JZMVh1UTBqK1MyMHgyYlk1SG9XanJxM1ZLN2dkV0U1VU1LT1NRMFZGdG42eFlLR3JFd2E0MmV0ZVhpRApwUkZLcnFVUVJFbXgvak5GT21ZMkRSNFU2UGFOQkdRVWc4eHNXbFBqQW5sc0p6ck5XTmNsVit4ZUNSRVBTTFhtCnllZ0tMMnFtZWU5WWhJWko0Qm5kY3YzZG5xdUh2cmxPcUtSMXFsR1M2bko2V1piNVYzYz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRQ0xIQVlFb0xOaE9XKzgKdGlqdDdHL3JkenBJMFV5VUpXdW16d0ZwcTlHazR6Z2c4cys4YkpTbFFZb29yOGV5Z2pVbmlySTdqRGlUbjQ5bQorVlNINDVRMXNJRWMzdGwyODU5ZnVNRVFHMXZJZXAvZi9tMFB6RHJIdzcvdFU3VXZCeEVKbEJ6T0dXbmp1T0xBCkVRbUk0Ti9MSHNKcTVhN2dXY0t1ZWdpQ2paOUtlVXI2Nm10M1lubGh1NUpvRFgydDBuc0dmYTBKZTRoY2RoSkEKaGJvU1hUVlZlUHFuMjdxblA3U0Y2bG5MMFNIeHhwTDFSbEVzT2I2ZzV6Y2ZQd2MwOTdCMTk5N25zem5hR1dYQQpaU1dkMHNRSTMvOGttMTBBUmU4VDlKYXUzK0FmaWg2MVpQQkVOUXFsdjFNeWZxWU94Q1kwSnpyZ2VsbHdpcTltCi84RERoaGloQWdNQkFBRUNnZ0VBTG9LNElHUDZsYzgyWk1vaTlTblFZZElEVXNWbjdVQjF0ZGdRaU54QncvZVUKbEsrYWRVMTRoYWhjSVM1a2ZuSzZndllFa1pSWWRrTXJGeXJWOEhsTzNJU2ZKcC83NWFHZTc4bytBcnlpKzJ6RQpkNGdCdnY1eHlNalNLdStKN0tkWU12T3FqZDVCWVRvMzFpL2NHRC9YazNvOVZyQmt2KzVEQVVNY0JVcUVyOGxQCjF3SE4xbURDVVlZZlZzMXJDMzBrWGFjMG5vT3BzMSs1dkpTKzZVQU00VFhvL3VXbUExYmh2eHc1YWE4RmhCU0gKZDNBSzNHUnhPZ1BLNnVUVmQ4S2JMK1B4Zm5LcTcvSDltUEJBaUgxa2N5bWVWVVZkbEpjSlVpeStyTHcrbUlBUApjcWFCKzRtZExSRi9IdEM4RHFkNkhZT3VURE1Ec3ZXaktFM0hVTW5YNFFLQmdRREVNejZzQW5qdkkvTU96TnJzCmpGSThkMnVaTHlTc3N2QndLVTYrSWZlSUFJRnBaUkNKZjN4eVlmNmxDNkdkQ0NucDQwN0kvNkhqSXFXVzk1ODIKV2h6dTNEMnR2VVpuWmpQUHNPeldBL053UFlucXEvRk9ZOHNJUENBTGhSYVYvTEtLMGhoL2dnZ0xhbGR1YlNiaApiczFLRnVJc29aRmpOMWVEZHlrL1NUelJDd0tCZ1FDMWdqVVZvUXRGekdmRW1hV0J5c055Zmh5Y3ppK0J3cVc1CnI5eElVcnYzaHpmd1doVVF0aVZXUWpvZDdFdkJRU29mNlRqV1Fra0FQaXlod2srMldjZGY1cERGWDNibWJIU2QKc0xqSTBQS0YrbmNPT09ETFN6U01FeHdJd3ppcEltUDJYanFJMlRnMFZkOHkvMHJ1Q1hIWnVDcW5iNWIra01MQgphVHphcU9sZ2d3S0JnUUNIMzUxRmJpam1KQlZOYUowc09Ea3pXdGlQSzFEUXNOTkdPYlVvZzBselREWlRFUVNVCjFFOFF2OENqK0J3aUxlY283SnhCSXBld1B1eENVcFpXQTY0SjFVaDVxNXk0T3RVaXZqb21OSEpBaHIyZVlSa3AKMm41ZTQ1U2xwYk53aDZIMTlXMjEwQTFXS24wR0lsMU12WGs2R0FMbU9iWC82ZkdYUDh5MjRUZFc1UUtCZ1FDMApNQUxLNmdqcXpiVGw4ekhlMjQrVGhhYVo5QVl0WnpKbVdETHlpVStZdDEvTTkyQ2FLbmgrWFZpY2hBdmdXZlNiCm9VZVBURlowSzBUYmdLN3BjODc5WVVLdTdjcDNqWXRuVUJ6aEhxemtYSFQ4WlhLajNwRFh6ZEN5MGpyWmpRNTMKY2F2aVZ1SDQ4cGFWWmVMWTAvOTJCK0l3UGhORHZDbmJIOElOd0VtT1NRS0JnRm9lelJwVEhjSVNuUU81TzUyWgpUaEIyMkN1TE9qYVZub2RWRzdLYzY5T2RBN3gydDlpRjhyNUxCVVh0ZUZLN2ErTWVnb3V5Wko4UHJlZWk2dHBICmZGZHBrRFQ5R242bTZtb3JEaU9WaVZ1aURXT0hHSjRnWGZpcGt2TEhkVlozZEpzMExUZ3RRVHRxMXZuL3loUE8Kb2xIZkw0dG1va241aGt4VitXUWltWFpPCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "SESSIONSTORAGE": {},
     "SHOW_CONFIGURATION_HINTS": true,
     "SHOW_MAINTENANCE_MODE": true,
     "SHUTDOWNTIMEOUT": "PT10S",
     "SOCKET_TIMEOUT": "PT10S",
+    "SUBSCRIPTION_FLOODPROTECTION": 100,
     "SYMBOLS": {
         "ADS.AdsSyncReadDeviceInfoReq": {
             "ACCESS": 3,
@@ -591,70 +601,168 @@
             "MAPPING": "Diagnostics",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
-                "properties": {
-                    "runtimes": {
-                        "additionalProperties": {
-                            "properties": {
-                                "adsApplicationName": {
-                                    "propertyOrder": 5,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
+                "allOf": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "object"
+                                    }
                                 },
-                                "adsProjectCompiledAt": {
-                                    "format": "date-time",
-                                    "propertyOrder": 7,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "adsProjectName": {
-                                    "propertyOrder": 6,
-                                    "type": "string"
-                                },
-                                "adsState": {
-                                    "propertyOrder": 3,
-                                    "type": "string"
-                                },
-                                "adsVersion": {
-                                    "propertyOrder": 8,
-                                    "type": "string"
-                                },
-                                "adsVersionBuild": {
-                                    "minimum": 0,
-                                    "propertyOrder": 9,
-                                    "type": "integer",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "connectionState": {
-                                    "propertyOrder": 1,
-                                    "type": "string"
-                                },
-                                "deviceName": {
-                                    "propertyOrder": 4,
-                                    "type": "string"
-                                },
-                                "isUserModeRuntime": {
-                                    "propertyOrder": 10,
-                                    "type": "boolean",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "systemServiceAdsState": {
-                                    "propertyOrder": 2,
-                                    "type": "string"
-                                }
+                                "type": "object",
+                                "versions": [
+                                    1.0
+                                ]
                             },
-                            "required": [
-                                "deviceName",
-                                "adsVersion",
-                                "adsState",
-                                "connectionState"
-                            ],
-                            "type": "object"
-                        },
-                        "type": "object"
+                            {
+                                "properties": {
+                                    "domainError": {
+                                        "format": "multiline",
+                                        "propertyOrder": 3,
+                                        "type": "string"
+                                    },
+                                    "domainState": {
+                                        "enum": [
+                                            "Good",
+                                            "Bad"
+                                        ],
+                                        "propertyOrder": 2,
+                                        "type": "string"
+                                    },
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "propertyOrder": 1,
+                                        "type": "object"
+                                    }
+                                },
+                                "required": [
+                                    "domainState"
+                                ],
+                                "type": "object",
+                                "versions": [
+                                    2.0
+                                ]
+                            }
+                        ]
                     }
-                },
-                "type": "object"
+                ]
             },
             "USEMAPPING": true
         },
@@ -1084,6 +1192,10 @@
                 },
                 "function": true,
                 "type": "object",
+                "versions": [
+                    1.0,
+                    2.0
+                ],
                 "writeValue": {
                     "properties": {
                         "domain": {
@@ -1913,26 +2025,72 @@
             "MAPPING": "IsSymbolOutdated",
             "OPTIONS": {},
             "SCHEMA": {
-                "enum": [
-                    "SYMBOL_UP_TO_DATE",
-                    "SYMBOL_SCHEMA_DIFFERENCE",
-                    "SYMBOL_INVALID_DOMAIN",
-                    "SYMBOL_INVALID_SYMBOL"
-                ],
-                "function": true,
-                "type": "string",
-                "writeValue": {
-                    "properties": {
-                        "symbol": {
-                            "description": "Name of the symbol.",
-                            "type": "string"
+                "anyOf": [
+                    {
+                        "enum": [
+                            "SYMBOL_UP_TO_DATE",
+                            "SYMBOL_SCHEMA_DIFFERENCE",
+                            "SYMBOL_INVALID_DOMAIN",
+                            "SYMBOL_INVALID_SYMBOL"
+                        ],
+                        "function": true,
+                        "type": "string",
+                        "versions": [
+                            1.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
                         }
                     },
-                    "required": [
-                        "symbol"
-                    ],
-                    "type": "object"
-                }
+                    {
+                        "function": true,
+                        "properties": {
+                            "mappedSymbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            },
+                            "state": {
+                                "enum": [
+                                    "SYMBOL_UP_TO_DATE",
+                                    "SYMBOL_SCHEMA_DIFFERENCE",
+                                    "SYMBOL_INVALID_DOMAIN",
+                                    "SYMBOL_INVALID_SYMBOL"
+                                ],
+                                "type": "string"
+                            },
+                            "symbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            }
+                        },
+                        "required": [
+                            "state"
+                        ],
+                        "type": "object",
+                        "versions": [
+                            2.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -2126,9 +2284,57 @@
                             "description": "The globally unique identifier associated with the extension.",
                             "type": "string"
                         },
+                        "hideDomainOnLoginPage": {
+                            "description": "Shows if the domain should be hidden on the login page.",
+                            "type": "boolean"
+                        },
                         "licensed": {
                             "description": "Indicate the extension is license status.",
                             "type": "boolean"
+                        },
+                        "oauthConfig": {
+                            "additionalProperties": false,
+                            "description": "The OAuth provider configuration information that is associated with the extension.",
+                            "properties": {
+                                "authorizationEndpoint": {
+                                    "description": "The OAuth authorization endpoint.",
+                                    "type": "string"
+                                },
+                                "clientId": {
+                                    "description": "The application (client) ID for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "displayName": {
+                                    "description": "The display name of the OAuth provider configuration.",
+                                    "type": "string"
+                                },
+                                "domainHint": {
+                                    "description": "The domain hint for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "error": {
+                                    "$ref": "tchmi:general#/definitions/errorDetails"
+                                },
+                                "prompt": {
+                                    "description": "The prompt behavior for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "responseType": {
+                                    "description": "The response type expected from the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "scope": {
+                                    "description": "The scope of access requested from the OAuth provider.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "displayName",
+                                "authorizationEndpoint",
+                                "clientId",
+                                "responseType"
+                            ],
+                            "type": "object"
                         },
                         "packageVersion": {
                             "description": "The version of the NuGet package that contains the extension.",
@@ -2694,7 +2900,14 @@
             "MAPPING": "Logout",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true
+                "function": true,
+                "properties": {
+                    "redirectUrl": {
+                        "description": "URL to redirect to after logout. If not specified, the user will be redirected to the login page.",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             },
             "USEMAPPING": true
         },
@@ -3169,7 +3382,9 @@
                         "type": "array"
                     }
                 ],
-                "writeValue": {}
+                "writeValue": {
+                    "type": "string"
+                }
             },
             "USEMAPPING": true
         },
@@ -3198,7 +3413,31 @@
                 },
                 "type": "object",
                 "writeValue": {
-                    "type": "string"
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "properties": {
+                                "exportName": {
+                                    "description": "Name of the exported report. You can use '{current_time}' as placeholder for the current timestamp.",
+                                    "pattern": "^[a-zA-Z0-9_\\-\\{\\}]+$",
+                                    "type": "string"
+                                },
+                                "htmlContainers": {
+                                    "$ref": "tchmi:server#/definitions/TcHmiReporting-htmlContainers"
+                                },
+                                "reportName": {
+                                    "pattern": "^[a-zA-Z0-9_\\-\\{\\}]+$",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "reportName"
+                            ],
+                            "type": "object"
+                        }
+                    ]
                 }
             },
             "USEMAPPING": true
@@ -3896,7 +4135,7 @@
     "SYMBOL_COMPLEXITY_LIMIT": 100,
     "TEMPDH": "",
     "THREADPOOLSIZE": 32,
-    "UPLOADTIMEOUT": "PT20S",
+    "UPLOADTIMEOUT": "PT1M",
     "USEINT64STRING": true,
     "USERGROUPS": {
         "__SystemAdministrators": {
@@ -4031,11 +4270,11 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\Reporting_HMI\\",
-        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.3.210\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.3.210\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.3.212\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.3.210\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.PDFViewer": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.PDFViewer.14.3.210\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.7.4\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.9.11\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.7.23\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.7.3\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.PDFViewer": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.PDFViewer.14.6.4\\runtimes\\native1.12-tchmi",
         "/TcHmiReporting": "..\\..\\.engineering_servers\\Reporting_HMI\\TcHmiReporting",
         "/bin": "..\\..\\Reporting_HMI\\bin\\"
     }

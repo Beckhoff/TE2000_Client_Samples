@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props')" />
-  <Import Project="$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <TcHmiDirectory>$(registry:HKEY_CURRENT_USER\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
@@ -26,10 +25,11 @@
     <HmiCommunicationRouterPort>10100</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
     <HmiInitial>14.3.100.1</HmiInitial>
-    <HmiRecent>14.3.222.1</HmiRecent>
+    <HmiRecent>14.20.22.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -94,7 +94,7 @@
   <PropertyGroup>
     <PostBuildEventDependsOn />
   </PropertyGroup>
-  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnBuildSuccess' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
     <Exec WorkingDirectory="$(OutDir)" Command="$(PostBuildEvent)" />
   </Target>
   <Target Name="GetFrameworkPaths" />
@@ -133,6 +133,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="ReportingFunctions" />
     <Folder Include="ReportingSources" />
     <Folder Include="Pages\" />
     <Folder Include="Server\ADS\" />
@@ -163,8 +164,16 @@
     <Content Include="Pages\Settings.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Pages\StartPage.content">
+    <Content Include="Pages\Reporting.content">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReportingFunctions\UploadReportingSources.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>ReportingFunctions\UploadReportingSources.ts</DependentUpon>
+    </Content>
+    <Content Include="ReportingFunctions\UploadReportingSources.ts">
+      <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="ReportingSources\ReportingStyles.css">
       <SubType>Content</SubType>
@@ -172,6 +181,8 @@
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\ADS\ADS.Config.default.json" />
+    <Content Include="Server\ADS\ADS.Config.default.json" />
     <Content Include="Server\ADS\ADS.Config.remote.json">
       <SubType>Content</SubType>
     </Content>
@@ -506,11 +517,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.props'))" />
-    <Error Condition="!Exists('$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
-  <Import Project="$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('$(SolutionDir)\packages\Microsoft.TypeScript.MSBuild.5.5.3\build\Microsoft.TypeScript.MSBuild.targets')" />
-  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.6.2\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.3.2\build\Microsoft.TypeScript.MSBuild.targets')" />
 </Project>

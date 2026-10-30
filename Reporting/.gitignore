@@ -46,3 +46,8 @@ ipch/
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
+
+# Compiled TypeScript of the HMI project
+Reporting_HMI/ReportingFunctions/*.js
+**/*.d.ts
+**/*.js.map

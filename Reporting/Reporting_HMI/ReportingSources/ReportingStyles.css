@@ -1,3 +1,39 @@
-.test-class {
-    background: red;
+/* Styles of the report TestReport. Upload this file once to the runtime local of the reporting server,
+   see step 1 on the page Reporting. The runtime configuration Reporting lists it in StyleSheets. */
+
+/* Text field Temperature_with_HTML */
+.temperature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.temperature-image {
+    height: 80px;
+    width: 80px;
+}
+
+.temperature-text {
+    display: flex;
+    align-items: center;
+}
+
+.temperature-text-value {
+    width: 200px;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+    color: lightslategrey;
+}
+
+.temperature-red {
+    --tchmi-icons-color: #EF0000;
+}
+
+.temperature-orange {
+    --tchmi-icons-color: #FFA500;
+}
+
+.temperature-green {
+    --tchmi-icons-color: #009940;
 }

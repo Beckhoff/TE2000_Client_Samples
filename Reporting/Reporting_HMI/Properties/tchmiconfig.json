@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.212/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./Beckhoff.TwinCAT.HMI.Framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -12,7 +12,8 @@
     "websocketIntervalTime": 500,
     "websocketTimeout": 20000,
     "websocketSystemTimeout": 60000,
-    "websocketSubscriptionMode": null
+    "websocketSubscriptionMode": null,
+    "disableOptionalSystemSubscriptions": false
   },
   "activeTheme": "Base",
   "themes": {
@@ -56,12 +57,18 @@
       "type": "Stylesheet"
     },
     {
+      "name": "ReportingFunctions/UploadReportingSources.js",
+      "description": "",
+      "type": "EsModule"
+    },
+    {
       "name": "ReportingSources/ReportingStyles.css",
       "description": "",
       "type": "Stylesheet"
     }
   ],
   "userControls": [],
+  "controls": [],
   "content": [
     {
       "url": "Pages/Events.content",
@@ -71,14 +78,14 @@
       "preloadBindings": false
     },
     {
-      "url": "Pages/Settings.content",
+      "url": "Pages/Reporting.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
       "preloadBindings": false
     },
     {
-      "url": "Pages/StartPage.content",
+      "url": "Pages/Settings.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -93,7 +100,11 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "ReportingFunctions/UploadReportingSources.js"
+    }
+  ],
   "symbols": {
     "internal": {
       "MediaQueryList": {
@@ -160,6 +171,12 @@
         "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.AffectedControlList",
         "persist": true,
         "readonly": true
+      },
+      "ReportOrdered": {
+        "value": false,
+        "type": "tchmi:general#/definitions/Boolean",
+        "persist": false,
+        "readonly": false
       }
     },
     "themedResources": {
@@ -243,25 +260,25 @@
           "Base-Dark": "Themes/Base-Dark/Images/PLC/plc_stop.svg"
         }
       },
-      "TR_Icon_StartPage_normal": {
+      "TR_Icon_Reporting_normal": {
         "type": "tchmi:framework#/definitions/Path",
-        "description": "Normal Icon of page: Start Page",
+        "description": "Normal Icon of page: Reporting",
         "values": {
           "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
           "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
         }
       },
-      "TR_Icon_StartPage_pressed": {
+      "TR_Icon_Reporting_pressed": {
         "type": "tchmi:framework#/definitions/Path",
-        "description": "Pressed Icon of page: Start Page",
+        "description": "Pressed Icon of page: Reporting",
         "values": {
           "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
           "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
         }
       },
-      "TR_Icon_StartPage_active": {
+      "TR_Icon_Reporting_active": {
         "type": "tchmi:framework#/definitions/Path",
-        "description": "Active Icon of page: Start Page",
+        "description": "Active Icon of page: Reporting",
         "values": {
           "Base": "Themes/Base/Images/Placeholder/placeholder_active.svg",
           "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_active.svg"
@@ -316,7 +333,8 @@
         }
       }
     },
-    "timer": {}
+    "timer": {},
+    "package": {}
   },
   "intervals": {},
   "trigger": [],
@@ -340,23 +358,38 @@
   "packages": [
     {
       "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
-      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate"
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Framework",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Framework"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Framework",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.PDFViewer",
-      "basePath": "/Beckhoff.TwinCAT.HMI.PDFViewer"
+      "basePath": "/Beckhoff.TwinCAT.HMI.PDFViewer",
+      "symbols": {
+        "package": {}
+      }
     }
   ],
   "keyboardLayouts": [

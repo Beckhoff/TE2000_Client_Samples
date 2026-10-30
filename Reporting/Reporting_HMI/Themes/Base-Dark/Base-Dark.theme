@@ -1,5 +1,5 @@
 {
-    "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.43/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json",
+    "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json",
     "controlClassValues":
     {
         "background-container":
