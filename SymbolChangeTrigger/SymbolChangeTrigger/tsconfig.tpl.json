@@ -39,9 +39,7 @@
   "exclude": [
     "$(Output).Path/"
   ],
-  "include": [
-    "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"
-  ],
+  "include": [],
   "files": [
     "CodeBehindSymbolChange.ts"
   ]
