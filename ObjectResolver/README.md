@@ -4,6 +4,15 @@ This sample shows how a control uses the `TcHmi.ObjectResolver` class to resolve
 
 ![Start page of the sample](README/StartPage.png)
 
+## Running the sample
+
+1. Open [ObjectResolver.sln](ObjectResolver.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Restore the NuGet packages, build the solution and start the Live-View of the `HMI` project. No PLC is needed.
+3. Select `Usage` or `Implementation` in the navigation. Both pages contain an instance of `MyControl`.
+4. Change a value in `MyControl` or in the spinboxes at the bottom. The other inputs show the new value.
+
+## Overview
+
 The solution contains two projects:
 
 | Project                | Content                                                                                                       |
@@ -97,13 +106,6 @@ resolverInfo.resolver.write(valueNew, [property]);
 - The dirty paths name the changed properties. Without them the resolver compares the object with its last value to find the changes.
 - A changed path is written to its symbol if its symbol expression uses `BindingMode=TwoWay`. Without it the resolver only keeps the new value locally until the symbol changes the next time.
 - Skipping unchanged values avoids writing a symbol again with the value it just delivered.
-
-## Running the sample
-
-1. Open [ObjectResolver.sln](ObjectResolver.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
-2. Restore the NuGet packages, build the solution and start the Live-View of the `HMI` project. No PLC is needed.
-3. Select `Usage` or `Implementation` in the navigation. Both pages contain an instance of `MyControl`.
-4. Change a value in `MyControl` or in the spinboxes at the bottom. The other inputs show the new value.
 
 ## Files
 
