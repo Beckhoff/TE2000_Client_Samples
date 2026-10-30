@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/web-manifest",
-  "name": "RecipeManagementSample",
+  "name": "RecipeManagementFilter",
   "icons": [
     {
       "src": "../Images/Manifest/launcher-icon-0-75x.png",
@@ -43,5 +43,6 @@
   "background_color": "#9E9E9E",
   "start_url": "../Default.html",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "short_name": "RecipeManagementFilter"
 }

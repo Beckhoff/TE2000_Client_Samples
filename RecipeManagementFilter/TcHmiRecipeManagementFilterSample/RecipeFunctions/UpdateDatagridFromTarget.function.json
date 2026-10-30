@@ -1,15 +1,14 @@
 {
   "function": {
     "name": "UpdateDatagridFromTarget",
+    "namespace": "TcHmi.Functions.RecipeManagementFilterSample",
     "displayName": "UpdateDatagridFromTarget",
     "visible": true,
     "category": "Recipe",
     "waitMode": "Asynchronous",
     "injectContextObject": true,
     "description": "Reads the current values and fills the datagrid newValue column",
-    "returnValue": {
-      "type": "tchmi:general#/definitions/Number"
-    },
+    "returnValue": null,
     "arguments": [
       {
         "name": "ctx",
@@ -46,5 +45,5 @@
       }
     ]
   },
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
 }

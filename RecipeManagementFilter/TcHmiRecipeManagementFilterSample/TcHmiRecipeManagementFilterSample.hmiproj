@@ -6,14 +6,14 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <HmiTitle>Please enter your Title...</HmiTitle>
+    <HmiTitle>RecipeManagementFilter</HmiTitle>
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <Name>TcHmiRecipeManagementFilterSample</Name>
     <HmiCommunicationRouterPort>10109</HmiCommunicationRouterPort>
     <HmiCommunicationServerPort>3002</HmiCommunicationServerPort>
     <HmiInitial>1.10.937.0</HmiInitial>
-    <HmiRecent>14.2.116</HmiRecent>
+    <HmiRecent>14.20.22.1</HmiRecent>
     <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
     <TargetFramework>native1.12-tchmi</TargetFramework>
     <HmiLogTcHmiServerMessages>false</HmiLogTcHmiServerMessages>
@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>false</TcHmi_Beckhoff_TwinCAT_HMI_Server_Engineering_IncludeInArchive>
+    <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -71,7 +72,7 @@
   <PropertyGroup>
     <PostBuildEventDependsOn />
   </PropertyGroup>
-  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnBuildSuccess' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
     <Exec WorkingDirectory="$(OutDir)" Command="$(PostBuildEvent)" />
   </Target>
   <Target Name="GetFrameworkPaths" />
@@ -184,6 +185,50 @@
     <Content Include="Themes\Base\Images\Splash-800x600.png">
       <Visible>true</Visible>
     </Content>
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_normal.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_active.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base\Images\Placeholder\placeholder_pressed.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Base-Dark.theme">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Base-DarkStyle.css">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Splash-320x534.png">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Splash-420x200.png">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Splash-800x600.png">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_normal.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_active.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="Themes\Base-Dark\Images\Placeholder\placeholder_pressed.svg">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
     <Content Include="tsconfig.json">
       <DependentUpon>tsconfig.tpl.json</DependentUpon>
     </Content>
@@ -206,6 +251,8 @@
     <Folder Include="Server\TcHmiUserManagement" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base\" />
+    <Folder Include="Themes\Base-Dark\" />
+    <Folder Include="Themes\Base-Dark\Images\" />
     <Folder Include="Fonts" />
     <Folder Include="Server">
       <WorkingDirectory>RecipeManagementSample</WorkingDirectory>
@@ -232,38 +279,43 @@
     </Content>
     <Content Include="RecipeFunctions\ConvertDatagridToRecipe.function.json">
       <SubType>Content</SubType>
-      <DependentUpon>RecipeFunctions\ConvertDatagridToRecipe.js</DependentUpon>
+      <DependentUpon>RecipeFunctions\ConvertDatagridToRecipe.ts</DependentUpon>
     </Content>
-    <Content Include="RecipeFunctions\ConvertDatagridToRecipe.js">
+    <Content Include="RecipeFunctions\ConvertDatagridToRecipe.ts">
       <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="RecipeFunctions\ConvertRecipeToDatagrid.function.json">
       <SubType>Content</SubType>
-      <DependentUpon>RecipeFunctions\ConvertRecipeToDatagrid.js</DependentUpon>
+      <DependentUpon>RecipeFunctions\ConvertRecipeToDatagrid.ts</DependentUpon>
     </Content>
-    <Content Include="RecipeFunctions\ConvertRecipeToDatagrid.js">
+    <Content Include="RecipeFunctions\ConvertRecipeToDatagrid.ts">
       <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="RecipeFunctions\DeleteRecipe.function.json">
       <SubType>Content</SubType>
-      <DependentUpon>RecipeFunctions\DeleteRecipe.js</DependentUpon>
+      <DependentUpon>RecipeFunctions\DeleteRecipe.ts</DependentUpon>
     </Content>
-    <Content Include="RecipeFunctions\DeleteRecipe.js">
+    <Content Include="RecipeFunctions\DeleteRecipe.ts">
       <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="RecipeFunctions\ListRecipesAsReferenceArray.function.json">
       <SubType>Content</SubType>
-      <DependentUpon>RecipeFunctions\ListRecipesAsReferenceArray.js</DependentUpon>
+      <DependentUpon>RecipeFunctions\ListRecipesAsReferenceArray.ts</DependentUpon>
     </Content>
-    <Content Include="RecipeFunctions\ListRecipesAsReferenceArray.js">
+    <Content Include="RecipeFunctions\ListRecipesAsReferenceArray.ts">
       <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="RecipeFunctions\UpdateDatagridFromTarget.function.json">
       <SubType>Content</SubType>
-      <DependentUpon>RecipeFunctions\UpdateDatagridFromTarget.js</DependentUpon>
+      <DependentUpon>RecipeFunctions\UpdateDatagridFromTarget.ts</DependentUpon>
     </Content>
-    <Content Include="RecipeFunctions\UpdateDatagridFromTarget.js">
+    <Content Include="RecipeFunctions\UpdateDatagridFromTarget.ts">
       <SubType>Content</SubType>
+      <IncludeAs>JavascriptModule</IncludeAs>
     </Content>
     <Content Include="Themes\Base\Base.theme">
       <SubType>Content</SubType>
@@ -278,10 +330,6 @@
       <Visible>true</Visible>
     </Content>
     <Content Include="Localization\en-US.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Background.png">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
@@ -313,7 +361,16 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
+    <Content Include="Pages\Recipes.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Pages\Functions.content">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="Properties" />
+    <Folder Include="Pages" />
+    <Folder Include="Themes\Base\Images\Placeholder\" />
+    <Folder Include="Themes\Base-Dark\Images\Placeholder\" />
     <Content Include="Properties\tchmiconfig.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>

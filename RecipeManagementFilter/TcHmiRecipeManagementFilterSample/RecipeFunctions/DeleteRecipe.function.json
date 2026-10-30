@@ -1,16 +1,14 @@
 {
   "function": {
     "name": "DeleteRecipe",
+    "namespace": "TcHmi.Functions.RecipeManagementFilterSample",
     "displayName": "DeleteRecipe",
     "visible": true,
     "category": "Recipe",
     "waitMode": "Asynchronous",
     "injectContextObject": true,
     "description": "Deletes a Recipe",
-    "returnValue": {
-      "type": "tchmi:general#/definitions/Number",
-      "description": ""
-    },
+    "returnValue": null,
     "arguments": [
       {
         "name": "ctx",
@@ -36,5 +34,5 @@
       }
     ]
   },
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
 }
