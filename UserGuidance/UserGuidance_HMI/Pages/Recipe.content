@@ -65,7 +65,7 @@
 </div>
 <div id="TcHmiPopup_2" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="520" data-tchmi-height-unit="px" data-tchmi-left="148" data-tchmi-left-unit="px" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="640" data-tchmi-width-unit="px" data-tchmi-modal="True">
 </div>
-<div id="TcHmiRecipeEdit_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeEdit" data-tchmi-height="342" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="418" data-tchmi-width-unit="px">
+<div id="TcHmiRecipeEdit_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeEdit" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-right-unit="px" data-tchmi-bottom="10" data-tchmi-bottom-unit="px">
 </div>
 </div>    
 </div>

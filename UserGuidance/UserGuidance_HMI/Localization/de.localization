@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
   "locale": "de",
   "localizedText": {
     "L_StartPage": "Startseite",
@@ -7,7 +7,7 @@
     "L_Localization": "Lokalisierung",
     "L_Theme": "Farbschema",
     "L_Settings": "Einstellungen",
-    "L_Recipe": "Recipe",
+    "L_Recipe": "Rezepte",
     "L_Testing": "Testing",
     "L_Checklist": "Checklist",
     "L_CreateReport": "CreateReport",

@@ -22,7 +22,7 @@
                     "image": "Images/Beckhoff_Logo.svg",
                     "altText": "Beckhoff",
                     "targetRegion": "%ctrl%Region_Center%/ctrl%",
-                    "targetContent": "Pages/StartPage.content"
+                    "targetContent": "Pages/Recipe.content"
                 },
                 {
                     "itemType": "Text",

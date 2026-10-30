@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.133/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
   "locale": "en",
   "localizedText": {
     "L_StartPage": "Start Page",
