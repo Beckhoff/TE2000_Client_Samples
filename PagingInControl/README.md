@@ -4,6 +4,15 @@ This sample shows how a control requests a server symbol which contains an array
 
 ![Start page of the sample](README/StartPage.png)
 
+## Running the sample
+
+1. Open [PagingInControl.sln](PagingInControl.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Restore the NuGet packages, build the solution and start the Live-View of the `PagingInControl` project. No PLC is needed.
+3. Use the buttons of `StringPagerControl` to switch between the pages and change `Items per page` at the bottom.
+4. Select `Writing items` in the navigation and click an item to edit it. The new text is written to `LoremIpsum` and also shows up on the `Reading pages` page.
+
+## Overview
+
 The solution contains two projects:
 
 | Project                            | Content                                                                                                      |
@@ -126,13 +135,6 @@ For `JumbledAlphabet` this writes to `JumbledAlphabet[19]`, the other items stay
 ## Error handling
 
 `__checkServerResult` checks the result of a server request step by step: the request itself, the response, the command and its read value. Errors are logged with `TcHmi.Log.Controls.error`, which adds the control, the attribute `DataSymbol` and its symbol expression to the message and checks the log level itself.
-
-## Running the sample
-
-1. Open [PagingInControl.sln](PagingInControl.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
-2. Restore the NuGet packages, build the solution and start the Live-View of the `PagingInControl` project. No PLC is needed.
-3. Use the buttons of `StringPagerControl` to switch between the pages and change `Items per page` at the bottom.
-4. Select `Writing items` in the navigation and click an item to edit it. The new text is written to `LoremIpsum` and also shows up on the `Reading pages` page.
 
 ## Files
 
