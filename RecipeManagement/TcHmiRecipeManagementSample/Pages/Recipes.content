@@ -1,0 +1,442 @@
+<div id="RecipesContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="672" data-tchmi-height="1056">
+<div id="RecipesHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Recipes" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="RecipesDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="32" data-tchmi-top="60" data-tchmi-height="32" data-tchmi-right="16">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Select a recipe at the bottom. All boxes work on this recipe, each row names the function it calls.</span></p>
+</div>
+<div id="TeachContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="104" data-tchmi-right="16" data-tchmi-min-width="640" data-tchmi-height="172">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="TeachTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="24" data-tchmi-top="16" data-tchmi-height="28" data-tchmi-width="400" data-tchmi-text="Teach" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="TeachButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Teach selected recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.TeachRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/RecipeReference"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TeachButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Saves the current values of the symbols in the selected recipe. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TeachRecipe</code></span></p>
+</div>
+<div id="TeachAsNewButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Teach as new recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.TeachAsNewRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/RecipeReference"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%NewRecipeName::Text%/ctrl%",
+            "valueType": "tchmi:general#/definitions/String"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": ""
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="NewRecipeName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-left="268" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-width="200" data-tchmi-placeholder="New recipe name" data-tchmi-auto-focus-out="True"></div>
+<div id="TeachAsNewButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="492" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Creates a recipe with this name and the current values, based on the type of the selected recipe. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TeachAsNewRecipe</code></span></p>
+</div>
+</div>
+<div id="ActivateDeleteContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="292" data-tchmi-right="16" data-tchmi-min-width="640" data-tchmi-height="172">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ActivateDeleteTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="24" data-tchmi-top="16" data-tchmi-height="28" data-tchmi-width="400" data-tchmi-text="Activate and delete" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="ActivateButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Activate selected recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.ActivateRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/RecipeReference"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="ActivateButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Writes the values of the selected recipe to its symbols. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">ActivateRecipe</code></span></p>
+</div>
+<div id="DeleteButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Delete selected recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Comment",
+        "comment": "Only delete if there is more than one recipe. Otherwise no new recipe could be taught in the client anymore."
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "asyncWait": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "%ctrl%RecipeSelect::SrcData%/ctrl%.length"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "1"
+                },
+                "compareOperator": ">",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "Comment",
+                "comment": "DeleteRecipe does not wait for completion, so the selection is reset before the recipe is gone.\r\nOtherwise the datagrid in the box Edit values would request the members of the deleted recipe."
+              },
+              {
+                "objectType": "Function",
+                "active": true,
+                "fn": "TcHmi.Functions.RecipeManagementSample.DeleteRecipe",
+                "fnParams": [
+                  {
+                    "objectType": "Symbol",
+                    "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+                    "valueType": "tchmi:framework#/definitions/RecipeReference"
+                  }
+                ],
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%RecipeSelect::SelectedIndex%/ctrl%",
+                "valueType": "tchmi:general#/definitions/UDINT",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "value": null
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="DeleteButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Deletes the selected recipe, unless it is the last one. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">DeleteRecipe</code> of this sample</span></p>
+</div>
+</div>
+<div id="ValuesContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="480" data-tchmi-right="16" data-tchmi-min-width="640" data-tchmi-height="372">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ValuesTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="24" data-tchmi-top="16" data-tchmi-height="28" data-tchmi-width="400" data-tchmi-text="Edit values" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="ValuesDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>The datagrid shows the members of the selected recipe and their saved values. The column New value takes new values or the current values of the symbols.</span></p>
+</div>
+<div id="RecipeDatagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-left="24" data-tchmi-top="104" data-tchmi-height="140" data-tchmi-width="544" data-tchmi-header-height="32" data-tchmi-row-height="36" data-tchmi-show-row-numbers="False">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "memberName",
+    "label": "Member",
+    "width": 240,
+    "editable": false,
+    "control": "TextBlock",
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "format": null
+  },
+  {
+    "name": "value",
+    "label": "Saved value",
+    "width": 140,
+    "editable": false,
+    "control": "TextBlock",
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "format": null
+  },
+  {
+    "name": "newValue",
+    "label": "New value",
+    "width": 140,
+    "editable": true,
+    "control": "TextBox",
+    "widthUnit": "px",
+    "resize": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "cellBackground": null,
+    "textColor": null,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "format": null
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%TcHmiRecipeManagement.Config::recipeList%/s%",
+    "actions": [
+      {
+        "objectType": "Comment",
+        "comment": "Binds SrcData again whenever the recipe list changes, so the datagrid also shows taught and updated values."
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.CreateBinding",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeDatagrid%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/Control"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+            "value": "SrcData"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%f%TcHmi.Functions.RecipeManagementSample.ConvertRecipeToDatagrid(%ctrl%RecipeSelect::SelectedValue%/ctrl%)%/f%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="UpdateButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="260" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Update selected recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.RecipeManagementSample.ConvertDatagridToRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeDatagrid%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/Control"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/RecipeReference"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="UpdateButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="260" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Saves the column New value in the selected recipe. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">ConvertDatagridToRecipe</code> of this sample</span></p>
+</div>
+<div id="ReadFromTargetButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="312" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Read values from target" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.RecipeManagementSample.UpdateDatagridFromTarget",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeDatagrid%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/Control"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/RecipeReference"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="ReadFromTargetButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="312" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Fills the column New value with the current values of the symbols. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">UpdateDatagridFromTarget</code> of this sample</span></p>
+</div>
+</div>
+<div id="FilesContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="868" data-tchmi-right="16" data-tchmi-min-width="640" data-tchmi-height="172">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="FilesTitle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="24" data-tchmi-top="16" data-tchmi-height="28" data-tchmi-width="400" data-tchmi-text="Recipe files" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-3"
+]
+</script>
+</div>
+<div id="DownloadButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Download selected recipe" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.DownloadRecipes",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%ctrl%RecipeSelect::SelectedValue%/ctrl%",
+            "valueType": "tchmi:framework#/definitions/MultipleRecipeReferences"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Boolean",
+            "value": false
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="DownloadButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="56" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Saves the selected recipe as a file. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">DownloadRecipes</code>, not available in the Live-View of Visual Studio</span></p>
+</div>
+<div id="UploadButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-width="220" data-tchmi-text="Upload recipe files" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.UploadRecipeFiles",
+        "fnParams": [],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="UploadButtonDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="268" data-tchmi-top="108" data-tchmi-height="40" data-tchmi-right="24">
+<p style="margin: 0; display: flex; align-items: center; height: 100%; font-size: 14px; line-height: 20px;"><span>Adds the recipes of files which are selected in the browser. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">UploadRecipeFiles</code></span></p>
+</div>
+</div>
+</div>

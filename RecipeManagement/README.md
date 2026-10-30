@@ -1,36 +1,95 @@
 # RecipeManagement
 
-This recipe management example shows the use of the recipe management at runtime. It thereby extends the functions available in the Actions and Conditions Editor by the use of the Framework API. The example serves as the point of entry to the recipe management and can be extended as desired. In parallel with the example project, observe the chapter [Management in the engineering](https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/5737061387.html?id=14175300647116079) in Infosys.
+This sample shows how to use the recipe management at runtime. It combines the recipe functions of the Actions and Conditions editor with own TypeScript functions which use the Framework API `Server.RecipeManagement`. The sample is a starting point for the recipe management and can be extended as needed. See also the chapter [Management in the engineering](https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/5737061387.html?id=14175300647116079) in Infosys.
 
-The example consists of a TwinCAT HMI project and a TwinCAT project with example symbols in the PLC. The example contains a total of three symbols, which are used by two different recipe types. Symbol 1 and Symbol 2 are the symbols from the PLC and Symbol 3 is an offline symbol. The offline symbol illustrates that symbols from other sources (OPC UA, use-specific server extension, etc.) can also be used as the ADS extension.
+![Start page of the sample](README/StartPage.png)
+
+## Running the sample
+
+1. Open [TcHmiRecipeManagementSample.sln](TcHmiRecipeManagementSample.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Activate the configuration of `TwinCAT Project1` and start the PLC.
+3. Restore the NuGet packages, build the solution and start the Live-View of the `TcHmiRecipeManagementSample` project.
+4. Select a recipe at the bottom and try the buttons on the pages.
+
+## Overview
+
+The solution contains two projects:
+
+| Project                                                    | Content                                                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [TcHmiRecipeManagementSample](TcHmiRecipeManagementSample) | The HMI project with the recipe management server extension and the user interface. |
+| [TwinCAT Project1](TwinCAT%20Project1)                     | A PLC with the variables `MAIN.Value1` and `MAIN.Value2`.                           |
+
+[Desktop.view](TcHmiRecipeManagementSample/Desktop.view) uses the layout of the TwinCAT HMI BaseTemplate from the `Beckhoff.TwinCAT.HMI.BaseTemplate` package: a header at the top, a navigation on the right, a region for the pages in the center and a container at the bottom. The container holds the recipe selection, which all pages use, and the current values of the recipe members.
+
+## Recipes and symbols
+
+The recipe management server extension (`Beckhoff.TwinCAT.HMI.RecipeManagement`) contains two recipe types:
+
+| Recipe type   | Members                                                                                     |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| `RecipeType1` | `Value1` and `Value2`, mapped to the PLC symbols `PLC1.MAIN.Value1` and `PLC1.MAIN.Value2`. |
+| `RecipeType2` | `Value3`, mapped to the offline server symbol `Value3`.                                     |
+
+`Value3` shows that recipe members are not limited to PLC symbols: any server symbol works, for example symbols of OPC UA or of an own server extension. The recipes `Recipe1` to `Recipe4` are based on these types, `Recipe4` is in the folder `SubFolder1`. All of them are defined in [TcHmiRecipeManagement.Config.default.json](TcHmiRecipeManagementSample/Server/TcHmiRecipeManagement/TcHmiRecipeManagement.Config.default.json).
 
 ## User interface
 
-The example has a user interface in the client that can execute various functions of the recipe management at runtime. These are described in more detail below.
+### Recipe selection
 
-![Hmi with labels](README/hmi_with_labels.png)
+The combobox `RecipeSelect` at the bottom shows all recipes. A recipe in a folder is shown with its path, for example `SubFolder1::Recipe4`. The buttons and the datagrid on the page Recipes use the selected recipe with `%ctrl%RecipeSelect::SelectedValue%/ctrl%`. Next to it the current values of `Value1`, `Value2` and `Value3` are shown.
 
-1. Recipe selection: All available recipe types are displayed in the combo box. If there is a recipe inside a folder, the relative path to the recipe is displayed. The combo box is used to select the recipe that is used as the basis for the other buttons and fields in this example.
+### Recipes
 
-2. Teach and activate recipe: The recipe currently selected in the combo box can be edited in this area.
-   * Teach selected recipe: The currently selected recipe is taught again. This means that the current online values are adopted from the PLC and saved in the recipe.
-   * Teach as new recipe: A new recipe is created with the current online values from the PLC on the basis of the currently selected recipe. A new name for the recipe must be entered in the text box.
-   * Activate selected recipe: The currently selected recipe is activated. This means that the values stored in the recipe are written to the corresponding symbols in the PLC.
-   * Delete selected recipe: The currently selected recipe is deleted.
-  
-3. Upload and download recipe: This area enables recipes to be downloaded and uploaded. The file browser of the respective browser that enables the selection of the storage location or the selection of the recipe thereby opens.
+The page groups the controls in four boxes. All of them work on the recipe which is selected at the bottom.
 
-   *Note*: The upload and download functions are not available in the LiveView in Visual Studio.
+**Teach**
 
-4. Display and edit recipe: This area enables the display and editing of the recipe members (symbols) of the currently selected recipe.
+- **Teach selected recipe**: reads the current values of the symbols and saves them in the selected recipe.
+- **Teach as new recipe**: creates a new recipe with the current values of the symbols, based on the recipe type of the selected recipe. Enter the name of the new recipe in the text box next to the button.
 
-   * Datagrid: The currently selected recipe is loaded and the individual members are displayed in the data grid. The "New value" column has two different functions. Firstly, the column is used to receive new values for the individual members of the recipe, which are subsequently saved by clicking on the Update selected recipe button. Secondly, the column is used to display the current online values of the members for comparison with the stored values by clicking on the Read values from target button.
-   * Update selected recipe: This button saves the recipe with the new values specified in the "New value" column.
-   * Read values from target: This button reads out the current online values of the recipe members and displays them in the "New value" column.
+**Activate and delete**
 
-5. Online recipe values: The current online values of the three symbols Value 1, Value 2 and Value 3 are displayed in this area.
+- **Activate selected recipe**: writes the values of the selected recipe to its symbols.
+- **Delete selected recipe**: deletes the selected recipe. A condition prevents deleting the last recipe, because then no new recipe could be taught in the client anymore.
 
-## Further Information
+**Edit values**
 
-* [Logic in the background](https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/5872675083.html?id=1883451105835014634) (Documentation in Infosys)
-* [Extension with filter function](../RecipeManagementFilter/README.md)
+The datagrid `RecipeDatagrid` shows the members of the selected recipe with their saved values. The column "New value" has two uses:
+
+- Enter new values and save them in the recipe with **Update selected recipe**.
+- **Read values from target** fills the column with the current values of the symbols, to compare them with the saved values.
+
+**Recipe files**
+
+- **Download selected recipe**: saves the selected recipe as a file in the browser.
+- **Upload recipe files**: opens the file selection of the browser and adds the recipes of the selected files.
+
+*Note*: Download and upload are not available in the Live-View of Visual Studio.
+
+Teach, teach as new, activate, download and upload use the functions `TeachRecipe`, `TeachAsNewRecipe`, `ActivateRecipe`, `DownloadRecipes` and `UploadRecipeFiles` of the `Beckhoff.TwinCAT.HMI.Functions` package. Delete, update and read from target use the functions `DeleteRecipe`, `ConvertDatagridToRecipe` and `UpdateDatagridFromTarget` of this sample.
+
+### Functions
+
+One box per function of this sample: where it is used, which API it calls and an excerpt of its implementation, with the calls of `Server.RecipeManagement` highlighted.
+
+## Functions of this sample
+
+The folder [RecipeFunctions](TcHmiRecipeManagementSample/RecipeFunctions) contains five TypeScript functions. Each consists of a `.ts` file and a `.function.json` file with the description for the Actions and Conditions editor. The functions are ES modules: they import the Framework API from `Beckhoff.TwinCAT.HMI.Framework/index.esm.js` and are listed with the type `EsModule` in the `dependencyFiles` of [tchmiconfig.json](TcHmiRecipeManagementSample/Properties/tchmiconfig.json). Each file registers its function with `Functions.registerFunctionEx` in the namespace `TcHmi.Functions.RecipeManagementSample`, so triggers and bindings call them for example as `TcHmi.Functions.RecipeManagementSample.DeleteRecipe`.
+
+| Function                      | Used by                       | API                                                                                      |
+| ----------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------- |
+| `ListRecipesAsReferenceArray` | `SrcData` of `RecipeSelect`   | None. Converts `TcHmiRecipeManagement.Config::recipeList` to a flat array of references. |
+| `ConvertRecipeToDatagrid`     | `SrcData` of `RecipeDatagrid` | `getRecipe`                                                                              |
+| `ConvertDatagridToRecipe`     | Update selected recipe        | `updateRecipe`                                                                           |
+| `UpdateDatagridFromTarget`    | Read values from target       | `readFromTarget`                                                                         |
+| `DeleteRecipe`                | Delete selected recipe        | `deleteRecipe`                                                                           |
+
+The asynchronous functions get a context object `ctx` and call `ctx.success` or `ctx.error` when the server answered. `ListRecipesAsReferenceArray` is synchronous and returns its result.
+
+`RecipeDatagrid` binds `SrcData` again with the function `CreateBinding` whenever `TcHmiRecipeManagement.Config::recipeList` changes, so the datagrid also shows the values after a teach or an update.
+
+## Further information
+
+- [Logic in the background](https://infosys.beckhoff.com/content/1033/te2000_tc3_hmi_engineering/5872675083.html?id=1883451105835014634) (documentation in Infosys)
+- [Extension with filter function](../RecipeManagementFilter/README.md)

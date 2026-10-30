@@ -83,5 +83,6 @@
             },
             "recipeTypeNames": []
         }
-    }
+    },
+    "recipeVersioningEnabled": false
 }

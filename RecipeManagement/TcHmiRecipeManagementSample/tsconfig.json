@@ -2,31 +2,49 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "none",
-    "target": "es6",
+    "module": "ES2022",
+    "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
-      "dom",
-      "scripthost",
-      "es6",
-      "es2017.intl"
+      "DOM",
+      "DOM.Iterable",
+      "ES2023"
     ],
+    "paths": {
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/index.esm.d.ts"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls/*": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Controls": [
+        "./../Packages/Beckhoff.TwinCAT.HMI.Controls.14.9.11/runtimes/native1.12-tchmi/index.esm.d.ts"
+      ]
+    },
     "types": [],
     "declaration": true,
     "sourceMap": true,
     "noEmitOnError": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
+    "strictBindCallApply": true,
     "strictNullChecks": true,
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "exclude": [
     "bin/"
   ],
-  "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.2.110/runtimes/native1.12-tchmi/TcHmi.d.ts"
+  "include": [],
+  "files": [
+    "RecipeFunctions/ConvertDatagridToRecipe.ts",
+    "RecipeFunctions/ConvertRecipeToDatagrid.ts",
+    "RecipeFunctions/DeleteRecipe.ts",
+    "RecipeFunctions/ListRecipesAsReferenceArray.ts",
+    "RecipeFunctions/UpdateDatagridFromTarget.ts"
   ]
 }

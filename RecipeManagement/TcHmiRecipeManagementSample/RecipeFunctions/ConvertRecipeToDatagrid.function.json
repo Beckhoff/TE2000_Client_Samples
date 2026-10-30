@@ -1,14 +1,16 @@
 {
   "function": {
-    "name": "ConvertRecipeToDataGrid",
-    "displayName": "ConvertRecipeToDataGrid",
+    "name": "ConvertRecipeToDatagrid",
+    "namespace": "TcHmi.Functions.RecipeManagementSample",
+    "displayName": "ConvertRecipeToDatagrid",
     "visible": true,
     "category": "Recipe",
     "waitMode": "Asynchronous",
     "injectContextObject": true,
     "description": "Reads the recipe and fills the datagrid",
     "returnValue": {
-      "type": "tchmi:general#/definitions/Array"
+      "type": "tchmi:general#/definitions/Array",
+      "description": "Rows for the datagrid"
     },
     "arguments": [
       {
@@ -35,5 +37,5 @@
       }
     ]
   },
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
 }

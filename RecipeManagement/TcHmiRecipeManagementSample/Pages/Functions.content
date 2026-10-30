@@ -1,0 +1,117 @@
+<div id="FunctionsContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="932" data-tchmi-height="1932">
+<div id="FunctionsHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Functions" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="FunctionsContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="900" data-tchmi-height="1852">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="FunctionsDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="96" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">This sample implements five functions in the folder <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">RecipeFunctions</code>. They are ES modules which import the Framework API and register themselves with <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Functions.registerFunctionEx</code>. Each box shows one of them: where it is used, which API it calls and an excerpt of its implementation. Highlighted are the calls of the Framework API <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Server.RecipeManagement</code>.</p>
+</div>
+<div id="FunctionsListText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="144" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. ListRecipesAsReferenceArray</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Used by: combobox <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">RecipeSelect</code>. API: none, synchronous</p>
+</div>
+<div id="FunctionsListCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="200" data-tchmi-height="279" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">export function ListRecipesAsReferenceArray(
+    recipeList: Server.RecipeManagement.FolderRecipe | null
+): string[] {
+    // ...
+    for (const [name, recipeOrFolder] of Object.entries(folder)) {
+        const reference = path ? path + '::' + name : name;
+        if (typeof recipeOrFolder.recipeTypeName === 'string') {
+            result.push(reference); // A recipe
+        } else {
+            iterateRecipes(reference, recipeOrFolder); // A folder
+        }
+    }
+    // ...
+    return result;
+}</pre>
+</div>
+<div id="FunctionsGetText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="511" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. ConvertRecipeToDatagrid</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Used by: datagrid <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">RecipeDatagrid</code>. API: <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">getRecipe</code></p>
+</div>
+<div id="FunctionsGetCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="567" data-tchmi-height="262" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">export function ConvertRecipeToDatagrid(ctx, recipeReference) {
+    // ...
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Server.RecipeManagement.getRecipe</span>(recipeReference, null,
+        (data) =&gt; {
+            // ... error handling
+            const rows = Object.entries(data.value.values)
+                .map(([memberName, value]) =&gt; ({
+                    memberName,
+                    value,
+                    newValue: value,
+                }));
+            ctx.success(rows);
+        });
+}</pre>
+</div>
+<div id="FunctionsUpdateText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="861" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. ConvertDatagridToRecipe</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Used by: button Update selected recipe. API: <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">updateRecipe</code></p>
+</div>
+<div id="FunctionsUpdateCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="917" data-tchmi-height="262" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">export function ConvertDatagridToRecipe(
+    ctx, datagridControl, recipeReference
+) {
+    // ...
+    const newValues: Dictionary&lt;any&gt; = {};
+    for (const row of rows) {
+        newValues[row.memberName] = row.newValue;
+    }
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Server.RecipeManagement.updateRecipe</span>(
+        recipeReference, null, newValues, (data) =&gt; {
+            // ... error handling
+            ctx.success();
+        });
+}</pre>
+</div>
+<div id="FunctionsTargetText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1211" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">4. UpdateDatagridFromTarget</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Used by: button Read values from target. API: <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">readFromTarget</code></p>
+</div>
+<div id="FunctionsTargetCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1267" data-tchmi-height="313" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">export function UpdateDatagridFromTarget(
+    ctx, datagridControl, recipeReference
+) {
+    // ...
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Server.RecipeManagement.readFromTarget</span>(
+        recipeReference, null, (data) =&gt; {
+            // ... error handling
+            // A dictionary with the recipe reference as key
+            const targetValues =
+                data.value?.[recipeReference]?.values;
+            datagridControl.setSrcData(rows.map((row) =&gt; ({
+                ...row,
+                newValue: targetValues[row.memberName],
+            })));
+            ctx.success();
+        });
+}</pre>
+</div>
+<div id="FunctionsDeleteText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1612" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">5. DeleteRecipe</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Used by: button Delete selected recipe. API: <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">deleteRecipe</code></p>
+</div>
+<div id="FunctionsDeleteCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1668" data-tchmi-height="160" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">export function DeleteRecipe(ctx, recipeReference) {
+    // ...
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Server.RecipeManagement.deleteRecipe</span>(
+        recipeReference, null, (data) =&gt; {
+            // ... error handling
+            ctx.success();
+        });
+}</pre>
+</div>
+</div>
+</div>

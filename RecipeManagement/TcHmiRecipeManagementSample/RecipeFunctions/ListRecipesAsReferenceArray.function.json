@@ -1,28 +1,18 @@
 {
   "function": {
     "name": "ListRecipesAsReferenceArray",
+    "namespace": "TcHmi.Functions.RecipeManagementSample",
     "displayName": "ListRecipesAsReferenceArray",
     "visible": true,
     "category": "Recipe",
-    "waitMode": "Asynchronous",
-    "injectContextObject": true,
-    "description": "Parses a recipe folder and returns a string array with the RecipeReferences",
+    "waitMode": "Synchronous",
+    "injectContextObject": false,
+    "description": "Converts the recipe list to an array of recipe references (path + '::' + name).",
     "returnValue": {
       "type": "tchmi:general#/definitions/Array",
-      "description": ""
+      "description": "Recipe references"
     },
     "arguments": [
-      {
-        "name": "ctx",
-        "displayName": "ctx",
-        "type": "tchmi:framework#/definitions/ContextReference",
-        "description": "Context Reference",
-        "defaultValue": "",
-        "required": true,
-        "bindable": false,
-        "restParameter": false,
-        "asReference": false
-      },
       {
         "name": "recipeList",
         "displayName": "recipeList",
@@ -36,5 +26,5 @@
       }
     ]
   },
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json"
 }
