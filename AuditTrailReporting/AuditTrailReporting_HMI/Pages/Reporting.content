@@ -1,0 +1,216 @@
+<div id="ReportingContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="932" data-tchmi-height="1390">
+<div id="ReportingHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Reporting" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ReportingContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-height="1310">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ReportingDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="72" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">The extension TcHmiReporting creates PDF reports with the TwinCAT Reporting Server. Create report orders the report <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Beckhoff</code> of the audit trail, the steps on the left show its configuration. Before the first report, install the package <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TwinCAT.XAR.ReportingServer</code> and upload the files of step 1.</p>
+</div>
+<div id="ReportingSourcesText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="120" data-tchmi-height="96" data-tchmi-width="440">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. Upload the scripts and the stylesheet</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Once before the first report: on the Config page, open TcHmiReporting, Custom config, select the runtime <code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">local</code> and upload each file under Upload CSS/JavaScript file. Or use the button below.</p>
+</div>
+<div id="ReportingSourcesCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="224" data-tchmi-height="126" data-tchmi-width="440">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">ReportingSources/
+    ReportingScripts/
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Toolbox.js</span>   // Creates the entries
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Images.js</span>    // Icons of the entries
+    ReportingStyles/
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">TcHmi.css</span>    // Layout of the entries</pre>
+</div>
+<div id="UploadSourcesButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="24" data-tchmi-top="366" data-tchmi-width="160" data-tchmi-height="40" data-tchmi-text="Upload files" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%UploadSourcesState::Text%/ctrl%",
+        "value": {
+          "objectType": "FunctionExpression",
+          "functionExpression": "TcHmi.Functions.AuditTrailReportingSample.UploadReportingSources('local')"
+        },
+        "asyncWait": true
+      }
+    ],
+    "displayName": "Upload the files of ReportingSources and show the result"
+  }
+]
+</script>
+</div>
+<div id="UploadSourcesState" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="200" data-tchmi-top="366" data-tchmi-width="264" data-tchmi-height="40" data-tchmi-text="" data-tchmi-word-wrap="True" data-tchmi-text-font-size="14" data-tchmi-text-font-size-unit="px" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="ReportingReportText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="438" data-tchmi-height="48" data-tchmi-width="440">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Runtime and report</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The text field AuditTrail reads the audit trail.</p>
+</div>
+<div id="ReportingReportCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="494" data-tchmi-height="228" data-tchmi-width="440">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&quot;reports&quot;: {
+  &quot;Beckhoff&quot;: {
+    &quot;runtime&quot;: <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">&quot;local&quot;</span>,
+    &quot;config&quot;: &quot;Beckhoff&quot;,
+    &quot;textFields&quot;: {
+      &quot;AuditTrail&quot;: {
+        &quot;symbol&quot;: <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">&quot;TcHmiAuditTrail.GetAuditTrail&quot;</span>,
+        &quot;value&quot;: &quot;...&quot;
+      }
+    }
+  }
+}</pre>
+</div>
+<div id="ReportingValueText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="754" data-tchmi-height="48" data-tchmi-width="440">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. Fill the text field with the entries</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">{value}</code> is replaced by the audit trail entries.</p>
+</div>
+<div id="ReportingValueCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="810" data-tchmi-height="228" data-tchmi-width="440">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&lt;div class=&quot;auditEntries&quot;&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    var parentElement =
+        document.querySelector(&quot;.auditEntries&quot;);
+    let toolbox = new <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Reporting.Toolbox.Element</span>();
+    // The value will be replaced while loading.
+    let jsValue = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">{value}</span>;
+    let sortedValue = jsValue.sort((data1, data2) =&gt;
+        data1.timestamp &gt; data2.timestamp ? 1 : -1);
+    toolbox.<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">createEntries</span>(parentElement, sortedValue);
+&lt;/script&gt;</pre>
+</div>
+<div id="ReportingCreateText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1070" data-tchmi-height="48" data-tchmi-width="440">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">4. Create the report from the HMI</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The button orders it, the viewer loads the PDF.</p>
+</div>
+<div id="ReportingCreateCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1126" data-tchmi-height="160" data-tchmi-width="440">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">// Create report: onPressed
+WriteToSymbol <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">%s%TcHmiReporting.OrderReport%/s%</span>
+    value: &quot;Beckhoff&quot;
+
+// ReportViewer: trigger
+<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">%s%TcHmiReporting.Diagnostics::reportsInProgress%/s%</span>
+    {} and %i%ReportOrdered%/i%:
+    File = &quot;/TcHmiReporting/reports/<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Beckhoff.pdf</span>&quot;</pre>
+</div>
+<div id="CreateReportButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="488" data-tchmi-top="120" data-tchmi-width="160" data-tchmi-height="40" data-tchmi-text="Create report" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%ReportViewer::File%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/Path",
+          "value": null
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%ReportOrdered%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Boolean",
+          "value": true
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%TcHmiReporting.OrderReport%/s%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/String",
+          "value": "Beckhoff"
+        },
+        "asyncWait": true
+      }
+    ],
+    "displayName": "Clear the PDF viewer and order the report"
+  }
+]
+</script>
+</div>
+<div id="ReportViewer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPdfViewer" data-tchmi-left="488" data-tchmi-top="176" data-tchmi-right="24" data-tchmi-bottom="24">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%TcHmiReporting.Diagnostics::reportsInProgress%/s%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Object",
+                  "symbolExpression": "%ctx%args[0]%/ctx%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Object",
+                  "value": {}
+                },
+                "compareOperator": "==",
+                "logic": null
+              },
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "symbolExpression": "%i%ReportOrdered%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": "AND"
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::File%/ctx%",
+                "value": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "TcHmi.Environment.getHostBaseUri() + '/TcHmiReporting/reports/Beckhoff.pdf?t=' + Date.now()"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": []
+          }
+        ],
+        "asyncWait": true
+      }
+    ],
+    "displayName": "Show the report when the ordered report is finished"
+  }
+]
+</script>
+</div>
+</div>
+</div>

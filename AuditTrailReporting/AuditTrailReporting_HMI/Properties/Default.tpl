@@ -22,7 +22,6 @@
 
    	    window.onload = function load() {
 			if ((!('TcHmi' in window) || !window.TcHmi.System) && document.body) {
-				document.body.style.background = '#C8C8C8';
 				document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded.';
 			}
 			window.onload = null;
@@ -61,7 +60,6 @@
   <script>
 	 window.onload = function load() {
 		if ((!('TcHmi' in window) || !window.TcHmi.System) && document.body) {
-			document.body.style.background = '#C8C8C8';
 			document.body.innerHTML = 'TwinCAT HMI Framework could not be loaded.';
 			if(!("Promise" in window)){
 				document.body.innerHTML += ' A more modern web browser (which supports ES6 JavaScript) is needed.';

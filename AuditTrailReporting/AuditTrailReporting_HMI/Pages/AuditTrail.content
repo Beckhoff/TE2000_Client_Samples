@@ -1,0 +1,127 @@
+<div id="AuditTrailContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-min-width="932" data-tchmi-min-height="480">
+<div id="AuditTrailHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Audit trail" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="AuditTrailContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-bottom="16">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="AuditTrailDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="72" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">The extension TcHmiAuditTrail records every change of the audited symbols with the old and the new value, the user and a comment. Change the values at the bottom and log in at the top right with another user to see more entries. Changes of MAIN.bTest need a comment.</p>
+</div>
+<div id="AuditTrailGrid" data-tchmi-type="TcHmi.Controls.Beckhoff.AuditTrailUtils.TcHmiAuditTrailGrid" data-tchmi-left="24" data-tchmi-top="112" data-tchmi-right="24" data-tchmi-bottom="24" data-tchmi-server-interval="1000" data-tchmi-show-menu-bar="true">
+<script data-tchmi-target-attribute="data-tchmi-filter" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-columns" type="application/json">
+[
+  {
+    "columnData": "timestamp",
+    "width": 175.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 100.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "columnData": "name",
+    "width": 150.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 100.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "columnData": "oldValue",
+    "width": 80.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 80.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "columnData": "newValue",
+    "width": 80.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 80.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "columnData": "userName",
+    "width": 280.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  },
+  {
+    "columnData": "comment",
+    "label": "Comment",
+    "width": 85.0,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 85.0,
+    "minWidthUnit": "px",
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-sorting" type="application/json">
+[
+  {
+    "name": "timestamp",
+    "order": "Descending"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+</div>
+</div>
+</div>

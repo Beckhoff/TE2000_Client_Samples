@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "none",
+    "module": "ES2022",
     "target": "ES2022",
     "skipLibCheck": true,
     "lib": [
@@ -10,6 +10,14 @@
       "DOM.Iterable",
       "ES2023"
     ],
+    "paths": {
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts"
+      ]
+    },
     "types": [],
     "declaration": true,
     "sourceMap": true,
@@ -20,12 +28,15 @@
     "noImplicitReturns": true,
     "strictFunctionTypes": false,
     "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "alwaysStrict": true
   },
   "exclude": [
     "$(Output).Path/"
   ],
   "include": [
     "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"
+  ],
+  "files": [
+    "ReportingFunctions/UploadReportingSources.ts"
   ]
 }

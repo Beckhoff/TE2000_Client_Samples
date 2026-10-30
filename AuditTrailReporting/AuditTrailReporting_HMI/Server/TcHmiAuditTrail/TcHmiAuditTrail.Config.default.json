@@ -43,6 +43,7 @@
     },
     "blockCommandsOnError": false,
     "configPageMaxEntries": 200,
+    "createEventOnAudit": false,
     "databaseConnection": {
         "connectionString": "Server=localhost; Port=5432; Database=postgres; Uid=postgres; Pwd=@{password};Timeout=10;",
         "connectionTimeout": 10,
@@ -84,7 +85,10 @@
                     "value": "AUTH_FAILED"
                 },
                 {
-                    "logic": "AND"
+                    "comparator": "==",
+                    "logic": "AND",
+                    "path": "domain",
+                    "value": ""
                 },
                 {
                     "comparator": "==",
@@ -112,7 +116,10 @@
                     "value": "LOGIN_LOG"
                 },
                 {
-                    "logic": "AND"
+                    "comparator": "==",
+                    "logic": "AND",
+                    "path": "domain",
+                    "value": ""
                 },
                 {
                     "comparator": "==",
@@ -130,7 +137,10 @@
                     "value": "LOGOUT_LOG"
                 },
                 {
-                    "logic": "AND"
+                    "comparator": "==",
+                    "logic": "AND",
+                    "path": "domain",
+                    "value": ""
                 },
                 {
                     "comparator": "!=",
