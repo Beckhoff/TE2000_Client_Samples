@@ -1,8 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "uglify": "terser FrameworkPrj1Control/FrameworkPrj1Control.js --compress --mangle --output FrameworkPrj1Control/FrameworkPrj1Control.js"
+  },
   "devDependencies": {
-    "grunt": "1.6.1",
-    "grunt-cli": "1.4.3",
-    "grunt-terser": "2.0.0"
+    "terser": "5.51.2"
   }
 }

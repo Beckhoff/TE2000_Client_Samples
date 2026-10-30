@@ -1,218 +1,80 @@
-# Uglify JavaScript in a Framework Project
+# UglifyJsDuringBuild
 
-This sample shows how to uglify JavaScript files during build with help of [Node.js](https://nodejs.org/en/) , [Grunt Task-Runner](https://www.npmjs.com/package/grunt) and [Terser](https://www.npmjs.com/package/terser).
+This sample shows how to minify (uglify) the JavaScript files of a package project after each build with [Terser](https://www.npmjs.com/package/terser) and an npm script.
 
-## Setup Node.js, Grunt, Terser
+## Running the sample
 
-Node.js is supplied together with TwinCAT HMI and manual installation is therefore not necessary.
+1. Open [FrameworkPrj1.sln](FrameworkPrj1/FrameworkPrj1.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed. Node.js is supplied together with TwinCAT HMI, a manual installation is not necessary.
+2. Restore the NuGet packages and build the solution. After the build, the post-build event installs Terser with npm and runs the npm script `uglify`. The first build needs access to the npm registry to download Terser.
+3. Open `FrameworkPrj1Control/FrameworkPrj1Control.js` in the project folder: it contains the minified JavaScript of [FrameworkPrj1Control.ts](FrameworkPrj1/FrameworkPrj1/FrameworkPrj1Control/FrameworkPrj1Control.ts).
 
-If you need a newer version for whatever reason, you can download it from [here](https://nodejs.org/en/).
+## Overview
 
-### package.json
+The solution contains one project:
 
-We have to create a package.json file with at least the following configuration to be able to fetch the required npm (Node Package Manager) packages.
+| Project                                      | Content                                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [FrameworkPrj1](FrameworkPrj1/FrameworkPrj1) | A package project with the control `FrameworkPrj1Control` and the npm configuration. |
 
-````json
+The project has no HMI, the sample is about the build of the package.
+
+## How it works
+
+### 1. Call Terser with an npm script
+
+[package.json](FrameworkPrj1/FrameworkPrj1/package.json) defines Terser as npm package and the npm script `uglify`, which calls it. `npm install` in the folder of the file downloads Terser to `node_modules`, `npm run uglify` runs the script:
+
+```json
 {
   "private": true,
+  "scripts": {
+    "uglify": "terser FrameworkPrj1Control/FrameworkPrj1Control.js --compress --mangle --output FrameworkPrj1Control/FrameworkPrj1Control.js"
+  },
   "devDependencies": {
-    "grunt": "1.0.4",
-    "grunt-cli": "1.3.2",
-    "grunt-terser": "2.0.0",
-    "terser": "5.14.2",
+    "terser": "5.51.2"
   }
 }
-````
+```
 
-If we call `npm install` within the directory where the package.json is stored the defined dependencies will be downloaded to `node_modules` by npm.
+Terser overwrites the compiled JavaScript file with its minified version. `--compress` simplifies the code and `--mangle` shortens the names of local variables. Without these options, Terser only removes whitespace and comments.
 
-### Gruntfile.js
+To minify more files, add one Terser call per file and join the calls with `&&`. With several input files and one `--output`, Terser combines all files into one.
 
-We have to create a [Gruntfile.js](https://gruntjs.com/getting-started#the-gruntfile) for configuration of our [Terser](https://www.npmjs.com/package/terser) [Grunt](https://www.npmjs.com/package/grunt) task.
+The source map `FrameworkPrj1Control.js.map`, which TypeScript creates, does not match the minified file anymore. The package does not contain it, see step 3.
 
-````js
-/**
- * 
- * @param {IGrunt} grunt Grunt object 
- */
-module.exports = function (grunt) {
-    // Grunt build configuration.
-    grunt.initConfig({
-        // General
-        pkg: grunt.file.readJSON('package.json'),
-        // Task: 'terser'
-        terser: {
-            release: {
-                options: {
-                    output: {
-                        beautify: false,
-                    }
-                },
-                files: {
-                    'FrameworkPrj1Control/FrameworkPrj1Control.js': ['FrameworkPrj1Control/FrameworkPrj1Control.js'],
-                }
-            }
-        }
-    });
+### 2. Run the script after the build
 
-    // Load npm tasks 
-    grunt.loadNpmTasks('/grunt-terser');
+The tab `Build Events` of the project properties (right-click on the project, Properties) defines command line scripts which run before or after the build. The post-build event of this sample installs the npm packages and runs the npm script:
 
-    // Register grunt tasks
-    grunt.registerTask('Uglify', [
-        'terser:release',
-    ]);
-};
-````
+```bat
+@echo off
+call npm install
+call npm run uglify
+```
 
-### Hint
-#### Avoid unwanted files in nuget packages
+The sample defines this event for both build configurations, `Debug` and `Release`. Minified code is hard to debug in the browser. To minify only the release build, remove the event from the configuration `Debug`.
 
-We add the exclude rules `Gruntfile.js;node_modules\**;` and `node_modules\**;` to the related file filter definitions in the FrameworkPrj1.nuspec file because those files are only relevant in the development environment.
+### 3. Keep the development files out of the NuGet package
 
-The following file filter rules have to be commented out to avoid debugging related source files in the resulting NuGet package.
+`node_modules` is only needed for the build. [FrameworkPrj1.nuspec](FrameworkPrj1/FrameworkPrj1/FrameworkPrj1.nuspec) excludes it from the files of the package:
 
-````xml
-<!-- Add the following commented out parts to add debugging related source files to the package. -->
-<!--
+```xml
 <file
-	src="**/*.js.map"
+	src="**/*.js"
 	target="runtimes\native1.12-tchmi\"
-	exclude=".hmipkgs\**;node_modules\**;.hmiframework\**"
-/>
-<file
-	src="**/*.ts"
-	target="runtimes\native1.12-tchmi\"
-	exclude=".hmipkgs\**;node_modules\**;.hmiframework\**"
-/>
--->
-````
+	exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+```
 
-The following file filter rule has to be added when `src="**/*.ts"` is commented out to make sure `*.d.ts` files are still included.
+The source files for debugging, `*.ts` and `*.js.map`, are commented out in the `.nuspec`, so the package contains only the minified JavaScript. Because the `**/*.ts` rule is commented out, a separate rule adds the `*.d.ts` files:
 
-````xml
+```xml
 <file
 	src="**/*.d.ts"
 	target="runtimes\native1.12-tchmi\"
-	exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"
-/>
-````
+	exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
+```
 
-FrameworkPrj1.nuspec
+## Further information
 
-````xml
-<?xml version="1.0"?>
-<package xmlns="">
-	<metadata>
-		<id>FrameworkPrj1</id>
-		<version>1.0.0</version>
-		<description>-.-</description>
-		<authors>AUTHOR_HERE</authors>
-		<title>FrameworkPrj1</title>
-		<owners>OWNER_HERE</owners>
-		<projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-		<copyright>Copyright 2024</copyright>
-		<tags>TwinCAT HMI</tags>
-		<dependencies>
-			<group targetFramework="native1.12-tchmi">
-				<dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.2.110" />
-			</group>
-		</dependencies>
-	</metadata>
-	<files>
-		<!-- Add additional files here to include them in the nuget package -->
-		<file src="images\logo.png" target="images\" />
-		<file
-			src="Manifest.json"
-			target="runtimes\native1.12-tchmi\"
-			exclude=""/>
-		<file
-			src="**/*.function.json"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/Description.json"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/Types.Schema.json"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.html"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.css"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.png"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.svg"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.jpg"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.ico"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.theme"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<file
-			src="**/*.js"
-			target="runtimes\native1.12-tchmi\"
-			exclude="Gruntfile.js;node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<!-- Make sure '**/*.d.ts' files are added to the package regardless of the '**/*.ts' filter. -->
-		<file
-			src="**/*.d.ts"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"/>
-		<!-- Add the following commented out parts to add debugging related source files to the package. -->
-		<!--
-		<file
-			src="**/*.js.map"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"
-		/>
-		<file
-			src="**/*.ts"
-			target="runtimes\native1.12-tchmi\"
-			exclude="node_modules\**;.hmipkgs\**;.hmiframework\**"
-		/>
-		-->
-	</files>
-</package>
-````
-
-## Run Terser Grunt Task on build
-
-On the Properties-Page (Right click on the project node -> Properties) of the TwinCAT HMI Framework Project you have the possibility to define build event command line scripts.
-
-* Pre-build event command line scripts will be processed before the build starts.
-* Post-build event command line scripts will be processed after the build has finished.
-
-![Framework-Project-Build-Events](README/Framework-Project-Build-Events-1.png)
-
-To uglify our JavaScript files on each Release build we define the following script in the Post-build event command line area.
-
-````bat
-@echo off
-call npm install
-call  "$(ProjectDir)node_modules\.bin\grunt" Uglify --no-color
-````
-
-The script will call `npm install` to make sure all all required node modules do exist and then it will call grunt within the local node_modules directory with the name of our defined grunt task. Grunt will now process this task and the task will process the terser job based on the terser:release configuration we made in Gruntfile.js.
-
-All we have to do now is to select the Release build configuration and build the project.
-
-![Framework-Project-Build](README/Framework-Project-Build-1.png)
+- [Terser command line usage](https://www.npmjs.com/package/terser#command-line-usage) (npm)
+- [npm run](https://docs.npmjs.com/cli/commands/npm-run-script) (npm documentation)

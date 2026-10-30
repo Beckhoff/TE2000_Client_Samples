@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
   "apiVersion": 1,
   "name": "FrameworkPrj1Control",

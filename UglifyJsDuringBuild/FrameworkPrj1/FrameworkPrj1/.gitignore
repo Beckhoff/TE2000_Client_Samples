@@ -8,7 +8,7 @@ liveview_*
 *.db-wal
 *.pid
 .hmiframework/
-.hmipkgs/*-*-*-*/
+.hmipkgs/
 tchmipublish.journal.json
 
 *.d.ts
