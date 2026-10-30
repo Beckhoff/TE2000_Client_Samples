@@ -1,5 +1,7 @@
 {
+    "ALLOWED_ORIGINS": [],
     "ALLOW_REMOTE_ADMIN": true,
+    "ALLOW_SSL_CERTIFICATES_HOSTS_ORIGINS": true,
     "AUTO_LOGINUSER": "",
     "AUTO_LOGOFF": "P30D",
     "BASE_HMI_URL": "",
@@ -7,7 +9,7 @@
     "CACHEMAXAGE": "P30D",
     "CACHEMAXENTRYSIZE": 1048576,
     "CACHEMAXSIZE": 2097152,
-    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURuekNDQW9lZ0F3SUJBZ0lKQU1JYXllRitRVi9tTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVWRQphVjlVWTFCcloxOVdUVjl5YjI5ME1DQVhEVEkwTVRFd05qQTJNekl3TVZvWUR6SXdOak13TXpBM01EWXpNakF4CldqQkJNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1SVXcKRXdZRFZRUUREQXhGUkdsZlZHTlFhMmRmVmswd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFSwpBb0lCQVFDb0dVUVdUYVU5VVd6eE93Q05udW9sOSt3RzZ3T2hPVjRCempBQTVidXdkaVJkaWh1NVVKRWdXVXpCClpQQkZubHdDcDFUb3ZEOTFNNGg0eWh5MTNJbDJ5RHd2bWpYWmQyNGlweTRZUGR2SVZOUW9ZS1dhY0Z2U1VHQmIKOEtvbkdVT2FOY2t1U1htM05MZzZTYTVVd3hJMHA2S2R3dXlxSmw0U1J5Ym1yblVaSWVmRWFoUVYxRk9DdlJWSwpjbFdLTVd0eVI1VUZsUzI1MFVOejZyd1JjVVN1S2NYV1VmZ3o5ZGdMaG1pZ0w0WVMyaExvWjNoMzFWWHRVaTVICjRMS3MyaWpYTTRuVVlKMURYZWJwTGhjSVN3U094cnJRQ2hrNzZjaUJBK2tyMlZDVnFUamVCWkFKLzRWbExCNlYKSTlXU2t6Z0JqaXEwbHkrRVNoTHlWbU1zcjNBM0FnTUJBQUdqZ1pJd2dZOHdZQVlEVlIwUkJGa3dWNElKYkc5agpZV3hvYjNOMGh3Ui9BQUFCaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCZ2d4RlJHbGZWR05RYTJkZlZrMkNERVZFCmFWOVVZMUJyWjE5V1RZY0V3S2krZ0ljUS9vQUFBQUFBQUFBaEJjNGNKOTd6SkRBZEJnTlZIUTRFRmdRVTBjTisKRUgzTUkrOUhtZFJieHBiMUtGYjhDMkV3REFZRFZSMFRBUUgvQkFJd0FEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQwpBUUVBcWxDWlJ0dUY0Mk00VUY3TlFWYjM2OWRKLzJFUDh0RXBnT3JHNmowMzF4RTI5bTIwVEtzVHFhRkRwZVJoCjkvend6Z1lkK1ZTT1ptMFRVQzZpaGFzRHdMZUkzaWFBQTFwNzFRREVPU2FlQXpFNXVDQnpYM214VkliYjZETWUKazUyS09WQWtUeDBGRklBVjNKWVZNK3J5ZWlqQWZBWG81SmlBSzVRSG5qWXNpZVlNbWp2NWNjWkF1dVN1a2IweApmbmJqSjliT3lTUzNKa1NpU3pGT2hSM21PeVVlUDhtWmllczVtYis0NGkrV0N6Vlp4a0FieGpYekIzLzJWOXV5ClZia29vTThiY1A4RXBPTzcwYm5tck1IczZKcG9ESGdVUnF1NHB3S24wM204RGhxTmxZTWVVRnJqM0l0bTRhbkIKS0xNd0pxelNXVEV1eDJQYWFoWHFvb0paWVE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlEcHpDQ0FvK2dBd0lCQWdJSkFLenVRTkVGc2J3Zk1BMEdDU3FHU0liM0RRRUJDd1VBTUVZeEN6QUpCZ05WCkJBWVRBa1JGTVJzd0dRWURWUVFLREJKVWQybHVRMEZVSUVoTlNTQlRaWEoyWlhJeEdqQVlCZ05WQkFNTUVVVkUKYVY5VVkxQnJaMTlXVFY5eWIyOTBNQ0FYRFRJME1URXdOakEyTXpJd01Wb1lEekl3TmpNd016QTNNRFl6TWpBeApXakJHTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnlNUm93CkdBWURWUVFEREJGRlJHbGZWR05RYTJkZlZrMWZjbTl2ZERDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVAKQURDQ0FRb0NnZ0VCQU16anNRK0ptSlBoNHIzMmpsd0tydVV3d3ZGcUF2akIyUy9TOVY3TzBYWWl3b2FlSUJ1eAo3dzVnVGpRRHpORjJrajFDVW9JR0cramU4VlBwS1AzWHNORDA2UWEvYy83R3lqV2M3QzNSUGN4N3g2V3lLL3cxCnlyd2NVMDlDU3RXcFRpNEo4dEJGdTlmSlV1TC85VGc3dkMvVlVjT3dpZmFxSVVwY1NkbHJsNlpUT2VnTTFzSnMKb1RvNWtnTXJzYzZTL1BnL0VHaENZdWFPYnpUQXk0MkZNM0lCRHoxZ1pGRno1SHVMbWJ3dGNhSnZ1T0FTbWpQRgpramQyVkZLVjRjR3FSb0J1V3ZNN2hWNXVsOWE3WFBuYkpLdTdmaDE1eFR3aHJFK3h2RVRHL2RHZGpqWnFma2RiCk9JUXZIVEtmVHJHRFM2ZUloaS8rTlZMNk16Q1pTZEwwRTJVQ0F3RUFBYU9CbFRDQmtqQmdCZ05WSFJFRVdUQlgKZ2dsc2IyTmhiR2h2YzNTSEJIOEFBQUdIRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUdDREVWRWFWOVVZMUJyWjE5VwpUWUlNUlVScFgxUmpVR3RuWDFaTmh3VEFxTDZBaHhEK2dBQUFBQUFBQUNFRnpod24zdk1rTUIwR0ExVWREZ1FXCkJCVHBKOUd1cm4ySkxmT3BXOCtmYTVkVWUxdVdZekFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFBRFp2U1hwS0JuY2FLSkxmTm5OcWJwcElPeWZ0WHFHTmd5NGlEcVFKQU50UjNUSDJhdAozeFJVTTk4MGg1WndXeExPWEwvMDR0MU8rWUw4WGpTQ3ladXJTMUJ6bFJLcFpBellnQXRCRTM4QmhrMENYeCs1Cmw2cXIwVlhXblFzQ3dnWVJOV0N0aEpZaVRGdURJT0RXL0hYbUZBQ3JCSVY0WGxnVTdTTDRGek9IWHdBdVZBWFUKYXBZci96d1hqaXZaa0ZMK0dIcWwxYnMvVDlySjNuSFpKNUZqMW1NcUFKNHAxNlhmSnlwRzhYSDFucXQvS1hMWgpVNld3dGxiUWhSVDAzNVJISlNHTWo2WFZ2b3lNcEdRcU1jM0JPM1JGaU1VU0p5QVdGY2ZkVUU4SmQzdE93Um80CnlieUwzM2E3aU9IZ25mZVZBZVJjQWx1VWFvb3h2OHhqZmRWOQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+    "CERTIFICATE": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVDakNDQXZLZ0F3SUJBZ0lKQUl4TzE2TW5sd2FsTUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXpNREUxTURFd05sb1lEekl3TmpVd01qSTNNVFV3Ck1UQTJXakJFTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVJnd0ZnWURWUVFEREE5Q1FVUkZWMDVDTUMxTlRHWlZWWEV3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQgpEd0F3Z2dFS0FvSUJBUUNXL0hlOEJDNlFvbmNvMGpvRnRsWmY5WHVkS3BGa0ExN0REY29heGoxTEJxSmpQWjcyCmx5SU1XOVJIZmdlbUNaNFRiL0NZVkVST0RLTVBXbTBDdjI0ODh3SDVYczJ6emRRcTFWa210Q054anFVem9oYTMKQ0NseXA0RHozSlY1VHRGRnVLY2pVdEloa0dVNjkxOUZMM1Q0TXlTWFNNMDh2dDdUa2FlUFc2cVNiNkJHNkF0Mgp6eTVPWE16R2dGZXNDaVlxaitHU1l6eFE0WXJaYXpNeUZSOWw1WFhGeGp3ZWJjcGlIa2ZETVZHaDhjbDI3UjhmClNvUHNjQUtxV2hRaTJJblRzeFlwa29nZUloSzdZRzZGYzVuYjU0U2J0MFRjUU1DWjJSa2w3d2lxS2VHcVlFYlAKckZCZjZ4blZSRXpVbTBVeSt3UWNZay9ZZnRCMit5WEQxOVdSQWdNQkFBR2pnZmN3Z2ZRd2daTUdBMVVkRVFTQgppekNCaUlJSmJHOWpZV3hvYjNOMGh3Ui9BQUFCaHhBQUFBQUFBQUFBQUFBQUFBQUFBQUFCZ2c5Q1FVUkZWMDVDCk1DMU5UR1pWVlhHQ0hFSkJSRVZYVGtJd0xVMU1abFZWY1M1aVpXTnJhRzltWmk1amIyMkhCS3dSZ1RlSEJNQ28KdkhlSEJNQ29PQUdIRVA2QUFBQUFBQUFBSWxQeHk2RVBadHlIRVA2QUFBQUFBQUFBZkNLQzgrSnQrNmt3SFFZRApWUjBPQkJZRUZGVHZjaG1kei9GQUY5bWpsSWs0WWxZNWxmWWZNQjhHQTFVZEl3UVlNQmFBRkJTQ1pXYXFleDdBClhSWWFMWjVrcVBQMUtTMWxNQXdHQTFVZEV3RUIvd1FDTUFBd0RnWURWUjBQQVFIL0JBUURBZ1dnTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQUYxQTBwMHNmMkdvOTFETC9wejFvRkhVVyszclY1WHR4SFI4K2xJNndMQlRwbgpjMjd2OSs0NTN5ZmZ3NWpteXdhNENlN1NhVTRRMStXaGk1TFNCU0RVcU90U3ZuVDY4YitYVWpRaWhmeEhrb2hKClpzYVA1S29MbCtmVFZ1c3BkcnFaRnVSL2RLWGNlUVFiN29HTUZQNjJ1cEQyaU1TaC85TnJRNmpvOVE5TlhVMUkKd3dZT3daYXdselNtWTY4b1gvWi9qRDRHdVFiT1pDSHZLRm5DeDFjWnhNa2Rua1p6M0xEd0xHT290a3FUSVRaQgpsUm8reFNNZUZVQTlXY1FxTnZuRERHVUMrWFEvU2tyODBwUHVZL0paRFVlSGcvTzQ3QUt5RkE4T1pkd25rQUJyCmlRQVRqZmhrM0d2dDdEWmt2d0pFQVNkMHNhVkE2Ylg0aExIOS9wdkIKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRUVqQ0NBdnFnQXdJQkFnSUpBTFBHRW5GSUFtOG1NQTBHQ1NxR1NJYjNEUUVCQ3dVQU1Fa3hDekFKQmdOVgpCQVlUQWtSRk1Sc3dHUVlEVlFRS0RCSlVkMmx1UTBGVUlFaE5TU0JUWlhKMlpYSXhIVEFiQmdOVkJBTU1GRUpCClJFVlhUa0l3TFUxTVpsVlZjVjl5YjI5ME1DQVhEVEkyTVRBek1ERTFNREV3TmxvWUR6SXdOalV3TWpJM01UVXcKTVRBMldqQkpNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeQpNUjB3R3dZRFZRUUREQlJDUVVSRlYwNUNNQzFOVEdaVlZYRmZjbTl2ZERDQ0FTSXdEUVlKS29aSWh2Y05BUUVCCkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUxaUnVtN1BmYUtCL25jMlN6TW9zV0pnRncwNVBFMVhSWlg0ckJrdVNrSVUKVkZJRkZFZWcwSzJ4RTlhKzZlbjB3UkNaTThOOXZkNXZBaDVtQS9yQUQ2QUlFMmVmTndjdEU4VENhSkVMaWFBTgpuT3JBU0pWYTlwSGpWWGtEbWI1czRORW9VQmRKaDJmdS9HR1JxcFNjNW4yQ0tJeHlzWG1LT0ZiL3FFb2d0dDBHCjFyLzV4TE56ZUQvaGlUY2srMjNNcGhMeW9QK2tiTncrZ2tpakRQb2dQaklhbXhVL3pVZERNeGRtWit6eGRRVkoKdmZpUzZMcmNpeHZ0a1hDMzJCK0k3UUdXZkw0ZFhBQ09FNzBpWVJVMFRHUEhaSWJRbklnd2pESXp3bGI1VGJwZgpBNlM4MWgzKzI4d1FQU0dYU3lndWNhdWVyR2RSV3NIek5sdmxPTFQzNm5rQ0F3RUFBYU9CK2pDQjl6Q0Jrd1lEClZSMFJCSUdMTUlHSWdnbHNiMk5oYkdodmMzU0hCSDhBQUFHSEVBQUFBQUFBQUFBQUFBQUFBQUFBQUFHQ0QwSkIKUkVWWFRrSXdMVTFNWmxWVmNZSWNRa0ZFUlZkT1FqQXRUVXhtVlZWeExtSmxZMnRvYjJabUxtTnZiWWNFckJHQgpONGNFd0tpOGQ0Y0V3S2c0QVljUS9vQUFBQUFBQUFBaVUvSExvUTltM0ljUS9vQUFBQUFBQUFCOElvTHo0bTM3CnFUQWRCZ05WSFE0RUZnUVVGSUpsWnFwN0hzQmRGaG90bm1TbzgvVXBMV1V3SHdZRFZSMGpCQmd3Rm9BVUZJSmwKWnFwN0hzQmRGaG90bm1TbzgvVXBMV1V3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFPQmdOVkhROEJBZjhFQkFNQwpBUVl3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUEzQ1Zua2NrN3hTU1pOSTIzakVyTk9ZUkJDRlNJZGQ1TFY5Clprajc2eTJsYk1CQjNUSDZ4a3VaYTBsQ0w5dEp3Q1ZidTdQWEJlUEdQdXk0aHc4NUdRblBJTzVCZjZKc3JBU3YKOWZxOHFnVnM2THQ2WWpLWXhZMWxMMWw2VUxGcTg2MTBxcExtY0IzNy81WmdBdEk4NUdLR29CTTJFRWwrUkRhOQovRjBNQkEzVllsdTlxM01yR3dKdGRtZ3pzUHN1OWlqbWtNUFlSQXNFVmJyVU5sR3JnRnlUOVJoSkhyNk9vVEQxClJqdFJzVEFXRDJHWDM0cEVVZXBNbWhPbzRvSSsxOXJTTkQ0Yi9tT3Npb0Y1UWxVZnZ6L2Iwa0RMNi81bzJldmcKR3ZDcGthNnlVaUNranRJdnM3OG1YTW8rNDA3T2pJdmM1aldRRG1HVlNyQWdaOEIrSzRNPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
     "CERTIFICATEEXPIRATION": "P14000D",
     "CHECKSUMENABLED": true,
     "CHUNKSIZE": 1048576,
@@ -80,7 +82,7 @@
                 ]
             },
             "NAME": "TcHmiSystemEngineering",
-            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.SystemEngineering.22.0.6493\\runtimes\\win-x64\\native\\",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.SystemEngineering.25.0.122\\runtimes\\win-x64\\native\\",
             "REQUIRED": false,
             "STARTUPTYPE": 1
         },
@@ -117,8 +119,8 @@
     "FILESREGEX": [
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self' 127.0.0.1:* localhost:*\r\n Content-Type: text/html",
-            "REGEX": ".*\\.(xml|htm|html|shtml)$"
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-src 'self'; media-src 'self'; frame-ancestors 'self' 127.0.0.1:* localhost:*\r\n Content-Type: text/html",
+            "REGEX": ".*\\.(htm|html|shtml)$"
         },
         {
             "ENABLE_GZIP": true,
@@ -127,7 +129,7 @@
         },
         {
             "ENABLE_GZIP": true,
-            "FILESHTTPHEADERS": "Content-Type: text/xml",
+            "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self' 127.0.0.1:* localhost:* *.localhost:*\r\n Content-Type: text/xml",
             "REGEX": ".*\\.(config|xml)$"
         },
         {
@@ -247,6 +249,11 @@
             "ENABLE_CHUNKING": false,
             "FILESHTTPHEADERS": "Content-Type: application/x-x509-ca-cert",
             "REGEX": ".*\\.(pem)$"
+        },
+        {
+            "ENABLE_GZIP": true,
+            "FILESHTTPHEADERS": "Content-Type: application/wasm",
+            "REGEX": ".*\\.(wasm)$"
         }
     ],
     "FLOODPROTECTION": 500,
@@ -257,27 +264,30 @@
     "HTTP_FLOODPROTECTION": 100,
     "INITTIMEOUT": "PT10S",
     "KEEP_ALIVE": "PT40S",
-    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQ29HVVFXVGFVOVVXengKT3dDTm51b2w5K3dHNndPaE9WNEJ6akFBNWJ1d2RpUmRpaHU1VUpFZ1dVekJaUEJGbmx3Q3AxVG92RDkxTTRoNAp5aHkxM0lsMnlEd3ZtalhaZDI0aXB5NFlQZHZJVk5Rb1lLV2FjRnZTVUdCYjhLb25HVU9hTmNrdVNYbTNOTGc2ClNhNVV3eEkwcDZLZHd1eXFKbDRTUnlibXJuVVpJZWZFYWhRVjFGT0N2UlZLY2xXS01XdHlSNVVGbFMyNTBVTnoKNnJ3UmNVU3VLY1hXVWZnejlkZ0xobWlnTDRZUzJoTG9aM2gzMVZYdFVpNUg0TEtzMmlqWE00blVZSjFEWGVicApMaGNJU3dTT3hyclFDaGs3NmNpQkEra3IyVkNWcVRqZUJaQUovNFZsTEI2Vkk5V1NremdCamlxMGx5K0VTaEx5ClZtTXNyM0EzQWdNQkFBRUNnZ0VBUytIdjl3T0JDcytsbHJZVVYxbjhDRHpGT3hBL09Mb05ZbEpDSUQyVXZ5RnQKNUIzeXl2S0FPUEttOEF5UlhGUVM1QTNHaWpOa2tCTTkwWTBuYmI5Sy9LaUNadGk5NDFnREN6aWQyY3FlMnUzVQpRZy95NGVkRHhBcU5uU05rcERiRzZpZktsQThPRjNLQWthdHVPNHc5dlRCSmU5OGc5K1JQQmdCQm90UHhQM0R3CkF0c01MN2R0WlhZdVp1aGhUTVVFVGRrL3prNEQ4WFB6N0hBNW1xY1JBY3FpazNib0h0dE94aGlsUnNzUExEdUoKMnNQWHhWRmFxLzY5SVBXZWZkNWNXVkszVHFKeXBwVnRLWDUyZFhNQmVOSE9GVnZ6YzhCRERsSzh5TmJ1dk1WWgoxNW1KM2JtQThWVU10bzNBWjFZVGRZRWNYTlZxRHFtTFdzL2tML3BENVFLQmdRRFJmbG9aM3pSYTRTMHJ1UXRtCmRONU1aNzV3VE1lRnpmRXRlMG1RcGtIVmdHSFFzZ1pKcVFRQ1diN1hrTlNIKzJFWGdmWTczeE5kK3BZeEN1SWcKMFVkeDdLN0NvV1VlbkxlQkJCZzZGOUJEbjV2akFIOW5wQmRvRkRXNXp3WFk4SVh6ZVk3TTI3a29jYTJBUU9wSQoyam9pcFQzZEdza1B0TEEyQWxRZGl6K090UUtCZ1FETmFtc1JyYk5Ib1pyUkNpNUVTMUEvYlVXNXBhQUhwL2RRCi9LRmdmVjA0b1dMbkR0QnpmYjJUdWs3V3JPTlQrTk5WWFZtM2tNOEVnNDhkK0xYRVF6amdGUDRES3I4blZOcnEKbDVHeStPTHBvK3ZWOGN5bVgxbHFZQnpzZHRYcmZOMTRIaWhwbWN2TExseThqdGlZY3VCSVVZZjk1ODZPMERKOAoyRi82TDBhcXV3S0JnRXFlNXhrd0dFWUd6MEF6dVl2Vk5SbWlHb09GMWN3amZ6VGtKV0FRMklKa0tITmQ5ajltCnBMYnhvTGpJTGV3QjdxT2c5MFI4UVRuSWVKY2ZlVXlYUHd1bGN0cUJBclBVdnNpRjNOdFVnQ3FXUDhDci9MVysKRFZoVldvM0U0Q0JXREdDZGUvQWNrK2VFRm5rSXBtc3MwR2htMDVKZWFCL2dES1F3VUNYMTQ3M0JBb0dBWElBMwpodFo1alNBdzMwRitaREttQ0dua3BCejVXM2svM2JCbDIxV1l6UStmd2Z6aDBhQWw1b2hYU0VUQ2VlWHJCTjNzCnNNVDg5RU5xQjAwZ1RTa1lTNUFvY3JTbEw4aithL1dsSHJzRk04RWxTa3FBcGNyNk1QVG5FWFRTRUNGQ2VmemEKcGZNajJuTWVQNnJ6em5Lc25PUmFJUFJxQjlXcFpwN3BXWGhBa2xFQ2dZQTJ4VjdEV2NVVXlBNE8yL3IzWmJNSQpiZjY2L0VtQ1owTUU2d3lpdjgvTjd2RmJGSnp3L0Y3Ly9qT0REVDVHNnZ5cWZjaWFQTi91aG5NeXJieWNtb0NsCnpsUzJMc1RiM3cxL3NJWGU1TXh3L29hOTgyVXI0VjRtTnA5Q1lmcGRNdkZBSE9aenhKT3laeUFFNjlXQzhodlUKcldpV0RiVUhtcDRaTStHQ291M3QyUT09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "KEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQ1cvSGU4QkM2UW9uY28KMGpvRnRsWmY5WHVkS3BGa0ExN0REY29heGoxTEJxSmpQWjcybHlJTVc5UkhmZ2VtQ1o0VGIvQ1lWRVJPREtNUApXbTBDdjI0ODh3SDVYczJ6emRRcTFWa210Q054anFVem9oYTNDQ2x5cDREejNKVjVUdEZGdUtjalV0SWhrR1U2CjkxOUZMM1Q0TXlTWFNNMDh2dDdUa2FlUFc2cVNiNkJHNkF0Mnp5NU9YTXpHZ0Zlc0NpWXFqK0dTWXp4UTRZcloKYXpNeUZSOWw1WFhGeGp3ZWJjcGlIa2ZETVZHaDhjbDI3UjhmU29Qc2NBS3FXaFFpMkluVHN4WXBrb2dlSWhLNwpZRzZGYzVuYjU0U2J0MFRjUU1DWjJSa2w3d2lxS2VHcVlFYlByRkJmNnhuVlJFelVtMFV5K3dRY1lrL1lmdEIyCit5WEQxOVdSQWdNQkFBRUNnZ0VBQmE5MHprTFlOOTNJUlNSeVp5Q1VNaVEvSkZPZXBTdEJKdkRoWEtsU1B2THkKdG9XSU0zZjNnaUNMUVg4VlNHWFVaWE5rVmh0cjRERUJZRnlxM2hlVUxmaHhhVXVZdDhDRWNMR2gzQTljaGlRdwpEcjMzemVxcitJdG1hT01KaXJJaWpFdFlCQ3NKbFlEaU81L1E2Y2VQL09CeHpGTzRyUStHWk9XQjVOMUNVcnNtCnQ0RGIzbTk0bWxsUk5XTHJaa0x0MFlmeTQ1Y2N4UDVVMCtHd0t1V1RHeUtGWEl6cFJCbnl5blAveTFQNFhLSVcKbWp4WG5lKzlsSTViZXQ2YTNwczRMMUU1WU94NUZ5SnJzZTlidC9ObEw2V3pGZTdCaFQzQzN1RFcxSDZ6bU4zQgpONVZTQWFubkZrK05QVjA2UXg1QUFNejA4WXM3aTdqeE1qOXNvRGFsNlFLQmdRRFZkemptSGxMT21ycXVKTGx6CkdYODZ4RXN1R2ZwQzFMeHRvKzdvNmw5K2dObEtDdzdpeThvSjVyak4yTDFWVHZmR0xWN1Nub29FcEx6clU4aGQKK3ZMSkxTNCtQNnY3aStCeEV2WDltdFNLWVlBK1BlM05oWFJzSWUxbkZ5SjA0WGxydDBnTFhNZzk3QitmVVNxVwpaS0UvcHZSSmg3YmVlUmk0eVFLWTRjNlB1UUtCZ1FDMUVqS0Q4L283Z2ZnVjFpRUNuSDVEbDdTbE05bEhqWTI0CmV2YzNrNzZycW5pSFBCeTBuU28vcm9ua2I4REFwdWVUUG9mcjNwTWkvUm9yMVRTUHlCMFExS09rTjBrOWJCV2oKa3g1THFRc3pQdHB1eWNzRzdxYndTc1lIMG1VeHdCR1ArVmRFekxrZ0JpTytrMndZdDhDYnRYdFhtbVZWYVdTeApISzhoaUJ0d21RS0JnQ1NPL3BlcXFkUG9mQUJIR2R1MGlpMnVZSkhNc1NldzkzUnZsd01jNEszeHMwVVREOEdYCjFVcE0wV212clAxblFOZ1gvUjFsT1k0Q0NMams2SFB2L3BTbHdEMjQrZU5pMlZXRVFjemxMM0Zqc1dyM2dEcXEKbUgzTWNiUXVLaUNLWFJrdGtwRWZtc3ZBSE1wVVJFN3RmUkJCcjZUSU1YRjRtOXRKMGNBTkxDdEJBb0dBUFVjcQpSMU96Rko1NGVkTmNtb2loaG5oNXp3ckw5cFltSncrZVNIVzhxbFhuc2tTYXBsa2w2aVZFVDBXdW9zUVpUTkIxCnFWSksweVY2ek9pN2dBbEdKT01CZWxxbmM1ejNlY01aRnB2ZnlYajA3VmRuV1RJODFzZEhXM0JOaE5ldVdkNFYKTlpoZThrS0JxRVkxNSt1UHlHSlRtcU1LdGl3VHdvaWxrQ0NDd01rQ2dZQWRlOVpmTmRUMnBwWksyTzQyK1p6ego4Y0lNK1RUWUsrR3VCbFJiWE9WTlk4QUcvK3BEK3FUK3JCQ2VueHdkNUxBOHlPWW9ISW5XREFVV1RkWDlFL051CjM0RGQrSUcwQkFCU1J4cDVNZVFzaWQ5NXpPb2FTNTByaU9VanNZRmdwaVFrS3RacUI4YURIYXpkZW1MZXpHNWQKamxLamoxeGQxV2xyNU1MKzlMRmhSQT09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "KEYPASSWORD": "",
     "MAXCONNECTIONSPERCLIENT": 32,
     "MAXHTTPHEADERSIZE": 32768,
     "MAXREQUESTSIZE": 1048576,
     "MAXSESSIONS": 128,
+    "OAUTHAUTHORIZATION_2_0": {},
     "PERMESSAGEDEFLATEENABLED": true,
     "PROJECTNAME": "SystemEngineering_HMI",
     "PROJECTVERSION": "1.0.0.0",
+    "RECORDING_MESSAGE_MAX_LENGTH": 5120,
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
-    "REQUIREAUTH": 0,
+    "REQUIREAUTH": 1,
     "REQUIRE_CLIENT_CERTIFICATE": false,
     "SAMESITE_ATTRIBUTE": 2,
-    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURwekNDQW8rZ0F3SUJBZ0lKQUt6dVFORUZzYndmTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVWRQphVjlVWTFCcloxOVdUVjl5YjI5ME1DQVhEVEkwTVRFd05qQTJNekl3TVZvWUR6SXdOak13TXpBM01EWXpNakF4CldqQkdNUXN3Q1FZRFZRUUdFd0pFUlRFYk1Ca0dBMVVFQ2d3U1ZIZHBia05CVkNCSVRVa2dVMlZ5ZG1WeU1Sb3cKR0FZRFZRUUREQkZGUkdsZlZHTlFhMmRmVmsxZmNtOXZkRENDQVNJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dFUApBRENDQVFvQ2dnRUJBTXpqc1ErSm1KUGg0cjMyamx3S3J1VXd3dkZxQXZqQjJTL1M5VjdPMFhZaXdvYWVJQnV4Cjd3NWdUalFEek5GMmtqMUNVb0lHRytqZThWUHBLUDNYc05EMDZRYS9jLzdHeWpXYzdDM1JQY3g3eDZXeUsvdzEKeXJ3Y1UwOUNTdFdwVGk0Sjh0QkZ1OWZKVXVMLzlUZzd2Qy9WVWNPd2lmYXFJVXBjU2Rscmw2WlRPZWdNMXNKcwpvVG81a2dNcnNjNlMvUGcvRUdoQ1l1YU9ielRBeTQyRk0zSUJEejFnWkZGejVIdUxtYnd0Y2FKdnVPQVNtalBGCmtqZDJWRktWNGNHcVJvQnVXdk03aFY1dWw5YTdYUG5iSkt1N2ZoMTV4VHdockUreHZFVEcvZEdkampacWZrZGIKT0lRdkhUS2ZUckdEUzZlSWhpLytOVkw2TXpDWlNkTDBFMlVDQXdFQUFhT0JsVENCa2pCZ0JnTlZIUkVFV1RCWApnZ2xzYjJOaGJHaHZjM1NIQkg4QUFBR0hFQUFBQUFBQUFBQUFBQUFBQUFBQUFBR0NERVZFYVY5VVkxQnJaMTlXClRZSU1SVVJwWDFSalVHdG5YMVpOaHdUQXFMNkFoeEQrZ0FBQUFBQUFBQ0VGemh3bjN2TWtNQjBHQTFVZERnUVcKQkJUcEo5R3VybjJKTGZPcFc4K2ZhNWRVZTF1V1l6QVBCZ05WSFJNQkFmOEVCVEFEQVFIL01BMEdDU3FHU0liMwpEUUVCQ3dVQUE0SUJBUUFEWnZTWHBLQm5jYUtKTGZObk5xYnBwSU95ZnRYcUdOZ3k0aURxUUpBTnRSM1RIMmF0CjN4UlVNOTgwaDVad1d4TE9YTC8wNHQxTytZTDhYalNDeVp1clMxQnpsUktwWkF6WWdBdEJFMzhCaGswQ1h4KzUKbDZxcjBWWFduUXNDd2dZUk5XQ3RoSllpVEZ1RElPRFcvSFhtRkFDckJJVjRYbGdVN1NMNEZ6T0hYd0F1VkFYVQphcFlyL3p3WGppdlprRkwrR0hxbDFicy9UOXJKM25IWko1RmoxbU1xQUo0cDE2WGZKeXBHOFhIMW5xdC9LWExaClU2V3d0bGJRaFJUMDM1UkhKU0dNajZYVnZveU1wR1FxTWMzQk8zUkZpTVVTSnlBV0ZjZmRVRThKZDN0T3dSbzQKeWJ5TDMzYTdpT0hnbmZlVkFlUmNBbHVVYW9veHY4eGpmZFY5Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
-    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRRE00N0VQaVppVDRlSzkKOW81Y0NxN2xNTUx4YWdMNHdka3YwdlZlenRGMklzS0duaUFic2U4T1lFNDBBOHpSZHBJOVFsS0NCaHZvM3ZGVAo2U2o5MTdEUTlPa0d2M1AreHNvMW5Pd3QwVDNNZThlbHNpdjhOY3E4SEZOUFFrclZxVTR1Q2ZMUVJidlh5VkxpCi8vVTRPN3d2MVZIRHNJbjJxaUZLWEVuWmE1ZW1Vem5vRE5iQ2JLRTZPWklESzdIT2t2ejRQeEJvUW1MbWptODAKd011TmhUTnlBUTg5WUdSUmMrUjdpNW04TFhHaWI3amdFcG96eFpJM2RsUlNsZUhCcWthQWJscnpPNFZlYnBmVwp1MXo1MnlTcnUzNGRlY1U4SWF4UHNieEV4djNSblk0MmFuNUhXemlFTHgweW4wNnhnMHVuaUlZdi9qVlMrak13Cm1VblM5Qk5sQWdNQkFBRUNnZ0VBQlVqNFI4RFNYVG90NloyREJZL0cvQ1Y2V2RUVXQ4cjBTYjRFMDBtOWNIRXMKR0dIYXpTd1ZVUWNkN1V5TnkzZG1CVXVCS2xaekFOcERXbGxBMCs5czRhNzNsZE41Y0FCN3RjOVM3a21mOFBiZQphd0ZDRGpMckJGZ3NzL1l2VFB5ZGhpVitqRzNJRHlSanpYUXh4SjRSMkNBR0NHaTAzbFo4SGxsc0ZENG92c01KCit3U0tLaDN6bmIrdXpxVkFpblVBY2drT3pLa3JjMWRMT1l6RGloaXNJdTZhLzIzdHVwY1hvY2syMitVMlpSNFEKZlBWdVR3M3hEcGx5dzcveFIzL1NkYW5WOFZwb2V1WG9vSnloaCtWZks4bVJxdG9HVkVXSTlUOUdLdG9nQzAvUwpxVHRQcGNXVDJscWtKWTVXMXh4czRaeU5YeTlOSThPYmlDZ1M1aGZta1FLQmdRRDFSblBLYWxiUEUzQjQra3BECjBHeVhjQXBaaFc3aW5EamZuekszVTNxdkNCd2J6WDJvaElWS2pIelJlcEtDQitxR3RTTDkybWRmeHN5UTdKdDYKdUxHMHpsV3FCZWV1YzBBaGdJaHhJWkNlakhrajJVem1sUXlES2Irb2JGc3RNK2xvYUNtRGFMbzZvMU83cldiYQpqTjBZNFYvdk4wU1UxVFJpZzBTem43ZTl1UUtCZ1FEVjJTdldHMWVvMnZLQnM3Q1FWalBqbUh3UXAxRXN4Y3JDCjNsSXNVM015N1JOZ1VDdmFQR28yd3oyaEdBYVAyTmQ4RUhKOFAwaUdaNEFqcmtHNVJkVVFYM0czOEs1L2tnRGcKYWRpbEM1RUJxeVgzS2hsMWI4RUJEUk5CTGxEZ0VtZHpRWk5OaWxKTmQ2L0VoMWU5bUs3N2toTTljQnJmMjFKZwprMWZvN3d0NURRS0JnRExVelA1d0YxbUcvOUl5bk4xOC9tUk1GZmtEakQxdWZ1THBUVXR0QTRudXRsU1V1NndHCit0QytXTWZaRFMvaGtCc213disxR2FOaHdkZHZFYkhYUVF6bGpoOVVaZlZqY1RFQVFFYWgzQ1RmbStOd0QxM2kKR2R1ODlUbGthMmpzenp5U0NiaHdKZGd0TFJkQ0VvVE1tSzJsVjRwdCs4cVVmT3pGbzZGT1FuZ1JBb0dBSHpiSgozVUMwZE9Nd2pwb0o1YWVQZjJNY2lObkRVWU8xYXVoRW1rKzcrdXo3N1EwR3VaNGo2c1pvMG9ETlJHWGtYaW1RCmJHNVlTYllGMEM5NVRHL1MvOGJPdElpZkQrUGgyTi9hVFl6NHA0T3gwUGdHSzB3YW9lcWtxdGoxMlI4V2xvNDEKMEJXbW1jUWtsYzBqazNzYjM0Q2M2bFRZdDJBdUVBYXh5RUJNTG1rQ2dZQkZ4RS9MZEd1ejhWM1hNR0Qxait2MApuQ3J4Nzk2eWpJWG5qWSt0bmlmaHdRcU4vaVd5Q2lQOVBFMGdWRDNsTC9UNlhjUTV3MGFIek9XOVY5Nmk4RjFlCklEcU9GMlY4TGtGTnJVRTZ3Q3dqUmJMak82aE5tQURhYUZhU2JNRmZ0VlF0YlRjRlFNZmlXMGVSVnpLTHV3NU0KVHlUWWttand4VUQzbGRSWWVKcnBKQT09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
+    "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVFakNDQXZxZ0F3SUJBZ0lKQUxQR0VuRklBbThtTUEwR0NTcUdTSWIzRFFFQkN3VUFNRWt4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4SFRBYkJnTlZCQU1NRkVKQgpSRVZYVGtJd0xVMU1abFZWY1Y5eWIyOTBNQ0FYRFRJMk1UQXpNREUxTURFd05sb1lEekl3TmpVd01qSTNNVFV3Ck1UQTJXakJKTVFzd0NRWURWUVFHRXdKRVJURWJNQmtHQTFVRUNnd1NWSGRwYmtOQlZDQklUVWtnVTJWeWRtVnkKTVIwd0d3WURWUVFEREJSQ1FVUkZWMDVDTUMxTlRHWlZWWEZmY205dmREQ0NBU0l3RFFZSktvWklodmNOQVFFQgpCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFMWlJ1bTdQZmFLQi9uYzJTek1vc1dKZ0Z3MDVQRTFYUlpYNHJCa3VTa0lVClZGSUZGRWVnMEsyeEU5YSs2ZW4wd1JDWk04Tjl2ZDV2QWg1bUEvckFENkFJRTJlZk53Y3RFOFRDYUpFTGlhQU4Kbk9yQVNKVmE5cEhqVlhrRG1iNXM0TkVvVUJkSmgyZnUvR0dScXBTYzVuMkNLSXh5c1htS09GYi9xRW9ndHQwRwoxci81eExOemVEL2hpVGNrKzIzTXBoTHlvUCtrYk53K2draWpEUG9nUGpJYW14VS96VWRETXhkbVorenhkUVZKCnZmaVM2THJjaXh2dGtYQzMyQitJN1FHV2ZMNGRYQUNPRTcwaVlSVTBUR1BIWkliUW5JZ3dqREl6d2xiNVRicGYKQTZTODFoMysyOHdRUFNHWFN5Z3VjYXVlckdkUldzSHpObHZsT0xUMzZua0NBd0VBQWFPQitqQ0I5ekNCa3dZRApWUjBSQklHTE1JR0lnZ2xzYjJOaGJHaHZjM1NIQkg4QUFBR0hFQUFBQUFBQUFBQUFBQUFBQUFBQUFBR0NEMEpCClJFVlhUa0l3TFUxTVpsVlZjWUljUWtGRVJWZE9RakF0VFV4bVZWVnhMbUpsWTJ0b2IyWm1MbU52YlljRXJCR0IKTjRjRXdLaThkNGNFd0tnNEFZY1Evb0FBQUFBQUFBQWlVL0hMb1E5bTNJY1Evb0FBQUFBQUFBQjhJb0x6NG0zNwpxVEFkQmdOVkhRNEVGZ1FVRklKbFpxcDdIc0JkRmhvdG5tU284L1VwTFdVd0h3WURWUjBqQkJnd0ZvQVVGSUpsClpxcDdIc0JkRmhvdG5tU284L1VwTFdVd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBT0JnTlZIUThCQWY4RUJBTUMKQVFZd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFBM0NWbmtjazd4U1NaTkkyM2pFck5PWVJCQ0ZTSWRkNUxWOQpaa2o3NnkybGJNQkIzVEg2eGt1WmEwbENMOXRKd0NWYnU3UFhCZVBHUHV5NGh3ODVHUW5QSU81QmY2SnNyQVN2CjlmcThxZ1ZzNkx0NllqS1l4WTFsTDFsNlVMRnE4NjEwcXBMbWNCMzcvNVpnQXRJODVHS0dvQk0yRUVsK1JEYTkKL0YwTUJBM1ZZbHU5cTNNckd3SnRkbWd6c1BzdTlpam1rTVBZUkFzRVZiclVObEdyZ0Z5VDlSaEpIcjZPb1REMQpSanRSc1RBV0QyR1gzNHBFVWVwTW1oT280b0krMTlyU05ENGIvbU9zaW9GNVFsVWZ2ei9iMGtETDYvNW8yZXZnCkd2Q3BrYTZ5VWlDa2p0SXZzNzhtWE1vKzQwN09qSXZjNWpXUURtR1ZTckFnWjhCK0s0TT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+    "SELFSIGNEDROOTCAKEY": "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQzJVYnB1ejMyaWdmNTMKTmtzektMRmlZQmNOT1R4TlYwV1YrS3daTGtwQ0ZGUlNCUlJIb05DdHNSUFd2dW5wOU1FUW1UUERmYjNlYndJZQpaZ1A2d0ErZ0NCTm5uemNITFJQRXdtaVJDNG1nRFp6cXdFaVZXdmFSNDFWNUE1bStiT0RSS0ZBWFNZZG43dnhoCmthcVVuT1o5Z2lpTWNyRjVpamhXLzZoS0lMYmRCdGEvK2NTemMzZy80WWszSlB0dHpLWVM4cUQvcEd6Y1BvSkkKb3d6NklENHlHcHNWUDgxSFF6TVhabWZzOFhVRlNiMzRrdWk2M0lzYjdaRnd0OWdmaU8wQmxueStIVndBamhPOQpJbUVWTkV4angyU0cwSnlJTUl3eU04SlcrVTI2WHdPa3ZOWWQvdHZNRUQwaGwwc29MbkdybnF4blVWckI4elpiCjVUaTA5K3A1QWdNQkFBRUNnZ0VBRFo3N0F2clkrOHBpK01TVFp6SFAyTlh0ZXZVdSttYytBV2VYOGZTcG94aXkKT1FOOG9hSlQzTm9wTFliTFlvbUE0QXpXRjNHZVBROUZsUUJScFVyeWorWHlqekFQdENkTHZndzVORGJzdEFxNApVYmlHWTdRdFRqWnlCUTIrRDRKQ1pKWHlyOTYwTVZGalJTWFZITy9BNzVrSkR2OGxuN3N5SE52U1ZxRnRrQU1wClhyWVFMRHB4czkyL3oxZTErSGVTV2VXWUdJbkpRbHJkYTBORVdvRmNzd3c2U0JSdzhtVDhSaGpxaWdqUWVOcWsKSC9nWGlGckRHNkxPWEUrYW50OXdnSU9EQkhlMXBGY0VwTkNQb3UyU3ErazJHU084TmtldG1JN1c3K3VQT1dpUwplaU40WFNjRFV5dVk4b0tUV0xrTFE4UnRoSHJqaVN4Nk9CdE5CbDU2MVFLQmdRRDhLRXhsVnprRmh4WC9Xd2gzCkVjdGMyaWx2YWVqcDRrZmRxelFyclZBOWtlb0d0ZW9XelJjODR1ek5sdXdXMjdvdTJpQ3dHY2toMG5CMStXVzcKUWVydXRqdFRUV0Ywc1dXMlBrTGFKRWt4UGRXckxUSjNKK2lBNWU0cWs5YTJFQzNRNHFGelNSRVorbFhpa0FCLwpycFNFQi9mMWdPdk53MlcrajNIdnRxL1YvUUtCZ1FDNUdQczN2VHlpZDhnRFhYbnJ0RXlJbEdldXhqR1U0R3B3CmxiWWN1SDY5c1ZSNEVmZTNXVGtDMXl6OE9xR2U5ZS9EcjRhRlRzMmM1Y2t1bUtRalp3dC9ZQXdROVlOQ20vRloKYWIxRkhXMlQ3VjF4aTJiV0dTcW5SeEtualVGMWlacHFJVWdHTUlaNExlKzdCQU5zbWZ3RDh0cFJYaFR0TlZpMAplK1FzcUxlUkxRS0JnRG5jRFZ1Ym5ndjBxVW1FMi9abWNPR0hkY2FJNk5ieUEwZU1CMWFXV0Rrb2lDaXVDVjdlCkJKMEYvUXhYdXlpcmxwYzFtaGFPZENaOG9TMlE0cFVMVlJzZFdaT054L1Q4MTdmdnBXdGt0QjdHYjRidHdneXgKYlpwV0tFWkEwaDNJckpxbnhpQXIvZTZXRUtzQ0cvc3dWZ2ZOeEVuaklUaC93NUxzVzFxRDh1a0pBb0dBTVZYVApQOXdVbVVsTDZubXowWHRSR3VaVGJHWXZPUHRINDVKRDVBdlkzRDZ6d1AwcEJabW1kSGRkNml6R2YxUVdBQlo4CnlITmtvbmtzMGxxbEJUcWwrZUZqMWZGYWR4cVJqYjk5VHpxMHhrVHlMeDEwMzRQOXRuQmZMSUdkL1BJY1VrVmsKcVNHdDljSm9yM1EyWlcvMW1DZld3UEZPcXBzWmRhSEFBNWRFdGxFQ2dZQkZaQVlHd1JEV21LSDN2ZUVoanFVSAo4d3duQ2V3VFpuamcvU0pxeHpRMXNsUUVReWdzakJuREpxeFRvRmxmSjFnejBBWVE5NHdUY0VjMFBDNUJkVlVCCmFabXcvbnQzU3IwUWErd2lKd002em9KS00xdFE0K0dWSjBqTmw5VStaaE1OSmVuMUt2YVMwNW5mVWljLzVqUVEKUVJPcmxZb1JINnowSVF5dWF2aHVudz09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K",
     "SESSIONSTORAGE": {},
     "SHOW_CONFIGURATION_HINTS": true,
     "SHOW_MAINTENANCE_MODE": true,
     "SHUTDOWNTIMEOUT": "PT10S",
     "SOCKET_TIMEOUT": "PT10S",
+    "SUBSCRIPTION_FLOODPROTECTION": 100,
     "SYMBOLS": {
         "ADS.AdsSyncReadDeviceInfoReq": {
             "ACCESS": 3,
@@ -539,70 +549,168 @@
             "MAPPING": "Diagnostics",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true,
-                "properties": {
-                    "runtimes": {
-                        "additionalProperties": {
-                            "properties": {
-                                "adsApplicationName": {
-                                    "propertyOrder": 5,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
+                "allOf": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "object"
+                                    }
                                 },
-                                "adsProjectCompiledAt": {
-                                    "format": "date-time",
-                                    "propertyOrder": 7,
-                                    "type": "string",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "adsProjectName": {
-                                    "propertyOrder": 6,
-                                    "type": "string"
-                                },
-                                "adsState": {
-                                    "propertyOrder": 3,
-                                    "type": "string"
-                                },
-                                "adsVersion": {
-                                    "propertyOrder": 8,
-                                    "type": "string"
-                                },
-                                "adsVersionBuild": {
-                                    "minimum": 0,
-                                    "propertyOrder": 9,
-                                    "type": "integer",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "connectionState": {
-                                    "propertyOrder": 1,
-                                    "type": "string"
-                                },
-                                "deviceName": {
-                                    "propertyOrder": 4,
-                                    "type": "string"
-                                },
-                                "isUserModeRuntime": {
-                                    "propertyOrder": 10,
-                                    "type": "boolean",
-                                    "visibility": "HideInEngineering"
-                                },
-                                "systemServiceAdsState": {
-                                    "propertyOrder": 2,
-                                    "type": "string"
-                                }
+                                "type": "object",
+                                "versions": [
+                                    1.0
+                                ]
                             },
-                            "required": [
-                                "deviceName",
-                                "adsVersion",
-                                "adsState",
-                                "connectionState"
-                            ],
-                            "type": "object"
-                        },
-                        "type": "object"
+                            {
+                                "properties": {
+                                    "domainError": {
+                                        "format": "multiline",
+                                        "propertyOrder": 3,
+                                        "type": "string"
+                                    },
+                                    "domainState": {
+                                        "enum": [
+                                            "Good",
+                                            "Bad"
+                                        ],
+                                        "propertyOrder": 2,
+                                        "type": "string"
+                                    },
+                                    "runtimes": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "adsApplicationName": {
+                                                    "propertyOrder": 5,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectCompiledAt": {
+                                                    "format": "date-time",
+                                                    "propertyOrder": 7,
+                                                    "type": "string",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "adsProjectName": {
+                                                    "propertyOrder": 6,
+                                                    "type": "string"
+                                                },
+                                                "adsState": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "adsVersion": {
+                                                    "propertyOrder": 8,
+                                                    "type": "string"
+                                                },
+                                                "adsVersionBuild": {
+                                                    "minimum": 0,
+                                                    "propertyOrder": 9,
+                                                    "type": "integer",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                },
+                                                "deviceName": {
+                                                    "propertyOrder": 4,
+                                                    "type": "string"
+                                                },
+                                                "isUserModeRuntime": {
+                                                    "propertyOrder": 10,
+                                                    "type": "boolean",
+                                                    "visibility": "HideInEngineering"
+                                                },
+                                                "systemServiceAdsState": {
+                                                    "propertyOrder": 2,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "deviceName",
+                                                "adsVersion",
+                                                "adsState",
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "propertyOrder": 1,
+                                        "type": "object"
+                                    }
+                                },
+                                "required": [
+                                    "domainState"
+                                ],
+                                "type": "object",
+                                "versions": [
+                                    2.0
+                                ]
+                            }
+                        ]
                     }
-                },
-                "type": "object"
+                ]
             },
             "USEMAPPING": true
         },
@@ -759,370 +867,20 @@
             "USEMAPPING": true
         },
         "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN._isInit": {
-            "ACCESS": 3,
+            "ACCESS": 0,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
+            "HIDDEN": true,
             "MAPPING": "PLC1::MAIN::_isInit",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             }
         },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._disableFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_disableFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the base position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._disableFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_disableFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._invertFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_invertFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._invertFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_invertFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._simulationFeedback": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_simulationFeedback",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process simulation time",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Simulation Feedback"
-                        },
-                        "propertyOrder": 6
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._config._timeout": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_config::_timeout",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process timout",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Timeout"
-                        },
-                        "propertyOrder": 5
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._id": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_id",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Identification name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Id"
-                        },
-                        "propertyOrder": 18
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbCutCylinder._name": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbCutCylinder::_name",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Name"
-                        },
-                        "propertyOrder": 17
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._disableFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_disableFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the base position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._disableFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_disableFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._invertFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_invertFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._invertFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_invertFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._simulationFeedback": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_simulationFeedback",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process simulation time",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Simulation Feedback"
-                        },
-                        "propertyOrder": 6
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._config._timeout": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_config::_timeout",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process timout",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Timeout"
-                        },
-                        "propertyOrder": 5
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._id": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_id",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Identification name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Id"
-                        },
-                        "propertyOrder": 18
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._fbPressCylinder._name": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_fbPressCylinder::_name",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Name"
-                        },
-                        "propertyOrder": 17
-                    }
-                ]
-            }
-        },
         "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedContainer._sStationName": {
-            "ACCESS": 3,
+            "ACCESS": 0,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
+            "HIDDEN": true,
             "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedContainer::_sStationName",
             "SCHEMA": {
                 "allOf": [
@@ -1139,281 +897,11 @@
                 ]
             }
         },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._disableFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_disableFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the base position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._disableFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_disableFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Disable the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Disable Feedback"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._invertFeedbackBP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_invertFeedbackBP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Base Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._invertFeedbackWP": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_invertFeedbackWP",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/BOOL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Work Position",
-                            "TcHmiSystemEng.Parameter.Info": "Invert the feedback for the work position",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Name": "Invert Feedback"
-                        },
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._simulationFeedback": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_simulationFeedback",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process simulation time",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Simulation Feedback"
-                        },
-                        "propertyOrder": 6
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._config._timeout": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_config::_timeout",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/TIME"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.GroupName": "Time",
-                            "TcHmiSystemEng.Parameter.Info": "Work process timout",
-                            "TcHmiSystemEng.Parameter.Layer": "-1",
-                            "TcHmiSystemEng.Parameter.Max": "T#30S",
-                            "TcHmiSystemEng.Parameter.Min": "T#0S",
-                            "TcHmiSystemEng.Parameter.Name": "Timeout"
-                        },
-                        "propertyOrder": 5
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._id": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_id",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Identification name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Id"
-                        },
-                        "propertyOrder": 18
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._fbCutCylinder._name": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_fbCutCylinder::_name",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Name of the cylinder",
-                            "TcHmiSystemEng.Parameter.Name": "Name"
-                        },
-                        "propertyOrder": 17
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInfeedFood._sStationName": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInfeedFood::_sStationName",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
-                            "TcHmiSystemEng.Parameter.Name": "Station name"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nMaxResolution": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInspection::_nMaxResolution",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 5
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nMinResolution": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInspection::_nMinResolution",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._nResolution": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInspection::_nResolution",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Resolution of the image",
-                            "TcHmiSystemEng.Parameter.Max": "@_nMaxResolution",
-                            "TcHmiSystemEng.Parameter.Min": "@_nMinResolution",
-                            "TcHmiSystemEng.Parameter.Name": "Resolution",
-                            "TcHmiSystemEng.Parameter.Unit": "TcHmiSystemEng.Preset.Unit"
-                        },
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._sImage": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbInspection::_sImage",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Image of the station",
-                            "TcHmiSystemEng.Parameter.Name": "Station Image"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
         "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbInspection._sStationName": {
-            "ACCESS": 3,
+            "ACCESS": 0,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
+            "HIDDEN": true,
             "MAPPING": "PLC1::MAIN::fbMachine::_fbInspection::_sStationName",
             "SCHEMA": {
                 "allOf": [
@@ -1430,219 +918,11 @@
                 ]
             }
         },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nMaxSpeed": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbLabeling::_nMaxSpeed",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nMinSpeed": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbLabeling::_nMinSpeed",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._nSpeed": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbLabeling::_nSpeed",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
-                            "TcHmiSystemEng.Parameter.Max": "@_nMaxSpeed",
-                            "TcHmiSystemEng.Parameter.Min": "@_nMinSpeed",
-                            "TcHmiSystemEng.Parameter.Name": "Label Speed",
-                            "TcHmiSystemEng.Parameter.Unit": "mm/1"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbLabeling._sStationName": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbLabeling::_sStationName",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
-                            "TcHmiSystemEng.Parameter.Name": "Station name"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._nMaxPickPosition": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbOutfeed::_nMaxPickPosition",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._nPickPosition": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbOutfeed::_nPickPosition",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
-                            "TcHmiSystemEng.Parameter.Max": "@_nMaxPickPosition",
-                            "TcHmiSystemEng.Parameter.Min": "0",
-                            "TcHmiSystemEng.Parameter.Name": "Label Speed",
-                            "TcHmiSystemEng.Parameter.Unit": "mm/1"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbOutfeed._sStationName": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbOutfeed::_sStationName",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
-                            "TcHmiSystemEng.Parameter.Name": "Station name"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nMaxTemperature": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbSealing::_nMaxTemperature",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 4
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nMinTemperature": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbSealing::_nMinTemperature",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "propertyOrder": 3
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._nTemperature": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbSealing::_nTemperature",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Temperature of the sealing",
-                            "TcHmiSystemEng.Parameter.Max": "@_nMaxTemperature",
-                            "TcHmiSystemEng.Parameter.Min": "@_nMinTemperature",
-                            "TcHmiSystemEng.Parameter.Name": "Temperature",
-                            "TcHmiSystemEng.Parameter.Unit": "°C"
-                        },
-                        "propertyOrder": 2
-                    }
-                ]
-            }
-        },
-        "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._fbSealing._sStationName": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::fbMachine::_fbSealing::_sStationName",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/STRING%2880%29"
-                    },
-                    {
-                        "attributes": {
-                            "TcHmiSystemEng.Parameter.Info": "Enter the name from the station",
-                            "TcHmiSystemEng.Parameter.Name": "Station name"
-                        },
-                        "propertyOrder": 1
-                    }
-                ]
-            }
-        },
         "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._sMachineName": {
-            "ACCESS": 3,
+            "ACCESS": 0,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
+            "HIDDEN": true,
             "MAPPING": "PLC1::MAIN::fbMachine::_sMachineName",
             "SCHEMA": {
                 "allOf": [
@@ -1660,9 +940,10 @@
             }
         },
         "ADS.TcHmiSystemEngineering.Runtime1.PLC1.MAIN.fbMachine._sMachineVersion": {
-            "ACCESS": 3,
+            "ACCESS": 0,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
+            "HIDDEN": true,
             "MAPPING": "PLC1::MAIN::fbMachine::_sMachineVersion",
             "SCHEMA": {
                 "allOf": [
@@ -1899,6 +1180,10 @@
                 },
                 "function": true,
                 "type": "object",
+                "versions": [
+                    1.0,
+                    2.0
+                ],
                 "writeValue": {
                     "properties": {
                         "domain": {
@@ -2728,26 +2013,72 @@
             "MAPPING": "IsSymbolOutdated",
             "OPTIONS": {},
             "SCHEMA": {
-                "enum": [
-                    "SYMBOL_UP_TO_DATE",
-                    "SYMBOL_SCHEMA_DIFFERENCE",
-                    "SYMBOL_INVALID_DOMAIN",
-                    "SYMBOL_INVALID_SYMBOL"
-                ],
-                "function": true,
-                "type": "string",
-                "writeValue": {
-                    "properties": {
-                        "symbol": {
-                            "description": "Name of the symbol.",
-                            "type": "string"
+                "anyOf": [
+                    {
+                        "enum": [
+                            "SYMBOL_UP_TO_DATE",
+                            "SYMBOL_SCHEMA_DIFFERENCE",
+                            "SYMBOL_INVALID_DOMAIN",
+                            "SYMBOL_INVALID_SYMBOL"
+                        ],
+                        "function": true,
+                        "type": "string",
+                        "versions": [
+                            1.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
                         }
                     },
-                    "required": [
-                        "symbol"
-                    ],
-                    "type": "object"
-                }
+                    {
+                        "function": true,
+                        "properties": {
+                            "mappedSymbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            },
+                            "state": {
+                                "enum": [
+                                    "SYMBOL_UP_TO_DATE",
+                                    "SYMBOL_SCHEMA_DIFFERENCE",
+                                    "SYMBOL_INVALID_DOMAIN",
+                                    "SYMBOL_INVALID_SYMBOL"
+                                ],
+                                "type": "string"
+                            },
+                            "symbolSchema": {
+                                "$ref": "tchmi:server#/definitions/schemaRef"
+                            }
+                        },
+                        "required": [
+                            "state"
+                        ],
+                        "type": "object",
+                        "versions": [
+                            2.0
+                        ],
+                        "writeValue": {
+                            "properties": {
+                                "symbol": {
+                                    "description": "Name of the symbol.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "symbol"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -2941,9 +2272,57 @@
                             "description": "The globally unique identifier associated with the extension.",
                             "type": "string"
                         },
+                        "hideDomainOnLoginPage": {
+                            "description": "Shows if the domain should be hidden on the login page.",
+                            "type": "boolean"
+                        },
                         "licensed": {
                             "description": "Indicate the extension is license status.",
                             "type": "boolean"
+                        },
+                        "oauthConfig": {
+                            "additionalProperties": false,
+                            "description": "The OAuth provider configuration information that is associated with the extension.",
+                            "properties": {
+                                "authorizationEndpoint": {
+                                    "description": "The OAuth authorization endpoint.",
+                                    "type": "string"
+                                },
+                                "clientId": {
+                                    "description": "The application (client) ID for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "displayName": {
+                                    "description": "The display name of the OAuth provider configuration.",
+                                    "type": "string"
+                                },
+                                "domainHint": {
+                                    "description": "The domain hint for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "error": {
+                                    "$ref": "tchmi:general#/definitions/errorDetails"
+                                },
+                                "prompt": {
+                                    "description": "The prompt behavior for the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "responseType": {
+                                    "description": "The response type expected from the OAuth provider.",
+                                    "type": "string"
+                                },
+                                "scope": {
+                                    "description": "The scope of access requested from the OAuth provider.",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "displayName",
+                                "authorizationEndpoint",
+                                "clientId",
+                                "responseType"
+                            ],
+                            "type": "object"
                         },
                         "packageVersion": {
                             "description": "The version of the NuGet package that contains the extension.",
@@ -3509,7 +2888,14 @@
             "MAPPING": "Logout",
             "OPTIONS": {},
             "SCHEMA": {
-                "function": true
+                "function": true,
+                "properties": {
+                    "redirectUrl": {
+                        "description": "URL to redirect to after logout. If not specified, the user will be redirected to the login page.",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
             },
             "USEMAPPING": true
         },
@@ -4136,6 +3522,17 @@
                         "state": {
                             "type": "string"
                         },
+                        "storeSymbolAccessesError": {
+                            "properties": {
+                                "code": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
                         "symbolInitState": {
                             "type": "string"
                         },
@@ -4155,6 +3552,9 @@
                         },
                         "symbolUpdateStateDesc": {
                             "type": "string"
+                        },
+                        "symbolsUpToDate": {
+                            "type": "boolean"
                         }
                     },
                     "type": "object"
@@ -4162,6 +3562,26 @@
                 "function": true,
                 "readOnly": true,
                 "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiSystemEngineering.GetChangedSymbolValues": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSystemEngineering",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetChangedSymbolValues",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "type": "string"
+                },
+                "readOnly": true,
+                "type": "array",
+                "writeValue": {
+                    "type": "string"
+                }
             },
             "USEMAPPING": true
         },
@@ -4189,6 +3609,7 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true,
+                "properties": {},
                 "readOnly": true,
                 "type": "object",
                 "writeValue": {
@@ -4206,6 +3627,7 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true,
+                "properties": {},
                 "readOnly": true,
                 "type": "object"
             },
@@ -4942,10 +4364,10 @@
                         "addSymbol": true,
                         "attributes": {
                             "TcHmiSystemEng.Parameter.Info": "Resolution of the image",
-                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbInspection::_nMaxResolution",
-                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbInspection::_nMinResolution",
+                            "TcHmiSystemEng.Parameter.Max": "@_nMaxResolution",
+                            "TcHmiSystemEng.Parameter.Min": "@_nMinResolution",
                             "TcHmiSystemEng.Parameter.Name": "Resolution",
-                            "TcHmiSystemEng.Parameter.Unit": ""
+                            "TcHmiSystemEng.Parameter.Unit": "Undefined preset \"TcHmiSystemEng.Preset.Unit\" used in attribute \"TcHmiSystemEng.Parameter.Unit\""
                         },
                         "propertyOrder": 3
                     }
@@ -5052,8 +4474,8 @@
                         "addSymbol": true,
                         "attributes": {
                             "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
-                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbLabeling::_nMaxSpeed",
-                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbLabeling::_nMinSpeed",
+                            "TcHmiSystemEng.Parameter.Max": "@_nMaxSpeed",
+                            "TcHmiSystemEng.Parameter.Min": "@_nMinSpeed",
                             "TcHmiSystemEng.Parameter.Name": "Label Speed",
                             "TcHmiSystemEng.Parameter.Unit": "mm/1"
                         },
@@ -5120,7 +4542,7 @@
                         "addSymbol": true,
                         "attributes": {
                             "TcHmiSystemEng.Parameter.Info": "Enter the speed of the label",
-                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbOutfeed::_nMaxPickPosition",
+                            "TcHmiSystemEng.Parameter.Max": "@_nMaxPickPosition",
                             "TcHmiSystemEng.Parameter.Min": "0",
                             "TcHmiSystemEng.Parameter.Name": "Label Speed",
                             "TcHmiSystemEng.Parameter.Unit": "mm/1"
@@ -5207,8 +4629,8 @@
                         "addSymbol": true,
                         "attributes": {
                             "TcHmiSystemEng.Parameter.Info": "Temperature of the sealing",
-                            "TcHmiSystemEng.Parameter.Max": "@PLC1::MAIN::fbMachine::_fbSealing::_nMaxTemperature",
-                            "TcHmiSystemEng.Parameter.Min": "@PLC1::MAIN::fbMachine::_fbSealing::_nMinTemperature",
+                            "TcHmiSystemEng.Parameter.Max": "@_nMaxTemperature",
+                            "TcHmiSystemEng.Parameter.Min": "@_nMinTemperature",
                             "TcHmiSystemEng.Parameter.Name": "Temperature",
                             "TcHmiSystemEng.Parameter.Unit": "°C"
                         },
@@ -5284,6 +4706,44 @@
                         "propertyOrder": 2
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiSystemEngineering.TeachSymbolValues": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiSystemEngineering",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "TeachSymbolValues",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "oneOf": [
+                        {
+                            "description": "Runtime.",
+                            "type": "string"
+                        },
+                        {
+                            "properties": {
+                                "runtime": {
+                                    "description": "Runtime.",
+                                    "type": "string"
+                                },
+                                "symbolNames": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "runtime"
+                            ],
+                            "type": "object"
+                        }
+                    ]
+                }
             },
             "USEMAPPING": true
         },
@@ -5788,7 +5248,7 @@
     "SYMBOL_COMPLEXITY_LIMIT": 100,
     "TEMPDH": "",
     "THREADPOOLSIZE": 32,
-    "UPLOADTIMEOUT": "PT20S",
+    "UPLOADTIMEOUT": "PT1M",
     "USEINT64STRING": true,
     "USERGROUPS": {
         "__SystemAdministrators": {
@@ -5869,6 +5329,7 @@
                 "SubscribeEvents": 3,
                 "TcHmiSqliteLogger.Diagnostics": 3,
                 "TcHmiSystemEngineering.Diagnostics": 3,
+                "TcHmiSystemEngineering.GetChangedSymbolValues": 3,
                 "TcHmiSystemEngineering.GetSchema": 3,
                 "TcHmiSystemEngineering.GetTreeView": 3,
                 "TcHmiSystemEngineering.ListSymbols": 3,
@@ -5923,11 +5384,11 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\SystemEngineering_HMI\\",
-        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.2.90\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.2.110\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.2.110\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.2.90\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.SystemEngineeringUtils": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.SystemEngineeringUtils.14.3.9\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.7.4\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.14.9.11\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.7.23\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.7.3\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.SystemEngineeringUtils": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.SystemEngineeringUtils.14.3.361\\runtimes\\native1.12-tchmi",
         "/bin": "..\\..\\SystemEngineering_HMI\\bin\\"
     }
 }
