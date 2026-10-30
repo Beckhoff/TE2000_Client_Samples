@@ -33,9 +33,7 @@
   "exclude": [
     "bin/"
   ],
-  "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.14.7.23/runtimes/native1.12-tchmi/TcHmi.d.ts"
-  ],
+  "include": [],
   "files": [
     "ReportingFunctions/UploadReportingSources.ts"
   ]
