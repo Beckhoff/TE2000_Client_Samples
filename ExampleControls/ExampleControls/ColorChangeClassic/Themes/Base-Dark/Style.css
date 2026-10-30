@@ -1,0 +1,16 @@
+/** Styles for theme: Base-Dark */
+.TcHmi_Controls_ExampleControls_ColorChangeClassic {
+}
+
+    /* Ring around the circle, so it is visible on every background */
+    .TcHmi_Controls_ExampleControls_ColorChangeClassic > * > .TcHmi_Controls_ExampleControls_ColorChangeClassic-circle {
+        box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2);
+    }
+
+    .TcHmi_Controls_ExampleControls_ColorChangeClassic > * > .glow-red {
+        background-color: rgba(248, 81, 73, 1);
+    }
+
+    .TcHmi_Controls_ExampleControls_ColorChangeClassic > * > .glow-green {
+        background-color: rgba(63, 185, 80, 1);
+    }

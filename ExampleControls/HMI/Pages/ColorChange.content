@@ -1,0 +1,93 @@
+<div id="ColorChangeContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="816" data-tchmi-height="1370">
+<div id="ColorChangeHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="ColorChange" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ColorChangeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="784" data-tchmi-height="1290">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ColorChangeDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="120" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">ColorChange</code> is the recommended way to write a control: an ES module which imports the framework API. Its attribute <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Value</code> is bound to the internal symbol <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">ColorChangeValue</code>, which the switch at the bottom changes.</p>
+</div>
+<div id="ColorChangeImportText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="160" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">1. Import the framework API</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The control is an ES module and imports what it needs.</p>
+</div>
+<div id="ColorChangeImportCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="216" data-tchmi-height="177" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">import { Controls, EventProvider, TcHmiControl, ValueConverter }
+    from <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'Beckhoff.TwinCAT.HMI.Framework/index.esm.js'</span>;
+
+export class ColorChange extends <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">TcHmiControl.Control</span> {
+    // ...
+}
+
+<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">Controls.registerEx</span>('ColorChange',
+    'TcHmi.Controls.ExampleControls', ColorChange);</pre>
+</div>
+<div id="ColorChangeAttributeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="417" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">2. Describe the attribute</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Description.json</code> defines the attribute, its type and its setter.</p>
+</div>
+<div id="ColorChangeAttributeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="473" data-tchmi-height="177" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">{
+    "name": "data-tchmi-value",
+    "propertyName": "Value",
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"propertySetterName": "setValue"</span>,
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"propertyGetterName": "getValue"</span>,
+    "type": "tchmi:general#/definitions/Boolean",
+    "bindable": true,
+    "defaultValueInternal": false
+}</pre>
+</div>
+<div id="ColorChangeSetterText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="674" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">3. Store the value in the setter</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The setter converts the value and processes it only if it changed.</p>
+</div>
+<div id="ColorChangeSetterCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="730" data-tchmi-height="245" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">public <span style="color: rgba(121, 184, 255, 1);">setValue</span>(valueNew: boolean | null) {
+    // null, for example from a binding without a value, is false
+    const convertedValue =
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">ValueConverter.toBoolean</span>(valueNew, false);
+    if (convertedValue === this.__value) {
+        return;
+    }
+    this.__value = convertedValue;
+    // Informs bindings which read the attribute
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">EventProvider.raise</span>(this.__id + '.onPropertyChanged',
+        { propertyName: 'Value' });
+    this.__processValue();
+}</pre>
+</div>
+<div id="ColorChangeProcessText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="999" data-tchmi-height="48" data-tchmi-width="528">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">4. Show the value</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;"><code style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">__processValue</code> toggles CSS classes, each theme defines their colors.</p>
+</div>
+<div id="ColorChangeProcessCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1055" data-tchmi-height="211" data-tchmi-width="528">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">protected <span style="color: rgba(121, 184, 255, 1);">__processValue</span>() {
+    this.__elementCircle.classList.toggle(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'glow-green'</span>,
+        this.__value);
+    this.__elementCircle.classList.toggle(<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'glow-red'</span>,
+        !this.__value);
+}
+
+/* Themes/Base/Style.css */
+.TcHmi_Controls_ExampleControls_ColorChange &gt; * &gt; <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">.glow-green</span> {
+    background-color: rgba(46, 160, 67, 1);
+}</pre>
+</div>
+<div id="ColorChangeControlLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="24" data-tchmi-height="24" data-tchmi-width="160" data-tchmi-text="ColorChange" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ColorChangeControl" data-tchmi-type="TcHmi.Controls.ExampleControls.ColorChange" data-tchmi-left="600" data-tchmi-top="56" data-tchmi-width="160" data-tchmi-height="160" data-tchmi-value="%i%ColorChangeValue%/i%"></div>
+</div>
+</div>

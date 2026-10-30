@@ -1,0 +1,111 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "type": "Control",
+      "basePath": "./ColorChange",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    },
+    {
+      "type": "Control",
+      "basePath": "./ColorChangeClassic",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    },
+    {
+      "type": "Control",
+      "basePath": "./ModuleImports",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    },
+    {
+      "type": "Control",
+      "basePath": "./ModuleImportsJs",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": ""
+    },
+    {
+      "type": "Language",
+      "locale": "de",
+      "files": "./Localization/de.localization"
+    },
+    {
+      "type": "Language",
+      "locale": "en",
+      "files": "./Localization/en.localization"
+    }
+  ],
+  "esmoduleImports": [
+    {
+      "imports": {
+        "textmodule": "ModuleImports/someText.js"
+      }
+    },
+    {
+      "moduleScope": "ModuleImportsJs",
+      "imports": {
+        "textmodule": "ModuleImportsJs/someText.js"
+      }
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "ExampleControls": {
+        "200": "ExampleControls"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1,
+  "symbols": {
+    "internal": {},
+    "themedResources": {},
+    "timer": {},
+    "package": {}
+  },
+  "intervals": {},
+  "actionTemplates": [],
+  "dataTypes": [],
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  }
+}

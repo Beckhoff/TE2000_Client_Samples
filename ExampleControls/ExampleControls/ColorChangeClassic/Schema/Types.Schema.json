@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.ExampleControls.ColorChangeClassic": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ColorChangeClassic",
+      "frameworkControlNamespace": "TcHmi.Controls.ExampleControls"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "type": "Language",
+      "locale": "de",
+      "files": "./Localization/de.localization"
+    },
+    {
+      "type": "Language",
+      "locale": "en",
+      "files": "./Localization/en.localization"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "UnitTests": {
+        "200": "UnitTests"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1,
+  "dataTypes": [],
+  "symbols": {
+    "internal": {},
+    "themedResources": {},
+    "timer": {},
+    "package": {}
+  },
+  "intervals": {},
+  "actionTemplates": [],
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  }
+}

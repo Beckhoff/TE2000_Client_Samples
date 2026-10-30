@@ -1,0 +1,10 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "MAXREQUESTSIZE": 1048576,
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "www",
+        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.14.7.4\\runtimes\\native1.12-tchmi",
+        "/bin/Debug": "..\\..\\UnitTests\\bin\\Debug\\"
+    }
+}
