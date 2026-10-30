@@ -4,6 +4,17 @@ This sample shows how an HMI should react on the change of a server symbol, for 
 
 ![Start page of the sample](README/StartPage.png)
 
+## Running the sample
+
+1. Open [SymbolChangeTrigger.sln](SymbolChangeTrigger.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Restore the NuGet packages of the HMI project and start the Live-View of the `SymbolChangeTrigger` project. No PLC is needed.
+3. Select one of the pages `Classic`, `Context` or `TypeScript/JavaScript` in the navigation.
+4. Switch `Running` on and off. The circle switches between green and red.
+
+To see the difference, open the developer tools of the browser and watch the messages of the websocket connection to the HMI server. With the classic page loaded, every change of `MachineRunning` is followed by an additional `ReadWrite` request which reads the symbol again. With the context page or the TypeScript/JavaScript page loaded, no request follows, the page only uses the subscription update of the server.
+
+## Overview
+
 The sample contains three variants of the same logic. Each variant is a content page with a circle which is green while the server symbol `MachineRunning` is `true` and red while it is `false`:
 
 | Variant               | Page                                                                 | Implementation                                                                  | Recommendation                     |
@@ -164,15 +175,6 @@ Like the context trigger it uses the value delivered by the subscription and sen
 The same API can be used from a plain JavaScript code-behind file. TypeScript is compiled to JavaScript during the build anyway.
 
 The code-behind file is an ES module. It is referenced in the `dependencyFiles` of [tchmiconfig.json](SymbolChangeTrigger/Properties/tchmiconfig.json) with the type `EsModule`, and the project file includes it with `IncludeAs` set to `JavascriptModule`. The `paths` entries in [tsconfig.json](SymbolChangeTrigger/tsconfig.json) map the imports of `Beckhoff.TwinCAT.HMI.Framework` and `Beckhoff.TwinCAT.HMI.Controls` to the installed packages. The import of the controls package is only used for the type of the circle and is removed by the compiler.
-
-## Running the sample
-
-1. Open [SymbolChangeTrigger.sln](SymbolChangeTrigger.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
-2. Restore the NuGet packages of the HMI project and start the Live-View of the `SymbolChangeTrigger` project. No PLC is needed.
-3. Select one of the pages `Classic`, `Context` or `TypeScript/JavaScript` in the navigation.
-4. Switch `Running` on and off. The circle switches between green and red.
-
-To see the difference, open the developer tools of the browser and watch the messages of the websocket connection to the HMI server. With the classic page loaded, every change of `MachineRunning` is followed by an additional `ReadWrite` request which reads the symbol again. With the context page or the TypeScript/JavaScript page loaded, no request follows, the page only uses the subscription update of the server.
 
 ## Files
 
