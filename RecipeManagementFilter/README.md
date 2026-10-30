@@ -4,6 +4,15 @@ This sample is the [RecipeManagement](../RecipeManagement/README.md) sample, ext
 
 ![Start page of the sample](README/StartPage.png)
 
+## Running the sample
+
+1. Open [TcHmiRecipeManagementFilterSample.sln](TcHmiRecipeManagementFilterSample.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
+2. Activate the configuration of `TwinCAT Project1` and start the PLC.
+3. Restore the NuGet packages, build the solution and start the Live-View of the `TcHmiRecipeManagementFilterSample` project.
+4. Enter a part of a recipe name in the filter at the bottom, for example `2`, and open the recipe selection.
+
+## Overview
+
 The solution contains two projects:
 
 | Project                                                                | Content                                                                             |
@@ -44,13 +53,6 @@ See [ListRecipesAsReferenceArray.ts](TcHmiRecipeManagementFilterSample/RecipeFun
 The functions of this sample are registered in the namespace `TcHmi.Functions.RecipeManagementFilterSample`, so they do not collide with the functions of RecipeManagement when both are used in one project.
 
 *Note*: The button Delete selected recipe only deletes a recipe if the combobox lists more than one recipe. With an active filter this counts the listed recipes, not all recipes: if the filter leaves only one recipe, clear the filter to delete it.
-
-## Running the sample
-
-1. Open [TcHmiRecipeManagementFilterSample.sln](TcHmiRecipeManagementFilterSample.sln) in Visual Studio or the TwinCAT XAE Shell with TwinCAT HMI Engineering installed.
-2. Activate the configuration of `TwinCAT Project1` and start the PLC.
-3. Restore the NuGet packages, build the solution and start the Live-View of the `TcHmiRecipeManagementFilterSample` project.
-4. Enter a part of a recipe name in the filter at the bottom, for example `2`, and open the recipe selection.
 
 ## Further information
 
