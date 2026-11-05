@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.SymbolControls.ClassicControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ClassicControl",
+      "frameworkControlNamespace": "TcHmi.Controls.SymbolControls"
+    },
+    "TcHmi.Controls.SymbolControls.ClassicControl.StateSymbol": {
+      "title": "StateSymbol",
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/Boolean"
+          }
+        }
+      ]
+    }
+  }
+}

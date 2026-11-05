@@ -1,0 +1,117 @@
+<div id="HybridContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="916" data-tchmi-height="1552">
+<div id="HybridHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Hybrid: Value or binding" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="HybridContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="884" data-tchmi-height="1472">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="HybridDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="168" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">HybridControl gives its value attribute <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">State</code> full control over the symbol of a binding, like <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">StateSymbol</code> in the classic implementation, but without an additional attribute which only accepts symbol references. A static value still goes to the setter. <b>Important:</b> the attribute needs <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">&quot;bindableAsRef&quot;: true</code> in Description.json. Only then a binding of the attribute raises the event <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">onAttributeSymbolReferenceChanged</code> with its <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.Symbol</code> instead of writing the value to the setter, so the control can read and write the symbol itself. Without it the control only receives values like for any attribute.</p>
+</div>
+<div id="HybridAttributeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="208" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Attribute description</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The attribute <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">State</code> in Description.json. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">bindableAsRef</code> is the important property.</p>
+</div>
+<div id="HybridAttributeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="264" data-tchmi-height="262" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;"><span style="color: rgba(139, 148, 158, 1);">// Description.json, attribute State</span>
+{
+  "name": "data-tchmi-state",
+  "propertyName": "State",
+  "propertySetterName": "setState",
+  "propertyGetterName": "getState",
+  "type": "tchmi:general#/definitions/Boolean",
+  "bindable": true,
+  <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"bindableAsRef": true</span>,
+  "allowEarlySymbolReferenceInjection": true,
+  "defaultBindingMode": "OneWay",
+  "defaultValue": false,
+  ...
+}</pre>
+</div>
+<div id="HybridImplementationText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="550" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Implementation</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The binding hands the symbol over to the control, which owns it from then on.</p>
+</div>
+<div id="HybridImplementationCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="606" data-tchmi-height="551" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">import { Binding, EventProvider }
+    from 'Beckhoff.TwinCAT.HMI.Framework/index.esm.js';
+
+public <span style="color: rgba(121, 184, 255, 1);">__previnit</span>() {
+    EventProvider.register(
+        this.__id + <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">'.onAttributeSymbolReferenceChanged'</span>,
+        (_event, data) =&gt;
+            this.__onAttributeSymbolReferenceChanged(data));
+    super.__previnit();
+}
+
+protected <span style="color: rgba(121, 184, 255, 1);">__onAttributeSymbolReferenceChanged</span>(data) {
+    this.__releaseStateSymbol();
+    if (!data.symbol) {
+        this.setState(null); // The binding was removed.
+        return;
+    }
+    this.__stateSymbol = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data.symbol</span>;
+    if (this.__isAttached) {
+        this.__destroyStateSymbolWatch =
+            this.__stateSymbol.watch(this.__onStateSymbolWatch);
+    }
+}
+
+protected <span style="color: rgba(121, 184, 255, 1);">__writeStateSymbol</span>(value: boolean) {
+    if (Binding.resolveEx('State', this)
+            ?.getOptions().BindingMode <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">!== 'TwoWay'</span>) {
+        return;
+    }
+    this.__stateSymbol.write(value, (data) =&gt; { /* ... */ });
+}</pre>
+</div>
+<div id="HybridUsageText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1181" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Usage</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">A static value, a OneWay binding and a TwoWay binding.</p>
+</div>
+<div id="HybridUsageCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1237" data-tchmi-height="211" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&lt;div id="HybridStatic"
+  data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl"
+  data-tchmi-state="true"&gt;&lt;/div&gt;
+
+&lt;div id="HybridOneWay"
+  data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl"
+  data-tchmi-state="%s%PumpRunning%/s%"&gt;&lt;/div&gt;
+
+&lt;div id="HybridTwoWay"
+  data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl"
+  data-tchmi-state="%s%PumpRunning<span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">|BindingMode=TwoWay</span>%/s%"&gt;&lt;/div&gt;</pre>
+</div>
+<div id="HybridStaticLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="208" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="Static value: true" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="HybridStatic" data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl" data-tchmi-left="600" data-tchmi-top="240" data-tchmi-width="260" data-tchmi-height="96" data-tchmi-state="true"></div>
+<div id="HybridOneWayLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="352" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="Binding, OneWay" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="HybridOneWay" data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl" data-tchmi-left="600" data-tchmi-top="384" data-tchmi-width="260" data-tchmi-height="96" data-tchmi-state="%s%PumpRunning%/s%"></div>
+<div id="HybridTwoWayLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="496" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="Binding, TwoWay" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="HybridTwoWay" data-tchmi-type="TcHmi.Controls.SymbolControls.HybridControl" data-tchmi-left="600" data-tchmi-top="528" data-tchmi-width="260" data-tchmi-height="96" data-tchmi-state="%s%PumpRunning|BindingMode=TwoWay%/s%"></div>
+</div>
+</div>

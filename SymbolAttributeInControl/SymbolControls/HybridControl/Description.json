@@ -1,0 +1,96 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "HybridControl",
+  "namespace": "TcHmi.Controls.SymbolControls",
+  "displayName": "HybridControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "Shows and toggles the boolean attribute State, which accepts a static value or a binding.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 260,
+      "height": 96
+    }
+  },
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "template": "Template.html",
+  "dependencyFiles": [
+    {
+      "name": "HybridControl.js",
+      "type": "EsModule",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "name": "data-tchmi-state",
+      "propertyName": "State",
+      "propertySetterName": "setState",
+      "propertyGetterName": "getState",
+      "displayName": "State",
+      "visible": true,
+      "themeable": "Standard",
+      "displayPriority": 10,
+      "type": "tchmi:general#/definitions/Boolean",
+      "category": "Common",
+      "description": "The state as a static value or a binding. A click inverts it and writes it to the bound symbol with BindingMode=TwoWay.",
+      "readOnly": false,
+      "bindable": true,
+      "bindableAsRef": true,
+      "allowEarlySymbolReferenceInjection": true,
+      "defaultBindingMode": "OneWay",
+      "heritable": true,
+      "defaultValue": false,
+      "defaultValueInternal": false
+    }
+  ],
+  "attributeCategories": [],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}

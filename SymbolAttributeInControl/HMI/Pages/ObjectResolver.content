@@ -1,0 +1,127 @@
+<div id="ObjectResolverContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="916" data-tchmi-height="1657">
+<div id="ObjectResolverHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="ObjectResolver: Symbol in an object" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ObjectResolverContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="884" data-tchmi-height="1577">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ObjectResolverDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="120" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">ObjectResolverControl has the attribute <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">Entries</code>, a list of objects with <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">label</code> and <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">stateSymbol</code>. <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">allowSymbolExpressionsInObject</code> lets the objects contain symbol expressions. The control resolves the value with a <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.ObjectResolver</code>. As the type of <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">stateSymbol</code> is Symbol, the resolver puts a <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.Symbol</code> into the entry instead of the value of the symbol. The resolver owns these symbols, the control only watches and writes them.</p>
+</div>
+<div id="ObjectResolverAttributeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="160" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Attribute description</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Symbol expressions are allowed in the object, <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">stateSymbol</code> has a Symbol type.</p>
+</div>
+<div id="ObjectResolverAttributeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="216" data-tchmi-height="585" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;"><span style="color: rgba(139, 148, 158, 1);">// Description.json, attribute Entries</span>
+{
+  "name": "data-tchmi-entries",
+  "propertyName": "Entries",
+  "propertySetterName": "setEntries",
+  "propertyGetterName": "getEntries",
+  "type": "...SymbolControls.ObjectResolverControl.EntryList",
+  "bindable": true,
+  <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"allowSymbolExpressionsInObject": true</span>,
+  ...
+}
+
+<span style="color: rgba(139, 148, 158, 1);">// Schema/Types.Schema.json</span>
+"...ObjectResolverControl.EntryList": {
+  "type": "array",
+  "items": { "$ref": "...ObjectResolverControl.Entry" }
+},
+"...ObjectResolverControl.Entry": {
+  "type": "object",
+  "properties": {
+    "label": { "type": "string" },
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"stateSymbol"</span>: {
+      <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"$ref": "...ObjectResolverControl.StateSymbol"</span>
+    }
+  }
+},
+"...ObjectResolverControl.StateSymbol": {
+  "allOf": [
+    { <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"$ref": "tchmi:framework#/definitions/Symbol"</span> },
+    { "frameworkSymbolSubType": {
+        "$ref": "tchmi:general#/definitions/Boolean" } }
+  ]
+}</pre>
+</div>
+<div id="ObjectResolverImplementationText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="825" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Implementation</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The type of the attribute tells the resolver where a <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.Symbol</code> is expected.</p>
+</div>
+<div id="ObjectResolverImplementationCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="881" data-tchmi-height="381" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">import { ObjectResolver }
+    from 'Beckhoff.TwinCAT.HMI.Framework/index.esm.js';
+
+public <span style="color: rgba(121, 184, 255, 1);">setEntries</span>(valueNew: ObjectResolverControl.Entry[] | null) {
+    const resolver = new ObjectResolver(valueNew, {
+        parentControl: this,
+        <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">type: this.getAttributeDescription('Entries')?.type</span>,
+    });
+    this.__objectResolvers.set('Entries', {
+        resolver: resolver,
+        watchCallback: this.__onEntriesWatchCallback,
+        watchDestroyer: resolver.watch(this.__onEntriesWatchCallback),
+    });
+}
+
+protected <span style="color: rgba(121, 184, 255, 1);">__onEntriesWatchCallback</span>(data) {
+    for (const entry of data.value ?? []) {
+<span style="color: rgba(139, 148, 158, 1);">        // A TcHmi.Symbol which belongs to the resolver.</span>
+        row.destroyWatch = <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">entry.stateSymbol.watch</span>(/* ... */);
+    }
+}</pre>
+</div>
+<div id="ObjectResolverUsageText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1286" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Usage</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">Each entry contains the symbol expression of its state.</p>
+</div>
+<div id="ObjectResolverUsageCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1342" data-tchmi-height="211" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&lt;div id="ObjectResolverEntries"
+  data-tchmi-type="TcHmi.Controls.SymbolControls.ObjectResolverControl"&gt;
+&lt;script data-tchmi-target-attribute="data-tchmi-entries"
+        type="application/json"&gt;
+[
+  { "label": "Pump", "stateSymbol": <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"%s%PumpRunning%/s%"</span> },
+  { "label": "Fan", "stateSymbol": <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"%s%FanRunning%/s%"</span> },
+  { "label": "Light", "stateSymbol": <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"%s%LightOn%/s%"</span> }
+]
+&lt;/script&gt;
+&lt;/div&gt;</pre>
+</div>
+<div id="ObjectResolverEntriesLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="160" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="ObjectResolverControl" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ObjectResolverEntries" data-tchmi-type="TcHmi.Controls.SymbolControls.ObjectResolverControl" data-tchmi-left="600" data-tchmi-top="192" data-tchmi-width="260" data-tchmi-height="176">
+<script data-tchmi-target-attribute="data-tchmi-entries" type="application/json">
+[
+  {
+    "label": "Pump",
+    "stateSymbol": "%s%PumpRunning%/s%"
+  },
+  {
+    "label": "Fan",
+    "stateSymbol": "%s%FanRunning%/s%"
+  },
+  {
+    "label": "Light",
+    "stateSymbol": "%s%LightOn%/s%"
+  }
+]
+</script>
+</div>
+</div>
+</div>

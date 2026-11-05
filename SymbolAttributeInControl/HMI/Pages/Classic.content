@@ -1,0 +1,96 @@
+<div id="ClassicContent" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-min-width="916" data-tchmi-height="1419">
+<div id="ClassicHeadline" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="32" data-tchmi-top="16" data-tchmi-height="32" data-tchmi-right="16" data-tchmi-text="Classic: Symbol attribute" data-tchmi-word-wrap="True">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+</div>
+<div id="ClassicContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="16" data-tchmi-top="64" data-tchmi-right="16" data-tchmi-min-width="884" data-tchmi-height="1339">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+<div id="ClassicDescription" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="24" data-tchmi-height="120" data-tchmi-right="24">
+<p style="margin: 0; font-size: 16px; line-height: 24px;">ClassicControl has the attribute <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">StateSymbol</code> of the type Symbol, like the StateSymbol of the TcHmiButton. The Framework does not read the symbol: it creates a <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.Symbol</code> for the symbol expression and passes it to the setter. The control watches the symbol while it is attached, shows its value and writes the inverted value on a click. Whether it respects the BindingMode or other options of the expression depends on the implementation.</p>
+</div>
+<div id="ClassicAttributeText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="160" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Attribute description</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The type of <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">StateSymbol</code> is based on Symbol, so the setter gets a <code style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; background: rgba(0, 0, 0, 0.07); padding: 1px 4px; border-radius: 3px;">TcHmi.Symbol</code>.</p>
+</div>
+<div id="ClassicAttributeCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="216" data-tchmi-height="364" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;"><span style="color: rgba(139, 148, 158, 1);">// Description.json, attribute StateSymbol</span>
+{
+  "name": "data-tchmi-state-symbol",
+  "propertyName": "StateSymbol",
+  "propertySetterName": "setStateSymbol",
+  "propertyGetterName": "getStateSymbol",
+  <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"type": "...SymbolControls.ClassicControl.StateSymbol"</span>,
+  "bindable": true,
+  "defaultValue": null,
+  ...
+}
+
+<span style="color: rgba(139, 148, 158, 1);">// Schema/Types.Schema.json</span>
+"TcHmi.Controls.SymbolControls.ClassicControl.StateSymbol": {
+  "allOf": [
+    { <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">"$ref": "tchmi:framework#/definitions/Symbol"</span> },
+    { "frameworkSymbolSubType": {
+        "$ref": "tchmi:general#/definitions/Boolean" } }
+  ]
+}</pre>
+</div>
+<div id="ClassicImplementationText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="604" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Implementation</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The control owns the symbol: it watches it while attached and destroys it when it is replaced.</p>
+</div>
+<div id="ClassicImplementationCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="660" data-tchmi-height="483" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">import { Symbol }
+    from 'Beckhoff.TwinCAT.HMI.Framework/index.esm.js';
+
+public <span style="color: rgba(121, 184, 255, 1);">setStateSymbol</span>(valueNew: Symbol&lt;boolean&gt; | null) {
+<span style="color: rgba(139, 148, 158, 1);">    // The watch first: destroying a symbol does not end its watches.</span>
+    this.__destroyStateSymbolWatch?.();
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">this.__stateSymbol?.destroy()</span>;
+    this.__stateSymbol = valueNew;
+    if (this.__stateSymbol &amp;&amp; this.__isAttached) {
+        this.__destroyStateSymbolWatch =
+            <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">this.__stateSymbol.watch</span>(this.__onStateSymbolWatch);
+    }
+}
+
+public <span style="color: rgba(121, 184, 255, 1);">__attach</span>() {
+    super.__attach();
+    if (this.__stateSymbol &amp;&amp; !this.__destroyStateSymbolWatch) {
+        this.__destroyStateSymbolWatch =
+            <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">this.__stateSymbol.watch</span>(this.__onStateSymbolWatch);
+    }
+}
+
+protected <span style="color: rgba(121, 184, 255, 1);">__toggle</span>() {
+    <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">this.__stateSymbol.write</span>(!this.__state, (data) =&gt; {
+        /* ... */
+    });
+}</pre>
+</div>
+<div id="ClassicUsageText" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1167" data-tchmi-height="48" data-tchmi-width="560">
+<p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: bold;">Usage</p>
+<p style="margin: 0; font-size: 14px; line-height: 24px;">The attribute contains the symbol expression.</p>
+</div>
+<div id="ClassicUsageCode" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-left="24" data-tchmi-top="1223" data-tchmi-height="92" data-tchmi-width="560">
+<pre style="margin: 0; height: 100%; box-sizing: border-box; padding: 12px 16px; overflow: hidden; background: rgba(30, 36, 48, 1); color: rgba(214, 222, 235, 1); border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 17px;">&lt;div id="ClassicPump"
+  data-tchmi-type="TcHmi.Controls.SymbolControls.ClassicControl"
+  <span style="background: rgba(46, 160, 67, 0.45); border-radius: 3px;">data-tchmi-state-symbol="%s%PumpRunning%/s%"</span>&gt;
+&lt;/div&gt;</pre>
+</div>
+<div id="ClassicPumpLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="600" data-tchmi-top="160" data-tchmi-height="24" data-tchmi-width="260" data-tchmi-text="ClassicControl" data-tchmi-word-wrap="False">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "text-size-default"
+]
+</script>
+</div>
+<div id="ClassicPump" data-tchmi-type="TcHmi.Controls.SymbolControls.ClassicControl" data-tchmi-left="600" data-tchmi-top="192" data-tchmi-width="260" data-tchmi-height="96" data-tchmi-state-symbol="%s%PumpRunning%/s%"></div>
+</div>
+</div>

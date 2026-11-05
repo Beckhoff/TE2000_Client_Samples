@@ -1,0 +1,22 @@
+/** Styles for theme: Base */
+.TcHmi_Controls_SymbolControls_HybridControl {
+
+}
+
+    .TcHmi_Controls_SymbolControls_HybridControl-Template {
+        background-color: #ffffff;
+        border: 1px solid #a3b0bb;
+        color: #4c6374;
+    }
+
+    .TcHmi_Controls_SymbolControls_HybridControl-row:hover {
+        background-color: rgba(76, 99, 116, 0.08);
+    }
+
+    .TcHmi_Controls_SymbolControls_HybridControl-lamp {
+        background-color: #a3b0bb;
+    }
+
+    .TcHmi_Controls_SymbolControls_HybridControl-row.on .TcHmi_Controls_SymbolControls_HybridControl-lamp {
+        background-color: #2ea043;
+    }

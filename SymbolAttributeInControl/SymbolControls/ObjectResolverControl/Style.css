@@ -1,0 +1,70 @@
+/* General theme independent control css. */
+
+.TcHmi_Controls_SymbolControls_ObjectResolverControl {
+    overflow: hidden;
+}
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-Template {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-caption {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        right: 16px;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-rows {
+        position: absolute;
+        top: 40px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        overflow-y: auto;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-row {
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-lamp {
+        flex: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-label {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: Consolas, 'Courier New', monospace;
+        font-size: 14px;
+    }
+
+    .TcHmi_Controls_SymbolControls_ObjectResolverControl-state {
+        flex: none;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+.TcHmi_Controls_SymbolControls_ObjectResolverControl.TcHmi_Controls_System_TcHmiControl-operate-disallowed .TcHmi_Controls_SymbolControls_ObjectResolverControl-row {
+    cursor: not-allowed;
+}

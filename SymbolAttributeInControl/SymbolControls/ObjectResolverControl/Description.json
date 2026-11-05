@@ -1,0 +1,95 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "ObjectResolverControl",
+  "namespace": "TcHmi.Controls.SymbolControls",
+  "displayName": "ObjectResolverControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "Shows and toggles a list of entries, each with a label and a symbol of type Boolean.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 260,
+      "height": 176
+    }
+  },
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "template": "Template.html",
+  "dependencyFiles": [
+    {
+      "name": "ObjectResolverControl.js",
+      "type": "EsModule",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "name": "data-tchmi-entries",
+      "propertyName": "Entries",
+      "propertySetterName": "setEntries",
+      "propertyGetterName": "getEntries",
+      "displayName": "Entries",
+      "visible": true,
+      "themeable": "None",
+      "displayPriority": 10,
+      "type": "tchmi:framework#/definitions/TcHmi.Controls.SymbolControls.ObjectResolverControl.EntryList",
+      "category": "Common",
+      "description": "List of entries. stateSymbol of each entry is a symbol of type Boolean, which the control shows and writes on a click.",
+      "readOnly": false,
+      "bindable": true,
+      "defaultBindingMode": "OneWay",
+      "heritable": true,
+      "defaultValue": null,
+      "defaultValueInternal": null,
+      "allowSymbolExpressionsInObject": true
+    }
+  ],
+  "attributeCategories": [],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.SymbolControls.ObjectResolverControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ObjectResolverControl",
+      "frameworkControlNamespace": "TcHmi.Controls.SymbolControls"
+    },
+    "TcHmi.Controls.SymbolControls.ObjectResolverControl.EntryList": {
+      "title": "EntryList",
+      "type": "array",
+      "items": {
+        "$ref": "tchmi:framework#/definitions/TcHmi.Controls.SymbolControls.ObjectResolverControl.Entry"
+      }
+    },
+    "TcHmi.Controls.SymbolControls.ObjectResolverControl.Entry": {
+      "title": "Entry",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Text of the entry."
+        },
+        "stateSymbol": {
+          "$ref": "tchmi:framework#/definitions/TcHmi.Controls.SymbolControls.ObjectResolverControl.StateSymbol"
+        }
+      },
+      "required": [
+        "label",
+        "stateSymbol"
+      ]
+    },
+    "TcHmi.Controls.SymbolControls.ObjectResolverControl.StateSymbol": {
+      "title": "StateSymbol",
+      "allOf": [
+        {
+          "$ref": "tchmi:framework#/definitions/Symbol"
+        },
+        {
+          "frameworkSymbolSubType": {
+            "$ref": "tchmi:general#/definitions/Boolean"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "ClassicControl",
+  "namespace": "TcHmi.Controls.SymbolControls",
+  "displayName": "ClassicControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "Shows and toggles the boolean value of the symbol in the attribute StateSymbol.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 260,
+      "height": 96
+    }
+  },
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "template": "Template.html",
+  "dependencyFiles": [
+    {
+      "name": "ClassicControl.js",
+      "type": "EsModule",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "name": "data-tchmi-state-symbol",
+      "propertyName": "StateSymbol",
+      "propertySetterName": "setStateSymbol",
+      "propertyGetterName": "getStateSymbol",
+      "displayName": "State Symbol",
+      "visible": true,
+      "themeable": "None",
+      "displayPriority": 10,
+      "type": "tchmi:framework#/definitions/TcHmi.Controls.SymbolControls.ClassicControl.StateSymbol",
+      "category": "Common",
+      "description": "A symbol of type Boolean. The control shows its value and writes the inverted value on a click.",
+      "readOnly": false,
+      "bindable": true,
+      "defaultBindingMode": "OneWay",
+      "heritable": true,
+      "defaultValue": null,
+      "defaultValueInternal": null
+    }
+  ],
+  "attributeCategories": [],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}
