@@ -335,5 +335,8 @@ package-lock.json
 # TwinCAT HMI
 .engineering_servers/
 .hmiframework/
+# JSON schemas downloaded by the engineering into the solution folder
+json-schema.org/
+json.schemastore.org/
 /ExampleControl/UnitTest4Control/spec/**/*.js
 !/ExampleControl/UnitTest4Control/spec/support/*.js
